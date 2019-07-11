@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1220" />
+	<title>九趣贷 — 贷快乐，更带梦想</title>
+	<link rel="shortcut icon" href="/yingpu/pc/img/logo.icon.png"/>
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<link rel="stylesheet" href="css/generalize.css">
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<style type="text/css">
+		#reg .zc{
+			font-size: 14px;
+			color: #fff;
+			margin: 10px 2px 0;
+		}
+		
+		#reg .zc .CheckBoxClass{
+			margin-top: 0;
+		    border-radius: 0;
+		    padding-left: 0;
+		    font-size: 0;
+		    background-color: #fff;
+		    outline: none;
+		    border: 0;
+		    height: 46px;
+			display: none;
+		}
+		.CheckBoxLabelClass{
+			background: url(images/checkbox.png) no-repeat;
+		    padding-left: 22px;
+		    padding-top: 0px;
+		    /*margin: 8px;*/
+		    height: 28px;
+		    /* width: 150px; */
+		    display: block;
+		    vertical-align: middle;
+		}
+		
+		.LabelSelected{
+			background: url("images/checked.png") no-repeat;
+		}
+		#reg .vcode{
+			width: 103px;
+		    height: 46px;
+		    margin-left: 17px;
+		    margin-top: 12px;
+		    border-radius: 4px;
+		    overflow: hidden;
+		    cursor: pointer;
+		}
+		#reg .vcode img{
+			width: 100%;
+			height: 100%;
+			margin-left: 0;
+			margin-top: 0;
+		}
+	</style>
+	<script type="text/javascript">
+		
+</script>
+<style>
+
+
+
+</style>
+</head>
+<body>
+	<iframe src="../../head3.html" class="iframe-head" width="100%" scrolling="no"  style="border:0px;"></iframe>	
+	<div class="nav">
+		<div class="cont w">
+			<img src="images/zcs.png" alt="">
+			<div class="register register-form">
+				<form action="" id="reg" method="post" onsubmit="return false;">
+                    <input type="hidden" name="method" />
+                    <input type="hidden" name="type" />
+                    <input type="hidden" name="activityId" />
+					<input type="text" name="phone" placeholder="输入11位手机号领取" class="inp1 tel" onkeyup="checkPhone()"><br>
+					<input type="password" id="passWord" name="password" placeholder="请设置6-20位密码" class="inp1 password"><br>
+					<input type="text" name="pic_code" placeholder="请输入图形验证码" class="inp2">
+					
+					<input type="hidden" id="yaoqing"  name="inviteCode" class="inp2">
+					<div class="vcode left">
+						<img src="" id="pic-code" onclick="javascript:void(loadPicCode());" />
+					</div>	<br>
+					<input type="text" name="code" placeholder="请输入验证码" class="inp2"><input type="button" class="inp3 inp4" id="send" value="获取验证码"><br>
+					<input type="submit" class="btn inp4 register-btn" value="注册领取新手福利"><br>
+					<div class="zc">
+						<input type="checkbox" id="agree" name="agree" class="CheckBoxClass" value="" checked="checked"/>
+						<label for="agree" class="CheckBoxLabelClass LabelSelected">注册即表示您同意<span onclick="viewLicense()" style="cursor: pointer;color: #FFFF04;">《九趣贷用户注册协议》</span></label>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="data">
+		<div class="w">
+			<ul class="list">
+				<li class="lis">
+					<p class="num">
+						<!-- <span>111,111,200.00</span> -->
+						<span id="data01"></span>
+						<span class="mon">元</span>
+					</p>
+					<p class="des">
+						<span class="icon icon1"></span>累计成交
+					</p>
+				</li>
+				<li><span class="line"></span></li>
+				<li class="lis">
+					<p class="num">
+						<!-- <span>325,6789,67</span> -->
+						<span id="data02"></span>
+						<span class="mon">元</span>
+					</p>
+					<p class="des">
+						<span class="icon icon2"></span>赚取收益
+					</p>
+				</li>
+				<li><span class="line"></span></li>
+				<li class="lis">
+					<p class="num">
+						<!-- <span>123,45</span> -->
+						<span id="data03"></span>
+						<span class="mon">人</span>
+					</p>
+					<p class="des">
+						<span class="icon icon3"></span>收获用户
+					</p>
+				</li>
+				<li><span class="line"></span></li>
+				<li class="lis">
+					<p class="num">
+						<!-- <span>495</span> -->
+						<span id="data04"></span>
+						<span class="mon">天</span>
+					</p>
+					<p class="des">
+						<span class="icon icon4"></span>安全运营
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="reco">
+		<div class="w">
+			<div class="bt">
+				<img src="images/img1.png" alt="" class="imgs">
+				<span class="rm">热门</span>
+				<span class="tj">推荐</span>
+				<img src="images/img1.png" alt="" class="imgs">
+			</div>
+			<div class="con1">
+				<div class="pro">
+					<i class="hb"><img src="images/hb.png" alt=""></i>
+					<u class="star">明星产品</u>
+					<ul class="touzi">
+						<li>
+							<p class="red"><span>7</span>%</p>
+							<p class="black">预期年化利率</p>
+						</li>
+						<li>
+							<p class="red"><span>1</span>个月</p>
+							<p class="black">借款期限</p>
+						</li>
+						<li>
+							<p class="red"><span>20</span>万年</p>
+							<p class="black">借款额度</p>
+						</li>
+					</ul>
+
+					<button class="btn1" onclick="location.href='../../project/list'">立即投资</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="safe">
+		<div class="w">
+			<div class="bt">
+				<img src="images/img1.png" alt="" class="imgs">
+				<span class="rm">6大</span>
+				<span class="tj">保障</span>
+				<img src="images/img1.png" alt="" class="imgs">
+			</div>
+			<ul class="bz">
+				<li>
+					<img src="images/tb1.png" alt="">
+					<p class="one">双重风控审核</p>
+					<p class="two">源头把控</p>
+				</li>
+				<li>
+					<img src="images/tb2.png" alt="">
+					<p class="one">100%实物保障</p>
+					<p class="two">优质资产</p>
+				</li>
+				<li>
+					<img src="images/tb3.png" alt="">
+					<p class="one">逾期保障机制</p>
+					<p class="two">债权回购</p>
+				</li>
+				<li>
+					<img src="images/tb4.png" alt="">
+					<p class="one">第三方支付托管</p>
+					<p class="two">资金安全</p>
+				</li>
+				<li>
+					<img src="images/tb5.png" alt="">
+					<p class="one">合法合规</p>
+					<p class="two">法律保障</p>
+				</li>
+				<li>
+					<img src="images/tb6.png" alt="">
+					<p class="one">银行级技术防护</p>
+					<p class="two">技术安全</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="honor">
+		<div class="w">
+			<div class="bt">
+				<img src="images/img1.png" alt="" class="imgs">
+				<span class="rm">企业</span>
+				<span class="tj">荣誉</span>
+				<img src="images/img1.png" alt="" class="imgs">
+			</div>
+			<div class="center">
+				<div class="device">
+				  	<a class="arrow-left" href="#"></a>
+				    <a class="arrow-right" href="#"></a>
+				  	<div class="swiper-container">
+					    <div class="swiper-wrapper">
+					      <div class="swiper-slide">
+					        <img src="images/zheng1.jpg"/>
+					      </div>
+					      <div class="swiper-slide">
+					       <img src="images/zheng2.jpg"/>
+					      </div>
+					      <div class="swiper-slide">
+					        <img src="images/zheng3.jpg"/>
+					      </div>
+					      <div class="swiper-slide">
+					        <img src="images/zheng5.jpg"/>
+					      </div>
+					      <div class="swiper-slide">
+					        <img src="images/zheng4.jpg"/>
+					      </div>
+					      <div class="swiper-slide">
+					        <img src="images/zheng6.jpg"/>
+					      </div>
+					      
+					    </div>
+				  	</div>
+				</div>
+				
+				<div class="carrousel"> 
+			      	<div class="wrapper"> 
+			      		<!--<span class="close"></span> -->
+			      		<img src="" alt="BINGOO" /> 
+			      	</div>
+			    </div>
+			</div>	
+
+			</div>
+		</div>	
+	</div>
+	
+	
+	<div class="style" style="margin-bottom: 60px;">
+		<div class="w">
+			<div class="bt">
+				<img src="images/img1.png" alt="" class="imgs">
+				<span class="rm">员工</span>
+				<span class="tj">风采</span>
+				<img src="images/img1.png" alt="" class="imgs">
+			</div>
+
+		</div>
+		<div class="ygfc">
+			
+		</div>
+		
+		<div class="w">
+			<button class="btn2" onclick="location.href='../../infomation/Jan_activity/Jan_activity.jsp'">立即领取3999元红包</button>
+			<dl>
+				<dt>说明:</dt>
+				<dd>1、请在活动期限内参与活动，活动结束，相关优惠券也会同步失效。</dd>
+				<dd>2、新老用户可根据个人资金计划，按照抵扣券指定规则使用。使用抵扣券时，应按照抵扣券要求最低投资额度充值、输入数值，在选择抵扣券后，系统会自动按照抵扣数额减扣；
+     			每笔投资，仅能使用一张抵扣券，抵扣券不可叠加。</dd>
+				<dd>3、天天存吧不能使用任何抵扣券。抵扣券不支持直接的现金折扣，用户可在投资到期后提现。</dd>
+				<dd>4、如有任何疑问欢迎咨询在线客服或拨打免费客服电话：400-969-1811，竭诚为您服务！</dd>
+				<dd>5、以上活动在法律许可的范围内，最终解释权归营普金服所有。</dd>
+				
+			</dl>
+		</div>
+	</div>
+	<iframe src="../../footer2.html" width="100%" scrolling="no"  style="border:0px;height:326px;margin-bottom: -5px;"></iframe>
+
+<script src="../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/yingpu/pc/js/queryString.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/idangerous.swiper.min.js"></script>
+<script src="js/countUp.js"></script>
+<script src="../../../layer-v3.0.3/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/utils.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$(function(){
+		loadPicCode();
+		
+		var inviteCode = queryString('code');
+		if (!!inviteCode) {
+			$('#yaoqing').val(inviteCode);
+		}
+		
+	});
+
+
+	$('[name=method]').val(queryString('method'));
+	$('[name=type]').val(queryString('type'));
+	$('[name=activityId]').val(queryString('activityId'));
+
+	//图片验证码
+	map = {
+		code : {
+			action : 'SMS',
+			passed : false
+		},
+		pic_code : {
+			action : 'Pic',
+			passed : false
+		}
+	};
+	
+	function loadPicCode() {
+		 cancelLoadingShade();
+		$.get('/yingpu/app/loan/getCaptcha/json', {}, function(data) {
+			
+			if (data.data) {
+				$('#pic-code').attr('src', 'data:image/jpeg;base64,' + data.data);
+				map['pic_code']['passed'] = false;
+			}
+		}, 'json');
+		useLoadingShade();
+	}
+	
+	
+	//发送短信验证码
+	function countdown() {
+			var send=document.getElementById('send'),
+			timer=null;
+		   	var times=60,
+		   	   	timer = setInterval(function(){
+	    		send.value = times+"秒后重试";
+				send.setAttribute('disabled','disabled');
+				times--;
+				if(times <= 0){
+					send.value = "发送验证码";
+					send.removeAttribute('disabled');
+					times = 60;
+					clearInterval(timer);
+				}
+		    }, 1000);
+		}
+	
+	
+	
+	var isPhoneExists = false;
+	
+	function sendCode() {
+        if (!/\d{11}/.test($('#reg input[name=phone]').val())) {
+            layer.alert('手机号码必须为11位数字！');
+            return;
+        }
+
+        if (isPhoneExists) {
+            layer.alert('您输入的手机号已存在！');
+            return;
+        }
+
+        if ($('#reg input[name=password]').val().length < 6 || $('#reg input[name=password]').val().length > 20) {
+            layer.alert('密码长度必须为6-16位！');
+            return;
+        }
+
+        if (!$('[name=pic_code]').val()) {
+            layer.alert('请输入图片验证码！');
+            return;
+        }
+
+/*		if (!map['pic_code']['passed']) {
+            layer.alert('您输入的图片验证码不正确！');
+            return;
+        }
+        */
+        $.post('/yingpu/pc/send/json', {
+            phone : $('#reg input[name=phone]').val(),
+            type : 1,
+            code : $('[name=pic_code]').val()
+        }, function(data) {
+            console.log(data);
+            if (data.status != 'success') {
+                layer.alert(data.message);
+                if (data.status == 'shixiao') {
+                    loadPicCode();
+                }
+                return;
+            }
+
+            layer.alert('短信已发送至您的手机，请注意查收！');
+            countdown();
+        }, 'json');
+
+        return true;
+    }
+
+    function checkPhone() {
+        cancelLoadingShade();
+        $.get('/yingpu/pc/myaccount/checkPhone', {phone : $(event.target || event.srcElement).val() }, function(data) {
+            useLoadingShade();
+            if (data.status == 'error') {
+                layer.alert('该手机号已存在！');
+                isPhoneExists = true;
+                return;
+            }
+
+            isPhoneExists = false;
+
+        });
+    }
+
+    window.onload=function(){
+        var send=document.getElementById('send'),
+            timer=null;
+
+            send.onclick=function(){
+            // 计时开始
+          console.log("2");
+            if (!sendCode()) {
+                return;
+            }
+        };
+    };
+
+    function register() {
+        var valid = true;
+        for (var k in map) {
+            valid = valid && map[k]['passed'];
+            if (!map[k]['passed']) {
+                var codeType = k == 'code' ? '短信' : '图片';
+                layer.alert(codeType + '验证码输入有误！');
+                return;
+            }
+        }
+
+        if (valid) {
+            $('.register-btn').attr('disabled', 'disabled');
+            var regLayer = layer.load(1, { shade : [ 0.4, '#fff' ] });
+            $.post('/yingpu/pc/doRegister', $("#reg").serialize(), function(data) {
+                $('.register-btn').removeAttr('disabled');
+                layer.close(regLayer);
+                if (data.status == 'success') {
+                    $('#userId').val(data.data.userId);
+                    $('#phone').val(data.data.phone);
+
+                    /*onRegSuccess();*/
+                    layer.alert('注册成功',function(){
+                        location.href='../../html/account.jsp';
+                    });
+                    return;
+                }
+
+                loadPicCode();
+                layer.msg(data.message || '对不起，注册失败，请稍后再试！');
+            }, 'json');
+        }
+    }
+
+
+
+
+
+    $('.register-form').on('submit', 'form', function(e) {
+        console.log("tijiao");
+        var mustFields = [
+            'phone', 'password', 'pic_code', 'code'
+        ];
+
+        var emptyField = '';
+        if (isPhoneExists) {
+            layer.alert('您输入的手机号已存在！');
+            return;
+        }
+
+
+        $(mustFields).each(function(k, v) {
+            if (!$('#reg input[name=' + v + ']').val()) {
+                emptyField = $('#reg input[name=' + v + ']').prev().html();
+                return false;
+            }
+        });
+
+        if (!!emptyField) {
+            layer.alert('请输入' + emptyField + '！');
+            return;
+        }
+        if ($('#reg input[name=phone]').val()==''){
+            layer.alert('手机号码不能为空！');
+            return;
+        }
+        if (!/\d{11}/.test($('input[name=phone]').val())) {
+            layer.alert('手机号码必须为11位数字！');
+            return;
+        }
+
+        if ($('#reg input[name=password]').val().length < 6 || $('#reg input[name=password]').val().length > 20) {
+            layer.alert('密码长度必须为6-20位！');
+            return;
+        }
+
+        register();
+        return false;
+    });
+
+
+    $(document).on('keyup', '[name=code], [name=pic_code]', function() {
+        $this = $(this);
+        cancelLoadingShade();
+        $.post('../../check' + map[$(this).attr('name')]['action'] + 'Code', {
+            code : $(this).val(),
+            phone : $('#reg [name=phone]').val()
+        }, function(data) {
+            if (data.status == 'success') {
+                map[$this.attr('name')]['passed'] = true;
+            }
+
+            useLoadingShade();
+        }, 'json');
+    });
+		
+		
+	$(function(){
+
+		$.get('/yingpu/pc/tongji/json', {}, function(data) {
+
+			//动态数据变化
+			var options = {
+              useEasing: true,
+              useGrouping: true,
+              separator: ',',
+              decimal: '.',
+            };
+			var d = data;
+			for (var i = 0; i < 4; i++) {
+			    if (!d[i]) {
+			        d[i] = { total : 0 };
+                }
+            }
+
+			var data_1 = new CountUp('data01', 0, d[0].total, 2, 2.5, options);
+			var data_2 = new CountUp('data02', 0, d[1].total, 2, 2.5, options);
+			var data_3 = new CountUp('data03', 0, d[2].total, 0, 2.5, options);
+			var data_4 = new CountUp('data04', 0, d[3].total, 0, 2.5, options);
+			
+
+			
+			data_1.start();
+			data_2.start();
+			data_3.start();
+			data_4.start();
+		});
+
+		
+			
+
+		
+
+
+		var mySwiper = new Swiper('.swiper-container',{
+	          paginationClickable: true,
+	          spaceBetween: 0,
+	          slidesPerView: 3,
+	      	  loop: true,
+		      autoplay: 3000,
+	      	  autoplayDisableOnInteraction: false,
+	      	  observer: true,//修改swiper自己或子元素时，自动初始化swiper
+			  observeParents: true//修改swiper的父元素时，自动初始化swiper
+	      	  
+		  })
+		  
+		  $('.arrow-left').on('click', function(e){
+		    e.preventDefault()
+		    mySwiper.swipePrev()
+		  })
+		  $('.arrow-right').on('click', function(e){
+		    e.preventDefault()
+		    mySwiper.swipeNext()
+		  });
+
+	
+	
+	var carrousel = $( ".carrousel" );
+	
+		$('.swiper-wrapper').delegate('img','click',function(e){
+			
+				console.log("123");
+			  var src = $(this).attr( "src" );
+			  var img=new Image();
+			  img.src=src;
+			  
+			  var realwidth=img.width;
+			  var realheight=img.height;
+			 var w,h;
+			 if(realwidth>realheight){
+			 	 w=800;
+			 	 h=800/realwidth*realheight;
+			 }else{
+			 	 h=800;
+			 	 w=800/realheight*realwidth;
+			 }
+			 
+			  carrousel.find("img").attr( "src", src ).css({'width':w,'height':h,'left':($(window).width()-w)/2+"px",'top':(($(window).height()-h)/2)+'px'});
+			  //判断图片是竖还是横
+			  
+		/*  	$(".wrapper img").on("load",function(e){
+		  		if($(".wrapper img",this.contentDocument).height()<$(".wrapper img",this.contentDocument).width()){
+		   			console.log("4");
+		   			$(this).css({"width":"100%"});
+		   			return false;
+		   		}else{
+		   			$(this).css({"height":"100%"});
+		   		}
+		  	}); */		
+			carrousel.fadeIn(); 
+		});
+		
+		carrousel.each(function(){
+			$(this).click(function(e){
+			  carrousel.find("img").attr( "src", '' );
+			  carrousel.fadeOut(0);
+			});
+		});
+		
+//				$(carrousel).click(function(e){
+//					carrousel.fadeOut();
+//				});
+})
+//				carrousel.each(function(){
+//					$(this).click(function(e){
+//					  carrousel.find("img").attr( "src", '' );
+//					  carrousel.fadeOut(0);
+//					});
+//				});
+
+		$(document).ready(function(){
+			$(".CheckBoxClass").change(function(){
+				console.log("1");
+				if($(this).is(":checked")){
+					$(this).next("label").addClass("LabelSelected");
+				}else{
+					$(this).next("label").removeClass("LabelSelected");
+				}
+			});
+		});
+		function viewLicense() {
+			var idxs = [19, 18], idx = 0;
+			layer.open({
+				type : 2,
+				content : '/yingpu/pc/myaccount/announce/content?id=' + idxs[idx] + '&type=contractsample',
+				area: ['50%', '80%']
+			});
+		}
+</script>
+</body>
+</html>

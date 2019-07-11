@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/charge.css"/>
+		<script src="/yingpu/pc/js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="UTF-8">
+            $(function(){
+                var errmessage =  window.location.href.split("=")[1];
+                errmessage = decodeURIComponent(errmessage);
+                $('#err').html((errmessage));
+            });
+		</script>
+	</head>
+	<body>
+		<div id="top">
+			<div class="center clearFix">
+				<div class="logo left" onclick="javascript:location.href='index';">
+					<img src="img/logofu.png" style="cursor: pointer;"/>
+				</div>
+				<p class="wel left">提现结果——贷快乐，更带梦想</p>
+			</div>
+		</div>
+		<div id="center">
+			<div class="center">
+				<div class="box">
+					<p class="textF"><span class="fail"></span><span class="miaoshu" id="err" value=""></span></p>
+					<a href="javascript:;" class="btn">返回继续提现</a>
+					<div class="wb">
+						<p class="p1">造成提现失败的原因可能有以下几种：</p>
+						<p class="p1">a、九趣贷账户余额不足；</p>
+						<p class="p1">b、银行开户行信息错误；。</p>
+						<p class="p1">c、银行账号/户名错误，或账号和户名不符；</p>
+						<p class="p1">d、银行账户冻结或正在办理挂失。</p>
+						<p class="p1">如果有其他情况也可致电客服400-969-1811。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="footer-bottom">			
+				<div class="footer-bottom-pic">
+					<a><img src="img/footer-cxwz.png"/></a>
+					<a><img src="img/footer-kxwz.png"/></a>
+					<a><img src="img/footer-hyyz.png"/></a>
+					<a><img src="img/footer-qyxy.png"/></a>
+					<a><img src="img/footer-360.png"/></a>
+					<!--<a href="#"><img src="img/footer-wljc.png"/></a>-->
+				</div>
+				<div class="footer-bottom-txt">
+					<p>Copyright  2019 9qudai.com All Rights Reserved | 九趣贷（www.9qudai.com）运营主体为九九金融信息服务有限公司</p>
+					<p>jiuqudai@163.com   | 地址：西安市雁塔区沣惠南路18号唐沣国际B座1402室</p>
+					<!--<p>© 2016-2017上海营夏财富投资管理有限公司 All rights reserved | 沪ICP备15044282号-1</p>-->
+					<p>市场有风险，投资需谨慎</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

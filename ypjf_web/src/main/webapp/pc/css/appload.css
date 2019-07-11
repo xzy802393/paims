@@ -1,0 +1,157 @@
+/*手机客户端页面*/
+
+.app-content{
+	width: 100%;
+}
+.app-content-one{
+	width: 100%;
+	background: url(../img/appload/app-bg1_02.jpg) no-repeat center;
+	height: 700px;
+}
+.app-content-left{
+	float: left;
+	width: 600px;
+}
+.app-content-left.mobile img{
+	margin-top: 86px;
+}
+.app-content-right{
+	float: left;
+	margin-left: 46px;
+	width: 462px;
+}
+.app-content-right.box{
+	margin-left: 48px;
+	color: #fff;
+}
+.app-content-right.box p.fabu{
+	height: 70px;
+	line-height: 70px;
+	font-size: 34px;
+	border-bottom: 1px solid #FFFFFF;
+	margin-top: 110px;
+}
+.app-content-right.box p span{
+	display: inline-block;
+	width: 155px;
+	height: 74px;
+	line-height: 74px;
+	background: rgba(255,255,255,.4);
+	border-radius: 6px;
+	font-size: 34px;
+	margin:0 16px;
+	text-align: center;
+	vertical-align: middle;
+}
+.app-content-right.box p.box-s{
+	font-size: 62px;
+	height: 74px;
+	line-height: 74px;
+	margin-top: 16px;
+}
+.app-content-one-load{
+	float: left;
+	width: 266px;
+	margin: 58px 8px 0 16px;
+}
+.app-content-one-load img{
+	margin-bottom: 12px;
+}
+
+.app-content-one-code{
+	float: left;
+	margin-top: 58px;
+}
+.app-content-one-code img{
+	width: 156px;
+	height: 156px;
+	border-radius: 6px;	
+}
+/*第二部分*/
+.app-content-two{
+	width: 100%;
+	height: 700px;
+	overflow: hidden;
+}
+.app-content-left-text{
+	width: 446px;
+	height: 100px;
+	margin-top: 300px;
+	border-left: 5px solid #004ea1;
+	padding-left: 10px;
+}
+.app-content-left .text-one,.app-content-right .text-one{
+	font-size: 42px;
+}
+.app-content-left .text-two,.app-content-right .text-two{
+	font-size: 28px;
+	color: #666;
+}
+.app-content-left-text .text-one span{
+	color: #004ea1;
+	font-weight: bold;
+}
+
+
+.app-content-right .app-content-right-mobile{
+	width: 644px;
+	height: 637px;
+	margin-top: 30px;
+}
+
+/**/
+
+.app-content-three{
+	width: 100%;
+	height: 700px;
+	background: url(../img/appload/app-bg2_03.jpg) no-repeat center;
+}
+
+.app-content-three .app-content-right-mobile{
+	margin-left: 84px;
+	margin-top: 24px;
+}
+.app-content-three .app-content-right-text{
+	width: 446px;
+	height: 100px;
+	margin-top: 300px;
+	padding-left: 10px;
+	margin-left: 143px;
+	color: #FFFFFF;
+}
+.app-content-right .text-two{
+	color: #FFFFFF;
+}
+
+/*第四部分*/
+
+.app-content-four .app-content-right-mobile{
+	margin-top: 80px;
+	width: 682px;
+	height: 617px;
+	display: block;
+}
+/*第五部分*/
+
+.app-content-five{
+	width: 100%;
+	height: 424px;
+	background: url(../img/appload/app-bg3_02.jpg) no-repeat center;
+}
+.app-content-five-center{
+	width: 582px;
+	height: 157px;
+	margin: 0 auto;
+	padding-top: 140px;
+}
+.app-content-five-left{
+	font-size: 28px;
+	color: #fff;
+}
+.app-content-five-center img{
+	width: 157px;
+	height: 157px;
+	border-radius: 6px;
+	vertical-align: middle;
+	margin-left: 30px;
+}

@@ -1,0 +1,160 @@
+/*投资记录页样式*/  
+/*借款记录页样式*/
+.invest-records,.borrow-records,.trans-records{
+	margin-left: 30px;
+	width: 938px;
+}
+.invest-records h3,.borrow-records h3,.trans-records h3{
+	font-size: 16px;
+	font-weight: normal;
+}
+.invest-records .tab-menu,.borrow-records .tab-menu,.trans-records .trans-choice{
+	margin-top: 28px;
+}
+.invest-records .tab-menu li,.borrow-records .tab-menu li{
+	float: left;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	cursor: pointer;
+}
+.invest-records .tab-menu li.active,.borrow-records .tab-menu li.active{
+	border-bottom: 2px solid #FF7F01;
+	color: #FF7F01;
+}
+/*投资列表*/
+/*借款列表*/
+.invest-records table,.borrow-records table,.trans-records table{
+	width: 938px;
+	margin-bottom: 24px;
+}
+.invest-records table tr,.borrow-records table tr,.trans-records table tr{
+	width: 99%;
+	height: 38px;
+	text-align: center;
+	color: #666;
+	font-size: 13px;
+}
+.invest-records table tr td:last-child,.borrow-records table tr td:last-child{
+	font-size: 12px;
+	color: #FF7F01;
+	cursor: pointer;
+}
+.invest-records table tr:nth-child(odd),.borrow-records table tr:nth-child(odd),.trans-records table tr:nth-child(odd){
+	background: #f8f8f8;
+}
+.invest-records table tr.title,.borrow-records table tr.title,.trans-records table tr.title{
+	height: 44px;
+	color: #333;
+	font-size: 14px;
+	background: #eee;
+	font-weight: normal;
+}
+.invest-records table tr.title th,.borrow-records table tr.title th,.trans-records table tr.title th{
+	color: #333;
+	font-weight: normal;
+}
+.borrow-records table tr td a.repay-btn{
+	padding: 4px 10px;
+    border-radius: 13px;
+    background: #FF7F01;
+    color: #fff;
+    margin-left: -44px;
+}
+
+
+/*投资记录*/
+.trans-records .trans-choice{
+	font-size: 14px;
+}
+.trans-records .trans-choice dl{
+	margin-left: 20px;
+	margin-bottom: 16px;
+}
+.trans-records .trans-choice dl dt,.trans-records .trans-choice dl dd{
+	float: left;
+	font-size: 14px;
+	padding: 4px 7px;
+	margin-right: 20px;	
+}
+.trans-records .trans-choice dl dd:hover{
+	cursor: pointer;
+	background: #f44336;
+	color: #fff;
+}
+.trans-records .trans-choice dl dd.active{
+	background: #f44336;
+	color: #fff;
+}
+.trans-choice-date-box{
+	text-align: right;
+	margin-right: 100px;
+}
+.trans-choice-date-box .calendarWarp{
+	position: relative;
+	display: inline-block;
+	text-align: left;
+}
+
+.trans-choice-date-box input[type="text"]{
+	width: 100px;
+	outline: none;
+	font-size: 12px;
+	color: #666;
+	cursor: default;
+	padding-left: 4px;
+}
+.trans-choice-date-box input[type="submit"]{
+	border: none;
+	background: none;
+	color: #FF7F01;
+	outline: none;
+	cursor: pointer;
+}
+
+.trans-records table tr{
+	height: 48px;
+}
+.trans-records table tr td.time span{
+	display: inline-block;
+	margin-bottom: 4px;
+}
+.trans-records table tr td.time span:last-child{
+	color: #aaa;
+	font-size: 12px;
+	margin-right: 26px;
+}
+.trans-records table tr td.org{
+	color: #FF7F01;
+}
+
+/*翻页样式*/
+.page-list{
+	width: 100%;
+	text-align: center;
+}
+.page-list a{
+	display: inline-block;
+	padding: 8px 12px;
+	font-size: 12px;
+	border: 1px solid #aaa;
+	margin-left: 10px;
+	cursor: default;
+}
+.page-list a.active{
+	background: #ff7200;
+	border: none;
+	padding: 9px 13px;
+	color: #fff;
+}
+.page-list a.on{
+	color: #aaa;
+}
+.page-list a:hover{
+	background: #FF7200;
+	border: none;
+	padding: 9px 13px;
+	color: #fff;
+}

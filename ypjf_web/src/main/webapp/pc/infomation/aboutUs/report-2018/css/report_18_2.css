@@ -1,0 +1,1040 @@
+html,
+body {
+    width: 100%;
+    height: auto;
+}
+
+/* 主体 */
+
+.w {
+    width: 100%;
+    height: auto;
+    margin-top: -42px;
+}
+
+/* 第一章 */
+
+.report {
+    width: 100%;
+    height: 915px;
+    background: url("../images/report-bg-1.png") no-repeat center;
+}
+
+.banner1 {
+    width: 1200px;
+    position: relative;
+    height: 915px;
+    margin: 0 auto;
+}
+
+.text {
+    position: absolute;
+    margin-left: -60px;
+    margin-top: 300px;
+}
+
+.gold {
+    font-size: 40px;
+    color: rgb(78, 76, 104);
+}
+
+.operate {
+    font-size: 40px;
+    color: rgb(60, 102, 231);
+    margin-top: 26px;
+}
+
+.border {
+    display: inline-block;
+    width: 132px;
+    height: 3px;
+    background-color: rgb(60, 102, 231);
+}
+
+.more {
+    font-size: 30px;
+    color: rgb(60, 102, 231);
+    margin-top: 26px;
+}
+
+.big {
+    width: 236px;
+    height: 24px;
+    margin-top: 26px;
+    line-height: 24px;
+    text-align: center;
+    border: solid 1px rgb(60, 102, 231);
+}
+
+.ter {
+    font-size: 16px;
+    color: rgb(60, 102, 231);
+}
+
+/*向下的三角形*/
+
+.triangle_border_down1 {
+    width: 0;
+    height: 0;
+    border-width: 56px 56px 0;
+    border-style: solid;
+    border-color: rgb(93, 30, 208) transparent transparent;
+    margin: 40px auto;
+    position: relative;
+    top: 910px;
+}
+
+/* 第二章 */
+
+.banner2 {
+    width: 100%;
+    height: 1030x;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
+/* 不忘初心 */
+
+.top1 {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.top1 span {
+    width: 270px;
+    height: 40px;
+    display: inline-block;
+    margin-top: -8px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 26px;
+    color: rgb(60, 102, 231);
+}
+
+.top1 img {
+    vertical-align: top;
+}
+
+/* 时钟数据展示 */
+
+.display {
+    width: 1200px;
+    height: 340px;
+    margin: 0 auto;
+}
+
+.clock {
+    position: relative;
+}
+
+.clock img {
+    width: 252px;
+    height: 231px;
+    position: absolute;
+    top: 18px;
+    left: 277px;
+}
+
+.clock ul {
+    width: 265px;
+    height: 126px;
+    position: absolute;
+    top: 38px;
+    right: 226px;
+}
+
+.clock ul li {
+    height: 40px;
+    font-size: 18px;
+    color: rgb(63, 60, 114);
+    ;
+}
+
+.clock ul li span {
+    font-size: 22px;
+}
+
+/* 时钟 */
+
+#plane {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: relative;
+    top: 81px;
+    left: 343px;
+}
+
+.kedu {
+    width: 5px;
+    height: 8px;
+    border-radius: 2px;
+    background-color: lawngreen;
+    position: absolute;
+    left: 56px;
+    top: 0;
+    transform-origin: 4px 60px;
+}
+
+.kedu:nth-child(3n+1) {
+    background-color: blueviolet;
+    height: 8px;
+}
+
+#center {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    top: 55px;
+    left: 55px;
+    z-index: 10;
+}
+
+#handS {
+    width: 2px;
+    height: 56px;
+    border-radius: 2px;
+    background-color: red;
+    position: absolute;
+    top: 4px;
+    left: 59px;
+    z-index: 9;
+    transform-origin: 1px 56px;
+    /* transition:  0.5s; */
+}
+
+#handM {
+    width: 4px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: navy;
+    position: absolute;
+    top: 20px;
+    left: 58px;
+    z-index: 8;
+    transform-origin: 2px 40px;
+}
+
+#handH {
+    width: 6px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: saddlebrown;
+    position: absolute;
+    top: 30px;
+    left: 57px;
+    z-index: 7;
+    transform-origin: 3px 30px;
+    animation: rot linear infinite 43200s;
+}
+
+/* @keyframes rot {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+} */
+
+/* 运营大数据 */
+
+.top2 {
+    margin-top: -30px;
+    text-align: center;
+}
+
+.top2 span {
+    width: 160px;
+    height: 40px;
+    display: inline-block;
+    margin-top: -8px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 26px;
+    color: rgb(60, 102, 231);
+}
+
+.top2 img {
+    vertical-align: top;
+}
+
+/* 累计成交额 */
+
+.middle {
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.middle img {
+    width: 230px;
+    height: 200px;
+}
+
+.middle .plus {
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 45px;
+    right: 46%;
+}
+
+.middle .yuan {
+    display: block;
+    text-align: center;
+    position: absolute;
+    right: 43%;
+    top: 115px;
+}
+
+/* 累计成交额展示 */
+
+.deal {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto 31px;
+}
+
+.deal ul {
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+}
+
+.deal ul .li-bg {
+    width: 308px;
+    height: 150px;
+    margin-top: 25px;
+    background: url(../images/report-bg-2.png) no-repeat;
+    float: left;
+}
+
+.deal ul .li-bg:nth-child(2),
+.deal ul .li-bg:nth-child(5) {
+    margin: 25px 138px 0;
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+}
+
+.icon-bg1 {
+    background: url("../images/icon-bg1.png") no-repeat;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.icon-bg2 {
+    background: url("../images/icon-bg2.png") no-repeat;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.icon-bg3 {
+    background: url("../images/icon-bg3.png") no-repeat;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.icon-bg4 {
+    background: url("../images/icon-bg4.png") no-repeat;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.li-bg p {
+    font-size: 18px;
+    color: #ffffff;
+    padding-top: 24px;
+    line-height: 0px;
+    text-align: center;
+}
+
+.last {
+    margin-top: 30px;
+    vertical-align: center;
+}
+
+.stop {
+    font-size: 18px;
+    color: rgb(60, 102, 231);
+    bottom: 25px;
+    text-align: center;
+}
+
+/*向下的三角形*/
+
+.triangle_border_down2 {
+    width: 0;
+    height: 0;
+    border-width: 56px 56px 0;
+    border-style: solid;
+    border-color: #ffffff transparent transparent;
+    margin: 0px auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* 第三章 */
+
+.banner3 {
+    width: 100%;
+    height: 600px;
+    background-color: rgb(93, 30, 208);
+    position: relative;
+    top: -17px;
+}
+
+.part {
+    position: relative;
+    top: 76px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 项目分布 */
+
+.top3 {
+    margin-top: -30px;
+    text-align: center;
+}
+
+.top3 span {
+    width: 316px;
+    height: 40px;
+    display: inline-block;
+    margin-top: -8px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 26px;
+    color: #ffffff;
+}
+
+.top3 img {
+    vertical-align: top;
+}
+
+/* 额度分布 */
+
+.amount {
+    width: 500px;
+    height: 120px;
+    margin-top: 40px;
+}
+
+.amount p {
+    margin-left: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.amount ul {
+    float: left;
+}
+
+.amount ul li {
+    float: left;
+    padding-top: 20px;
+    padding-left: 70px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.amount ul li span:last-child {
+    margin-left: 20px;
+}
+
+.zero {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.zero_1 {
+    background-color: rgb(255, 255, 0);
+}
+
+.zero_2 {
+    background-color: rgb(105, 253, 240);
+}
+
+.zero_3 {
+    background-color: rgb(255, 21, 76);
+}
+
+.zero_4 {
+    background-color: rgb(0, 238, 56);
+    margin-left: -20px;
+}
+
+.zero_5 {
+    background-color: rgb(248, 122, 81);
+}
+
+.zero_6 {
+    background-color: rgb(247, 214, 98);
+}
+
+.zero_7 {
+    background-color: rgb(51, 173, 227);
+}
+
+.zero_8 {
+    background-color: rgb(90, 234, 137);
+}
+
+/* 期限分布 */
+
+.term {
+    width: 500px;
+    height: 120px;
+    margin-top: 40px;
+}
+
+.term p {
+    margin-left: 20px;
+    margin-top: 6px;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.term ul {
+    float: left;
+}
+
+.term ul li {
+    float: left;
+    padding-top: 20px;
+    padding-left: 80px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.term ul li span:last-child {
+    margin-left: 20px;
+}
+
+/* 圆圈图 */
+
+.y_left {
+    width: 50%;
+    height: 250px;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+.y_left img {
+    width: 360px;
+    height: 220px;
+    margin: 30px auto;
+    margin-top: 30px;
+}
+
+.one {
+    font-size: 14px;
+    position: absolute;
+    top: 95px;
+    left: 137px;
+}
+
+.two {
+    font-size: 14px;
+    position: absolute;
+    top: 70px;
+    left: 382px;
+}
+
+.three {
+    font-size: 14px;
+    position: absolute;
+    top: 186px;
+    left: 252px;
+}
+
+.four {
+    font-size: 12px;
+    position: absolute;
+    top: 129px;
+    left: 455px;
+}
+
+.five {
+    font-size: 14px;
+    position: absolute;
+    top: 157px;
+    right: 283px;
+}
+
+.six {
+    font-size: 14px;
+    position: absolute;
+    top: 74px;
+    right: 379px;
+}
+
+.seven {
+    font-size: 14px;
+    position: absolute;
+    top: 233px;
+    right: 359px;
+}
+
+.eight {
+    font-size: 14px;
+    position: absolute;
+    top: 97px;
+    right: 179px;
+}
+
+.y_right {
+    width: 50%;
+    height: 250px;
+    float: right;
+    text-align: center;
+    position: relative;
+}
+
+.y_right img {
+    width: 290px;
+    height: 250px;
+    margin: 30px auto;
+}
+
+/*向下的三角形*/
+
+.triangle_border_down3 {
+    width: 0;
+    height: 0;
+    border-width: 56px 56px 0;
+    border-style: solid;
+    border-color: rgb(93, 30, 208) transparent transparent;
+    margin: 40px auto;
+    position: relative;
+    top: 96px;
+    z-index: 1;
+}
+
+/* 第四章 */
+
+.banner4 {
+    width: 1200px;
+    height: 2046px;
+    background-color: #ffffff;
+    position: relative;
+    top: 21px;
+    margin: 0 auto;
+}
+
+.fans {
+    position: relative;
+    top: 64px;
+}
+
+/* 我们的营粉 */
+
+.top4 {
+    text-align: center;
+    margin-top: -10px;
+}
+
+.top4 span {
+    width: 190px;
+    height: 40px;
+    display: inline-block;
+    margin-top: -8px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 26px;
+    color: rgb(60, 102, 231);
+}
+
+.top4 img {
+    vertical-align: top;
+}
+
+.table {
+    width: 482px;
+    height: 278px;
+    margin-top: 50px;
+    background: url("../images/table.png") no-repeat;
+}
+
+.common {
+    width: 162px;
+    height: 165px;
+    margin-left: 157px;
+    margin-top: 91px;
+    background: url(../images/common.png) no-repeat;
+}
+
+.rich {
+    width: 200px;
+    height: 100px;
+    margin-left: 60px;
+    margin-top: 125px;
+}
+
+.rich ul {
+    position: relative;
+}
+
+.rich ul li {
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    margin-left: 8px;
+}
+
+.rich ul li span:nth-child(2) {
+    margin-left: 26px;
+}
+
+.rich ul li span:last-child {
+    margin-left: 38px;
+}
+
+.bfm {
+    width: 15px;
+    height: 24px;
+    display: inline-block;
+    position: absolute;
+    top: 14px;
+    background: url("../images/girl.png") no-repeat;
+}
+
+.gfs {
+    width: 21px;
+    height: 22px;
+    display: inline-block;
+    position: absolute;
+    top: 64px;
+    background: url("../images/boy.png") no-repeat;
+}
+
+/* 营普金服最记录 */
+
+.top5 {
+    text-align: center;
+    margin-top: 140px;
+}
+
+.top5 span {
+    width: 234px;
+    height: 40px;
+    display: inline-block;
+    margin-top: -8px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 26px;
+    color: rgb(60, 102, 231);
+}
+
+.top5 img {
+    vertical-align: top;
+}
+
+.most ul {
+    width: 100%;
+}
+
+.most ul .up {
+    margin: 54px 123px;
+}
+
+.most ul .up img {
+    margin: 30px 49px;
+}
+
+.most ul .down {
+    margin-top: 40px;
+}
+
+.most ul .down img {
+    margin: 0 40px;
+}
+
+/* 趣闻二三事 */
+
+.top6 {
+    margin-top: 78px;
+    text-align: center;
+}
+
+.top6 span {
+    width: 316px;
+    height: 40px;
+    display: inline-block;
+    margin-top: -8px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 26px;
+    color: rgb(60, 102, 231);
+}
+
+.top6 img {
+    vertical-align: top;
+}
+
+.chat {
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* 第五章 */
+
+.banner5 {
+    width: 100%;
+    height: 970px;
+    background-color: #ffffff;
+    position: relative;
+    top: 194px;
+}
+
+.inn {
+    position: relative;
+}
+
+/* 营普客栈 */
+
+.top7 {
+    text-align: center;
+}
+
+.top7 span {
+    width: 470px;
+    height: 40px;
+    display: inline-block;
+    margin-top: -8px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 26px;
+    color: rgb(60, 102, 231);
+}
+
+.top7 img {
+    vertical-align: top;
+}
+
+.ticket {
+    width: 100%;
+    text-align: center;
+}
+
+.ticket p {
+    font-size: 18px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.down_most {
+    width: 22px;
+    height: 39px;
+    margin-top: 30px;
+}
+
+.ticket a {
+    color: rgb(60, 102, 231);
+    display: block;
+    margin-top: 20px;
+}
+
+.down_well {
+    /* width: 1241px;
+    height: 683px; */
+    margin-top: 6px;
+}
+
+/*向下的三角形*/
+
+.triangle_border_down4 {
+    width: 0;
+    height: 0;
+    border-width: 56px 56px 0;
+    border-style: solid;
+    border-color: #ffffff transparent transparent;
+    margin: 0 auto;
+    position: relative;
+    top: 0px;
+    z-index: 1;
+}
+
+/* 第六章 */
+
+.banner6 {
+    width: 100%;
+    height: 744px;
+    background-color: rgb(93, 30, 208);
+    position: relative;
+    top: 14px;
+}
+
+.hot {
+    position: relative;
+    top: 66px;
+}
+
+/* 热点活动 */
+
+.top8 {
+    margin-top: 140px;
+    text-align: center;
+}
+
+.top8 span {
+    width: 234px;
+    height: 40px;
+    display: inline-block;
+    margin-top: -8px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 26px;
+    color: #ffffff;
+}
+
+.top7 img {
+    vertical-align: top;
+}
+
+.heart {
+    width: 100%;
+}
+
+.heart ul {
+    padding-top: 20px;
+    text-align: center;
+    clear: both;
+    overflow: hidden;
+    width: 623px;
+    margin: 0 auto;
+}
+
+.heart li {
+    color: #ffffff;
+    float: left;
+    margin-left: 24px;
+}
+
+.heart li img {
+    margin-top: -6px;
+}
+
+/* 热点活动列表  */
+
+.heart_lists {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.heart_lists ul {
+    width: 100%;
+}
+
+.heart_lists1 {
+    margin-top: 130px;
+}
+
+.heart_lists1 img {
+    margin-left: 3px;
+}
+
+.heart_lists2 {
+    margin-top: 8px;
+}
+
+.heart_lists2 img {
+    margin-left: 3px;
+}
+
+.heart_lists3 {
+    margin-top: 8px;
+}
+
+.heart_lists3 img {
+    margin-left: 2px;
+}
+
+/*向下的三角形*/
+
+.triangle_border_down5 {
+    width: 0;
+    height: 0;
+    border-width: 56px 56px 0;
+    border-style: solid;
+    border-color: rgb(93, 30, 208) transparent transparent;
+    margin: 0px auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* 第七章 */
+
+.banner7 {
+    width: 100%;
+    height: 694px;
+    background-color: #ffffff;
+    position: relative;
+    top: 12px;
+}
+
+.lowest ul {
+    position: relative;
+    z-index: 2;
+}
+
+.lowest li {
+    float: left;
+    list-style: none;
+    text-align: center;
+    margin-top: 10px;
+    margin: 10px 83px 10px;
+}
+
+.lowest li .aside {
+    width: 200px;
+    height: 200px;
+    display: block;
+    list-style: none;
+    text-align: center;
+    margin: 6px auto;
+}
+
+.core {
+    width: 300px;
+    height: 300px;
+    display: block;
+    list-style: none;
+    text-align: center;
+    margin: 6px auto;
+    margin-top: -46px;
+}
+
+.tired {
+    height: 46px;
+    line-height: 46px;
+    margin-top: 58px;
+}
+
+.tired p {
+    text-align: center;
+}
+
+.bage {
+    width: 900px;
+    height: 320px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

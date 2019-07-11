@@ -1,0 +1,734 @@
+.top{
+	/*width: 100%;
+	height: 120px;
+	background: url(../img/nav-bg.jpg) no-repeat center;
+	 position:absolute;
+    z-index:5;
+    top:0;*/
+   width: 100%;
+    height: 110px;
+    background: url(../img/nav-bg.jpg) no-repeat center;
+    /* position: absolute; */
+    z-index: 5;
+    top: 0;
+}
+.top .logo{
+	margin-top: 35px;
+}
+.top .wel{
+	/* font-size: 18px; */
+	height: 110px;
+	/* line-height: 120px; */
+	margin-left: 10px;
+	/* color: #333; */
+}
+.top .wel img{
+	width:180px;
+	height:42px;
+	margin-top:32px;
+}
+.login{
+	width: 100%;
+    height: auto;
+    min-height: 625px;
+    background: url(../img/login-bg-1.jpg) no-repeat center;
+    overflow: auto;
+    top: 110px;
+    /* position: absolute; */
+    z-index: 10;
+    /* bottom: 163px; */
+    _height: 100%;
+    /* padding: 20px 0; */
+}
+.login .center{
+	/* position: relative; */
+	width:980px;
+	height:456px;
+	margin:0 auto;
+	background:#fff;
+	border-radius: 16px;
+	margin-top:85px;
+	box-shadow: -1px 2px 2px 2px #ffece2;
+}
+.login-box{
+	width: 458px;
+	height: 398px;
+	/* background: #fff; */
+	/* position: absolute;
+	top: 76px;
+	right: 0; */
+	border-radius: 16px;
+	/*box-shadow: -1px 2px 2px 2px #adacac;*/
+}
+.login-box .menu{
+	padding: 30px 34px 0;
+}
+.login-box .menu p.title{
+	width:100%;
+	margin:0 auto;
+	text-align: center;
+}
+.login-box .menu p.miaoshu{
+	font-size:14px;
+	color:#ff7352;
+	line-height:36px;
+	padding-left:286px;
+}
+.login-box form{
+	padding: 0 34px 30px 34px;
+}
+.login-box form .username,.login-box form .passward,.login-box form .verification-code,.account-control{
+	position: relative;
+	width: 362px;
+	height: 44px;
+	margin-bottom: 22px;
+}
+.login-box form .username input,.login-box form .passward input{
+	height: 100%;
+    width: 312px;
+    padding-left: 50px;
+    border: 1px solid #efefef;
+    outline: none;
+    font-size: 14px;
+    box-sizing: content-box;
+    height: 44px;
+    line-height: 44px;
+}
+.login-box form span.user-icon,.login-box form span.passward-icon{
+	display: inline-block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 44px;
+	height: 44px;
+	background: url(../img/login-user-icon.png) no-repeat center;
+	border-right: 1px solid #efefef;	
+}
+.login-box form span.passward-icon{
+	background: url(../img/login-pass.png) no-repeat center;
+}
+.login-box form span.passward-eye{
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 44px;
+	height: 44px;
+	background: url(../img/login-p-eye.png) no-repeat center;
+}
+.verification-code input{
+	width: 218px;
+	height: 44px;
+	line-height: 44px;
+	border: 1px solid #efefef;
+	padding-left: 10px;
+	outline: none;
+	color:#a1a1a1;
+}
+.verification-code .verification-pic{
+	display: inline-block;
+	width: 117px;
+	height: 43px;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.verification-code .verification-pic img{
+	width: 117px;
+	height: 43px;
+}
+.account-control input{
+	width: 14px;
+	height: 14px;
+	vertical-align: -2px;
+}
+.account-control{
+	line-height: 42px;
+	margin-bottom: 5px;
+	margin:0 auto;
+}
+.account-control label{
+	font-size: 14px;
+	color: #757575;
+}
+.account-control a{
+	color: #757575;
+	font-size: 14px;
+	display: inline-block;
+	text-align: right;
+	width: 284px;
+}
+.login-box form .login-btn{
+	width: 360px;
+	height: 50px;
+	background: url(../img/login-btnBg.png) no-repeat center;
+	border: none;
+	color: #fff;
+	font-size: 18px;
+	outline: none;
+}
+
+.bottom .footer-bottom{
+	width: 100%;
+    height: 141px;
+    background: #333333;
+    text-align: center;
+    padding-top: 23px;
+    color: #FFFFFF;
+    /* position: absolute; */
+    z-index: 200;
+    /* bottom: -295px; */
+   
+}
+/*注册页面css*/
+.top p.wel a{
+	display: inline-block;
+	width: 67px;
+	height: 37px;
+	color: #fff;
+	font-size: 18px;
+	background: #239afb;
+	border-radius: 6px;
+	margin-left: 10px;
+	line-height: 37px;
+    text-align: center;
+}
+.rejister-contain{
+	width: 100%;
+	/*height: 587px;*/
+	min-height: 628px;
+	 background: url(../img/login-bg-1.jpg) no-repeat center;
+	/* padding-top: 40px; */
+	overflow:auto;
+  /*  top:110px; */
+   /* position:absolute;*/
+    z-index:10;
+   /* bottom:163px; */
+    _height:100%;	
+    /* padding: 20px 0; */
+}
+.rejister-box{
+	width: 1080px;
+    height: 540px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    margin-top: 44px;
+    box-shadow: -1px 2px 2px 2px #ffece2;
+}
+.rejister-form{
+	width: 540px;
+	height: 540px;
+	display: block;
+}
+.rejister-form #reg{
+	width: 540px;
+	/* height: 540px; */
+	padding-top:20px;
+	display: block;
+}
+.rejister-form form div.msg{
+	width: 362px;
+	height: 44px;
+	border: 1px solid #dadada;
+	line-height: 44px;
+	font-size: 14px;
+	margin:0 auto;
+	margin-top:15px;
+}
+.rejister-form form div.msg.focus{
+	width: 361px;
+	height: 43px;
+	border: 2px solid #7fc6ff;
+	box-shadow: 1px 1px 3px 0px #7fc6ff;;
+}
+.rejister-form form div.vert .msg.focus{
+	width: 228px;
+	height: 42px;
+	border: 2px solid #7fc6ff;
+}
+.rejister-form form div.msg span.tit{
+	display: inline-block;
+	width: 83px;
+	height: 44px;
+	line-height: 44px;
+	margin-left: 14px;
+}
+.rejister-form form div.msg input{
+	border: none;
+	outline: none;
+	width: 250px;
+}
+/*.rejister-form form div.msg input::-webkit-input-placeholder{
+　　color: #000;
+}*/
+input::-webkit-input-placeholder{
+	color: #A1A1A1;
+}
+.rejister-form form div.vert{
+	width: 364px;
+	border: none;
+	margin:0 auto;
+}
+.rejister-form form div.vert .msg{
+	width: 230px;
+	height: 44px;
+	border: 1px solid #DADADA;
+}
+.rejister-form form div.vert .msg input{
+	width: 118px;
+}
+/*.rejister-form form div.msg.vert .vcode-pic{
+	width: 108px;
+	height: 44px;
+	display: inline-block;
+}*/
+.rejister-form form div.vert .vcode{
+	width: 107px;
+	height: 44px;
+	border: 1px solid #DADADA;
+	overflow: hidden;
+	margin-left: 22px;
+	cursor: pointer;
+	margin-top:15px;
+}
+.rejister-form form div.vert .vcode input{
+	border: none;
+	outline: none;
+	background: none;
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	cursor: pointer;
+}
+.rejister-form a.denglu{
+	display: block;
+	width:100%;
+	text-align: center;
+	font-size:14px;
+	color:#ff7352;
+	line-height:40px;
+}
+.rejister-form form div.msg.visit-code input{
+	width: 211px;
+}
+.rejister-form form div.msg.visit-code span.chioce{
+	color: #ff7352;
+}
+.account-control span{
+	color: #ff7352;
+}
+.rejister-form form .rejister-btn{
+	width: 364px;
+	height: 46px;
+	background: url(../img/login-btnBg.png) no-repeat center;
+	color: #fff;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	margin-left:90px;
+}
+
+/*右边图片*/
+.rejister-img{
+	width:540px;
+	height:540px;
+}
+.rejister-img img{
+	width:540px;
+	height:540px;
+}
+
+
+
+
+/*找回密码*/
+.find-passward-contain{
+	width: 100%;
+    /* height: 587px; */
+   min-height: 628px;
+    background: #F5F5F5;
+    padding-top: 40px;
+    top: 120px;
+    /*position: absolute;*/
+    z-index: 10;
+    bottom: 163px;
+    _height: 100%;
+    /* padding: 20px 0; */
+}
+
+.find-passward-t{
+	height: 88px;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+.find-passward-t h4{
+	padding-top: 6px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	color: #333;
+	font-weight: normal;
+}
+.find-passward-t p{
+	font-size: 14px;
+	color: #999;
+}
+.find-passward-t p span{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: url(../img/find-passward-tip.png) no-repeat center;
+	vertical-align: -1px;
+	margin-right: 10px;
+}
+.find-passward-box{
+	width: 752px;
+	height: 540px;
+	background: #fff;
+	margin: 0 auto;
+	box-shadow: 2px 5px 6px 1px #b5b4b4;
+}
+.find-passward-form{
+	width: 365px;
+	margin: 20px auto;
+}
+.find-passward-form form div.msg{
+	width: 362px;
+	height: 44px;
+	border: 1px solid #dadada;
+	line-height: 44px;
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+.find-passward-form form div.msg.focus{
+	width: 361px;
+	height: 43px;
+	border: 2px solid #7fc6ff;
+	box-shadow: 1px 1px 3px 0px #7fc6ff;;
+}
+.find-passward-form form div.vert .msg.focus{
+	width: 228px;
+	height: 42px;
+	border: 2px solid #7fc6ff;
+}
+.find-passward-form form div.msg span.tit{
+	display: inline-block;
+	width: 83px;
+	height: 44px;
+	line-height: 44px;
+	margin-left: 14px;
+}
+.find-passward-form form div.msg input{
+	border: none;
+	outline: none;
+	width: 250px;
+	background: none;
+}
+/*.rejister-form form div.msg input::-webkit-input-placeholder{
+　　color: #000;
+}*/
+input::-webkit-input-placeholder{
+	color: #A1A1A1;
+}
+.find-passward-form form div.vert{
+	width: 364px;
+	border: none;
+}
+.find-passward-form form div.vert .msg{
+	width: 230px;
+	height: 44px;
+	border: 1px solid #DADADA;
+}
+.find-passward-form form div.vert .msg input{
+	width: 118px;
+}
+/*.rejister-form form div.msg.vert .vcode-pic{
+	width: 108px;
+	height: 44px;
+	display: inline-block;
+}*/
+.find-passward-form form div.vert .vcode{
+	width: 107px;
+	height: 44px;
+	border: 1px solid #DADADA;
+	overflow: hidden;
+	margin-left: 22px;
+	cursor: pointer;
+}
+.find-passward-form form div.vert .vcode input{
+	border: none;
+	outline: none;
+	background: none;
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	cursor: pointer;
+}
+.find-passward-form form div.msg.visit-code input{
+	width: 211px;
+}
+.find-passward-form form div.msg.visit-code span.chioce{
+	color: #ff7352;
+}
+.account-control span{
+	color: #ff7352;
+}
+.find-passward-form form .sure-btn{
+	width: 364px;
+	height: 46px;
+	background: #FF8A27;
+	color: #fff;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.find-passward-form p.go-index{
+	width: 100%;
+	text-align: right;
+	height: 30px;
+	line-height: 30px;
+}
+.find-passward-form p.go-index a{
+	color: #FF7F01;
+}
+
+/*注册成功页*/
+.rejister-ok{
+	width: 100%;
+	text-align: center;
+	padding-top: 114px;
+	display: none;
+}
+.rejister-ok p span.ok{
+	display: inline-block;
+	width: 57px;
+	height: 57px;
+	background: url(../img/rejister-ok.png) no-repeat center;
+	vertical-align: middle;
+	margin-right: 18px;
+}
+.rejister-ok p{
+	font-size: 18px;
+	color: #333;
+}
+.rejister-ok p:nth-child(2){
+	margin-top: 54px;
+}
+.rejister-ok p:nth-child(3){
+	margin-top: 18px;
+}
+.rejister-ok p:nth-child(3) a{
+	display: inline-block;
+	width: 170px;
+	height: 46px;
+	background: #bababa;
+	line-height: 46px;
+	color: #fff;
+	
+}
+.rejister-ok p:nth-child(3) a.active{
+	background: #ff8a27;
+	margin-right: 10px;
+}
+.rejister-ok p:nth-child(3) a:hover{
+	background: #FF8A27;
+}
+.rejister-ok p.tip{
+	margin-top: 21px;
+    font-size: 14px;
+    color: #666;
+}
+
+/*遮罩层*/
+.black-overlay{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.4;
+	opacity:.40;
+	filter: alpha(opacity=40);
+}
+.open-fuyou{
+	/* display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -269px;
+	margin-top: -260px; */
+	width: 540px;
+	height: 540px;
+	z-index:1002;
+	overflow: auto;
+	/*box-shadow: 5px 5px 5px 0 #b5acac;*/
+}
+.open-fuyou .open-fuyou-tit{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: #FF8A27;
+	color: #fff;
+	font-size: 22px;
+}
+.open-fuyou .open-fuyou-tit .close{
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	background: url(../img/borrow-close.png) no-repeat center;
+	margin-top: -35px;
+	margin-left: 470px;
+	cursor: pointer;
+}
+.open-fuyou-form{
+	width: 100%;
+	text-align: center;
+}
+.open-fuyou-form p.title{
+	height: 60px;
+	line-height: 60px;
+	font-size: 14px;
+	color: #999;
+	padding-top:56px;
+}
+.open-fuyou-form p a{
+	color: #239afb;
+}
+.open-fuyou-form form{
+	width: 100%;
+}
+.open-fuyou-form form label{
+	margin-top: 14px;
+	height: 34px;
+	line-height: 34px;
+	display: block;
+	font-size: 14px;
+	color: #333;
+}
+.open-fuyou-form form label input,.open-fuyou-form form label select{
+	width: 228px;
+	height: 32px;
+	border: 1px solid #dedede;
+	margin-left: 14px;
+	padding-left: 8px;
+	color:#a1a1a1;
+}
+.open-fuyou-form form p.tip{
+	height: 26px;
+	line-height: 26px;
+	font-size: 12px;
+	color: #666;
+}
+.open-fuyou-form form p.tip span{
+	color: #ff0000;
+}
+
+.open-fuyou-form form label select.province{
+	width: 106px;
+}
+.open-fuyou-form form label select.city{
+	width: 106px;
+	margin-left: 10px;
+}
+p.ceping-text{
+	width:238px;
+	font-size:14px;
+	color:#666666;
+	line-height:24px;
+	margin:0 auto;
+	padding-bottom:54px;
+}
+/* 进行测评按钮 */
+a.open-ceping-btn{
+	display: block;
+	width: 298px;
+	height: 48px;
+	background: url(../img/open-fuyou-btnBg.png) no-repeat center;
+	color: #fff;
+	font-size: 18px;
+	margin:0 auto;
+	line-height:48px;
+}
+/*开通富有金账户按钮*/
+.open-fuyou-form form input.open-fuyou-btn{
+	width: 298px;
+	height: 48px;
+	border: none;
+	margin-top: 40px;
+	background: url(../img/open-fuyou-btnBg.png) no-repeat center;
+	color: #fff;
+	font-size: 18px;
+	outline: none;
+}
+.open-fuyou-form form input.open-fuyou-btn.active{
+	background: #FF8A27;
+	cursor: pointer;
+}
+
+/*开通富有成功弹框*/
+
+.open-fuyou-ok{
+	display: block;
+	
+	width: 540px;
+	height: 540px;
+	margin:0 auto;
+	text-align: center;
+	/*box-shadow: 5px 5px 5px 0 #b5acac;*/
+}
+
+.open-fuyou-ok .open-fuyou-tit .close{
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	background: url(../img/tip-close.png) no-repeat center;
+	margin-top: -35px;
+	margin-left: 470px;
+	cursor: pointer;
+}
+.open-fuyou-ok .open-fuyou-txt{
+	width: 100%;
+	text-align: center;
+	color: #333;
+	font-size: 16px;
+	padding-top: 36px;
+}
+.open-fuyou-ok p.title {
+	padding-top:176px;
+    font-size: 18px;
+    color: #333;
+}
+.open-fuyou-ok p.ceping-text{
+	 width: 238px;
+	font-size: 14px;
+	color: #666666;
+	line-height: 24px;
+	margin: 0 auto;
+	padding-bottom: 54px;
+	padding-top:54px;
+}
+.open-fuyou-ok span.ok{
+	 display: inline-block;
+	width: 57px;
+	height: 57px;
+	background: url(../img/rejister-ok.png) no-repeat center;
+	vertical-align: middle;
+	margin-right: 18px;
+}
+      
+.open-fuyou-ok .open-fuyou-txt p.open-ok{
+	margin-top: 16px;
+}
+.open-fuyou-ok .open-fuyou-txt p:last-child{
+	margin-top: 38px;
+}
+.open-fuyou-ok .open-fuyou-txt p:last-child span{
+	color: #ff0000;
+}

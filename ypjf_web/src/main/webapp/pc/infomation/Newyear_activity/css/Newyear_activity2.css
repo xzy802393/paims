@@ -1,0 +1,148 @@
+.activity-page{
+	width: 100%;
+	height: 100%;
+}
+.activity-page .head-banner{
+	width: 100%;
+	height: 781px;
+	background: url(../img/img2/images/banner-bg-1_01.jpg) no-repeat center;
+	text-align: center;
+	padding-top: 1px;	
+}
+.activity-page .head-banner h3{
+	margin-top: 296px;
+}
+.activity-page .head-banner .red{
+	margin-top: 40px;
+}
+.activity-page .head-banner .red span{
+	display: inline-block;
+	width: 72px;
+	height: 72px;
+	background: #e40000;
+	font-size: 42px;
+	color: #fff;
+	text-align: center;
+	line-height: 72px;
+	border-radius: 36px;
+	margin: 10px;
+	font-family: cursive;
+}
+.activity-page .head-banner .time{
+	font-size: 30px;
+	color: #fff000;
+	font-family: cursive;
+	margin-top: 30px;
+}
+.activity-page .choujiang{
+	width: 100%;
+	height: 1800px;
+	background: url(../img/img2/images/choujiang-bg_02.jpg) repeat-y center;
+	text-align: center;
+	position: relative;
+}
+.activity-page .choujiang .meihua1{
+	width: 350px;
+	height: 623px;
+	background: url(../img/img2/meihua1.png) no-repeat left;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.activity-page .choujiang .meihua2{
+	width: 445px;
+	height: 636px;
+	background: url(../img/img2/meihua2.png) no-repeat right;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.activity-page .choujiang .act-des{
+	padding-top: 124px;
+}
+.choujiang-box{
+	position: absolute;
+	width: 858px;
+	height: 858px;
+	/*top: 30px;*/
+	left: 50%;
+	margin-left: -429px;
+	z-index: 10;
+}
+
+.choujiang-box #luck table tr td{
+	position: relative;
+	z-index: 20;
+}
+.choujiang-box #luck table tr td .large{
+	display: none;
+	width: 495px;
+	height: 295px;
+	overflow: hidden;
+	position: absolute;
+	top: -278px;
+	left: -159px;
+	z-index: 99;
+}
+.choujiang-box #luck table tr td:hover .large{
+	display: block;
+}
+
+#record{
+	width: 100%;
+	height: 878px;
+	position: absolute;
+	top: 600px;
+	z-index: 9;
+	overflow: hidden;
+}
+#record marquee p{
+	margin-bottom: 100px;
+	display: inline-block;
+	padding: 30px;
+	height: 40px;
+	background: url(../img/img2/danmu-bg.png) no-repeat center;
+	background-size: contain;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	font-family: cursive;
+}
+
+.prize{
+	text-align: center;
+	margin-top: 990px;
+}
+.prize p{
+	text-align: center;
+	font-size: 18px;
+	color: #FF0000;
+	vertical-align: middle;
+}
+.prize p span{
+	font-size: 24px;
+	color: #ac0d00;
+	vertical-align: middle;
+}
+
+.invest{
+	margin-top: 60px;
+	text-align: center;
+}
+.invest .invest-btn{
+	display: block;
+	width: 487px;
+	height: 81px;
+	text-align: center;
+	line-height: 81px;
+	background: url(../img/img2/invest-btn.png) no-repeat center;
+	margin: 10px auto;
+	font-size: 26px;
+	color: #f0001a;
+}
+.bottom-banner{
+	width: 100%;
+    height: 658px;
+    background: url(../img/img2/bottom-banner.jpg) no-repeat center;
+}

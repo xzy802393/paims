@@ -1,0 +1,324 @@
+
+.platform-intro .company,.platform-intro .style{
+	margin: 50px auto 0;
+	text-align: center;
+}
+.platform-intro .tit{
+	margin-bottom: 40px;
+	text-align: center;
+}
+.platform-intro .main{
+	width: 100%;
+}
+.platform-intro .main .intro{
+	width: 504px;
+	margin: 50px 100px 50px 10px;
+}
+.platform-intro .main .intro p{
+	line-height: 35px;
+    text-align: justify;
+    font-size: 14px;
+    color: #666;
+}
+
+/*高管团队*/
+.platform-intro.bg{
+	width: 100%;
+	background: url(../../img/infomation/about_bg1.jpg) no-repeat center;
+	height: auto;
+	background-size: cover;
+	padding-top: 10px;
+}
+
+.platform-intro .team{
+	width: 100%;
+}
+.platform-intro .team .tit,.platform-intro .style .tit{
+	margin: 40px auto;
+}
+.team .main ul{
+	width: 90%;
+	margin: 0 auto;
+}
+.team .main ul li{
+	float: left;
+	width: 300px;
+	height: 350px;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 20px;
+}
+.team .main ul li:nth-child(2),.team .main ul li:nth-child(5){
+	margin: 0 70px;
+}
+.team .main ul li img{
+	width: 300px;
+	height: 330px;
+	overflow: hidden;
+}
+.team .main ul li .txt{
+	width: 300px;
+    height: 100px;
+    background: rgba(18,21,44,0.7);
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    padding: 0 12px;
+    border-top: 2px solid #CB5412;
+    overflow: hidden;
+}
+.team .main ul li .txt h3{
+	color: #CB5412;
+    font-size: 24px;
+    font-weight: 100;
+    margin: 18px 0 10px 0;
+}
+.team .main ul li .txt h4{
+	color: #fff;
+    font-size: 14px;
+    font-weight: 100;
+}
+.team .main ul li .txt p{
+	color: #fff;
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid #CB5412;
+    padding-left: 20px;
+    padding-right: 30px;
+    text-align: justify;
+    display: none;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/*公司风采*/
+.platform-intro .style{
+	margin-top: 100px;
+}
+
+.poster-main {
+  width: 1000px;
+  height: 430px;
+  position: relative;
+  margin: 0 auto;
+}
+.poster-main a, .poster-main img { display: block; width: 100%;}
+.poster-main .poster-list {
+  width: 1000px;
+  height: 430px;
+}
+.poster-main .poster-list .poster-item {
+  width: 200px;
+  height: 430px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.poster-main .poster-btn {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+.poster-main .poster-prev-btn {
+  left: 0;
+  background: url(../../img/infomation/left.png) no-repeat center center;
+}
+.poster-main .poster-next-btn {
+  right: 0;
+  background: url(../../img/infomation/right.png) no-repeat center center;
+}
+
+/*证照荣誉*/
+.platform-intro.cert{
+	width: 100%;
+	margin: 60px auto;
+	background: url(../../img/infomation/about_bg2.jpg) no-repeat center;
+	padding-top: 10px;
+}
+.platform-intro.cert .tit{
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+/*body {
+  background-color: #eaeaea;
+  font-family: 'Roboto';
+}*/
+
+.center-block, .carrousel, .carrousel .wrapper {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.gallery {
+  list-style: none;
+  overflow: hidden;
+  height: 300px;
+}
+
+.portrait {
+  width: 180px;
+  box-shadow: 0 0 3px #555;
+  background-color: #FFF;
+  padding: 5px;
+  margin: 7px 0px 0px 7px;
+  text-align: center;
+  cursor: pointer;
+  float: left;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  /*-webkit-filter: grayscale(100%);
+  filter: grayscale(100%);*/
+}
+
+.portrait:hover {
+  -moz-transform: scale(1.04, 1.04);
+  -ms-transform: scale(1.04, 1.04);
+  -webkit-transform: scale(1.04, 1.04);
+  transform: scale(1.04, 1.04);
+  box-shadow: 0 0 5px #555;
+  /*-webkit-filter: grayscale(0%);
+  filter: grayscale(0%);*/
+}
+.portrait .pic {
+  width: 100%;
+  margin: 5px 0;
+}
+.portrait:nth-child(2),.portrait:nth-child(3),.portrait:nth-child(4),.portrait:nth-child(5){
+	margin-top: 70px;
+	
+}
+
+/*.portrait .date {
+  font-size: 10px;
+  font-weight: bold;
+}
+.portrait .foot {
+  font-size: 11px;
+}
+.portrait .foot .heart {
+  margin-left: 4px;
+}*/
+
+.carrousel {
+  position: fixed;
+  background-color: rgba(10, 10, 10, 0.4);
+  display: none;
+  z-index: 1000;
+}
+.carrousel .wrapper {
+  width: 800px;
+  /*height: 800px;*/
+  overflow: hidden;
+  /*.loading{
+    color: #FFF;
+    font-size: 24px;
+    margin: 40% 40%;
+    display: none;
+  }*/
+}
+.carrousel .wrapper img {
+  /*width: 70%;*/
+  margin: 100px auto;
+  margin-left: 15%;
+}
+/*.carrousel .wrapper:nth-child(1) img,.carrousel .wrapper:nth-child(5) img{
+	width: 70%;
+	margin-left: 15%;
+}*/
+
+
+.close {
+   display: block;
+   width: 22px;
+   height: 22px;
+   background: url(../../img/borrow-close.png) no-repeat center;
+  cursor: pointer;
+  color: #FFF;
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  font-size: 18px;
+}
+.close:hover {
+  font-size: 20px;
+  color: #DDD;
+}
+
+
+/*分公司*/
+.platform-intro.control{
+	width: 100%;
+}
+.platform-intro.control .tit{
+	margin: 30px auto 60px;
+	text-align: center;
+}
+.platform-intro.control ul{
+	width: 100%;
+}
+.platform-intro.control ul li{
+	float: left;
+	width: 352px;
+	padding: 10px;
+	border: 1px solid #b6b6b6;
+	/*height: 270px;*/
+}
+.platform-intro.control ul li:nth-child(2){
+	margin: 0 22px;
+}
+.platform-intro.control ul li img{
+	width: 100%;
+	display: block;
+}
+
+/*联系方式*/
+.platform-intro.contact{
+	width: 100%;
+	background: url(../../img/infomation/about_bg3.jpg) no-repeat center;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	margin-top: 50px;
+	margin-bottom: 60px;
+}
+.platform-intro.contact .tit{
+	margin-top: 60px;
+}
+.platform-intro.contact .main{
+	width: 100%;
+}
+.platform-intro.contact .main .contact-info{
+	width: 580px;
+	float: left;
+	color: #838383;
+	font-size: 14px;
+	text-align: center;
+}
+.platform-intro.contact .main .contact-info p.tel span{
+	display: inline-block;
+    width: 45px;
+    height: 45px;
+    background: url(../../img/infomation/dz.png) no-repeat -50px;
+}
+.platform-intro.contact .main .contact-info p.map span{
+	display: inline-block;
+    width: 45px;
+    height: 45px;
+    background: url(../../img/infomation/dz.png) no-repeat -160px;
+}
+.platform-intro.contact .main .contact-map {
+	float: left;
+}
+.platform-intro.contact .main .contact-info p{
+	margin-top: 30px;
+}
+.platform-intro.contact .main .contact-info p.map{
+	margin-top: 60px;
+}
+

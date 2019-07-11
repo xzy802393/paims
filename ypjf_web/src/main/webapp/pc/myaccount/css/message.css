@@ -1,0 +1,180 @@
+	.message-contain{
+	margin-left: 30px;
+	width: 938px;
+}
+.message-contain h3{
+	font-size: 16px;
+	font-weight: normal;
+}
+.message-contain .tab-menu{
+	margin-top: 28px;
+}
+.message-contain .tab-menu li{
+	float: left;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	cursor: pointer;
+	position: relative;
+}
+.message-contain .tab-menu li.active{
+	border-bottom: 2px solid #FF7F01;
+	color: #FF7F01;
+	font-weight: bold;
+}
+.message-contain .tab-menu li span{
+	display: inline-block;
+	position: absolute;
+	font-size: 12px;
+	color: #ff0000;
+	font-weight: normal;
+	top: -8px;
+}
+.message-contain .tab-menu li.active span{
+	display: none;
+}
+
+/*邮箱列表*/
+.message-box{
+	width: 100%;
+	margin-bottom: 30px;
+}
+.message-box .message-fun{
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+}
+.message-box input[type="checkbox"]{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin-left: 20px;
+	margin-right: 16px;
+	vertical-align: -3px;
+}
+.message-box input[type="button"]{
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 14px;
+	cursor: pointer;
+}
+.message-box input[type="button"]:hover{
+	color: #FF7F01;
+}
+.message-list ul{
+	width: 100%;
+}
+.message-list ul li{
+	margin-bottom: 14px;
+}
+.message-list ul li div.message-title{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background: #F5F5F5;
+	color: #333;
+	font-size: 13px;
+}
+.message-list ul li div.message-title:hover,.message-list ul li div.message-title:hover a,.message-list ul li div.message-title:hover span input{
+	color: #FF7F01;
+	cursor: pointer;
+}
+.message-list ul li div.message-content{
+	width: 936px;
+	border: 1px solid #ddd;
+	border-top: 0;
+	padding-top: 14px;
+	display: none;
+}
+.message-list ul li div.message-content p{
+	width: 712px;
+	line-height: 22px;
+	margin-left: 90px;
+	/*margin-top: 14px;*/
+	margin-bottom: 14px;
+	color: #666;
+}
+.message-list ul li span{
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	/*vertical-align: 7px;*/
+}
+.message-list ul li span.open{
+	display: inline-block;
+	width: 18px;
+	height: 20px;
+	background: url(../../img/account/msg-icon2.png) no-repeat center;
+	margin-right: 13px;
+	vertical-align: -5px;
+}
+.message-list ul li span.unread{
+	display: inline-block;
+	width: 18px;
+	height: 20px;
+	background: url(../../img/account/msg-icon.png) no-repeat center;
+	margin-right: 13px;
+	vertical-align: -5px;
+}
+.message-list ul li span.title{
+	display: inline-block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	/*overflow: hidden;*/
+	width: 570px;
+	
+}
+.message-list ul li span.title a{
+	color: #333;
+	/*display: inline-block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 570px;*/
+}
+.message-list ul li span.time{
+	margin-left: 42px;
+	margin-right: 42px;
+}
+.message-list ul li input[type="button"]{
+	margin: 0 14px;
+}
+
+/*翻页样式*/
+.page-list{
+	width: 100%;
+	text-align: center;
+}
+.page-list a{
+	display: inline-block;
+	padding: 8px 12px;
+	font-size: 12px;
+	border: 1px solid #aaa;
+	margin-left: 10px;
+	cursor: default;
+}
+.page-list a.active{
+	background: #ff7200;
+	border: none;
+	padding: 9px 13px;
+	color: #fff;
+}
+.page-list a.on{
+	color: #aaa;
+}
+.page-list a:hover{
+	background: #FF7200;
+	border: none;
+	padding: 9px 13px;
+	color: #fff;
+}
+
+button{
+	width: 108px;
+	height: 25px;
+	float: right;
+	margin-right: 20px;
+}

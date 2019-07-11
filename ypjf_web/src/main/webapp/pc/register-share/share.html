@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    
+    <title>下载九趣贷APP</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="../css/safe.css"/>-->
+   <style type="text/css">
+   		.share-head,.share-box,.share-activity{
+   			text-align: center;
+   		}
+   		.share-head img,.share-box img,.share-activity img{
+   			display: block;
+   			margin: 0 auto;
+   			width: 100%;
+   		}
+   		.share-box{
+   			position: relative;
+   		}
+   		.input-box{
+   			position: absolute;
+   			top: -10px;  			
+    		width: 100%;
+    		text-align: center;
+
+   		}
+   		.input-box input{
+   			display: block;
+   			height: 4rem;
+   			width: 60%;
+   			margin: 10px auto;
+   			border-radius: 6px;
+   			outline: none;
+   			font-size: 1.5rem;
+   		}
+   		.input-box input.phone{
+   			padding-left: 6px;
+   		}
+   		.input-box input.getbtn{
+   			background: url(img/share/btn-bg.png) no-repeat center;
+   			color: #FF3C4A;
+   			font-weight: 700;
+   		}
+   		.input-box .text{
+   			font-size: 1.5rem;
+   			color: #fff;
+   		}
+   		.input-box .text span{
+   			color: #fcfe02;
+   		}
+   </style>
+</head>
+<body>
+	<div class="share-head">
+		<!--<img src="img/share/images/share-1.jpg"/>-->
+		<img src="img/share/images/share-1888_01.jpg"/>
+	</div>
+	<div class="share-box">
+		<img src="img/share/images/share-2.png"/>
+		<div class="input-box">
+			<input type="text" class="phone" name="phone" id="" placeholder="请输入手机号" required="required"/>
+			<input type="button" class="getbtn" id="getBtn" value="立即领取"/>
+			<div class="text">
+				<p><span id="phonenum">15229074105</span>为您推荐</p>
+				<p>九趣贷  贷快乐，更贷梦想</p>
+			</div>
+		</div>
+		
+	</div>
+	<div class="share-activity">
+		<!--<img src="img/share/images/share-3.jpg"/>-->
+		<img src="img/share/images/share-1888-4_03.jpg"/>
+	</div>
+	
+</body>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/layer-v3.0.3/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#getBtn").on('click',function(){
+			if($('input[name="phone"]').val()==null||$('input[name="phone"]').val()==''){
+				layer.msg('手机号不能为空');
+				return false;
+			}
+			location.href='share_register.html?phone='+$('input[name="phone"]').val()+'&inviteCode='+queryString('inviteCode');
+		});
+
+      $('#phonenum').text(queryString('inviteCode'));
+	});
+
+
+  function queryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r =window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+</script>
+</html>

@@ -1,0 +1,145 @@
+<#escape x as x?html>
+
+    <script type="text/javascript" src="${ctx}/js/activity/activity.js"></script>
+
+    <script type="text/javascript">
+
+        $('.date-picker').datepicker({
+            autoclose: true,
+            format: 'yyyy-mm-dd',
+            language: 'zh-CN',
+            todayBtn: 'linked',
+            startDate:new Date(2014,10,27),
+            endDate:'+6000d',
+            startDate: '-6000d',
+        }).next().on(ace.click_event, function(){
+            // $(this).prev().focus();
+        });
+
+    </script>
+    <!-- /.page-header -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="operate panel panel-default" style="height:65px;">
+                <div class="panel-body">
+                    <div class="pull-left">
+                        <form class="form-horizontal" name="searchForm" id="searchForm" action="${ctx}/system/pointsMall/list" role="form">
+                            <input type="hidden" name="pageIndex" id="pageIndex" value="${(returnDatas.page.pageIndex)!'1'}"/>
+                            <input type="hidden" name="sort" id="page_sort" value="${(returnDatas.page.sort)!'desc'}"/>
+                            <input type="hidden" name="order" id="page_order" value="${(returnDatas.page.order)!'id'}"/>
+
+                            <label for="search_userName"><b>商品名称:</b></label>
+                            <input type="text" id="search_userName"  name="name" placeholder="请填写用户名称"  value="${(returnDatas.queryBean.name)!''}">
+                            <label for="search_startTime"><b>&nbsp;上架时间:</b></label>
+                            <input name="dateStart"  class="date-picker"  style="width:100px;" id="search_startTime" value="${(returnDatas.queryBean.dateStart)!''}"  type="text"/>
+                            -
+                            <label for="search_endTime"><b></b></label>
+                            <input name="dateEnd"  class="date-picker"  style="width:100px;" id="search_endTime" value="${(returnDatas.queryBean.dateEnd)!''}"  type="text"/>
+
+                            <a  href="javascript:mySubmitForm('searchForm');"
+                                class="btn btn-purple btn-sm">
+                                查询 <i class="ace-icon fa fa-search icon-on-right bigger-10"></i>
+                            </a>
+                        </form>
+                    </div>
+
+                    <div class="pull-right">
+                    <@shiro.hasPermission name="/system/pointsMall/update" >
+                    <button onclick="myhref('${ctx}/system/pointsMall/update/pre');" class="btn  btn-sm  btn-primary">
+                        添加
+                    </button>
+                </@shiro.hasPermission>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <!--start_export-->
+                <table id="listDataTable" border="1" class="table table-striped table-bordered table-hover">
+                    <!--end_no_export-->
+                    <!--first_start_export-->
+                    <thead>
+                    <tr>
+                        <!--first_start_no_export-->
+                        <th>操作</th>
+                        <!--first_end_no_export-->
+                        <th>商品名</th>
+                        <th>商品类型</th>
+                        <th>商品图片</th>
+                        <th>商品缩图</th>
+                        <th>所需积分</th>
+                        <th>商品状态</th>
+                        <th>商品描述</th>
+                        <th>权重</th>
+                        <th>添加时间</th>
+                    </tr>
+                    </thead>
+                    <!--first_end_export-->
+
+                    <!--start_export-->
+                    <tbody>
+
+                    <#if (returnDatas.data??)&&(returnDatas.data?size>0)>
+                        <#list returnDatas.data as _data>
+
+                            <tr class="" id="item_${(_data.id)}">
+                                <!--start_no_export-->
+
+                                <td>
+                                    <div class="hidden-sm hidden-xs btn-group">
+                                        <button class="btn btn-xs btn-info"
+                                                onclick="myhref('${ctx}/system/pointsMall/update/pre?id=${(_data.id)!''}');">
+                                            <i class="ace-icon fa fa-pencil bigger-120"></i>
+                                        </button>
+                                        <button class="btn btn-xs btn-danger"
+                                                onclick="mydelete('${ctx}/system/pointsMall/delete?id=${(_data.id)!''}','${ctx}/system/pointsMall/list',null,'确认删除？');">
+                                            <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                        </button>
+                                    </div>
+                                </td>
+            <!--end_no_export-->
+            <td >
+                ${(_data.goodsName)!''}
+            </td>
+            <td >
+                ${(_data.name)!''}
+            </td>
+            <td >
+                <img src="${(_data.logo)!''}" style="width: auto; height: 30px;" />
+            </td>
+            <td >
+                <img src="${(_data.smLogo)!''}" style="width: auto; height: 30px;" />
+            </td>
+            <td >
+                ${(_data.points)!''}
+            </td>
+            <td >
+                ${(((_data.getMoney)!0)==1)?string('下架', '上架')}
+            </td>
+            <td >
+                ${(_data.goodsDesc)!''}
+            </td>
+            <td >
+                ${(_data.goodsCount)!''}
+            </td>
+            <td >
+                ${(_data.addTime)!''}
+            </td>
+            </tr>
+            </#list>
+            </#if>
+            </tbody>
+            </table>
+            <!--end_export-->
+        </div>
+        <!-- /.span -->
+    </div>
+    <#if returnDatas.page??>
+        <@h.pagetoolbar page=returnDatas.page formId='searchForm' />
+    </#if>
+    </div>
+    </div>
+    <!-- /.main-container -->
+</#escape>

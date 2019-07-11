@@ -1,0 +1,195 @@
+<#escape x as x?html>
+
+<script type="text/javascript" src="${ctx}/js/activity/activity.js"></script>
+
+<script type="text/javascript">
+
+function deleteActivity(){
+	var id=jQuery("#id").val();
+	if(!id||id==""){
+		myalert("请选择你要删除的记录");
+		return;
+	}else{
+		var _url="${ctx}/activity/delete?id="+id;
+		var listurl="${ctx}/activity/list";
+		mydelete(_url,listurl);
+	}
+}
+
+$('.date-picker').datepicker({
+    autoclose: true,
+    format: 'yyyy-mm-dd',
+    language: 'zh-CN',
+    todayBtn: 'linked',
+    startDate:new Date(2014,10,27),
+    endDate:'+6000d',
+    startDate: '-6000d',
+}).next().on(ace.click_event, function(){
+   // $(this).prev().focus();
+});
+var gId;
+function edit(id, content) {
+    if (!!id) {
+        gId = id;
+
+        layer.open({
+            title : '修改备注',
+            type : 1,
+            content : '<div style="width: 100%; height: 100%;"><div style="width: 80%; height: 60%; margin: 0px 10%; padding: 50px 0;">'
+            + '<textarea style="width: 100%; height: 100%;" onkeyup="recordInput(this)" name="edit_desc" maxLength="255">' + content + '</textarea></div>'
+            + '<div style="width: 80%; padding: 20px 10%;" margin: 20px 0;>'
+            + '<button style="background: #438EB9; border: none; margin-left: 60%; color: #fff; padding: 8px 25px;" value="提交" onclick="submit()">提交</button></div></div>',
+            area : ['30%', '50%']
+        });
+    }
+}
+
+
+function submit() {
+    $.post('${ctx}/system/activity/worldcup/2018/user_bonus/remark', { remark : recordedInput || undefined, id : gId }, function(data) {
+        layer.closeAll();
+        if (data.status == 'success') {
+            layer.msg('添加备注成功!');
+            $('#item_' + gId).find('.ellipsis').html(recordedInput);
+        } else {
+            layer.msg('添加备注失败!');
+        }
+    }, 'json')
+}
+
+var recordedInput = '';
+function recordInput(ele) {
+    recordedInput = $(ele).val();
+}
+
+
+</script>
+
+
+	
+
+<!-- /.page-header -->
+
+<div class="row">
+    <div class="col-xs-12">
+<div class="operate panel panel-default" style="height:65px;">
+	<div class="panel-body">
+		<div class="pull-left">
+ <form class="form-horizontal" name="searchForm" id="searchForm" action="${ctx}/system/activity/worldcup/2018/user_bonus" role="form">
+            <input type="hidden" name="pageIndex" id="pageIndex" value="${(returnDatas.page.pageIndex)!'1'}"/>
+            <input type="hidden" name="sort" id="page_sort" value="${(returnDatas.page.sort)!'desc'}"/>
+            <input type="hidden" name="order" id="page_order" value="${(returnDatas.page.order)!'id'}"/>
+			<!--<label for="search_state"><b>是否可用:</b></label> -->
+			 <!--<select id="search_state" name="state" class="col-10" >-->
+				<!--<option value="是">是</option>-->
+				<!--<option value="否">否</option>-->
+			<!--</select>-->
+     <label for="search_userName"><b>用户名称:</b></label>
+     <input type="text" id="search_userName"  name="name" placeholder="请填写用户名称"  value="${(returnDatas.queryBean.name)!''}">
+     <label for="search_projectName"><b>手机号:</b></label>
+     <input type="text" id="search_projectName"  name="phone" placeholder="请填写手机号"  value="${(returnDatas.queryBean.phone)!''}">
+     <label for="search_startTime"><b>&nbsp;竞猜时间:</b></label>
+     <input name="dateStart"  class="date-picker"  style="width:100px;" id="search_startTime" value="${(returnDatas.queryBean.dateStart)!''}"  type="text"/>
+     -
+     <label for="search_endTime"><b></b></label>
+     <input name="dateEnd"  class="date-picker"  style="width:100px;" id="search_endTime" value="${(returnDatas.queryBean.dateEnd)!''}"  type="text"/>
+
+     <a  href="javascript:mySubmitForm('searchForm');"
+				class="btn btn-purple btn-sm">
+					查询 <i class="ace-icon fa fa-search icon-on-right bigger-10"></i>
+				</a>
+
+</form>
+		</div>
+		<div class="pull-right">
+			    <@shiro.hasPermission name="/system/activity/worldcup/2018/user_bonus/export" >
+				  <button onclick="myexport('searchForm','${ctx}/system/activity/worldcup/2018/user_bonus/export');" class="btn  btn-sm  btn-primary">
+                      
+                        导出
+                    </button>
+		    	</@shiro.hasPermission>
+
+			
+		</div>
+	</div>
+</div>
+
+   <div class="row">
+            <div class="col-xs-12">
+	            <!--start_export-->
+                <table id="listDataTable" border="1" class="table table-striped table-bordered table-hover">
+                    <!--end_no_export-->
+                    <!--first_start_export-->
+                    <thead>
+                    <tr>
+                        <!--first_start_no_export-->
+                        <th>操作</th>
+                        <!--first_end_no_export-->
+						<th>用户名</th>
+						<th>手机号</th>
+						<th>竞猜比赛</th>
+						<th>竞猜时间</th>
+						<th>是否获奖</th>
+						<th>奖金</th>
+                        <th>备注</th>
+                    </tr>
+                    </thead>
+                    <!--first_end_export-->
+
+                    <!--start_export-->
+                    <tbody>
+           
+				   <#if (returnDatas.data??)&&(returnDatas.data?size>0)>
+					 <#list returnDatas.data as _data>
+
+                            <tr class="" id="item_${(_data.id)}">
+                                <!--start_no_export-->
+                               <td>
+                                    <div class="hidden-sm hidden-xs btn-group">
+                                        <@shiro.hasPermission name="/system/activity/worldcup/2018/user_bonus/remark" >
+                                        <button class="btn btn-xs btn-info"
+                                                onclick="edit(${(_data.id)}, '<#if (_data.remark)??>${(_data.remark)?replace('\n', '')}</#if>')">
+                                            <i class="ace-icon fa fa-pencil bigger-120"></i>
+                                        </button>
+                                    </@shiro.hasPermission>
+                                    </div>
+                                </td>
+                                <!--end_no_export-->
+
+							<td >
+								${(_data.realName)!''}
+							</td>
+							<td >
+								${(_data.phone)!''}
+							</td>
+							<td >
+								${(_data.matchTeams)!''}
+							</td>
+                                <td >
+                                    ${(_data.guessTime)!'0'}
+                                </td>
+                                <td >
+                                    ${(((_data.getMoney)!0)==0)?string('否', '是')}
+                                </td>
+                                <td >
+                                    ${(_data.getMoney)!'0'}
+                                </td>
+                                <td class="ellipsis">
+                                    ${(_data.remark)!''}
+                                </td>
+						</tr>
+					</#list>
+					 </#if>
+                    </tbody>
+                </table>
+                <!--end_export-->
+            </div>
+            <!-- /.span -->
+        </div>
+        <#if returnDatas.page??>	
+            <@h.pagetoolbar page=returnDatas.page formId='searchForm' />
+         </#if>
+    </div>
+</div>
+<!-- /.main-container -->
+</#escape>

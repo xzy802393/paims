@@ -1,0 +1,568 @@
+/* css reset */
+body,section,h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dd,th,td { 
+	margin: 0;
+	padding: 0;  
+}  
+
+a{
+	text-decoration: none;
+}
+img { 
+	border: none;
+	vertical-align: middle;
+} 
+ul {
+	list-style: none; 
+}
+.clearFix:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.clearFix{
+	zoom:1;
+}
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html { overflow-y: scroll; }
+
+
+body{
+	width:100%;
+	text-align: center;
+	color:#000;
+	max-width:1920px;
+	min-width:1400px;
+	margin:0 auto;
+}
+
+
+#content{
+	max-width:1920px;
+	min-width:1400px;
+	margin:0 auto;
+	position: relative;
+}
+#content .top{
+	width:100%;
+	height:890px;
+	background: url(../img/top.png) no-repeat 0 0;
+	background-size: 100% 100%;
+	padding-top:60px;
+}
+#content .center{
+	width:100%;
+	height:2319px;
+	background: url(../img/center.png) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+#content .bottom{
+	width:100%;
+	height:1601px;
+	background: url(../img/bottom.png) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+
+
+#content .top .banner{
+	width:925px;
+	height:894px;
+	background: url(../img/titleBg.png) no-repeat 0 0;
+	margin:0 auto;
+}
+#content .top .banner .title{
+	width:509px;
+	height:424px;
+	margin:0 auto;
+	padding-top:254px;
+}
+
+#content .center .jiangpin{
+	width:1247px;
+	height:2311px;
+	background: url(../img/jiangpinBg.png) no-repeat 0 0;
+	margin:0 auto;
+}
+#content .center .jiangpin li{
+	display: inline-block;
+}
+#content .center .jiangpin .list1{
+	width:1032px;
+	height:506px;
+	margin:0 auto;
+	padding-top:176px;
+}
+#content .center .jiangpin .list1 li{
+	width:433px;
+	height:453px;
+}
+#content .center .jiangpin .list1 li:nth-of-type(1){
+	margin-right:134px;
+}
+#content .center .jiangpin .list1 li:nth-of-type(2) img{
+	width:308px;
+	height:330px;
+}
+#content .center .jiangpin .list1 li:nth-of-type(1) img{
+	width:342px;
+	height:330px;
+}
+
+#content .center .jiangpin .list1 li .text{
+	
+	font:18px/50px "微软雅黑";
+	border-bottom:1px dashed #36af9e;
+	border-top:1px dashed #36af9e;
+	margin-top:30px;
+}
+#content .center .jiangpin .list1 li .price{
+	font:bold 14px/66px "微软雅黑";
+	color: #f88d01;
+}
+#content .center .jiangpin .list1 li .money{
+	font:bold 18px/18px "微软雅黑";
+	color: #f88d01;
+}
+
+
+/* 奖品2 */
+#content .center .jiangpin .list2{
+	width:1032px;
+	height:410px;
+	margin:0 auto;
+	padding-top:84px;
+}
+#content .center .jiangpin .list2 li{
+	width:298px;
+	height:319px;
+}
+#content .center .jiangpin .list2 li:nth-of-type(1),
+#content .center .jiangpin .list2 li:nth-of-type(2){
+	margin-right:46px;
+}
+#content .center .jiangpin .list2 li img{
+	width:164px;
+	height:227px;
+}
+#content .center .jiangpin .list2 li .yedeng{
+	width:276px;
+	height:203px;
+}
+#content .center .jiangpin .list2 li .text{
+	
+	font:18px/36px "微软雅黑";
+	border-bottom:1px dashed #36af9e;
+	border-top:1px dashed #36af9e;
+	margin-top:30px;
+}
+#content .center .jiangpin .list2 li .price{
+	font:bold 14px/66px "微软雅黑";
+	color: #f88d01;
+}
+#content .center .jiangpin .list2 li .money{
+	font:bold 18px/18px "微软雅黑";
+	color: #f88d01;
+}
+
+
+
+/* 奖品3 */
+#content .center .jiangpin .list3{
+	width:1032px;
+	height:444px;
+	margin:0 auto;
+	padding-top:127px;
+}
+#content .center .jiangpin .list3 li:nth-of-type(1){
+	width:353px;
+}
+#content .center .jiangpin .list3 li{
+	width:294px;
+	height:286px;
+}
+#content .center .jiangpin .list3 li:nth-of-type(1),
+#content .center .jiangpin .list3 li:nth-of-type(2){
+	margin-right:30px;
+}
+#content .center .jiangpin .list3 li .chouzhi{
+	width:198px;
+	height:194px;
+}
+#content .center .jiangpin .list3 li .cheng{
+	width:227px;
+	height:197px;
+}
+#content .center .jiangpin .list3 li .jingdongka{
+	width:248px;
+	height:157px;
+}
+/* #content .center .jiangpin .list3 li .yedeng{
+	width:276px;
+	height:203px;
+} */
+#content .center .jiangpin .list3 li .text{
+	
+	font:18px/36px "微软雅黑";
+	border-bottom:1px dashed #36af9e;
+	border-top:1px dashed #36af9e;
+	margin-top:30px;
+}
+#content .center .jiangpin .list3 li .price{
+	font:bold 14px/66px "微软雅黑";
+	color: #f88d01;
+}
+#content .center .jiangpin .list3 li .money{
+	font:bold 18px/18px "微软雅黑";
+	color: #f88d01;
+}
+
+/* 奖品4 */
+#content .center .jiangpin .list4{
+	width:1032px;
+	height:444px;
+	margin:0 auto;
+	padding-top:127px;
+}
+#content .center .jiangpin .list4 li{
+	width:298px;
+	height:276px;
+}
+#content .center .jiangpin .list4 li:nth-of-type(1),
+#content .center .jiangpin .list4 li:nth-of-type(2){
+	margin-right:30px;
+}
+
+#content .center .jiangpin .list4 li img{
+	width:248px;
+	height:157px;
+}
+#content .center .jiangpin .list4 li .text{
+	
+	font:18px/36px "微软雅黑";
+	border-bottom:1px dashed #36af9e;
+	border-top:1px dashed #36af9e;
+	margin-top:30px;
+}
+#content .center .jiangpin .list4 li .price{
+	font:bold 14px/66px "微软雅黑";
+	color: #f88d01;
+}
+#content .center .jiangpin .list4 li .money{
+	font:bold 18px/18px "微软雅黑";
+	color: #f88d01;
+}
+
+
+
+/* bottom */
+#content .bottom .title{
+	width:705px;
+	height:120px;
+	margin:0 auto;
+}
+#content .bottom .title h1{
+	width:705px;
+	height:131px;
+	background: url(../img/cishu.png) no-repeat 0 0;
+	background-size: cover;
+}
+#content .bottom .title h1 .miaoshu{
+	padding-top:70px;
+	font:bold 36px/36px "微软雅黑";
+	color:#f88d01;
+	letter-spacing: 14px;;
+}
+
+
+
+/* 活动 */
+#content .bottom #main{
+	max-width:1920px;
+	min-width:1200px;
+	padding-top:38px;
+	/* text-align: center; */
+}
+#content .bottom #game{
+	width:869px;
+	height:1413px;
+	background: url(../img/gameBg.png) no-repeat 0 0;
+	background-size:cover;
+	margin:0 auto;
+	position: relative;
+	text-align: center;
+}
+#game .centerBt{
+	width:687px;
+	height:1413px;
+	margin:0 auto;
+	padding-top:123px;
+	text-align: center;
+	/* background: url(../img/fanguang.png) no-repeat 0 0;
+	z-index:3; */
+}
+#game .centerBt .fanguang{
+	position: absolute;
+	left: -83px;
+  top: -46px;
+	width:663px;
+	height:683px;
+	background: url(../img/fanguang.png) no-repeat 0 0;
+}
+#content .bottom  .topBt{
+	height:472px;
+}
+#content .bottom .topBt .huagan{
+	width:168px;
+	height:43px;
+	background: url(../img/gan.png) no-repeat 0 0;
+	margin:0 auto;
+}
+#content .bottom .topBt .sheng{
+	width:14px;
+	height:65px;
+	background: url(../img/shengzi.png) no-repeat 0 0;
+	margin:-2px auto 0;
+}
+#content .bottom .topBt .shengBg{
+	width:12px;
+	height:0;
+	background: url(../img/shengBg.png) repeat-y 0 0;
+	margin:-4px auto 0;
+}
+#content .bottom .topBt .jiazi{
+	width:142px;
+	height:128px;
+	margin:0 auto;
+}
+#content .bottom .topBt .jiazi .lose{
+	width:118px;
+	height:128px;
+	background: url(../img/jiazi.png) no-repeat 0 0;
+	margin:-2px auto 0;
+	display: block;
+}
+#content .bottom .topBt .jiazi .lose img{
+	display: none;
+	width:120px;
+	height:140px;
+	margin: 0 auto;
+	padding-top:80px;
+}
+#content .bottom .topBt .jiazi .win{
+	width:142px;
+	height:128px;
+	background: url(../img/jiazi2.png) no-repeat 0 0;
+	margin:-2px auto 0;
+	display: none;
+}
+
+
+
+
+
+#game .centerBt .bottomBt{
+	position: relative;
+	height:160px;
+	left:0;
+	overflow: hidden;
+}
+#content  .bottomBt .chuansong{
+	position: absolute;
+	right:44px;
+	bottom:28px;
+	width:300px;
+	height:37px;
+	background: url(../img/jiantou.png) no-repeat 0 0;
+	margin:0 auto 0;
+	display: block;
+}
+#content .bottom #game .centerBt .bottomBt .gundong{
+	width:685px;
+	height:154px;
+	overflow: hidden;
+	
+}
+#content .bottom #game .centerBt .bottomBt .gun{
+	width:3014px;
+}
+#content .bottom #game .centerBt .bottomBt ul{
+	float:left;
+}
+#content .bottom #game .centerBt .bottomBt .wawa{
+	width:1507px;
+	height:165px;
+}
+#content .bottom #game .centerBt .bottomBt .wawa2{
+	width:1507px;
+	height:165px;
+}
+#content .bottom #game .centerBt .bottomBt  li{
+	float:left;
+	width:107px;
+	height:152px;
+	position: relative;
+	padding:0 15px;
+	
+}
+#content .bottom #game .centerBt .bottomBt  li span{
+	display: inline-block;
+	width:74px;
+	height:32px;
+	background: url(../img/daoying.png) no-repeat 0 0;
+	position: absolute;
+	bottom:2px;
+	left:50%;
+	margin-left:-37px;
+}
+#content .bottom #game .centerBt .bottomBt  li img{
+	width:120px;
+	height:140px;
+	position: absolute;
+	top:0;
+	left:50%;
+	margin-left:-60px;
+	z-index:2;
+}
+
+
+#content .bottom #game #anniu{
+	width:500px;
+	height:100px;
+	padding-top:74px;
+	margin:0 auto;
+	position: relative;
+}
+#game #anniu .zhuce{
+	position: absolute;
+	left:22px;
+	bottom:10px;
+	width:155px;
+	height:57px;	
+}
+#content .bottom #game #anniu .zhuce img{
+	width:155px;
+	height:57px;	
+}
+#content .bottom #game .btn {
+	width: 112px;
+	height: 95px;
+	position: absolute;
+	right:36px;
+	bottom:6px;
+	
+}
+#content .bottom #game .btn_star {
+	background: url(../img/kaishi.png) no-repeat 0 0;
+	background-size: cover;
+	width: 112px;
+	height: 95px;
+	display: block;
+}
+
+#content .bottom #game .btn_end {
+	width: 112px;
+	height: 95px;
+	background: url(../img/kaishi2.png) no-repeat 0 0;
+	background-size: cover;
+	display: none;
+} 
+
+#content .bottom #game .centerBt .shuoming{
+	width:621px;
+	height:415px;
+	margin:0 auto;
+	padding-top:32px;
+}
+#content .bottom #game .centerBt .shuoming h3{
+	width:621px;
+	height:44px;
+	background: url(../img/huodongshuoming.png) no-repeat 0 0;
+	background-size: cover;
+	
+}
+#content .bottom #game .centerBt .shuoming .text{
+	width:532px;
+	height:314px;
+	margin:24px auto 0;
+}
+#content .bottom #game .centerBt .shuoming .text p{
+	text-align: left;
+	font:15px/22px "微软雅黑";
+	color:#000;
+}
+#content .bottom #game .centerBt .shuoming .text .zhong{
+	text-align: center;
+	font-weight: bold;
+	padding-top:36px;
+}
+
+
+/* 抽奖弹框 */
+ #tankuang{
+	display: none;
+	position: absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:4877px;
+	/* background: #000;
+	opacity: .5;
+	filter:Alpha(opacity=50); */
+	background: rgba(0,0,0,.5);
+	z-index:10;
+}
+#tankuang .content1{
+    display: block;
+    width:723px;
+    height:447px;
+  padding-top:3754px;
+	margin:0 auto;
+
+}
+#tankuang .content1 .bg{
+   width:723px;
+   height:447px;
+   background: url(../img/zhong.png) no-repeat 0 0;
+   margin:0 auto;
+
+}
+#tankuang .content1 .prize{
+	padding-top:189px;
+	width:600px;
+	padding-left:125px;
+}
+#tankuang .content1 .suprise{
+	width:374px;
+	height:55px;
+	margin:0 auto;
+}
+#tankuang .content1 .jiang{
+	font:18px/36px "微软雅黑";
+	color:#f33441;
+	margin:0 auto;
+	padding-top:35px;
+}
+#tankuang .content1 .money{
+	font:18px/36px "微软雅黑";
+	color:#f33441;
+	margin:0 auto;
+}
+#tankuang .content1 .know{
+	width:164px;
+	height:36px;
+	margin:0 auto;
+	padding-top:16px;
+}
+#tankuang .content2{
+	 display: none;
+	 width:663px;
+	 height:447px;
+	padding-top:3754px;
+	margin:0 auto;
+	 
+ }
+ #tankuang .content2 .bg{
+ 	width:663px;
+ 	height:447px;
+ 	background: url(../img/weizhong.png) no-repeat 0 0;
+ 	margin:0 auto;
+ }

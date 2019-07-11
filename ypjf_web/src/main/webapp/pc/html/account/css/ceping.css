@@ -1,0 +1,148 @@
+#accountBox{
+	width:1200px;
+	margin:0 auto;
+	/* padding-top:28px; */
+}
+
+#accountBox #aside{
+	float:left;
+	width:140px;
+	height:auto;
+	margin-right:24px;
+	border:1px solid #e8e8e8;
+}
+#accountBox #account{
+	float:right;
+	width:1032px;
+	/* height:1700px; */
+	border:1px solid #e8e8e8;
+	margin-bottom:60px;
+}
+#accountBox #account p.title{
+	font-size:16px;
+	color:#292929;
+	line-height:55px;
+	border-bottom: 1px solid #e8e8e8;
+	margin:0 22px;
+	padding-left:30px;
+	margin-bottom:20px;
+}
+#accountBox #account .box{
+	width:990px;
+	margin:0 auto;
+}
+#accountBox #account .box li{
+	padding-bottom:20px;
+}
+#accountBox #account .box p.question{
+	font-size:14px;
+	color:#333333;
+	line-height:40px;
+	background: #e6f4ff;
+	padding:0 30px;
+}
+#accountBox #account .box label{
+	padding:0 52px;
+	display: block;
+	vertical-align: middle;
+	font-size:14px;
+	color:#666666;
+	line-height:16px;
+	padding-top:16px;
+}
+#accountBox #account .box li .text{
+	font-size:14px;
+	color:#666666;
+	line-height:16px;
+	padding-top:16px;
+	padding-left:40px;
+}
+#accountBox #account .box label input{
+	display: inline-block;
+	margin-right:10px;
+	vertical-align: middle;
+}
+#accountBox #account .box li.btn{
+	width:430px;
+	height:30px;
+	margin:0 auto;
+	padding-top:30px;
+}
+#accountBox #account .box li.btn1{
+	width:182px;
+	height:30px;
+	margin:0 auto;
+}
+#accountBox #account .box li.btn1 span.next{
+	display: inline-block;
+	height:30px;
+	width:182px;
+	font-size:14px;
+	line-height:30px;
+	color:#239afb;
+	text-align: center;
+	border:1px solid #239afb;
+	cursor: pointer;
+}
+#accountBox #account .box li.btn span{
+	display: inline-block;
+	width:182px;
+	height:30px;
+	font-size:14px;
+	line-height:30px;
+	cursor: pointer;
+}
+#accountBox #account .box li.btn span.prev{
+	color:#239afb;
+	text-align: center;
+	border:1px solid #239afb;
+	margin-right:56px;
+}
+#accountBox #account .box li.btn span.tj{
+	color:#fff;
+	text-align: center;
+	background: #239afb;
+	width:184px;
+	height:32px;
+}
+
+
+
+/* 结果 */
+#accountBox #account .jieguo{
+	width:910px;
+	margin:0 auto;
+	display: none;
+}
+#accountBox #account .jieguo .p1{
+	font-size:14px;
+	line-height:14px;
+	color:#313131;
+}
+#accountBox #account .jieguo .leixing li{
+	display: none;
+}
+#accountBox #account .jieguo .leixing .lx{
+	font-size:28px;
+	line-height:70px;
+	color:#313131;
+	font-weight:bold;
+}
+#accountBox #account .jieguo .leixing .text{
+	font-size:14px;
+	line-height:26px;
+	color:#888888;
+}
+#accountBox #account .jieguo .join{
+	width:186px;
+	height:30px;
+	
+	background: #239AFB;
+	margin:30px 0;
+	text-align: center;
+}
+#accountBox #account .jieguo .join a{
+	font-size:14px;
+	line-height:30px;
+	color:#fff;
+}

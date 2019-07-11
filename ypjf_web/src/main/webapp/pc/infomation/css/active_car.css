@@ -1,0 +1,85 @@
+.active-main .active-banner.car{
+	background: url(../../img/infomation/car-banner.jpg) no-repeat center;
+}
+.active-project .tab-menu{
+	margin-top: 28px;
+}
+.active-project .tab-menu li{
+	float: left;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	font-size: 16px;
+	color: #333;
+	cursor: pointer;
+}
+.active-project .tab-menu li.active{
+	border-bottom: 2px solid #FF7F01;
+	color: #FF7F01;
+}
+
+/*车贷融*/
+.tab-main .item{
+	width: 100%;
+	height: auto;
+}
+.tab-main .item.active-car{
+	width: 100%;
+}
+.tab-main .item .des{
+	margin-top: 30px;
+	width: 1180px;
+	padding: 20px 10px;
+	background: #F5F5F5;	
+}
+.tab-main .item .des p{
+	font-size: 14px;
+	color: #666;
+	line-height: 22px;
+}
+.tab-main .item .des p span{
+	font-size: 16px;
+	color: #333;
+	font-weight: bold;
+}
+.tab-main .item .process{
+	width: 100%;
+	margin-top: 56px;
+}
+.tab-main .item .process li{
+	float: left;
+	text-align: center;
+	width: 170px;
+	height: 240px;
+}
+.tab-main .item .process li:nth-child(odd){
+	background: url(../../img/infomation/active-process-bg.png) no-repeat 30px 28px;
+
+.tab-main .item .process li:nth-child(even){
+	background: url(../../img/infomation/active-process-bg2.png) no-repeat center 92px;
+}
+.tab-main .item .process li:nth-child(odd) p{
+	56
+}
+.tab-main .item .process li:nth-child(odd) .num{
+	margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

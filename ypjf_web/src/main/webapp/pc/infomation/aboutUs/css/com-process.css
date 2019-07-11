@@ -1,0 +1,126 @@
+.aboutUs .banner.com{
+	width: 100%;
+	height: 374px;
+	background: url(../img/banner-rule.jpg) no-repeat center;
+	background-size: cover;
+}
+.aboutUs .yingpu{
+	width: 100%;
+	height: auto;
+}
+.aboutUs .yingpu .nav-bar p{
+	margin: 40px 0;
+    font-size: 16px;
+    height: 18px;
+    line-height: 18px;
+    border-left: 2px solid #666;
+    padding-left: 10px;
+}
+.aboutUs .yingpu .nav-bar p a:hover{
+	font-weight: bold;
+    color: #FF7F01;
+}
+.aboutUs .yingpu .nav-bar p .now{
+	font-weight: bold;
+    color: #FF7F01;
+}
+
+.com-process{
+	width: 100%;
+	height: auto;
+}
+.com-process .title{
+	width: 220px;
+	margin: 0 auto;
+	/*text-align: center;*/
+}
+.com-process .title h3{
+	font-size: 20px;
+	color: #697890;
+}
+.com-process .title h3 span{
+	font-size: 28px;
+}
+.com-process .title p.chang{
+	width: 220px;
+	height: 6px;
+	background: #697890;
+	margin: 6px auto;
+}
+.com-process .title p.duan{
+	width: 110px;
+	height: 6px;
+	/*margin-top: 10px;*/
+	background: #697890;
+	/*margin-top: 10px;*/
+}
+.content ul{
+	margin-top: 50px;
+}
+.content ul li{
+	width: 100%;
+	margin: 20px auto;
+	text-align: center;
+}
+.content ul li .gray{
+	filter: grayscale(1);
+	opacity: 1;
+}
+
+.content ul li .view{
+	display: block;
+    width: 154px;
+    margin-left: 1046px;
+    font-size: 14px;
+    margin-top: -17px;
+    text-decoration: underline;
+    color: #ff7f02;
+}
+
+.borrow{
+	width: 100%;
+	height: 510px;
+	background: #f5f5f5;
+}
+.borrow .sanjiao{
+	width: 0;
+    height: 0;
+    border-top: solid 26px #fff;
+    border-left: solid 20px transparent;
+    border-right: solid 20px transparent;
+    margin: 0 auto 40px;
+}
+.borrow .sanjiao.f5{
+	width: 0;
+    height: 0;
+    border-top: solid 26px #F5F5F5;
+    border-left: solid 20px transparent;
+    border-right: solid 20px transparent;
+    margin: 0 auto 40px;
+}
+.com-process .text{
+	width: 540px;
+	margin: 17px auto;
+	text-align: center;
+	font-size: 14px;
+	color: #697890;
+	line-height: 26px;
+}	
+.com-process.pilou{
+	margin-top: 64px;
+}
+.borrow.stop{
+	height: 500px;
+}
+.rule-bottom{
+	width: 100%;
+	height: 326px;
+	background: url(../img/images/rule-b-bg_03.png) center;
+	text-align: center;
+	margin-top: 50px;
+}
+.rule-bottom img{
+	width: 715px;
+	height: 157px;
+	margin: 84px auto;
+}

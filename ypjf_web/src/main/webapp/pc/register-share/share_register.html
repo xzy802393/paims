@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    
+    <title>邀请有礼-投资理财-营普金服</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/register.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="../css/safe.css"/>-->
+   <style type="text/css">
+   		
+   </style>
+</head>
+<body>
+	<div class="title">
+		<h3>注册</h3>
+	</div>
+	<div class="register-form">
+		<form id="reg" action="" method="post" onsubmit="return false;">
+			<div class="msg focused">
+				<span class="icon tel"></span>
+				<input type="text" name="phone" id="tel"  placeholder="请输入您的手机号码" onkeyup="checkPhone()"/>
+			</div>
+			<div class="msg">
+				<span class="icon passward"></span>
+				<input type="password" name="password"  placeholder="请输入6-16位字母和数字" />
+			</div>
+			<div class="msg">
+				<span class="icon passward"></span>
+				<input type="password" name="confirm_password"  placeholder="请输入6-16位字母和数字" />
+			</div>
+			<div class="vert">
+				<div class="msg left">
+					<span class="icon pic-code"></span>							
+					<input type="text" name="pic_code"  placeholder="请输入图片验证码" style="width: 66%;"/>	
+				</div>
+				<div class="vcode left">
+					<img src="" id="pic-code" onclick="javascript:loadPicCode();" />
+				</div>						 `
+			</div>
+		
+			<div class="vert clearfix">
+				<div class="msg left">
+					<span class="icon msg-code"></span>							
+					<input type="text" name="code"  placeholder="请输入短信验证码" style="width: 66%;"/>	
+				</div>
+				<div class="vcode left">
+					<input type="button" id="send" value="发送验证码">
+				</div>	
+
+				<input type="hidden" name="inviteCode" id="inviteCode" placeholder="请输入邀请人的手机号码">					 
+			</div>
+			
+			
+			<input type="submit" value="立即注册" class="register-btn" id="register"/>
+			<div class="account-control checked">
+				<input type="checkbox" name="agree" id="agree" value="" checked="checked"/>
+				<span class="ok"></span>
+				<label for="agree">我已阅读并同意<span onclick="viewLicense()" style="cursor: pointer;">《九趣贷用户注册协议》</span></label>
+			</div>
+		</form>
+	</div>
+	
+	
+</body>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/layer-v3.0.3/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/utils.js"></script>
+<script type="text/javascript">
+			$('#tel').val(queryString('phone'));
+			$('#inviteCode').val(queryString('inviteCode')=='null' ? '' :queryString('inviteCode'));
+		//输入框的边框
+		$("form").find("input").focus(function(){
+			$("form").find("input").parent().removeClass("focused");
+			$(this).parent().addClass("focused");
+		});
+		
+		//复选框的选中
+		$("#agree").click(function(){
+			$(".ok").show();
+		});
+		$(".ok").click(function(){
+			$(this).hide();
+		});
+		
+		
+		map = {
+			code : {
+				action : 'SMS',
+				passed : false
+			},
+			pic_code : {
+				action : 'Pic',
+				passed : false
+			}
+		};
+		
+		
+		var isPhoneExists = false;
+	
+		useLoadingShade();
+		$(function(){
+			$("#register .msg input").focus(function(){
+				$("#register .msg").removeClass("focus");
+				$(this).parent().addClass("focus");
+			});
+			
+			loadPicCode();
+
+		});
+
+		window.onload=function(){
+		    var send=document.getElementById('send'),
+		        timer=null;
+		    
+		        send.onclick=function(){
+		        // 计时开始 
+		      
+		      	if (!sendCode()) {
+		      		return;
+		      	}
+		    };
+		    
+		};
+		
+		function viewLicense() {
+			var idxs = [19, 18], idx = 0;
+			layer.open({
+				type : 2,
+				content : ' ../../pc/myaccount/announce/content?id=' + idxs[idx] + '&type=contractsample',
+				area: ['50%', '80%']
+			});
+		}
+		
+		
+		function countdown() {
+			var send=document.getElementById('send'),
+			timer=null;
+		   	var times=60,
+		   	   	timer = setInterval(function(){
+	    		send.value = times+"秒后重试";
+				send.setAttribute('disabled','disabled');
+				times--;
+				if(times <= 0){
+					send.value = "发送验证码";
+					send.removeAttribute('disabled');
+					times = 60;
+					clearInterval(timer);
+				}
+		    }, 1000);
+		}
+		
+		
+		function showFYRegister() {
+			loadRegions('province', 0);
+			loadBanks();
+			$('#fade').show();$('#openFuyou').show();$('#openFuyou form').show();
+		}
+		
+		function queryString(name) {
+		    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+		    var r =window.location.search.substr(1).match(reg);
+		    if (r != null) return unescape(r[2]); return null;
+		}
+
+		var inviteCode = queryString('code');
+		if (!!inviteCode) {
+			$('input[name=inviteCode]').val(inviteCode);
+		}
+		
+		//select的默认颜色
+			
+			$(function () {
+				var unSelected = "#999";
+				var selected = "#333",
+					curOption;
+				$("select").css("color", unSelected);
+				$("option").css("color", selected);
+				
+				$(document).on("change", "select", function () {
+					if ($(this).val()) {
+						$(this).css("color", selected);					
+					}
+					else {
+						$(this).css("color", unSelected);
+					}
+				});
+			})
+			
+		
+		
+		function sendCode() {
+			if (!/\d{11}/.test($('#reg input[name=phone]').val())) {
+				layer.msg('手机号码必须为11位数字！');
+				return;
+			}
+
+			if (isPhoneExists) {
+				layer.alert('您输入的手机号已存在！');
+				return;
+			}
+			
+			if (!$('[name=pic_code]').val()) {
+				layer.alert('请输入图片验证码！');
+				return;
+			}
+			
+			if (!map['pic_code']['passed']) {
+				layer.alert('您输入的图片验证码不正确！');
+				return;
+			}
+			
+			$.post(' ../../pc/send/json', {
+				phone : $('#reg input[name=phone]').val(),
+				type : 1,
+				code : $('[name=pic_code]').val()
+			}, function(data) {
+				if (data.status != 'success') {
+					layer.msg(data.message);
+					if (data.status == 'shixiao') {
+						loadPicCode();
+					}
+					return;
+				}
+				
+				layer.msg('短信已发送至您的手机，请注意查收！');
+				countdown();
+			}, 'json');
+			
+			return true;
+		}
+		
+		
+		function checkPhone() {
+			cancelLoadingShade();
+			$.get('../../pc/myaccount/checkPhone', { phone : $(event.target || event.srcElement).val() }, function(data) {
+				useLoadingShade();
+				if (data.status == 'error') {
+					layer.msg('该手机号已存在！');
+					isPhoneExists = true;
+					return;
+				}
+				
+				isPhoneExists = false;
+
+			});
+		}
+		
+		
+		function loadPicCode() {
+			cancelLoadingShade();
+			$.get('../../app/loan/getCaptcha/json', {}, function(data) {
+				if (data.data) {
+					$('#pic-code').attr('src', 'data:image/jpeg;base64,' + data.data);
+					map['pic_code']['passed'] = false;
+				}
+				
+				useLoadingShade();
+			}, 'json');
+		}
+		
+		
+		function register() {
+			var valid = true;
+			for (var k in map) {
+				valid = valid && map[k]['passed'];
+				if (!map[k]['passed']) {
+					var codeType = k == 'code' ? '短信' : '图片';
+					layer.msg(codeType + '验证码输入有误！');
+					return;
+				}
+			}
+			
+			if (valid) {
+				$('.register-btn').attr('disabled', 'disabled');
+				var regLayer = layer.load(1, { shade : [ 0.4, '#fff' ] });
+				$.post('../doRegister', $("#reg").serialize(), function(data) {
+					$('.register-btn').removeAttr('disabled');
+					layer.close(regLayer);
+					if (data.status == 'success') {
+						$('#userId').val(data.data.userId);
+						$('#phone').val(data.data.phone);
+						/*onRegSuccess();*/
+						layer.alert('注册成功',function(){
+							location.href='../../web/down.html';
+						});
+						return;
+					}
+					
+					loadPicCode();
+					layer.msg(data.message || '对不起，注册失败，请稍后再试！');
+				}, 'json');
+			}
+		}
+		
+		
+		function onRegSuccess() {
+			$('form').hide();
+			$('.register-ok').show();
+		}
+		
+		
+		$('.register-form').on('submit', 'form', function(e) {
+			var mustFields = [
+				'phone', 'password', 'confirm_password', 'pic_code', 'code'
+			];
+			
+			var emptyField = '';
+			if (isPhoneExists) {
+				layer.msg('您输入的手机号已存在！');
+				return;
+			}
+			
+			
+			$(mustFields).each(function(k, v) {
+				if (!$('#reg input[name=' + v + ']').val()) {
+					emptyField = $('#reg input[name=' + v + ']').prev().html();
+					return false;
+				}
+			});
+			
+			if (!!emptyField) {
+				layer.msg('请输入' + emptyField + '！');
+				return;
+			}
+			
+			if (!/\d{11}/.test($('input[name=phone]').val())) {
+				layer.msg('手机号码必须为11位数字！');
+				return;
+			}
+			
+			if ($('#reg input[name=password]').val() != $('#reg input[name=confirm_password]').val()) {
+				layer.msg('两次密码不一致！');
+				return;
+			}
+			
+			if ($('#reg input[name=password]').val().length < 6 || $('#reg input[name=password]').val().length > 20) {
+				layer.msg('密码长度必须为6-20位！');
+				return;
+			}
+			
+			register();
+			return false;
+		});
+		
+		$(document).on('keyup', '[name=code], [name=pic_code]', function() {
+			$this = $(this);
+			cancelLoadingShade();
+			$.post('../check' + map[$(this).attr('name')]['action'] + 'Code', {
+				code : $(this).val(),
+				phone : $('#reg [name=phone]').val()
+			}, function(data) {
+				if (data.status == 'success') {
+					map[$this.attr('name')]['passed'] = true;
+				}
+				
+				useLoadingShade();
+			}, 'json');
+		});
+
+</script>
+</html>

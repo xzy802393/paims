@@ -1,0 +1,55 @@
+@media (min-width:1200px) and (max-width:1300px){
+    body .nhje p,.s3 .guize p,.shuoming p{
+        font-size: 17px;
+        line-height: 30px;
+    }
+    body .s1 #biao1,#biao2,#biao3,#biao4{
+         left: 28.5%;
+     }
+    .shuoming{
+        bottom: 1%;
+        left: 24%;
+    	width: 50%;
+    }
+}
+@media (min-width:1300px) and (max-width:1500px){
+    body .nhje p,.s3 .guize p,.shuoming p{
+        font-size: 17px;
+        line-height: 35px;
+    }
+    body .s1 #biao1,#biao2,#biao3,#biao4{
+        left: 28.5%;
+    }
+    .shuoming{
+        bottom: 1%;
+    }
+}
+@media  (max-width:1200px){
+    body .nhje p,.s3 .guize p,.shuoming p{
+        font-size: 15px;
+        line-height: 23px;
+    }
+    body .s1 #biao1,#biao2,#biao3,#biao4{
+        left: 28.5%;
+    }
+    .shuoming{
+        bottom: 1%;
+    }
+}
+@media  (min-width:1500px) and (max-width:1600px){
+    body .nhje p,.s3 .guize p,.shuoming p{
+        font-size: 17px;
+        line-height: 40px;
+    }
+    body .s1 #biao1,#biao2,#biao3,#biao4{
+        left: 26.5%;
+    }
+    .shuoming{
+        bottom: 0%;
+    }
+}
+@media  (min-width:1600px) and (max-width:1900px){
+	.shuoming{
+        bottom: 5%;
+    }
+}

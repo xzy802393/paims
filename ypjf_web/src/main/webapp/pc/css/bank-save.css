@@ -1,0 +1,212 @@
+/*银行存管*/
+
+
+/*bank-banner*/
+.bank-content{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 128px;
+}
+.bank-content .bank-banner{
+	width: 100%;
+	height: 909px;
+	background: url(../img/safe/img/bank-banner_01.jpg) no-repeat center;
+	text-align: center;	
+	position: relative;
+}
+.bank-content .bank-banner img{
+	display: block;
+	margin: 0 auto;
+}
+.bank-content .bank-banner img:nth-child(1){
+	position: relative;
+	top: 290px;
+}
+.bank-content .bank-banner img:nth-child(2){
+	position: relative;
+	top: 420px;
+}
+.bank-content .bank-banner p{
+	position: relative;
+	top: 455px;
+	font-size: 18px;
+	color: #fff;
+	font-weight: bold;	
+}
+.bank-content .bank-banner img:last-child{
+	position: relative;
+	top: 486px;
+}
+.bank-problem .center{
+	text-align: center;
+}
+.bank-problem.one .center h4{
+	margin-top: 70px;
+}
+
+
+.bank-problem.one .center p{
+	width: 1034px;
+	margin: 50px auto;
+	text-align: center;
+	line-height: 32px;
+	font-size: 18px;
+}
+.bank-problem .center .title{
+	margin-top: 20px;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+.bank-problem.two{
+	width: 100%;
+	height: 531px;
+	background: url(../img/safe/img/bank-ques-2.bg.jpg) no-repeat center;
+	padding-top: 100px;
+}
+.bank-problem.two h4{
+	margin-top: 0;
+}
+.bank-problem-two-list li{
+	width: 30%;
+	float: left;
+}
+.bank-problem-two-list li+li{
+	margin-left: 50px;
+}
+.bank-problem-two-list li img{
+	margin-top: 46px;
+}
+.bank-problem-two-list li h6{
+	margin-top: 30px;
+	font-size: 22px;
+	color: #fff;
+}
+.bank-problem.two .bank-problem-two-list p{
+	width: 90%;
+	margin: 20px auto;
+	font-size: 18px;
+	line-height: 34px;
+	color: #FFF;
+	text-align: center;
+}
+
+.bank-problem.three{
+	width: 100%;
+	text-align: center;
+}
+.bank-problem.three{
+	margin-top: 68px;
+}
+
+.bank-problem.three .btn{
+	width: 338px;
+	height: 50px;
+	line-height: 50px;
+	background: #00aeff;
+	border-radius: 6px;
+	margin: 60px auto 10px;
+	font-size: 24px;
+	color: #fff;
+}
+.bank-problem.three .btn-t{
+	font-size: 20px;
+	color: #00aeff;
+	line-height: 30px;
+}
+.bank-problem.three .bank-path{
+	margin: 40px auto;
+}
+
+
+
+.bank-problem.four{
+	width: 100%;
+	height: 871px;
+	background: url(../img/safe/img/bank-ques-4.bg.jpg) no-repeat center;
+	padding-top: 100px;
+	text-align: center;
+}
+.bank-problem.four h4{
+	margin-bottom: 50px;
+}
+.bank-problem.four .four-pro-l,.bank-problem.four .four-pro-r{
+	float: left;
+	width: 560px;
+	height: 424px;
+	margin-bottom: 79px;
+}
+.bank-problem.four .four-pro-r{
+	margin-left: 78px;
+}
+.bank-problem.four .four-pro-r .bg{
+	width: 560px;
+	height: 404px;
+}
+.bank-problem.four .four-pro-l .bg{ 
+	width: 560px;
+	height: 151px;
+	
+}
+.bank-problem.four .bg{
+	background-color: rgba(255,255,255,.4);
+	margin-bottom: 79px;
+	color: #fff;
+	padding-top: 20px;
+}
+.bank-problem.four .bg h6{
+	width: 90%;
+	text-align: left;
+	font-size: 24px;
+	color: #ff9833;
+	margin-bottom: 10px;
+	font-weight: normal;
+	margin-left: 20px;
+}
+.bank-problem.four .bg p{
+	width: 90%;
+	text-align: justify;
+	font-size: 18px;
+	color: #fff;
+	line-height: 32px;
+	margin: 0 auto;
+}
+.bank-problem.four .four-four.bg{
+	overflow: hidden;
+	clear: both;
+	margin-top: 79px;
+	height: 126px;
+	
+}
+.bank-problem.four .four-four.bg p{
+	width: 95%;
+	margin: 0 auto;
+}
+.bank-problem.five{
+	margin-bottom: 67px;
+}
+
+.bank-problem.five h4{
+	margin-top: 74px;
+	
+}
+	
+.bank-problem.five .five-content{
+	width: 1200px;
+	margin-top: 52px;
+	margin-left: 10px;
+}
+.bank-problem.five .five-content img{
+	float: left;
+	display: block;
+}
+.bank-problem.five .five-content img:nth-child(1){
+	width: 700px;
+	margin-right: -10px;
+}
+.bank-problem.five .five-content img:nth-child(2){
+	width: 500px;
+	margin-left: -3px;
+}

@@ -1,0 +1,337 @@
+.novice-boot{
+	width: 100%;
+	height: auto;
+}
+.novice-boot .b-head{
+	width: 100%;
+	height: 600px;
+	background: url(../../img/novice_boot/images/b-banner_02.jpg) no-repeat center;
+}
+.b-main{
+	width: 100%;
+	/*height: 2980px;*/
+	background-color: #e3efff;
+	background-image: url(../../img/novice_boot/b-dian-bg.png);
+	/*background-position: center;*/
+	/*background-size: cover;*/
+	position: relative;
+	z-index: 1;
+}
+.yp-how,.yp-who,.yp-style,.yp-why{
+	position: relative;
+	z-index: 2;
+}
+.b-main .center .yp-who{
+	width: 100%;
+	height: 300px;
+	position: relative;
+}
+.b-main .center .yp-who .who-pic{
+	margin-top: ;
+}
+.b-main .center .yp-who .who-pic .who-l{
+	display: block;
+	width: 205px;
+	height: 270px;
+	background: url(../../img/novice_boot/b-1.1.png) no-repeat center;
+	margin-left: 14px;
+}
+.b-main .center .yp-who .who-pic .who-r{
+	display: block;
+	width: 102px;
+	height: 102px;
+	background: url(../../img/novice_boot/b-1.2.png)  no-repeat center;
+	margin-top: 12px;
+	margin-right: 140px;
+}
+.yp-who .who-txt{
+	width: 100%;
+    height: 140px;
+    background: #fff;
+    text-align: center; 
+    padding-top: 2px;
+    margin-top: -72px;
+    position: absolute;
+}
+.yp-who .who-txt p{
+	padding: 21px 42px;
+    text-align: center;
+    font-size: 14px;
+    color: #2648ad;
+    line-height: 26px;
+}
+.yp-who .who-txt h3{
+	margin-top: 20px;
+	font-size: 22px;
+	color: #ff7800;
+}
+
+.yp-why{
+	width: 100%;
+	height: 483px;
+	margin-top: 144px;
+}
+.yp-style{
+	width: 100%;
+	height: 602px;
+	margin-top: 85px;
+}
+
+.yp-how{
+	width: 100%;
+	margin-top: 15px;
+}
+.yp-how .how-tit img{
+	margin-top: 98px;
+	margin-left: 132px;
+	width: 1007px;
+	height: 172px;
+}
+.yp-how .how-main{
+	/*width: 1200px;
+	height: 470px;*/
+	padding: 40px 54px;
+	background: #fff;
+}
+.yp-how .how-main .how-step{
+	width: 100%;
+}
+.yp-how .how-main .how-step .step{
+	width: 150px;
+	text-align: center;
+	font-size: 16px;
+	color: #333;
+	float: left;
+}
+.yp-how .how-main .how-step .step span{
+	display: block;
+	width: 62px;
+	height: 62px;
+	margin: 0 auto 14px;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+	
+  /*  filter: grayscale(100%);*/
+    /*filter: url(gray.svg#grayscale);
+	
+    filter: gray;*/
+}
+.yp-how .how-main .how-step .step span.step1{
+	background: url(../../img/novice_boot/h-zhuce.png) no-repeat center;
+}
+.yp-how .how-main .how-step .step span.step2{
+	background: url(../../img/novice_boot/h-renzhen.png) no-repeat center;
+}
+.yp-how .how-main .how-step .step span.step3{
+	background: url(../../img/novice_boot/h-chongzhi.png) no-repeat center;
+}
+.yp-how .how-main .how-step .step span.step4{
+	background: url(../../img/novice_boot/h-touzi.png) no-repeat center;
+}
+.yp-how .how-main .how-step .step span.step5{
+	background: url(../../img/novice_boot/h-shouyi.png) no-repeat center;
+}
+
+.yp-how .how-main .how-step .step span:hover{
+	-webkit-animation: step_icon .2s ease both;
+	-moz-animation: step_icon .2s ease both;
+	-o-animation: step_icon .2s ease both;
+	-ms-animation: step_icon .2s ease both;
+	animation: step_icon .2s ease both;
+	cursor: pointer;
+}
+@-moz-keyframes step_icon{
+	0% {-ms-transform: scale(1);-webkit-transform: scale(1);-moz-transform: scale(1);-o-transform: scale(1);transform: scale(1);}
+	100% {-ms-transform: scale(1.1);-webkit-transform: scale(1.1);-moz-transform: scale(1.1);-o-transform: scale(1.1);transform: scale(1.1);}
+}
+@-o-keyframes step_icon{
+	0% {-ms-transform: scale(1);-webkit-transform: scale(1);-moz-transform: scale(1);-o-transform: scale(1);transform: scale(1);}
+	100% {-ms-transform: scale(1.1);-webkit-transform: scale(1.1);-moz-transform: scale(1.1);-o-transform: scale(1.1);transform: scale(1.1);}
+}
+@-webkit-keyframes step_icon{
+	0% {-ms-transform: scale(1);-webkit-transform: scale(1);-moz-transform: scale(1);-o-transform: scale(1);transform: scale(1);}
+	100% {-ms-transform: scale(1.1);-webkit-transform: scale(1.1);-moz-transform: scale(1.1);-o-transform: scale(1.1);transform: scale(1.1);}
+}
+@-ms-keyframes step_icon{
+	0% {-ms-transform: scale(1);-webkit-transform: scale(1);-moz-transform: scale(1);-o-transform: scale(1);transform: scale(1);}
+	100% {-ms-transform: scale(1.1);-webkit-transform: scale(1.1);-moz-transform: scale(1.1);-o-transform: scale(1.1);transform: scale(1.1);}
+}
+@keyframes step_icon{
+	0% {-ms-transform: scale(1);-webkit-transform: scale(1);-moz-transform: scale(1);-o-transform: scale(1);transform: scale(1);}
+	100% {-ms-transform: scale(1.1);-webkit-transform: scale(1.1);-moz-transform: scale(1.1);-o-transform: scale(1.1);transform: scale(1.1);}
+}
+.yp-how .how-main .how-step .step.active span{
+	filter: grayscale(0%);
+	-webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+} 
+
+.how-step .sanjiao{
+	width: 85px;
+	text-align: center;
+	float: left;
+    display: inline-block;
+    margin: 21px 34px 0;
+    width: 0;
+    height: 0;
+    border-top: solid 7px transparent;
+    border-left: solid 14px #bbbbbb;
+    border-bottom: solid 7px transparent;
+}
+.how-step .sanjiao.active{
+	border-left: solid 14px #9dc8ff;
+}
+
+.how-main .step-content{
+	margin-top: 34px;
+	width: 1092px;
+	height: 262px;
+	background: #e3efff;
+}
+.step-list .step-txt{
+	width: 580px;
+	text-align: center;
+}
+.step-list .step-txt .sanjiao{
+	display: block;
+	/*position: absolute;
+    top: -2px;
+    left: 170px;*/
+    width: 0;
+    height: 0;
+    border-top: solid 20px #9dc8ff;
+    border-left: solid 12px transparent;
+    border-right: solid 12px transparent;
+    margin-left: 60px;
+}
+.step-list .step-pic{
+	/*margin-left: 40px;*/
+}
+.step-list .step-txt p{
+	margin-top: 64px;
+	color: #3a8af0;
+	font-size: 24px;
+}
+.step-list .step-txt a{
+	display: block;
+	width: 200px;
+	height: 47px;
+	background: #3a8af0;
+	margin: 10px auto;
+	border-radius: 2px;
+	line-height: 47px;
+	font-size: 24px;
+	color: #fff;
+}
+.step-list .step-txt span{
+	display: inline-block;
+	font-size: 14px;
+	color: #3a8af0;
+	margin-top: 30px;
+	/*margin-left: 30px;*/
+}
+.step-list:nth-child(2) .step-txt .sanjiao{
+	margin-left: 293px;
+}
+.step-list:nth-child(2) .step-txt p{
+	margin-left: -96px;
+}
+
+.step-list:nth-child(3) .step-txt .sanjiao{
+	margin-left: 529px;
+}
+.step-list:nth-child(3) .step-txt p{
+	margin-left: 0px;
+}
+.step-list:nth-child(3) .step-txt span{
+	margin-left: -30px;
+}
+.step-list:nth-child(4) .step-txt .sanjiao{
+	margin-left: 760px;
+}
+.step-list:nth-child(4) .step-txt p{
+	margin-left: 0px;
+}
+.step-list:nth-child(4) .step-txt span{
+	margin-left: -98px;
+}
+.step-list:nth-child(5) .step-txt .sanjiao{
+	margin-left: 994px;
+}
+.step-list:nth-child(5) .step-txt p{
+	margin-left: 0px;
+}
+.step-list:nth-child(5) .step-txt span{
+	margin-left: -98px;
+}
+
+
+/*我们的产品*/
+.yp-product{
+	position: relative;
+	margin-bottom: 446px;
+}
+.yp-product .pro-tit{
+	position: absolute;
+    bottom: -255px;
+    left: 18%;
+    z-index: -1;
+}
+.yp-product .pro-tit img{
+	animation:ourpro 3s 2s infinite alternate linear;
+}
+@keyframes ourpro{
+	0%{transform: translateX(0);}
+}
+@keyframes ourpro{
+	100%{transform: translateX(-50px);}
+} 
+
+.b-main .pro-main{
+	/*position: absolute;*/
+	width: 100%;
+	height: 875px;
+	background: url(../../img/novice_boot/pro-bg.png) no-repeat center;	
+}
+.b-main .pro-main .pro-type{
+	width: 1200px;
+	margin: 0 auto;
+	/*position: relative;*/
+}
+.b-main .pro-main .pro-type ul{
+	width: 1044px;
+	margin: 0 auto;
+}
+.b-main .pro-main .pro-type ul li{
+	float: left;
+	width: 271px;
+	height: 406px;
+}
+.b-main .pro-main .pro-type ul li+li{
+	margin-left: 112px;
+}
+.b-main .pro-main .pro-type ul li img{
+	margin-top: -156px;
+}
+.b-main .pro-main .ewm{
+	width: 100%;
+	text-align: center;
+}
+.b-main .pro-main .ewm img{
+	margin-top: -90px;
+}
+.b-main .pro-main .ewm p{
+	font-size: 24px;
+	color: #333;
+	margin-top: 10px;
+}
+.b-main .pro-main .tip{
+	margin-top: 122px;
+    text-align: center;
+    color: #f28c1e;
+}

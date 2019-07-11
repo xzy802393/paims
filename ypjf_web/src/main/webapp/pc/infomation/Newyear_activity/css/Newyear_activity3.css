@@ -1,0 +1,188 @@
+body{
+	
+}
+.activity-page{
+	width: 100%;
+	height: auto;
+	background: #e4f6da;
+}
+.activity-page .head-banner{
+	width: 100%;
+	height: 920px;
+	background: url(../img/img3/images/mate10-banner_01.jpg) no-repeat center;
+	text-align: center;
+	padding-top: 1px;	
+}
+.activity-page .head-banner img{
+	margin-top: 86px;
+	margin-left: 188px;
+}
+
+.activity-page .choujiang {
+	text-align: center;
+	position: relative;
+    z-index: 10;
+}
+.activity-page .choujiang .tit{
+	text-align: center;
+	padding: 50px 0;
+}
+
+.choujiang-box.shanDeng{
+	background: none;
+	margin: 0 auto;
+}
+.choujiang-box.shanDeng td{
+	width: 212px;
+    height: 219px;
+    background: none;
+    margin: 10px;
+    display: inline-block;
+    border: 6px solid #fff;
+    border-radius: 17px;
+    /*background: #fff;*/
+}
+#btn.cjBtn{
+	width: 212px;
+	height: 219px;
+	background: url(../img/img3/ksfp.png) no-repeat center;
+	/*background-size: cover;*/
+}
+
+#luck .active{
+	background: none;
+    border: 6px solid #F5CA8F;
+    cursor: pointer;
+}
+/*翻转效果*/
+.artGroup {
+  display: block;
+  width: 212px;
+  height: 219px;
+  position: relative;
+ /* margin: 0 10px 10px 10px;*/
+  float: left;
+}
+ 
+.artwork {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+ 
+.artGroup img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+}
+ 
+.artGroup .detail {
+  display: block;
+  /*background: url(../img/img3/jangpin-bg.png) no-repeat center;*/
+  width: 212px;
+  height: 219px;
+ /* background-size: cover;*/
+  position: absolute;
+}
+ 
+.artGroup .detail img {
+	width: 100%;
+	height: 100%;
+  /*width: 140px;
+	height: auto;
+	top: 28px;
+	left: 37px;*/
+}
+               
+
+.artGroup.flip {
+  -webkit-perspective: 800px;
+  perspective: 800px;
+}
+ 
+.artGroup.flip .artwork {
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+ 
+.artGroup.flip .detail,
+.artGroup.flip .theFlip {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  /*-o-transform: rotate(-180deg);*/
+  /* filter:progid:DXImageTransform.Microsoft.Matrix(SizingMethod=sMethod ,M11=-1 ,M12=0 ,M21=0 ,M22=-1);*/
+   /*M11=cos(角度值),M12=-sin(角度值),M21=sin(角度值),M22=cos(角度值)*/
+}
+ .artGroup.flip .theFlip img.wenzi{
+ 	display: none;
+ }
+.artGroup.flip img,
+.artGroup.flip .detail {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}  
+.artGroup.flip .theFlip .detail{
+	-webkit-backface-visibility: hidden;
+    backface-visibility: visible;
+}
+
+.artGroup.slide { overflow: hidden; }
+/*.artGroup.slide .detail { bottom: -364px; }  */
+      
+.prize p{
+	color: #328825;
+	font-size:22px;
+	line-height: 30px;
+}
+
+.activity-page .choujiang .act-des{
+	padding-top: 124px;
+}
+.bottom-banner{
+	position: relative;
+    z-index: 10;
+	margin-top: 190px;
+	width: 100%;
+	height: 193px;
+	background: url(../img/img3/bottom-bg.png) no-repeat center;
+}
+.bottom-banner .invest{
+	text-align: center;
+}
+.bottom-banner .invest img{
+	margin-top: -62px;
+}
+.baiyun{
+	width: 100%;
+	height: auto;
+	position: absolute;
+    z-index: 1;
+    top: 1000px;
+}
+.baiyun .yun{
+	
+}
+.baiyun .yun.yun1{
+	text-align: left;
+}
+.baiyun .yun.yun2{
+	text-align: right;
+}
+.baiyun .yun.yun3{
+	text-align: left;
+}
+.baiyun .yun.yun4{
+	text-align: right;
+}
+.tip p{
+	color: #328825;
+	font-size:22px;
+	line-height: 30px;
+}
+.prize .num{
+	color: #FF0000;
+}

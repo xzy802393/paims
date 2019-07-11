@@ -1,0 +1,505 @@
+.deposit-main{
+	margin-left: 30px;
+	width: 938px;
+}
+.deposit-main h3{
+	font-size: 16px;
+	font-weight: normal;
+	margin-bottom: 28px;
+}
+.deposit-main .deposit-fun{
+	width: 876px;
+	height: auto;
+	border: 1px solid #ddd;
+	padding: 30px;
+}
+.deposit-main .deposit-fun p{
+	height: 40px;
+	line-height: 40px;
+	color: #333;
+	font-size: 14px;
+}
+.deposit-main .deposit-fun p+p{
+	margin-bottom: 24px;
+}
+.deposit-main .deposit-fun p.deposit-num input{
+	width: 240px;
+	height: 40px;
+	margin-left: 18px;
+	background: #F5F5F5;
+	padding-left: 10px;
+	border: 1px solid #ddd;
+}
+.quan select{
+	width: 252px;
+	height: 40px;
+	margin-left: 18px;
+	background: #F5F5F5;
+	padding-left: 10px;
+	border: 1px solid #ddd;
+}
+.quan span.jine{
+	color:red;
+	display: inline-block;
+	padding-left:10px;
+	padding-right:10px;
+}
+.deposit-main .deposit-fun p.deposit-num span{
+	margin-left: -30px;
+}
+.deposit-main .deposit-fun p.account-balance{
+	margin-left: 78px;
+}
+.deposit-main .deposit-fun p.account-balance span{
+	color: #FF0000;
+}
+.deposit-main .deposit-fun p.pay-style a{
+	display: inline-block;
+	border: 1px solid #ddd;
+	height: 38px;
+	line-height: 38px;
+	padding: 0 26px 0 16px;
+	margin-left: 18px;
+	cursor: pointer;
+}
+.deposit-main .deposit-fun p.pay-style a img{
+	vertical-align: middle;
+}
+.deposit-main .deposit-fun p.pay-style a.q-payment{
+	
+}
+.deposit-main .deposit-fun p.pay-style a.active{
+	background: url(../../img/account/deposit-style-ok.png) no-repeat bottom right;
+	border: 1px solid #239afb;
+}
+.deposit-main .deposit-fun p.bank a{
+	display:inline-block;
+	margin-left: 18px;
+	/*width: 174px;*/
+	height: 38px;
+	border: 1px solid #ddd;
+	line-height: 38px;
+	padding: 0 20px 0 0;
+}
+.deposit-main .deposit-fun p.bank a:hover{
+	border: 1px solid #239AFB;
+	cursor: pointer;
+}
+
+/*无银行卡*/
+.deposit-main .deposit-fun p.bank a span.add{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: url(../../img/account/deposit-add.png) center;
+	margin: 0 16px;
+	vertical-align: -3px;
+}	
+.deposit-main .deposit-fun p.bank a.look-for{
+	border: 0;
+	color: #239AFB;
+	vertical-align: -10px;
+}
+.deposit-main .deposit-fun p.tip{
+	line-height: 56px;
+	color: #ff0000;
+}
+.deposit-main .deposit-fun p.tip a{
+	color: #239AFB;
+	cursor: pointer;
+}
+/*有银行卡*/
+.deposit-main .deposit-fun p.bank a span.bank-icon{
+	display: inline-block;
+	width: auto;
+	height: 23px;
+	/*background: url(../../img/account/deposit-bank-icon.png) no-repeat center;*/
+	background: url(../../666.png) no-repeat center;
+	margin: 0 6px 0 16px;
+	vertical-align: -7px;
+	background-size: cover;
+}
+.deposit-main .deposit-fun p.bank a.active{
+	background: url(../../img/account/deposit-style-ok.png) no-repeat bottom right;
+	border: 1px solid #239afb;
+}
+
+/*充值*/
+.deposit-main .deposit-fun .deposit-btn{
+	clear: both;	
+}
+.deposit-main .deposit-fun .deposit-btn button{
+	margin-top: 12px;
+    margin-left: 138px;
+    width: 88px;
+    height: 41px;
+    background: #aaa;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.deposit-main .deposit-fun .deposit-btn button.active{
+	background: #239AFB;
+}
+.deposit-main .deposit-fun .deposit-tip{
+	font-size: 12px;
+	color: #333;
+	line-height: 84px;
+}
+.deposit-main .deposit-fun .deposit-tip span{
+	color: #ff0000;
+	cursor: pointer;
+}
+.deposit-main .reminders{
+	margin-top: 26px;
+	font-size: 14px;
+	color: #666666;
+	line-height: 25px;
+	margin-bottom: 50px;
+	margin-left: 4px;
+}
+
+/*充值前页面弹出框*/
+/*充值前页面弹出框*/
+.renzhen-box{
+	width: 366px;
+	height: 186px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -98px;
+	margin-left: -100px;
+	border: 1px solid #ddd;
+	background: #F5F5F5;	
+}
+.renzhen-box p.close{
+	height: 46px;
+	line-height: 46px;
+	text-align: right;
+}
+.renzhen-box p.close span{
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	background: url(../../img/tip-close.png) no-repeat center;
+	margin-right: 14px;
+}
+.renzhen-box p.renzhen-tip{
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+}
+.renzhen-box p a{
+	display: block;
+	width: 134px;
+	height: 42px;
+	border: 1px solid #239AFB;
+	margin: 30px auto;
+	text-align: center;
+	line-height: 42px;
+	font-size: 14px;
+	color: #239AFB;
+}
+
+/*充值弹出框*/
+/*充值弹出框*/
+.black-overlay{
+	/*display: none;*/
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.2;
+	opacity:.20;
+	filter: alpha(opacity=20);
+}
+.deposit-alert{
+	/*display: none;*/
+	position: fixed;
+	bottom: 36%;
+	left: 43%;
+	width: 446px;
+	height: 258px;
+	background-color: white;
+	z-index:1002;
+	overflow: auto;
+	box-shadow: 5px 5px 5px 0 #b5acac;
+}
+.deposit-alert .alert-tit{
+	width: 100%;
+	height: 38px;
+	border-bottom: 1px solid #ddd;
+	background: #F5F5F5;
+}
+.deposit-alert .alert-tit p{
+	line-height: 38px;
+	height: 38px;
+	text-align: center;
+	color: #333;
+	font-size: 16px;
+}
+.deposit-alert .alert-main p.icon{
+	height: 32px;
+	line-height: 32px;
+	background: #fffbe2;
+	font-size: 14px;
+	color: #666;
+	text-align: center;
+}
+.deposit-alert .alert-main p.icon span{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: url(../../img/account/deposit-tip-icon.png) no-repeat center;	
+	vertical-align: -2px;
+	margin-right: 10px;
+}
+.deposit-alert .alert-main .alert-btn{
+	width: 100%;
+	margin-top: 22px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.deposit-alert .alert-main .alert-btn input{
+	margin-top: 30px;
+	width: 114px;
+	height: 38px;
+	border: 1px solid #ddd;
+	background: #fff;
+	outline: none;
+	font-size: 14px;
+	color: #333;
+	cursor: pointer;
+}
+.deposit-alert .alert-main .alert-btn input:hover{
+	background: #f64b3e;
+	color: #fff;
+	border: 0;
+	
+}
+.deposit-alert .alert-main .alert-btn input.red{
+	background: #f64b3e;
+	color: #fff;
+	border: 0;
+}
+.deposit-alert .alert-main .alert-btn .btn{
+	margin-right: 14px;
+}
+.deposit-alert .alert-main p:last-child{
+	text-align: center;
+	margin-top: 32px;
+	color: #333;
+	font-size: 14px;
+}
+
+/*提现样式*/
+.deposit-main .deposit-fun.cash .account-balance{
+	margin-left: 0;
+}
+.deposit-main .deposit-fun.cash p{
+	margin-bottom: 24px;
+}
+.deposit-main .deposit-fun.cash .account-balance .yue{
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 58px;
+}
+.deposit-main .deposit-fun.cash .account-balance .infact{
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 30px;
+}
+.deposit-main .deposit-fun.cash .deposit-num span.tip{
+	margin-left: 20px;
+	color: #ff0000;
+}
+.deposit-main .deposit-fun.cash .deposit-num input{
+	background: #fff;
+}
+.deposit-main .deposit-fun.cash .next-btn button{
+	margin-top: 12px;
+	margin-left: 138px;
+	width: 90px;
+	height: 30px;
+	background: #aaa;
+	color: #FFFFFF;
+	font-size: 14px;
+	text-align: center;
+	line-height: 30px;
+	border: none;
+	outline: none;
+}
+.deposit-main .deposit-fun.cash .next-btn button.active{
+	background: #239AFB;
+	cursor: pointer;
+}
+.deposit-main .reminders.cash dl{
+	font-size: 14px;
+	font-size: 14px;
+	color: #666666;
+	line-height: 25px;
+	margin-left: 4px;
+	clear: both;
+	overflow: hidden;
+}
+.deposit-main .reminders.cash dl dt,.deposit-main .reminders.cash dl dd{
+	float: left;
+}
+.deposit-main .reminders.cash dl dd{
+	width: 906px;
+}
+
+
+
+/*充值成功*/
+.deposit-main .deposit-fun.success{
+	text-align: center;
+}
+.deposit-main .deposit-fun.success p{
+	margin-top: 120px;
+	margin-bottom: 120px;
+	font-size: 24px;
+	color: #333;
+}
+.deposit-main .deposit-fun.success p span.ok{
+	display: inline-block;
+	width: 57px;
+	height: 57px;
+	background: url(../../img/rejister-ok.png) no-repeat center;
+	vertical-align: middle;
+	margin-right: 18px;
+}
+.deposit-main .deposit-fun.success p a{
+	font-size: 14px;
+	color: #ff860e;
+	margin-left: 18px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0; 
+}
+input[type="number"]{-moz-appearance:textfield;}
+
+
+/*网银支付*/
+.choose-bank{
+	margin-top: 40px;
+}
+.choose-bank .title{
+	width: 60px;
+	font-size: 14px;
+	color: #333;
+	height: 32px;
+	line-height: 32px;
+}
+.choose-bank .bank-list{
+	width: 540px;
+	margin-left: 20px;
+}
+.choose-bank .bank-list ul{
+	width: 100%;
+	
+}
+.choose-bank .bank-list ul li{
+	float: left;
+}
+.choose-bank .bank-list ul li{
+	display: block;
+    width: 132px;
+    height: 32px;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    margin-top: -1px;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+}
+.choose-bank .bank-list ul li a{
+    width: 130px;
+    height: 30px;
+    display: block;
+	/*background: url(../../img/account/deposit-style-ok.png) no-repeat bottom right;
+    border: 1px solid #239afb;*/
+}
+/*.choose-bank .bank-list ul li a.gongshang{
+	background: url(../../img/yh_logo/gongshang.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.zhaoshang{
+	background: url(../../img/yh_logo/zhaoshang-15.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.nongye{
+	background: url(../../img/yh_logo/nonghang-1.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.jianshe{
+	background: url(../../img/yh_logo/jianhang-2.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.minsheng{
+	background: url(../../img/yh_logo/mingsheng.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.youzheng{
+	background: url(../../img/yh_logo/youzheng-16.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.guangda{
+	background: url(../../img/yh_logo/guangda-18.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.huaxia{
+	background: url(../../img/yh_logo/huaxia-4.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.luoshang{
+	background: url(../../img/yh_logo/luoyangshangye-14.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.zhonghang{
+	background: url(../../img/yh_logo/zhonghang.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.jiaotong{
+	background: url(../../img/yh_logo/jiaotong-13.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.pufa{
+	background: url(../../img/yh_logo/pufa-12.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.xingye{
+	background: url(../../img/yh_logo/xingye-11.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.zhongxin{
+	background: url(../../img/yh_logo/zhongxin-10.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.beijing{
+	background: url(../../img/yh_logo/beijing-9.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.guangdong{
+	background: url(../../img/yh_logo/guangdong-8.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.pingan{
+	background: url(../../img/yh_logo/pingan-7.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.zheshang{
+	background: url(../../img/yh_logo/zheshang-6.png) no-repeat center;
+}
+.choose-bank .bank-list ul li a.xinhui{
+	background: url(../../img/yh_logo/xinhuicunzheng-5.png) no-repeat center;
+}*/
+/*.choose-bank .bank-list ul li a.pufa{
+	background: url(../../img/yh_logo/pufa-12.png) no-repeat center;
+}*/
+
+.choose-bank .bank-list ul li a.active{
+    width: 130px;
+    height: 30px;
+    display: block;
+	background: url(../../img/account/deposit-style-ok.png) no-repeat bottom right;
+    border: 1px solid #239afb;
+}
+.choose-bank .bank-list ul li a img{
+	margin-top: 6px;
+}

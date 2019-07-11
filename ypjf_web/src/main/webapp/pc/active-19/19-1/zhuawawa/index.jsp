@@ -1,0 +1,256 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../../css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/zhuawawa.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
+    <link rel="shortcut icon" href="../../../img/logo1.icon"/>
+    <title></title>
+</head>
+<body>
+<!--顶部-->
+
+<iframe src="../../../head.html" class="iframe-head" width="100%" scrolling="no"  style="border:0px;display: block;"></iframe>
+
+<!--主体-->
+<div id="content">
+    <div class="top">
+        <div class="banner">
+            <div class="title"><img src="img/bannerTitle.png" ></div>
+        </div>
+    </div>
+    <div class="center">
+        <!-- <div class="title">
+            <h1><div class="miaoshu">奖品展示</div></h1>
+        </div> -->
+        <div class="jiangpin">
+            <ul class="list1">
+                <li>
+                    <img src="img/jiangpin1.png" alt="平板">
+                    <p class="text">Apple iPad Pro 11英寸平板电脑 2018年新款</p>
+                    <p><span class="price">价值:</span><span class="money">7699.00元</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangpin2.png" alt="口红">
+                    <p class="text">迪奥（Dior）魅惑润唇蜜3.5g 001粉色变色润唇膏</p>
+                    <p><span class="price">价值:</span><span class="money">300.00元</span></p>
+                </li>
+            </ul>
+            <ul class="list2">
+                <li>
+                    <img src="img/jiangpin3.png" alt="养生壶">
+                    <p class="text">美的（Midea）1.5L玻璃养生壶</p>
+                    <p class="money"><span class="price">价值:</span><span class="money">139.00元</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangpin4.png" alt="咖啡机">
+                    <p class="text">小熊（bear）美式家用咖啡机 </p>
+                    <p class="money"><span class="price">价值:</span><span class="money">89.00元</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangpin5.png" alt="夜灯" class="yedeng">
+                    <p class="text">减压七彩助眠小海豹软硅胶夜灯</p>
+                    <p class="money"><span class="price">价值:</span><span class="money">59.00元</span></p>
+                </li>
+            </ul>
+            <ul class="list3">
+                <li>
+                    <img src="img/jiangpin6.png" alt="抽纸" class="chouzhi">
+                    <p class="text">清风抽纸 原木纯品金装系列 3层120抽*24包</p>
+                    <p class="money"><span class="price">价值:</span><span class="money">56.90元</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangpin7.png" alt="称" class="cheng">
+                    <p class="text">透明轻薄圆形人体健康秤J-2018A</p>
+                    <p class="money"><span class="price">价值:</span><span class="money">29.00元</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangpin8.png" alt="100京东卡" class="jingdongka">
+                    <p class="text">京东E卡面值100元（电子卡）</p>
+                    <p class="money"><span class="price">价值:</span><span class="money">100.00元</span></p>
+                </li>
+            </ul>
+            <ul class="list4">
+                <li>
+                    <img src="img/jiangpin9.png" alt="20京东卡">
+                    <p class="text">京东E卡面值20元（电子卡）</p>
+                    <p class="money"><span class="price">价值:</span><span class="money">20.00元</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangpin10.png" alt="10京东卡">
+                    <p class="text">京东E卡面值10元（电子卡）</p>
+                    <p class="money"><span class="price">价值:</span><span class="money">10.00元</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangpin11.png" alt="5京东卡">
+                    <p class="text">京东E卡面值5元（电子卡）</p>
+                    <p class="money"><span class="price">价值:</span><span class="money">5.00元</span></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="title">
+            <h1><div class="miaoshu">剩余<span class="cishu" id="cishu">0</span>次抓奖机会</div></h1>
+        </div>
+        <div id="main">
+            <div id="game">
+                <div class="centerBt">
+                    <div class="fanguang"></div>
+                    <div class="topBt">
+                        <div class="huagan"></div>
+                        <div class="sheng"></div>
+                        <div class="shengBg"></div>
+                        <div class="jiazi">
+                            <div class="lose">
+                                <img src="">
+                            </div>
+                            <div class="win">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottomBt">
+
+                        <div class="chuansong"></div>
+                        <div class="gundong">
+                            <div class="gun clearFix">
+                                <ul class="wawa clearFix">
+                                    <li><img src="img/img1.png" alt=""><span></span></li>
+                                    <li><img src="img/img2.png" alt=""><span></span></li>
+                                    <li><img src="img/img3.png" alt=""><span></span></li>
+                                    <li><img src="img/img4.png" alt=""><span></span></li>
+                                    <li><img src="img/img5.png" alt=""><span></span></li>
+                                    <li><img src="img/img6.png" alt=""><span></span></li>
+                                    <li><img src="img/img7.png" alt=""><span></span></li>
+                                    <li><img src="img/img8.png" alt=""><span></span></li>
+                                    <li><img src="img/img9.png" alt=""><span></span></li>
+                                    <li><img src="img/img10.png" alt=""><span></span></li>
+                                    <li><img src="img/img11.png" alt=""><span></span></li>
+                                </ul>
+                                <ul class="wawa2 clearFix">
+                                    <li><img src="img/img1.png" alt=""><span></span></li>
+                                    <li><img src="img/img2.png" alt=""><span></span></li>
+                                    <li><img src="img/img3.png" alt=""><span></span></li>
+                                    <li><img src="img/img4.png" alt=""><span></span></li>
+                                    <li><img src="img/img5.png" alt=""><span></span></li>
+                                    <li><img src="img/img6.png" alt=""><span></span></li>
+                                    <li><img src="img/img7.png" alt=""><span></span></li>
+                                    <li><img src="img/img8.png" alt=""><span></span></li>
+                                    <li><img src="img/img9.png" alt=""><span></span></li>
+                                    <li><img src="img/img10.png" alt=""><span></span></li>
+                                    <li><img src="img/img11.png" alt=""><span></span></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="anniu">
+                        <a class="zhuce" href="../../../project/list">
+                            <img src="img/touzi.png" alt="立即投资">
+                        </a>
+                        <!--按钮(真)-->
+                        <div class="btn">
+                            <!--点击前-->
+                            <div class="btn_star"></div>
+                            <!--点击后-->
+                            <div class="btn_end"></div>
+                        </div>
+                    </div>
+
+                    <div class="shuoming">
+                        <h3></h3>
+                        <div class="text">
+                            <p>1.活动日期：2019年1月1日—2019年1月31日</p>
+                            <p>2.活动方式：按下开始按钮，爪子下落，捉到哪个娃娃，就可获得娃娃所对应的礼品，捉到就是你的了，机不可失时不再来，还不赶快行动起来!!!</p>
+                            <p>3.抽奖方式：自2019年1月1日起，用户投资年化每满800，即可按动开始按钮一次。获奖记录可在“我的账户—我的奖励—抽奖奖励”中查看。</p>
+                            <p>4.用户获奖后，可与营普金服官方客服取得联系，安排后续发货对奖，请你保持通讯畅通。</p>
+                            <p>5.虚拟奖品以电子验证码，赠送等方式兑换；实物奖品均由第三方发货，营普金服不负责售后质量问题。如用户提供的收货地址、收货人联系方式错误，损失由用户自行承担。</p>
+                            <p>6.所有礼物不支持现金折现。请在活动结束前，及时使用你的抽奖机会。</p>
+                            <p class="zhong">温馨提示：年化投资金额=实际投资金额/12*标的期限（月份）</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div id="tankuang">
+        <div class="content1" id="prize">
+            <div class="bg">
+                <div class="prize">
+                    <p class="suprise"><img src="img/suprise.png" alt="惊喜"></p>
+                    <p class="jiang" id="jiang">迪奥（Dior）魅惑润唇蜜3.5g 001粉色变色润唇膏</p>
+                    <%--<p class="money">￥300.00元</p>--%>
+                    <p class="know"><img src="img/know.png" alt="我知道"></p>
+                </div>
+            </div>
+        </div>
+        <div class="content2" id="nothing">
+            <div class="bg">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部导航-->
+<iframe src="../../../footer.html" width="100%" scrolling="no"  style="border:0px;height:326px;"></iframe>
+
+<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/wawa.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/wawa.js"></script>
+<script src="../../../../layer-v3.0.3/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    window.onload = function(){
+
+        $('.bottom .chuansong').animate({right:800,opacity:0},12000,"linear");
+        var lis0=$('.wawa li').eq(0);
+        var lis1=$('.wawa li').eq(1);
+        var lis2=$('.wawa li').eq(2);
+        lis0.css('visibility','hidden');
+        lis1.css('visibility','hidden');
+        lis2.css('visibility','hidden');
+
+        var timer2=2;
+        clearTimeout(timer2);
+        timer2 = setTimeout(function(){
+
+            lis0.css('visibility','visible');
+            lis1.css('visibility','visible');
+            lis2.css('visibility','visible');
+        },15000)
+
+    };
+    function isLogin() {
+        return !!'${pcuser.phone}';
+    }
+    function getEncodedCurrentURL(){
+        return encodeURIComponent(location.href);
+    }
+    function showLoginPrompt() {
+        layer.alert('很抱歉，登录后才参加此活动，请先登录!', {title : '温馨提示', btn: ['登录', '取消']}, function () {
+            location.href = '/yingpu/pc/login?backUrl=' + getEncodedCurrentURL();
+        }, function () {
+
+        });
+    }
+    $(function(){
+        if (!isLogin()){
+            showLoginPrompt();
+        }
+        else{
+            loadUserDrawInfo()
+        }
+    })
+
+
+</script>
+
+</body>
+</html>

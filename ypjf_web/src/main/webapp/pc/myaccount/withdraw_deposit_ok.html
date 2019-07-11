@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=1220" />
+		<title>营普金服—参股商业银行的互联网金融服务平台</title>
+		<meta name="Description" content="营普金服，法人持股商业银行，重庆富民银行资金存管，深圳前海股权交易中心上市，股权代码366066。超短期理财，100元起投，安全合规专业高效的互联网金融服务平台。"/>
+		<meta name="Keywords" content="营普金服,yingpujinfu,营普,yingpu,网贷,P2P,网络借贷,红包,车贷融,房贷融,优企融,个人投资理财,互联网理财,金融理财,短期理财,借款,营夏"/>
+		<link rel="shortcut icon" href="../img/logo1.icon"/>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/account.css"/>
+		<link rel="stylesheet" type="text/css" href="css/deposit.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>-->
+	</head>
+	<body>
+		<!--顶部-->
+		
+		<iframe src="../head.html" class="iframe-head" width="100%" scrolling="no"  style="border:0px;"></iframe>	
+		<!--主体-->
+		<div class="account-box">
+			<div class="center clearfix">
+				<!--左边导航-->
+				
+				<div class="account-nav left">
+					
+					<iframe src="../myaccount/account_sidebar.html" width="100%" height="722" scrolling="no"  style="border:0px;"></iframe>
+					
+				</div>
+				<!--右边主体部分-->
+				
+				<div class="deposit-main left">
+					<h3 id="tilte">提现成功</h3>
+					<div class="deposit-fun success">
+						<p><span class="ok"></span><span id="tip">提现成功  </span><a href="../myaccount/account">返回我的账户</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<!--底部导航-->
+		<iframe src="../footer.html" width="100%" scrolling="no"  style="border:0px;height:326px;"></iframe>
+		
+		<!--加载js文件-->
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/queryString.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/build/dist/echarts.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/radialIndicator.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+			var msg = '';
+		
+		switch(queryString('type')) {
+			case '1':
+				$('#title').html('提现成功！');
+				$('#tip').html('提现成功！');
+				break;
+				
+			case '2':
+				$('#title').html('充值成功！');
+				$('#tip').html('充值成功！');
+				break;
+				
+			case '3':
+				$('#title').html('更换银行卡成功！');
+				$('#tip').html('更换银行卡成功！');
+				break;
+				
+			case '4':
+				$('#title').html('修改交易密码成功！');
+				$('#tip').html('修改交易密码成功！');
+				break;
+			
+			case '5':
+				$('#title').html('更换银行卡成功！');
+				$('#tip').html('更换银行卡成功！');
+				break;
+		}
+		
+	</script>
+	
+	</body>
+</html>

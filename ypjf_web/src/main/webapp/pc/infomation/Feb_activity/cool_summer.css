@@ -1,0 +1,124 @@
+.main{
+	width: 100%
+	height: auto;	
+}
+.main .banner{
+	width: 100%;
+	height: 700px;
+	background: url(images/cool-summer/banner-bg_01.jpg) no-repeat center;
+	text-align: center;
+	padding-top: 50px;
+}
+.banner img{
+	margin-left: 124px;
+	margin-top: 18px;
+}
+.banner p{
+	width: 776px;
+    font-size: 18px;
+    line-height: 32px;
+    color: #fff;
+    margin: 27px 116px 0 262px;
+    text-align: left;
+    text-align: justify;
+}
+.section-one{
+	width: 100%;
+	height: 1118px;
+	background: url(images/cool-summer/cool-bg_02.png) no-repeat center;
+	text-align: center;
+}
+.section-one .tit,.section-two .tit{
+	margin-bottom: 120px;
+}
+.section-one .tit img,.section-two .tit img{
+	padding-right: 60px;
+}
+
+.section-one ul,.section-two ul{
+	width: 1200px;
+	margin: 60px auto;
+}
+.section-one ul li.list{
+	width: 50%;
+	text-align: center;
+	box-sizing: border-box;
+	float: left;
+	font-size: 16px;
+	line-height: 30px;	
+}
+.section-one ul li.item:nth-child(1){
+	padding-left: 120px;
+	
+}
+.section-one ul li.item:nth-child(2){
+	padding-right: 214px;
+}
+.section-one ul li.task{
+	width: 33%;
+}
+.section-one ul li.task:nth-child(1){
+	text-align: left;
+}
+.section-one ul li.task:nth-child(3){
+	text-align: right;
+}
+.section-one ul li.task:nth-child(1) p:last-child{
+	padding-left: 35px;
+}
+.section-one ul li.task:nth-child(3) p:last-child{
+	padding-right: 35px;
+}
+/*.section-one ul li.task p{
+	text-align: center;
+}*/
+.section-one ul li.list img,.section-two ul li.list img{
+	margin-bottom: 10px;
+}
+.section-one ul li.list p span,.section-two ul li.list p span{
+	font-size: 24px;
+	color: red;
+}
+.section-two{
+	width: 100%;
+	height: 802px;
+	background: url(images/cool-summer/cool-bg_03.png) no-repeat center;
+	text-align: center;
+	padding-top: 40px;
+}
+.section-two ul .list{
+	width: 25%;
+	float: left;
+	font-size: 16px;
+	line-height: 30px;	
+}
+.section-three{
+	width: 100%;
+	height: 900px;
+	background: url(images/cool-summer/cool-bg_04.jpg) no-repeat center;
+	padding-top: 18px;
+}
+.instruction{
+	width: 700px;
+    margin: 200px auto;
+    font-size: 16px;
+}
+.instruction h5{
+	text-align: center;
+	font-size: 28px;
+	margin-bottom: 30px;
+}
+.instruction dl{
+	width: 100%;
+	clear: both;	
+	line-height: 40px;
+}
+.instruction dl dt,.instruction dl dd{
+	float: left;	
+}
+.instruction dl dt{
+	width: 24px;
+}
+.instruction dl dd{
+	width: 676px;
+}

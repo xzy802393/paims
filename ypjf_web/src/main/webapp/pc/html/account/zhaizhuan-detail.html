@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=1220" />
+		<title>九趣贷 — 贷快乐，更带梦想</title>
+		<link rel="shortcut icon" href="/yingpu/pc/img/logo.icon.png"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/zhaizhuan-detail.css"/>
+        <style>
+            .subtotal-left-cell { width: 100px; display: inline-block; text-align: left; }
+            .je {
+                min-width: 77px;
+                display: inline-block;
+                text-align: center;
+            }
+            tbody {
+                min-height: 100px;}
+        </style>
+	</head>
+	<body>
+	<!--顶部-->
+	<iframe src="/yingpu/pc/head3.html?index=6" height="104px" width="100%" scrolling="no" name="head" style="border:0px;"></iframe>
+		<div id="accountBox" class="clearFix">
+			<!-- 左边导航 -->
+			<div id="aside">
+				<iframe src="../../myaccount/account_sidebar.html" width="100%" height="850px" scrolling="no"  style="border:0px;"></iframe>
+			</div>
+			
+			<!-- 右边内容 -->
+			<div id="account">
+				<div class="nav clearFix">
+					<span class="active">债权转让—详情</span>
+					<span class="tishi">风险提示:<a href="javascript:void(viewLicense(1))">《债权转让与受让协议》</a></span>
+				</div>
+				<div id="table" class="list" style="display: block;">
+					<table border="0">
+                        <thead>
+                            <tr class="title">
+                                <th>勾选</th>
+                                <th>项目名称</th>
+                                <th>预期年化利率</th>
+                                <th>日期</th>
+                                <th>期限(月)</th>
+                                <th>到期时间</th>
+                                <th>本金(元)</th>
+                                <th>利息(元)</th>
+                                <th>是否溢价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+					</table>
+				</div>
+				<div id="total">
+                    <p class="bj">已选债转金额: <span class="subtotal-left-cell"><span class="je">0.00</span>元</span></p>
+					<p class="lx">收取利息: <span class="subtotal-left-cell"><input readonly type="text" id="totalInterest" value="0.00">元</span></p>
+				</div>
+				<div id="btn">
+					<a href="javascript:void(history.back())" class="back">返回上一页</a>
+					<a href="javascript:void(authorize())" class="queren">确认授权</a>
+				</div>
+			</div>
+		</div>
+        <script type="x-tpl" id="tpl">
+            <tr>
+                <td class="checked"><input type="checkbox" value="$id"></td>
+                <td>$name</td>
+                <td>$earningRate</td>
+                <td>$startDate</td>
+                <td>$deadline</td>
+                <td>$expiresDate</td>
+                <td>$investmentAmount</td>
+                <td>$assignBebtInterest</td>
+                <td class="true">
+                    <select name="isCharge">
+                        <option value="1">是</option>
+                        <option value="0">否</option>
+                    </select>
+                </td>
+            </tr>
+        </script>
+	<!--底部导航-->
+	<iframe src="/yingpu/pc/footer2.html" class="iframe-foot" width="100%" scrolling="no" style="border:0px;height:326px;"></iframe>
+        <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../layer-v3.0.3/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/utils.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/queryString.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+            var tpl = $('#tpl').html();
+            var debtInfo = {};
+            var curMaxInterest = 0;
+
+            // 授权
+            function authorize() {
+                var debtItems = [];
+                var interest = Number($('#totalInterest').val());
+                var selectedNum = $('[type=checkbox]:checked').each(function(i, e) {
+                    var $tr = $(e).parent().parent();
+                    var isCharge = $tr.find('select').val() == 1;
+                    var info = debtInfo[$tr.index()];
+                    debtItems.push({
+                        dispersedProjectId : info.history.id,
+                        isCharge : isCharge
+                    });
+                }).size();
+                if (selectedNum == 0) {
+                    layer.msg('请先选择要债转的项！');
+                    return;
+                }
+                // if (isNaN(interest) || interest < 0) {
+                //     layer.msg('您输入的收取利息数值不合法！');
+                // }
+
+                $.ajax({
+                    url : '/yingpu/pc/si/debt/sell',
+                    dataType : 'json',
+                   // contentType : 'application/json; charset=UTF-8',
+                    type : 'POST',
+                    data : {
+                        id : queryString('id'),
+                        itemJson : JSON.stringify(debtItems),
+                        interest : interest
+                    },
+                    success : function(rsp) {
+                    if (rsp.status != 'success') {
+                        layer.alert(rsp.message);
+                        return;
+                    }
+
+                    layer.msg('债转授权完成！');
+                    reload(500);
+                }
+            });
+            }
+            $.get('/yingpu/pc/si/debt/interest/get', {siOrderId : queryString('id')}, function(data) {
+                var html = '';
+                debtInfo = data.data;
+                $.each(data.data || [], function(i, e) {
+                    var project = $.extend(e, e.history);
+                    project.name = e.project.name;
+			        html += tpl.formatStr(project);
+                });
+                $('.list tbody').html(html);
+            });
+
+            $('body').on('click', '[type=checkbox]', function() {
+                var amount = 0, interest = 0;
+                $('[type=checkbox]:checked').each(function(i, e) {
+                    var $tr = $(e).parent().parent();
+                    var isCharge = $tr.find('select').val() == 1;
+                    var info = debtInfo[$tr.index()];
+                    amount += info.history.investmentAmount;
+                    interest = isCharge ? accAdd(interest, info.assignBebtInterest) : 0;
+                });
+
+                curMaxInterest = Math.max(0, interest);
+                $('.je').text(amount);
+                $('#totalInterest').val(interest);
+            });
+
+            // $('#totalInterest').blur(function() {
+            //     var val = $(this).val();
+            //     if (isNaN(val) || val > curMaxInterest || val < 0) {
+            //         $(this).val(curMaxInterest);
+            //     }
+            // })
+
+            function viewLicense(idx) {
+                var idxs = [17, 21];
+                layer.open({
+                    type: 2,
+                    content: '/yingpu/pc/myaccount/announce/content?id=' + idxs[idx] + '&type=contractsample',
+                    area: ['50%', '80%']
+                });
+            }
+		</script>
+	</body>
+	
+</html>

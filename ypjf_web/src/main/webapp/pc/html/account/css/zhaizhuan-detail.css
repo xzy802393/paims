@@ -1,0 +1,156 @@
+#accountBox{
+	width:1200px;
+	margin:0 auto;
+	padding-top:28px;
+}
+
+#accountBox #aside{
+	float:left;
+	width:140px;
+	height:auto;
+	margin-right:24px;
+	border:1px solid #e8e8e8;
+}
+#accountBox #account{
+	float:right;
+	width:1032px;
+	height:608px;
+	border:1px solid #e8e8e8;
+}
+
+#account .nav{
+	width:990px;
+	height:55px;
+	border-bottom:1px solid #e8e8e8;
+	margin:0 auto;
+	margin-bottom:58px;
+}
+#account .nav span.active{
+	font-size: 16px;
+	line-height:54px;
+	color:#ff7d54;
+	border-bottom:2px solid #f06725;
+	float:left;
+	margin-left:30px;
+}
+#account .nav span.tishi{
+	font-size: 14px;
+	line-height:54px;
+	color:#666666;
+	float:right;
+	margin-right:30px;
+}
+#account .nav span.tishi a{
+	color:#ff7d54;
+}
+
+
+#account #table{
+	max-height:350px;
+	overflow: auto;
+}
+#account #table table{
+	width: 990px;
+	max-height:350px;
+	margin:0 auto;
+	margin-bottom: 32px;
+}
+#account #table table tr{
+	height: 55px;
+	text-align: center;
+	border-bottom:1px solid #e8e8e8;
+}
+#account #table table tr td{
+	color: #7b7b7b;
+	font-size: 14px;
+	line-height:54px;
+	height: 54px;
+}
+
+#account #table table tr.title{
+	height: 65px;
+	color: #333;
+	font-size: 14px;
+	background: #fafafa;
+	font-weight: normal;
+	border:none;
+}
+#account #table table tr.title th{
+	color: #7b7b7b;
+	font-weight: normal;
+}
+#account #table table td.checked input[type="checkbox"]{
+	
+    width: 13px;
+    height: 13px;
+    background-color: #fff;
+    -webkit-appearance:none;
+    border: 1px solid #c9c9c9;
+    border-radius: 2px;
+    outline: none;
+
+}
+#account #table table td.true select{
+	outline: none;
+	border-color:#eee;
+	color:#7b7b7b; 
+}
+#account #table table td a{
+	color:#ff7d54;
+}
+
+#account #table table td.checked input[type=checkbox]:checked{
+	background: url("../img/checked.png") no-repeat center;
+	border:none;
+}
+#account #total{
+	height:80px;
+	width:98%;
+	
+}
+#account #total p{
+	color: #7b7b7b;
+	font-size: 18px;
+	line-height:40px;
+	text-align: right;
+	margin-right:30px;
+}
+#account #total p input[type="text"]{
+	width:78px;
+	outline:none;
+	color: #7b7b7b;
+	font-size: 14px;
+	border:none;
+	border-bottom:1px solid #e8e8e8;
+	text-align: center;
+	/* margin-left:28px; */
+}
+#account #btn{
+	padding:30px 0;
+	width:334px;
+	height:31px;
+	margin:0 auto;
+}
+#account #btn .back{
+	display: inline-block;
+	width:124px;
+	height:29px;
+	border:1px solid #fe4a47;
+	text-align: center;
+	font-size:14px;
+	color:#fe4a47;
+	line-height:29px;
+	margin-right:76px;
+	border-radius: 4px;
+}
+#account #btn .queren{
+	display: inline-block;
+	width:126px;
+	height:31px;
+	text-align: center;
+	font-size:14px;
+	background:#fe4a47;
+	line-height:29px;
+	color:#fff;
+	border-radius: 4px;
+}

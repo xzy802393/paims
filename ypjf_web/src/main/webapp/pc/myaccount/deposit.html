@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=1220" />
+		<title>营普金服-我的账户</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/account.css"/>
+		<link rel="stylesheet" type="text/css" href="css/deposit.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>-->
+	</head>
+	<body>
+		<!--顶部-->
+		
+		<iframe src="../head.html" class="iframe-head" width="100%" scrolling="no"  style="border:0px;"></iframe>	
+		<!--主体-->
+		<div class="account-box">
+			<div class="center clearfix">
+				<!--左边导航-->
+				
+				<div class="account-nav left">
+					
+					<iframe src="../myaccount/account_sidebar.html" width="100%" height="622" scrolling="no"  style="border:0px;"></iframe>
+					
+				</div>
+				<!--右边主体部分-->
+				
+				<div class="deposit-main left">
+					<h3>充值</h3>
+					<div class="deposit-fun clearfix">
+						<p class="deposit-num">充值金额  <input type="text" /> <span>元</span></p>
+						<p class="account-balance">账户余额 <span>0.00</span> 元，充值后余额 <span>0.00</span> 元</p>
+						<p class="pay-style">支付方式  
+							<a class="q-payment active" onclick="$(this).parent().find('a').removeClass('active');$(this).addClass('active')"><img src="../img/account/deposit-style-1.png"/></a>
+							<a class="e-pay" onclick="$(this).parent().find('a').removeClass('active');$(this).addClass('active')"><img src="../img/account/deposit-style-2.png"/>网银支付</a></p>
+						
+						<!--已添加银行卡时显示银行卡和查看充值限额表-->
+						<!--没有添加银行卡时显示添加银行卡，查看充值限额，*为了您的资金安全，请先完成等等-->
+						<p class="bank left">开户银行  
+							<a style="display: none;" onclick="$('bindBank').show()"><span class="add"></span>添加认证银行卡</a>
+							<a class="active"><span class="bank-icon"></span>招商银行(7918)</a>
+							<a href="#" class="look-for">查看充值限额表</a>
+						</p>
+						<p class="tip left" style="display: none;">*为了您的资金安全，请先完成<a onclick="$('bindBank').show()">实名认证</a>和<a onclick="$('bindBank').show()">绑定银行卡</a></p>
+						
+						<div class="deposit-btn">
+							<button class="">充值</button>
+						</div>
+						
+						<p class="deposit-tip"> <span>*</span> 根据国家相关规定：不支持使用信用卡充值</p>
+					</div>
+					
+					<div class="reminders">
+							<p>温馨提示：                                  </p>
+							<p>1、如果在充值过程中遇到问题请致电：400-969-1811，客服竭诚为您服务；</p>
+							<p>2、如果超出支付限额，可以拆分整体投资金额多次充值；             </p>
+							<p>3、单次充值金额需大于或等于100元；                    </p>
+							<p>4、充值服务0手续费，账户金额提现0手续费；                 </p>
+							<p>5、请使用借记卡充值，信用卡无法充值；                    </p>
+							<p>6、银行卡余额不足需要先补充金额后再次充值；                 </p>
+							<p>7、开通网银方法：（1）携带本人身份证到银行柜台办理。（2）登录网上银行办理；</p>
+							<p>8、如果存在银行卡状态异常情况，请联系银行做取消挂失或补卡处理；       </p>
+							<p>9、每日的充值限额依据各银行限额为准，请注意您的银行卡充值限制，以免造成不便。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--进入充值页面时的验证-->
+		<!--进入充值页面时的验证-->
+		<!--进入充值页面时的验证-->
+		<!--<div class="renzhen-box">
+			<p class="close"><span onclick="$(this).parent().parent().hide()"></span></p>
+			<p class="renzhen-tip">您还未实名认证和绑定银行卡，暂时无法充值</p>
+			<p><a href="#">前往实名认证</a></p>
+		</div>-->
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!--充值遇到问题的弹框-->
+		<!--充值遇到问题的弹框-->
+		<!--充值遇到问题的弹框-->
+		<div id="" class="deposit-alert">
+			<div class="alert-tit" id="">
+				<p>充值提示</p>
+			</div>
+			<div class="alert-main">
+				<p class="icon"><span></span>请您在新打开的第三方支付页面上完成，完成前请不要关闭此窗口</p>
+				<div class="alert-btn">
+					<p>完成充值后请根据您的情况点击下面的按钮</p>
+					<input class="btn" type="button" id="" value="充值遇到问题" />
+					<input class="red" type="button" name="" id="" value="已完成充值" />
+				</div>
+				<p>如果【快捷充值】提示“未开通支付功能”，请前往银联开通</p>
+			</div>
+		</div>
+		
+		
+		<!--绑定银行卡层-->
+		
+		<!--绑定银行卡-->
+		<!--绑定银行卡-->
+		<iframe src="bind_bankcard.html" id="bindBank" width="100%" style="position: absolute;top: 0;left: 0;display: none;z-index: 10;" scrolling="no"></iframe>
+		<!--底部导航-->
+		<iframe src="../footer.html" width="100%" scrolling="no"  style="border:0px;height:326px;"></iframe>
+		
+		<!--加载js文件-->
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/build/dist/echarts.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/radialIndicator.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#bindBank").height($(document).height());
+		});
+	
+	</script>?
+
+	</body>
+</html>

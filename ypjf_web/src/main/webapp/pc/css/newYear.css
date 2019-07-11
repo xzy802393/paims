@@ -1,0 +1,38 @@
+.go-home{
+	width: 100%;
+	height: 283px;
+	position: fixed;
+	bottom: 0;
+	z-index: 999;
+	background: url(../img/images/lijitouzi-bg_02.png) no-repeat bottom;
+	/*background-size: contain;*/
+}
+.go-home .center .close{
+	position: absolute;
+	top: 76px;
+	right: 0;
+	width: 32px;
+	height: 32px;
+	background: url(../img/lijitouzi-close.png) no-repeat center;
+	/*border: 2px solid #666;*/
+	border-radius: 50%;
+	background-size: contain;
+	cursor: pointer;
+}
+.go-home .center .get-prize{
+	width: 146px;
+    height: 50px;
+    position: absolute;
+    bottom: -256px;
+    left: 56%;
+}
+.go-home .center .get-prize a{
+	display: block;
+	width: 146px;
+    height: 50px;
+    background: url(../img/lijitouzi.png) no-repeat center;	
+}
+.go-home .center .get-prize a span{
+	margin-left: 10px;
+	font-family: cursive;
+}

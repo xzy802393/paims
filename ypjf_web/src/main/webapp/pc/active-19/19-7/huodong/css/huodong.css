@@ -1,0 +1,299 @@
+/* css reset */
+body,section,h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dd,th,td { 
+	margin: 0;
+	padding: 0; 
+	font-family:  'PingFang SC','Helvetica Neue','Helvetica','Tahoma','Arial','Hiragino Sans GB','Heiti SC','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif';
+	/* color:##171717; */
+	-webkit-font-smoothing: antialiased;
+} 
+a{
+	text-decoration: none;
+}
+img { 
+	border: none;
+	vertical-align: middle;
+} 
+ul {
+	list-style: none; 
+}
+.clearFix:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.clearFix{
+	zoom:1;
+}
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html { overflow-y: scroll; }
+
+
+body{
+	width:100%;
+	text-align: center;
+	color:#000;
+	max-width:1920px;
+	min-width:1400px;
+	margin:0 auto;
+}
+
+
+#content{
+	max-width:1920px;
+	min-width:1400px;
+	margin:0 auto;
+}
+#content #banner{
+	width:100%;
+	height:474px;
+	background: url(../img/top.jpg) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+
+#content #active{
+	width:100%;
+	height:844px;
+	background: url(../img/activeBg.jpg) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+#content #bottom{
+	width:100%;
+	height:564px;
+	background: url(../img/bottom.jpg) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+
+/* banner区域 */
+#content #banner .banner{
+	width:976px;
+	height:314px;
+	margin:0 auto;
+	padding-top:98px;
+}
+#content #banner .banner .title{
+	width:976px;
+	height:209px;
+	margin:0 auto;
+	padding-bottom:50px;
+}
+#content #banner .banner .text{
+	width:542px;
+	height:56px;
+	background:url(../img/fanliBg.png) no-repeat center;
+	/* padding-top:16px; */
+	font-size:26px;
+	line-height:56px;
+	color:#fff;
+	margin:0 auto;
+	font-family: "微软雅黑";
+	letter-spacing: 2px;
+}
+#content #banner .banner .text .num{
+	font-size:28px;
+}
+/* 活动区域 */
+#active .canyu{
+	width:642px;
+	margin:0 auto;
+	font-size:16px;
+	line-height:30px;
+	color:#fff;
+	text-align:center;
+	padding-top:30px;
+	padding-bottom:24px;
+}
+
+#active .guize{
+	width:562px;
+	height:62px;
+	margin:0 auto;
+	
+}
+#active .guize h1{
+	width:562px;
+	height:62px;
+	background:url(../img/guizeTitle.png) no-repeat center;
+	background-size:100% 100%;
+}
+#active .guize h1 span{
+	color:#0b0a15;
+	letter-spacing: 2px;
+	font:28px/62px "微软雅黑";
+}
+#active .main{
+	width:100%;
+	height:546px;
+	margin:0 auto;
+	background:url(../img/huodongBg.png) no-repeat center;
+	background-size:100% 100%;
+}
+#active .main .lists{
+	width:1200x;
+	height:546px;
+	margin:0 auto;
+		
+}
+#active .main .lists .list1{
+	width:916px;
+	height:195px;
+	margin:0 auto;
+	padding-top:54px;
+}
+#active .main .lists .item{
+	width:408px;
+	height:195px;
+	/* float:left; */
+	background:url(../img/hb.png) no-repeat center;
+	background-size:100% 100%;
+}
+#active .main .lists .item .laybox{
+	width:330px;
+	height:148px;
+	margin:0 auto;
+	text-align: left;
+	padding-top:20px;
+}
+#active .main .lists .item .laybox .fXtext{
+	font-size:18px;
+	line-height:18px;
+}
+#active .main .lists .item .laybox .center{
+	width:100%;
+	height:88px;
+}
+#active .main .lists .item .laybox .center .left{
+	float:left;
+	width:45%;
+	height:88px;
+	text-align: left;
+}
+#active .main .lists .item .laybox .center .right{
+	float:right;
+	width:55%;
+	height:88px;
+	text-align: right;
+}
+#active .main .lists .item .fanxian{
+	font-size:30px;
+}
+#active .main .lists .item .fanxian .num{
+	font-size:60px;
+	line-height:88px;
+	font-weight:bold;
+	font-family: "微软雅黑";
+}
+#active .main .lists .item .sz{
+	font-size:22px;
+	line-height:40px;
+	padding-right:30px;
+}
+
+#active .main .lists .item .text{
+	font-size:22px;
+	line-height:40px;
+}
+#active .main .lists .item .laybox .hbbottom{
+	width:248px;
+	height:42px;
+	margin:0 auto;
+	background: #4e2be9;
+}
+#active .main .lists .item .btn{
+	width:248px;
+	height:42px;
+	text-align: center;
+}
+#active .main .lists .item .qixian{
+	font-size:18px;
+	line-height:42px;
+	color:#fff;
+}
+#active .main .lists .item .zs{
+	font-size:18px;
+	line-height:42px;
+	color:#effe00;
+	font-weight:bold;
+	padding-left:6px;
+}
+#active .main .lists .list2{
+	width:1204px;
+	height:195px;
+	padding-top:60px;
+	margin:0 auto;
+}
+
+
+#active .chujie{
+	width:217px;
+	height:59px;
+	margin:0 auto;
+	padding-top:36px;
+}
+#active .chujie a{
+	display: block;
+	width:217px;
+	height:59px;
+	margin:0 auto;
+}
+#active .chujie img{
+	width:217px;
+	height:59px;
+}
+#active .chujie h1 span{
+	color:#fff;
+	letter-spacing: 2px;
+	font:28px/140px "微软雅黑";
+}
+
+/* bottom */
+#content #bottom .shuoming{
+	width:924px;
+	height:480px;
+	margin:0 auto;
+	text-align: center;
+	padding-top:56px;
+}
+#content #bottom .title{
+	width: 562px;
+	height: 62px;
+	margin:0 auto;	
+	padding-bottom:30px;
+}
+#content #bottom .title h3{
+	width: 562px;
+	height: 62px;
+	background: url(../img/guizeTitle.png) no-repeat center;
+	background-size: 100% 100%;
+	color: 0b0a15;
+    letter-spacing: 2px;
+    font: 28px/62px "微软雅黑";
+	text-align: center;
+	/* margin:0 auto; */
+}
+#content #bottom .shuoming .box{
+	width:637px;
+	height:382px;
+	background: url(../img/guize.png) no-repeat 0 0;
+	background-size:100% 100%;
+	margin:0 auto;
+	text-align: center;
+}
+
+#content #bottom .shuoming .box .text{
+	width:460px;
+	margin:0 auto;
+	text-align: left;
+	padding-top:70px;
+}
+#content #bottom .shuoming .box .text p{
+	
+	font:18px/36px "微软雅黑";
+	color:#fffee9;
+	letter-spacing: 1px;
+}
+#content #bottom .shuoming .box .text p.tishi{
+	font-weight: bold;
+	text-align: center;
+}
+
+

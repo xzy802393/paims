@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=1220" />
+		<title>营普金服-我的账户</title>
+		<link rel="shortcut icon" href="../img/logo1.icon"/>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/account.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bind_bankcard.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>-->
+	</head>
+	<body>
+		<!--顶部-->
+		
+		
+		
+		
+		<!--遮罩层-->
+		<!--遮罩层-->
+		<div id="fade" class="black-overlay"></div>
+		<div class="open-fuyou" id="openFuyou">
+			<div class="open-fuyou-tit">
+				<p>开通富友金账户</p>
+				<span class="close" onclick="$('#openFuyou').hide();$('#fade').hide();"></span>
+			</div>
+			<div class="open-fuyou-form">
+				<p>为了您的资金安全，继续投资请开通第三方托管账户<a href="#">富友金账户</a></p>
+				<form id="fy" action="" method="post" onsubmit="return false;">
+				<input id="userId" name="userId" value="${pcuser.id}" type="hidden" />
+				<input id="phone" name="phone" value="${pcuser.phone}" type="hidden" />
+				
+					<label><span>真实姓名</span><input name="realName" type="text" value="胡国辉" placeholder="请输入真实姓名"/></label>
+					<label><span>身份证号</span><input name="idCard" type="text" value="612325199512202117" placeholder="请输入身份证号"/></label>
+					<label><span>银行卡号</span><input name="bankNum" type="text" value="6217853600032426511" placeholder="请输入您的银行卡号"/></label>
+					<p class="tip"><span>*</span>请绑定持卡人为本人的储蓄卡</p>
+					<label><span>开户银行</span>
+						<select name="parent_bank_id" class="bank">
+							<option value="">请选择</option>
+						</select>
+					</label>
+					<label><span>开户省市</span>
+						<select name="province" class="province">
+							<option value="">请选择省份</option>
+						</select>
+						<select name="city_id" class="city">
+							<option value="">请选择城市</option>
+						</select>
+					</label>
+					<input type="submit" class="open-fuyou-btn" value="开通富友金账户"/>
+				</form>
+			</div>
+		</div>	
+		
+		<!--开通富友账户成功,弹出对话框-->
+		<!--开通富友账户成功,弹出对话框-->
+		<div class="open-fuyou-ok" id="openFuyou-ok">
+			<div class="open-fuyou-tit">
+				<p>开通富友金账户</p>
+				<span class="close" onclick="location.href = 'html/account.html';"></span>
+			</div>
+			<div class="open-fuyou-txt">
+				<img src="../img/rejister-ok.png"/>
+				<p class="open-ok">开通成功</p>
+				<p>您的富友账户余额：<span>0.00元</span></p>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		<!--加载js文件-->
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/build/dist/echarts.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/radialIndicator.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#fade").height($(document).parent().height());
+		});
+
+
+		
+	</script>
+		
+		
+
+		
+	</body>
+</html>

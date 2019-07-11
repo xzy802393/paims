@@ -1,0 +1,546 @@
+html{
+	height: 100%;
+}
+.content{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.banner{
+	width: 100%;
+	height: 926px;
+	background: url(../img/guess_wordcup/banner-bg_01.jpg) no-repeat center;
+	text-align: center;
+	padding-top: 1px;
+}
+.act-tit{
+	margin-top: 190px;
+}
+.act-des{
+	width: 710px;
+    margin: 60px auto;
+    font-size: 22px;
+    line-height: 40px;
+    color: #fff;
+    letter-spacing: 3px;
+    text-align: left;
+}
+.main{
+	width: 100%;
+	height: auto;
+	background: url(../img/guess_wordcup/bg_02.png) repeat-y center;
+	padding-bottom: 60px;
+}
+.sec-tit{
+	margin: 0 auto 10px;
+    width: 515px;
+    height: 183px;
+    background: url(../img/guess_wordcup/pk-tit.png) no-repeat center;
+    text-align: center;
+    padding-top: 1px;
+    position: relative;
+    top: -74px;
+}
+.sec-tit h4{
+	font-size: 30px;
+    color: #50819b;
+    letter-spacing: 10px;
+    margin-top: 114px;
+}
+.section .history{
+	width: 100%;
+	height: 752px;
+	background: url(../img/guess_wordcup/list-bg.png) no-repeat center;
+	margin-bottom: 70px;
+	position: relative;
+}
+.current{
+	width: 888px;
+	height: 104px;
+	position: relative;
+	top: 48px;
+	left: 50%;
+	margin-left: -444px;
+}
+.container{
+	width: 100%;
+}
+.container .item{
+	float: left;
+	width: 36%;
+	text-align: center;
+}
+.container .item.vs{
+	width: 28%;
+}
+.current .team{
+	margin-top: 41px;
+    height: 56px;
+    line-height: 56px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+.current .team img{
+	width: 46px;
+	height: 49px;
+	margin-right: 48px;
+}
+.current .team span{
+	display: inline-block;
+	height: 49px;
+	line-height: 49px;
+	letter-spacing: 10px;
+}
+.vs .score{
+	font-size: 40px;
+    color: #fff;
+    letter-spacing: 14px;
+}
+.vs .time{
+	font-size: 22px;
+    color: #fff;
+    margin-top: 42px;
+    letter-spacing: 2px;
+}
+
+.listbox .item{
+	width: 42%;
+}
+.listbox .container .item.vs{
+	width: 15.5%;
+	height: 98px;
+	line-height: 98px;
+	font-size: 40px;
+	color: #fff;
+	font-weight: bold;
+}
+.listbox .item .team{
+	position: relative;
+	width: 320px;
+    height: 50px;
+    background: #28c6ec;
+    margin: 30px auto 18px;
+    display: flex;
+   /* justify-content: center;*/
+    line-height: 50px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+.listbox .item .team img{
+	width: 46px;
+    height: 50px;
+    overflow: hidden;
+    margin-left: 55px;
+}
+.listbox .item .team span{
+	letter-spacing: 6px;
+    margin-left: 43px;
+}
+.listbox .item .team.win .win{
+	display: block;
+}
+.listbox .item .team .win{
+	display: none;
+    position: absolute;
+    width: 58px;
+    height: 44px;
+    background: url(../img/guess_wordcup/win-icon.png) no-repeat center;
+    top: -17px;
+    left: -60px;
+}
+
+
+/*滚动条设置*/
+#box0
+{
+    width: 998px;
+    position: relative;
+    /* background: rgba(5, 105, 245, 0.11); */
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 100px;
+    left: 48px;
+}
+#box1
+{
+    width: 908px;
+    height: 506px;
+    overflow: hidden;
+}
+#box2
+{
+    width: 920px;
+    height: 506px;
+    padding-right: 60px;
+    overflow-y: scroll;
+}
+#listBox
+{
+    width: 906px;
+    padding-right: 20px;
+    overflow-wrap: break-word;
+}
+
+#scroll-bar
+{
+    position: absolute;
+    top: -5px;
+    right: 29px;
+    width: 16px;
+    height: 506px;
+    border-radius: 17px;
+    cursor: pointer;
+    background-color: #9be5d1;
+    border: 4px solid #5ca291;
+}
+/*#scroll-bar:hover
+{
+    background-color: rgba(175, 175, 175, 0.70);
+}*/
+#scroll-btn
+{
+    position: absolute;
+    right: 0px;
+    width: 16px;
+    /* height: 96px; */
+    /* border-radius: 27px; */
+    background: #ffffff;
+    /* background-size: cover; */
+    cursor: pointer;
+    border-radius: 16px;
+     
+}
+/*#scroll-btn:hover
+{
+    opacity: 1;
+}*/
+.currentgame{
+	height: 887px;
+	background: url(../img/guess_wordcup/ball-park_03.png) no-repeat center;
+	padding-top: 2px;	
+	margin-bottom: 48px;
+}
+.gamecontainer{
+	margin: 134px auto;
+    position: relative;
+    height: 613px;
+}
+.personal-record{
+	position: absolute;
+    right: 54px;
+    top: -59px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2px;
+}
+.personal-record a{
+	color: #fff;
+    /* text-decoration: underline; */
+    font-size: 18px;
+}
+.gamelist{
+	width: 100%;
+}
+.gamelist .list{
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+.gamelist .list .team{
+	width: 286px;
+	margin: 0 auto;
+}
+.gamelist .list .team li{
+	float: left;
+	width: 33%;
+}
+.gamelist .list .team .teamA img,.gamelist .list .team .teamB img{
+	width: 82px;
+	height: 86px;
+	overflow: hidden;
+}
+.gamelist .list .team .teamT{
+	color: #fff;
+	font-size: 14px;
+	line-height: 20px;
+	margin-top: 10px;
+}
+.gamelist.gamelist3 .list:nth-child(3){
+	width: 100%;
+}
+.gamelist.gamelist3 .list:nth-child(4){
+	display: none;
+}
+.gamelist.gamelist2{
+	margin-top: 320px;
+}
+.gamelist.gamelist2 .list:nth-child(3),.gamelist.gamelist2 .list:nth-child(4){
+	display: none;
+}
+.gamelist.gamelist1{
+	padding-top: 1px;
+}
+.gamelist.gamelist1 .list:first-child{
+	float: none;
+	width: 282px;
+    margin: 0 auto;
+    height: 224px;
+    /* display: flex; */
+    background: #27b09b;
+    border-radius: 20px;
+    /* padding-top: 351px; */
+    box-sizing: border-box;
+    margin-top: 121px;
+}
+.gamelist.gamelist1 .list:nth-child(2),.gamelist.gamelist1 .list:nth-child(3),.gamelist.gamelist1 .list:nth-child(4){
+	display: none;
+}
+.gamelist .list .team .teamT p:first-child{
+	font-size: 22px;
+}
+.gamelist .list .team .teamname{
+	margin-top: 14px;
+	font-size: 17px;
+	color: #fff;
+}
+.list .guess{
+	width: 286px;
+	margin: 20px auto;
+}
+.list .guess .guess-select{
+	height: 30px;
+	width: 286px;
+}
+.list .guess .guess-select .win{
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	width: 124px;
+	height: 30px;
+	background: url(../img/guess_wordcup/win-bg_02.png) no-repeat center;
+	line-height: 30px;
+	font-size: 17px;
+	color: #fff;
+	border-top-left-radius: 6px;
+	background-size: 100% 100%;
+}
+.list .guess .guess-select .fail{
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	width: 124px;
+	height: 30px;
+	background: url(../img/guess_wordcup/fail-bg_01.png) no-repeat center;
+	line-height: 30px;
+	font-size: 17px;
+	color: #fff;
+	border-top-right-radius: 6px;
+	background-size: 100% 100%;
+	margin-left: -30px;
+}
+.list .guess .guess-select .equal{
+	display: inline-block;
+	position: relative;
+	z-index: 2;
+	width: 68px;
+	height: 30px;
+	background: url(../img/guess_wordcup/equal.png) no-repeat center;	
+	background-size: 100% 100%;
+	left: -14px;
+}
+.guess-select span{
+	float: left;
+	line-height: 30px;
+	font-size: 17px;
+	color: #fff;
+	cursor: pointer;
+}
+.list .guess .guess-select .win.active{
+	transform: scaleY(1.3);
+    top: -4px;
+    font-size: 14px;
+}
+.list .guess .guess-select .fail.active{
+	transform: scaleY(1.3);
+    top: -4px;
+    font-size: 14px;
+}
+.list .guess .guess-select .equal.active{
+	transform: scale(1.3);
+    top: -4px;
+    font-size: 14px;
+}
+.guess-confirm{
+	width: 286px;
+	height: 30px;
+	background: #ffdb53;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	line-height: 30px;
+	font-size: 17px;
+	color: #3f3f3f;
+	cursor: pointer;
+}
+.guess-confirm.over{
+	background: #C0C0C0;
+}
+.gamelist .list{
+	margin-bottom: 174px;
+}
+
+/*---获奖记录----*/
+/*.rewardslist{
+	margin-top: ;
+}*/
+.rewardslist .rewards-tit{
+	width: 515px;
+	height: 352px;
+	background: url(../img/guess_wordcup/list-tit.png) no-repeat center;
+	padding-top: 2px;
+	margin: 0 auto;
+	text-anchor: center;
+}
+.rewards-tit h4{
+	margin-top: 283px;
+	font-size: 30px;
+	color: #50819b;
+	text-align: center;
+	letter-spacing: 6px;
+}
+.rewards-box{
+	width: 1000px;
+    height: 760px;
+    background: url(../img/guess_wordcup/record-bg_03.png) no-repeat center;
+    padding-top: 2px;
+    margin-top: 70px;
+    position: relative;
+    z-index: 2;
+    background-size: 100% 100%;
+}
+.rewards-box table{
+    width: 900px;
+    padding-right: 20px;
+   	text-align: center;
+   	color: #fff;
+   	line-height: 50px;
+   	margin: 20px auto;
+    font-size: 14px;
+}
+.rewards-box .rewards0{
+    width: 900px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    /*top: 100px;
+    left: 48px;*/
+}
+.rewards-box .rewards1{
+    width: 900px;
+    height: 546px;
+    overflow: hidden;
+}
+.rewards-box .rewards2{
+    width: 900px;
+    height: 546px;
+    padding-right: 60px;
+    overflow-y: scroll;
+}
+.rewards-box table.tit{
+	margin-top: 70px;
+}
+.rewards-box table.tit th{
+	font-size: 20px;	
+}
+.rewards-box table td{
+	width: 25%;
+}
+.rewards-box .recordbox{
+	margin-top: 0;
+}
+.scroll-bar{
+    position: absolute;
+    top: -5px;
+    right: 29px;
+    width: 16px;
+    height: 506px;
+    border-radius: 17px;
+    cursor: pointer;
+    background-color: #9be5d1;
+    border: 4px solid #5ca291;
+}
+/*#scroll-bar:hover
+{
+    background-color: rgba(175, 175, 175, 0.70);
+}*/
+.scroll-btn
+{
+    position: absolute;
+    right: 0px;
+    width: 16px;
+    /* height: 96px; */
+    /* border-radius: 27px; */
+    background: #ffffff;
+    /* background-size: cover; */
+    cursor: pointer;
+    border-radius: 16px; 
+}
+
+.invest-btn{
+	width: 292px;
+	height: 157px;
+	background: url(../img/guess_wordcup/rule-tit.png) no-repeat center;
+	margin: 482px auto 120px;
+}
+.invest-btn a{
+	font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 6px;
+    display: block;
+    height: 60px;
+    line-height: 240px;
+}
+/*====活动说明====*/
+.instruction{
+	width: 100%;
+    height: 1182px;
+    background: url(../img/guess_wordcup/bottom-bg_02.jpg) no-repeat center;
+    position: relative;
+    margin-top: -476px;
+    z-index: 1;
+    padding-top: 2px;
+}
+.instruction .act-des{
+	width: 1200px;
+}
+.instruction .act-des h5{
+	width: 1141px;
+	height: auto;
+	text-align: center;
+	background: url(../img/guess_wordcup/h5-bg.png) no-repeat center;
+	margin: 0 auto;
+}
+.instruction .act-des .ins-main{
+	width: 888px;
+	margin: 60px auto;
+}
+.instruction .act-des .ins-main dl{
+	clear: both;
+	overflow: hidden;
+	font-size: 18px;
+}
+.instruction .act-des .ins-main dt{
+	width: 34px;
+	float: left;
+}
+.instruction .act-des .ins-main dd{
+	width: 854px;
+	float: left;
+}

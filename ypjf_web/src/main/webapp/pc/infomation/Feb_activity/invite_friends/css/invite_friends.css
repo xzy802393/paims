@@ -1,0 +1,145 @@
+.header{
+	background: url(../imgs/header.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 1000px;
+	text-align: center;
+}
+.header img{
+	width: 786px;
+	margin-top: 50px;
+}
+.header p{
+	line-height: 45px;
+    font-size: 18px;
+    width: 28em;
+    margin: 25px auto;
+    text-align: left;
+    color: #44AB72;
+    font-weight: 600;
+}
+.bodyer{
+	background: url(../imgs/bodyer.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 940px;
+	text-align: center; 
+	margin-top: -2px;
+	overflow: hidden;
+}
+.bodyer .invite{
+	width: 60%;
+    height: 810px;
+    margin: 0 auto;
+    margin-top: 121px;
+    overflow: hidden;
+}
+.invite_Process{
+	background: url(../imgs/yaoqingliucheng.png) no-repeat;
+	background-size: 100% 100%;
+	width: 430px;
+	height: 84px;
+	margin: 100px auto;
+}
+.invite_Process h1{
+	line-height: 84px;
+    font-size: 35px;
+    color: #fff;
+    letter-spacing: 15px;
+    text-align: center;
+}
+.bodyer .invite .invite_list:after{
+	display:block;
+	clear:both;
+	content:"";
+	visibility:hidden;
+	height:0;
+}
+.bodyer .invite .invite_list{
+	zoom: 1;
+    margin: 0 auto;
+    height: 342px;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+.bodyer .invite ul li{
+	width:139px;
+     height:324px; 
+}
+.bodyer .invite ul li h1{
+	line-height: 28px;
+    margin: 20px 0;
+    font-size: 17px;
+}
+.bodyer .invite ul li:nth-child(2) img,li:nth-child(4) img,li:nth-child(6) img{
+	margin-top: 189px;
+}
+/*.bodyer .invite ul li:nth-child(4) img{
+	margin-top: 189px;
+}
+.bodyer .invite ul li:nth-child(6) img{
+	margin-top: 189px;
+}*/
+.bodyer .invite ul li:last-child h1:nth-child(1){
+	    margin-bottom: 0;
+}
+.bodyer .invite ul li:last-child h1:nth-child(2){
+	    margin: 0;
+}
+.bodyer .invite ul li:last-child h1:nth-child(3){
+	    margin-top: 10px;
+}
+.bodyer .invite .invite_now{
+	background: url(../imgs/lijiyaoqing.png) no-repeat;
+	background-size: 100% 100%;
+	width: 266px;
+	height: 157px;
+	margin: 20px auto;
+	margin-bottom: 0;
+}
+.bodyer .invite .invite_now h1{
+	line-height: 70px;
+	font-size: 28px;
+    
+    letter-spacing: 15px;
+     cursor:pointer;
+	
+}
+.bodyer .invite .invite_now h1 a{
+	color: #fff;
+}
+.footer{
+	background: url(../imgs/footer.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 939px; 
+	margin-top: -2px;
+	overflow: hidden;
+}
+.footer .invite_rule{
+	margin: 80px auto;
+    margin-bottom: 30px;
+
+}
+.footer .rule_text{
+	width: 48%;
+    margin: 0 auto;
+    height: 29rem;
+    overflow: hidden;
+}
+.footer .rule_text p{
+	font-size: 19px;
+    line-height: 35px;
+    letter-spacing: 4px;
+    color: #3B3B3B;
+}
+.bodyer .invite ul li h1:nth-child(1){
+	color: #C7A65F;
+}
+.bodyer .invite ul li h1:nth-child(2){
+	font-size: 16px;
+}
+.bodyer .invite ul li h1:last-child{
+	font-size: 16px;
+}

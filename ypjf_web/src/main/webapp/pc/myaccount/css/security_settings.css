@@ -1,0 +1,199 @@
+.security_set,.security_risk_assessment{
+	width: 938px;
+	margin-left: 28px;
+}
+.security_set h3,.security_risk_assessment h3{
+	font-size: 16px;
+	font-weight: normal;
+}
+.security_set ul{
+	width: 100%;
+	margin-top: 28px;
+	margin-bottom: 100px;
+}
+.security_set ul li{
+	width: 100%;
+	height: 66px;
+	border-bottom: 1px solid #DDDDDD;
+	line-height: 66px;
+}
+.security_set ul li p{
+	float: left;
+	font-size: 14px;
+}
+.security_set ul li p.tit{
+	width: 218px;
+	margin-left: 18px;
+}
+.security_set ul li p.des{
+	width: 512px;
+	color: #9e9e9e;
+}
+.security_set ul li p.fun{
+	width: 136px;
+	text-align: right;
+}
+.security_set ul li p.fun a{
+	color: #239afb;
+}
+.security_set ul li:hover p.des{
+	color: #FF7F01;
+}
+
+/*风险测评页*/
+.security_risk_assessment ul{
+	border: 1px solid #ddd;
+	width: 937px;
+	margin-top: 28px;
+	margin-bottom: 40px;
+}
+.security_risk_assessment ul li{
+	width: 100%;
+	margin-bottom: 10px;
+}
+.security_risk_assessment ul li.des h4{
+	text-align: center;
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: normal;
+	margin-top: 20px;
+}
+.security_risk_assessment ul li.des p{
+	padding: 10px 20px;
+	line-height: 24px;
+	font-size: 14px;
+	color: #333;
+}
+.security_risk_assessment ul li.des p:nth-child(2){
+	text-indent: 2em;
+	text-align: justify;
+}
+.security_risk_assessment ul li.des p:nth-child(3){
+	padding-bottom: 5px;
+	text-indent: 2em;
+}
+.security_risk_assessment ul li .ques-tit{
+	width: 100%;
+	height: 40px;
+	background: #e6f4ff;
+	margin-bottom: 10px;
+}
+.security_risk_assessment ul li .ques-tit h6{
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	font-weight: normal;
+	color: #333;
+	margin-left: 20px;
+}
+.security_risk_assessment ul li .ques-check{
+	width: 90%;
+    margin-left: 30px;
+}
+.security_risk_assessment ul li .ques-check p{
+	
+	line-height: 32px;
+	margin-left: 40px;
+	font-size: 14px;
+	color: #666;
+}
+.security_risk_assessment ul li .ques-check p input{
+	vertical-align: -2px;
+    margin-right: 10px;
+    margin-left: -25px;
+}
+.security_risk_assessment ul li.ques-submit{
+	text-align: center;
+}
+.security_risk_assessment ul li.ques-submit input{
+	width: 72px;
+	height: 32px;
+	background: #239afb;
+	color: #fff;
+	font-size: 14px;
+	outline: none;
+	border: none;
+	margin: 20px;
+	cursor: pointer;
+}
+
+/*遮罩层*/
+.black-overlay{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.2;
+	opacity:.20;
+	filter: alpha(opacity=20);
+}
+.asset-result{
+	display: none;
+	position: fixed;
+	bottom: 36%;
+	left: 43%;
+	width: 474px;
+	height: 214px;
+	background-color: white;
+	z-index:1002;
+	overflow: auto;
+	box-shadow: 5px 5px 5px 0 #b5acac;
+}
+.asset-result .result-tit{
+	width: 100%;
+	height: 42px;
+	background: #239afb;
+	text-align: center;
+	line-height: 42px;
+}
+.asset-result .result-tit:hover{
+	cursor: move;
+}
+.asset-result .result-tit p{
+	color: #fff;
+	font-size: 16px;
+}
+.asset-result .result-main{
+	margin-top: 16px;
+}
+.asset-result .result-main .result-des{
+	width: 310px;
+	margin-left: 14px;
+	font-size: 13px;
+	color: #333;
+	margin-top: 10px;
+}
+.asset-result .result-main .result-pic{
+	width: 118px;
+	height: 121px;
+}
+.asset-result .result-main .result-pic img{
+	width: 118px;
+	height: 121px;
+}
+.asset-result .result-main .result-des p{
+	height: 50px;
+}
+.asset-result .result-main .result-des p span{
+	font-size: 35px;
+	font-family: "arial, helvetica, sans-serif";
+}
+.asset-result .sure-btn{
+	width: 100%;
+	text-align: center;
+}
+.asset-result .sure-btn a{
+	display: block;
+	width: 70px;
+	height: 32px;
+	background: url(../../img/asset-sure-bg.png) no-repeat center;
+	margin: 0 auto;
+	font-size: 16px;
+	color: #333;
+	margin-top: -9px;
+	cursor: pointer;
+}

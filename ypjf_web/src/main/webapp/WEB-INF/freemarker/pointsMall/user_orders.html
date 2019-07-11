@@ -1,0 +1,233 @@
+<#escape x as x?html>
+
+<script type="text/javascript" src="${ctx}/js/activity/activity.js"></script>
+
+<script type="text/javascript">
+
+function deleteActivity(){
+	var id=jQuery("#id").val();
+	if(!id||id==""){
+		myalert("请选择你要删除的记录");
+		return;
+	}else{
+		var _url="${ctx}/activity/delete?id="+id;
+		var listurl="${ctx}/activity/list";
+		mydelete(_url,listurl);
+	}
+}
+
+$('.date-picker').datepicker({
+    autoclose: true,
+    format: 'yyyy-mm-dd',
+    language: 'zh-CN',
+    todayBtn: 'linked',
+    startDate:new Date(2014,10,27),
+    endDate:'+6000d',
+    startDate: '-6000d',
+}).next().on(ace.click_event, function(){
+    $(this).prev().focus();
+});
+var gId;
+function edit(id, content) {
+    if (!!id) {
+        gId = id;
+
+        layer.open({
+            title : '修改备注',
+            type : 1,
+            content : '<div style="width: 100%; height: 100%;"><div style="width: 80%; height: 60%; margin: 0px 10%; padding: 50px 0;">'
+            + '<textarea style="width: 100%; height: 100%;" onkeyup="recordInput(this)" name="edit_desc" maxLength="255">' + content + '</textarea></div>'
+            + '<div style="width: 80%; padding: 20px 10%;" margin: 20px 0;>'
+            + '<button style="background: #438EB9; border: none; margin-left: 60%; color: #fff; padding: 8px 25px;" value="提交" onclick="submit()">提交</button></div></div>',
+            area : ['30%', '50%']
+        });
+    }
+}
+
+
+function submit(id) {
+    $.post('${ctx}/system/pointsMall/order/deliver', { id : id }, function(data) {
+        if (data.status == 'success') {
+            layer.msg('发货成功!');
+            $('#item_' + id).find('.b').html("已收货");
+            $('#item_' + id).find('.a').removeAttr('onclick');
+            $('#item_' + id).find('.a').removeClass('btn btn-info');
+            $('#item_' + id).find('.a').html("已发货");
+        } else {
+            layer.msg('发货失败!');
+        }
+    }, 'json')
+}
+
+var recordedInput = '';
+function recordInput(ele) {
+    recordedInput = $(ele).val();
+}
+
+
+</script>
+
+
+	
+
+<!-- /.page-header -->
+
+<div class="row">
+    <div class="col-xs-12">
+<div class="operate panel panel-default" style="height:65px;">
+	<div class="panel-body">
+		<div class="pull-left">
+ <form class="form-horizontal" name="searchForm" id="searchForm" action="${ctx}/system/pointsMall/user/orders" role="form">
+     <input type="hidden" name="pageIndex" id="pageIndex" value="${(returnDatas.page.pageIndex)!'1'}"/>
+     <input type="hidden" name="sort" id="page_sort" value="${(returnDatas.page.sort)!'desc'}"/>
+     <input type="hidden" name="order" id="page_order" value="${(returnDatas.page.order)!'id'}"/>
+			<!--<label for="search_state"><b>是否可用:</b></label> -->
+			 <!--<select id="search_state" name="state" class="col-10" >-->
+				<!--<option value="是">是</option>-->
+				<!--<option value="否">否</option>-->
+			<!--</select>-->
+     <label for="search_userName"><b>用户名称:</b></label>
+     <input type="text" id="search_userName"  name="name" placeholder="请填写用户名称"  value="${(returnDatas.queryBean.name)!''}">
+     <label for="search_projectName"><b>手机号:</b></label>
+     <input type="text" id="search_projectName"  name="phone" placeholder="请填写手机号"  value="${(returnDatas.queryBean.phone)!''}">
+     <label for="search_projectName"><b>状态:</b></label>
+     <select name="status">
+         <option value="">全部</option>
+         <option <#if (((returnDatas.queryBean.status)!'') == '2')>selected</#if> value="2">已下单</option>
+         <option <#if (((returnDatas.queryBean.status)!'') == '5')>selected</#if>  value="5">已收货</option>
+     </select>
+     <label for="search_startTime"><b>&nbsp;兑换
+         时间:</b></label>
+     <input name="dateStart"  class="date-picker"  style="width:100px;" id="search_startTime" value="${(returnDatas.queryBean.dateStart)!''}"  type="text"/>
+     -
+     <label for="search_endTime"><b></b></label>
+     <input name="dateEnd"  class="date-picker"  style="width:100px;" id="search_endTime" value="${(returnDatas.queryBean.dateEnd)!''}"  type="text"/>
+     <label ><b></b></label>
+     <a  href="javascript:mySubmitForm('searchForm');"
+				class="btn btn-purple btn-sm">
+					查询 <i class="ace-icon fa fa-search icon-on-right bigger-10"></i>
+				</a>
+
+</form>
+		</div>
+		<div class="pull-right">
+			    <@shiro.hasPermission name="/system/pointsMall/user/orders/export" >
+				  <button onclick="myexport('searchForm','${ctx}/system/pointsMall/user/orders/export');" class="btn  btn-sm  btn-primary">
+                      
+                        导出
+                    </button>
+		    	</@shiro.hasPermission>
+
+			
+		</div>
+	</div>
+</div>
+
+   <div class="row">
+            <div class="col-xs-12">
+	            <!--start_export-->
+                <table id="listDataTable" border="1" class="table table-striped table-bordered table-hover">
+                    <!--end_no_export-->
+                    <!--first_start_export-->
+                    <thead>
+                    <tr>
+						<th>用户名</th>
+						<th>手机号</th>
+						<th>换购商品</th>
+						<th>换购数量</th>
+						<th>消费银子数</th>
+                        <th>收货人</th>
+                        <th>收货人手机号</th>
+                        <th>收货时间</th>
+                        <th>订单状态</th>
+                        <th>收货地址</th>
+                        <th>下单时间</th>
+                        <th>支付时间</th>
+                        <!--first_start_no_export-->
+                        <th>操作</th>
+                        <!--first_end_no_export-->
+                    </tr>
+                    </thead>
+                    <!--first_end_export-->
+
+                    <!--start_export-->
+                    <tbody>
+           
+				   <#if (returnDatas.data??)&&(returnDatas.data?size>0)>
+					 <#list returnDatas.data as _data>
+
+                            <tr class="" id="item_${(_data.orderId)}">
+
+							<td >
+								${(_data.realName)!''}
+							</td>
+							<td >
+								${(_data.phone)!''}
+							</td>
+							<td >
+								${(_data.goodsName)!''}
+							</td>
+                            <td >
+                                ${(_data.goodsNumber)!'1'}
+                            </td>
+                            <td >
+                                ${((_data.totalIntegral)!0)}
+                            </td>
+                            <td >
+                                ${(_data.receiverName)!''}
+                            </td>
+                            <td >
+                                ${(_data.receiverPhone)!''}
+                            </td>
+                            <td >
+                                ${(_data.deliverMethod)!''}
+                            </td>
+                            <td  class="b">
+                                <#if ((_data.status)!0) == 2>
+                                    已下单
+                                </#if>
+                                <#if ((_data.status)!0) == 5>
+                                    已收货
+                                </#if>
+                            </td>
+
+                            <td class="ellipsis">
+                                ${(_data.receiveAddress)!''}
+                            </td>
+
+                            <td >
+                                ${(_data.createTime)!''}
+                            </td>
+                            <td >
+                                ${(_data.paymentTime)!''}
+                            </td>
+                            <!--start_no_export-->
+                            <td>
+                                <div class="hidden-sm hidden-xs btn-group">
+                                    &emsp;
+                                    <#if ((_data.status)!0) == 2>
+                                        <@shiro.hasPermission name="/system/pointsMall/order/deliver">
+                                            <a href="javascript:void(0)" onclick="submit(${(_data.orderId)})" class="a btn btn-info"> 发货 </a>
+                                        </@shiro.hasPermission>
+                                    <#elseif ((_data.status)!0) == 5>
+                                        已发货
+                                    </#if>
+                                </div>
+                            </td>
+                               <!--end_no_export-->
+						</tr>
+					</#list>
+					 </#if>
+                    </tbody>
+                </table>
+                <!--end_export-->
+            </div>
+            <!-- /.span -->
+        </div>
+    <#if returnDatas.page??>
+    <@h.pagetoolbar page=returnDatas.page formId='searchForm' />
+    </#if>
+    </div>
+</div>
+<!-- /.main-container -->
+</#escape>

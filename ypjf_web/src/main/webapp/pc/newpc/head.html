@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<style>
+			/* body{
+				background:#aaa;
+			} */
+		</style>
+	</head>
+	<body>
+		<div class="dingbu">
+			<div id="header">
+				<div class="top clearFix">
+					<div class="left">
+						<p>服务热线：400-151-6636(服务时间:9:00-20:00)</p>
+					</div>
+					<div class="right">
+						<ul class="subNav clearFix">
+							<li class="dengluqian" style="display:block;"><a href="javascript:tiaozhuan('../login')" class="a">登录</a></li>
+							<li class="dengluhou" style="display:none;"><span class="name"></span><a href="javascript:signout();" class="a">退出</a></li>
+							<li id="zhuce"><a href="javascript:tiaozhuan('../register');" class="a">注册</a></li>
+							<!-- <li><a href="javascript:tiaozhuan('../html/appload.jsp');" class="a"><img src="img/phoneLogo.png" alt="手机" class="tel">手机APP</a></li> -->
+							<li><a href="javascript:tiaozhuan('../html/level/level.html');"  class="a">会员中心</a></li>
+							<li><a href="javascript:tiaozhuan('../infomation/help.html');"  class="a">帮助中心</a></li>
+							<li><a href="javascript:tiaozhuan('../infomation/Novice_boot.html');"  class="a">新手引导</a></li>
+							<!-- <li><a href="javascript:tiaozhuan('../active_center');" class="a">活动中心</a></li> -->
+							<li><a href="javascript:tiaozhuan('../pointsmall/points_mall.jsp');" class="last a">九趣商城</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="bottom clearFix">
+					<div class="left">
+						<a href="javascript:tiaozhuan('/yingpu/pc/index');"><img src="img/logo.png" alt="九趣贷" class="logo"></a>
+						<img src="img/logoright.png" alt="介绍" class="logoRight">
+					</div>
+					<div class="right">
+						<ul class="nav clearFix">
+							<li><a href="javascript:tiaozhuan('/yingpu/pc/index');" class="a">首页</a></li>
+							<li><a href="javascript:tiaozhuan('../project/findProject');"  class="a">我要出借</a></li>
+                            <li><a href="javascript:tzurl('html/my-borrow/borrow.html')"  class="a">我要借款</a></li>
+							<li><a href="javascript:tzurl('html/safe/safe.html');" class="a">安全保障</a></li>
+							<li class="xiala"><a href="javascript:tiaozhuan('../html/aboutUs/platform_intro.html');" class="a">信息披露</a></li>
+							<li style="float:right;padding-right:0;" id="zhanghu"><img class="person" src="img/small-person.png" style="display: inline-block;width:17px;height:17px;padding-right:4px;margin-top:-2px;"><a href="javascript:tiaozhuan('../myaccount/account');" class="mac">我的账户</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="kuang pulu">
+				<ul class="clearFix">
+					<li  class="pulllist"><a href="javascript:tzurl('infomation/aboutUs/message.html');">信披声明</a></li>
+					<li  class="pulllist"><a href="javascript:tzurl('html/aboutUs/platform_intro.html');">平台简介</a></li>
+					<!-- <li  class="pulllist"><a href="javascript:tzurl('infomation/operation_data.html');">运营数据</a></li> -->
+					<li  class="pulllist"><a href="javascript:tzurl('infomation/list');">平台动态</a></li>
+					<!-- <li  class="pulllist"><a href="javascript:tzurl('active_center');">活动中心</a></li> -->
+					<li  class="pulllist"><a href="javascript:tzurl('html/product-center/center.html');">产品中心</a></li>
+					<li  class="pulllist"><a href="javascript:tzurl('infomation/list2');">风险教育</a></li>
+					<li  class="pulllist"><a href="javascript:tzurl('infomation/aboutUs/contacts_us.html');">联系我们</a></li>
+				</ul>
+			</div>
+			<div class="kuang chujie">
+				<ul class="clearFix">
+					<li  class="pulllist"><a href="javascript:tzurl('project/findProject');">新手专享</a></li>
+<<<<<<< Updated upstream
+					<li  class="pulllist"><a href="javascript:tzurl('my-invest/zhiTou.jsp');">X快享智能投标</a></li>
+					<li  class="pulllist"><a href="javascript:tzurl('project/list');">散标</a></li>
+					<li  class="pulllist"><a href="javascript:tzurl('project/findZhai');">债权转让</a></li>
+=======
+					 <li  class="pulllist"><a href="javascript:tzurl('my-invest/zhiTou.jsp');">X快享智能投标</a></li>
+					<li  class="pulllist"><a href="javascript:tzurl('project/list');">散标</a></li>
+					 <li  class="pulllist"><a href="javascript:tzurl('project/findZhai');">债权转让</a></li>
+>>>>>>> Stashed changes
+				</ul>
+			</div>
+		</div>
+	<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/yingpu/pc/js/queryString.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('#header .bottom .right li a').mouseover(function(){
+			$(this).addClass('hover');
+			$('.pulu').css('display','none');
+			$('.chujie').css('display','none')
+		});
+		$('#header .bottom .right li a').mouseout(function(){
+			$(this).removeClass('hover');
+		});
+		$('#header .bottom .right li a').eq(4).mouseover(function(){
+			$('.pulu').slideDown();
+		});
+		$('.dingbu .pulu').hover(function(){
+			$(this).show();
+		},function(){
+			$(this).slideUp();
+		});
+        $('#header .bottom .right li a').eq(1).mouseover(function(){
+            $('.chujie').slideDown();
+        });
+        $('.dingbu .chujie').hover(function(){
+            $(this).show();
+        },function(){
+            $(this).slideUp();
+        })
+
+		$('#header .bottom .right li#zhanghu').hover(function(){
+			$(this).find('.mac').css({'color':'#537ce4','font-weight':'bold'});
+			$(this).find('.person').attr('src','img/small-person-lan.png');
+			console.log($(this).find('.person').attr("src"))
+		},function(){
+			$(this).find('.mac').css({'color':'#1f1f1f','font-weight':'normal'});
+			$(this).find('.person').attr('src','img/small-person.jpg')
+		});
+		$('#header .top .right li a').hover(function(){
+			$(this).css('color','#537ce4');
+		},function(){
+			$(this).css('color','#1f1f1f');
+		});
+		$('#header .bottom .right li a').click(function(){
+			$('#header .bottom .right li a').removeClass('active');
+			$(this).addClass('active');
+			$(this).css('border-color','#1f1f1f');
+		});
+
+		$('.dingbu').hover(function(){
+			$(this).css({'background':'#fff','color':'#1f1f1f'});
+			$(this).find('.a').css('color','#1f1f1f');
+			$(this).find('#header .top .right .a').css('border-right','1px solid #333');
+			$(this).find('#header .top .right .last').css('border-right','none');
+			$(this).find('.mac').css('color','#1f1f1f');
+			$(this).find('span').css('color','#1f1f1f');
+			$(this).find('p').css('color','#1f1f1f');
+			// $(this).find('.logo').attr('src','img/logofu.png');
+			// $(this).find('.logoRight').attr('src','img/logoRightfu.png');
+			$(this).find('.logo').attr('src','/yingpu/pc/img/logo.gif');
+			$(this).find('.logo').css({'width':'330px','height':'45px'})
+			$(this).find('#header .bottom .left .logoRight').remove();
+			$(this).find('.pull').attr('src','img/pullfu.png');
+			$(this).find('.tel').attr('src','img/phoneLogofu.png');
+			$(this).find('.active').css('border-color','#1f1f1f');
+			$(this).find('#header').css('border-color','#eee');
+			$(this).find('.person').attr('src','img/small-person.jpg');
+		},function(){
+			$(this).css({'background':'none','color':'#fff'});
+			$(this).find('#header .top .right .a').css('border-right','1px solid #fff');
+			$(this).find('#header .top .right .last').css('border-right','none');
+			$(this).find('.a').css('color','#fff');
+			$(this).find('.mac').css('color','#fff');
+			$(this).find('span').css('color','#fff');
+			$(this).find('p').css('color','#fff');
+			// $(this).find('.logo').attr('src','img/logo.png');
+			// $(this).find('.logoRight').attr('src','img/logoright.png');
+			$(this).find('.logo').attr('src','img/logo.png');
+			$(this).find('.logo').css({'width':'141px','height':'45px'})
+			$(this).find('.logo').attr('src','img/logo.png');
+			$(this).find('.logoRight').attr('src','img/logoright.png');
+			$(this).find('#header .bottom .left').append('<img src="img/logoright.png" alt="介绍" class="logoRight">')
+			$(this).find('.pull').attr('src','img/pull.png');
+			$(this).find('.tel').attr('src','img/phoneLogo.png');
+			$(this).find('.active').css('border-color','#fff');
+			$(this).find('#header').css('border-color','rgba(255, 255, 255, 0.8)');
+			$(this).find('.person').attr('src','img/small-person.png');
+		});
+
+        function tzurl(url){
+            top.location.href='/yingpu/pc/'+url;
+        };
+
+        function tiaozhuan(url) {
+            window.top.location.href=url;
+        };
+        function signout(){
+            localStorage.user=null;
+            //document.cookie = 'SHAREJSESSIONID=121212;expires=-1';
+            delete localStorage.user;
+            tiaozhuan('../logout')
+        };
+        $(function() {
+            var sessionUser;
+           if (localStorage.user) {
+                try {
+                    sessionUser = JSON.parse(localStorage.user);
+                }
+                catch (e) {
+                    console.log(e);
+                }
+            }
+
+            if (sessionUser) {
+                var user = sessionUser;
+                $('.name').html('<a href="javascript:tiaozhuan(\'../myaccount/account\')"; class="a">欢迎:'  +(user.userCode) + '进入九趣贷！</a>');
+                $('.dengluhou').show();
+                // $('#xiaoxi').show();
+                $('.dengluqian').hide();
+                $('#zhuce').hide();
+                return;
+            }
+        });
+
+	$('.nav').find('li').each(function(i,e){
+		
+	    if(i==queryString("index")){
+	        $(this).children('a').addClass('active');
+	    }
+	});
+	
+	</script>
+	</body>
+</html>

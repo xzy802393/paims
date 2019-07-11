@@ -1,0 +1,81 @@
+.mycard{
+	margin-left: 30px;
+	width: 938px;
+}
+.mycard h3{
+	font-size: 16px;
+	font-weight: normal;
+	margin-bottom: 28px;
+}
+.mycard .mycard-manage{
+	width: 876px;
+	height: auto;
+	border: 1px solid #ddd;
+	padding: 30px;
+}
+.mycard .mycard-manage p{
+	font-size: 14px;
+	color: #333;
+}
+.mycard .mycard-manage p span{
+	color: #ff0000;
+}
+.mycard .mycard-manage .mycard-box{
+	width: 290px;
+	height: 158px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	margin-top: 20px;
+	overflow: hidden;
+}
+.mycard .mycard-manage .mycard-box .mycard-tit{
+	width: 260px;
+	height: 44px;
+	background: #abb1ba;
+	line-height: 44px;
+	font-size: 16px;
+	padding: 0 16px;	
+}
+.mycard-manage .mycard-box .mycard-tit p{
+	color: #fff;
+}
+.mycard-manage .mycard-box .mycard-msg{
+	padding: 10px 16px;
+	font-size: 13px;
+	color: #9b9b9b;
+	line-height: 24px;
+	height: 24px;
+}
+.mycard-manage .mycard-box .mycard-msg p span{
+	color: #333;
+}
+.mycard-manage .mycard-box .mycard-msg p:last-child{
+	text-align: right;
+}
+.mycard-manage .mycard-box .mycard-msg p:last-child a{
+	display:inline-block;
+	padding: 4px 14px;
+	background: #239AFB;
+	font-size: 14px;
+	color: #fff;
+	margin-top: -10px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+.mycard-manage p.tip{
+	margin-top: 30px;
+	font-size: 13px;
+	color: #666;
+}
+
+
+/*没有绑定银行卡*/
+.mycard-manage.none .mycard-box{
+	text-align: center;
+	border: 1px dotted #ddd;
+	cursor: pointer;
+}
+.mycard-manage.none .mycard-box p:first-child{
+	font-size: 100px;
+	color: #abb1ba;
+}

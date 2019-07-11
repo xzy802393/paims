@@ -1,0 +1,220 @@
+.mall{
+	width: 100%;
+	height: auto;
+	background: #f7f7f7;
+}
+.banner{
+	width: 100%;
+	height: 375px;
+	background: url(../img/banner-jiuqu.jpg) no-repeat center;
+	position: relative;
+}
+.banner .center{
+	position: absolute;
+	left: 50%;
+	margin-left: -600px;
+}
+.login-box,.login-ok-box{
+	position: absolute;
+	top: 58px;
+	right: 0px;	
+	width: 280px;
+	height: 250px;
+	background: rgba(102,102,102,.6);
+	z-index: 31;
+	text-align: center;
+}
+.login-box h4{
+	margin-top: 38px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: normal;
+}
+.login-box .rate{
+	color: #ff682c;
+	font-size: 24px;
+	line-height: 60px;
+	margin-top: 10px;
+	font-weight: bold;
+}
+.login-box .active{
+	width: 210px;
+	height: 38px;
+	text-align: center;
+	line-height: 38px;
+	background: #ff682c;
+	border-radius: 2px;
+    margin: 10px auto;
+}
+.login-box .active a{
+	font-size: 16px;
+	color: #fff;
+}
+.login-box .login-btn{
+	margin-left: 100px;
+    color: #fff;
+}
+.login-box .login-btn a{
+	color: #ff682c;
+}
+.login-ok-box{
+	display: block;
+}
+.login-ok-box h4{
+	margin-top: 38px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: normal;
+}
+.login-ok-box div.yue p:first-child{
+	font-size: 16px;
+    color: #fff;
+    margin-top: 8px;
+    line-height: 30px;
+    
+}
+.login-ok-box div.yue p:last-child{
+	font-size: 14px;
+    color: #666;  
+}
+.login-ok-box div.yue p:last-child span{
+	font-size: 24px;
+    color: #c11024;
+    font-weight: bold;
+    line-height: 44px;
+}
+.login-ok-box .deposit-btn{
+	text-align: right;
+	font-size: 16px;
+	padding-right: 30px;
+}
+.login-ok-box .deposit-btn a{
+	color: #FF8601;
+}
+.login-ok-box .myaccount a{
+	display: block;
+    width: 204px;
+    height: 37px;
+    background: #ff682c;
+    line-height: 37px;
+    color: #fff;
+    font-size: 16px;
+    margin: 21px auto 6px;
+    border-radius: 3px;
+}
+.login-ok-box .myaccount a.signed{
+	background: #b6b4b4;
+    border: 1px solid #ff7f01;
+}
+.login-ok-box .sign-in{
+	width: 204px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	color: #fff;
+	font-size: 14px;
+}
+.login-ok-box .sign-in li{
+	color: #FFFfff;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+
+/*签到记录*/
+.black-overlay{
+	display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.2;
+    opacity: .20;
+    filter: alpha(opacity=20);
+}
+.sign-records{
+	width: 760px;
+	height: 490px;
+	position: fixed;
+	top: 50%;
+	margin-top: -240px;
+	left: 50%;
+	margin-left: -380px;
+	background: #fff;
+    z-index: 99999;
+    2px 2px 2px 2px #8b7979;
+    display: none;
+}
+
+.sign-records .tit{
+	text-align: center;
+	padding: 0 20px!important;
+	background: #ff7f01!important;
+    color: #fff!important;
+    height: 55px!important;
+    line-height: 55px!important;
+    font-size: 18px!important;
+    /*font-weight: bold!important;*/
+}
+.sign-records .tit span {
+    position: absolute;
+    right: 14px;
+    top: 17px;
+    height: 14px;
+    width: 14px;
+    background: url(../../img/borrow-close.png) no-repeat center;
+    /* margin-top: 19px; */
+    /* margin-right: 19px; */
+    cursor: pointer;
+    background-size: 100%;
+}
+.sign-records .tit h3{
+	font-size: 16px;
+	font-weight: normal;
+}
+.records-box .text{
+	width: 40%;
+	text-align: center;
+	padding-top: 100px;
+    padding-left: 95px;
+    box-sizing: border-box;
+}
+.records-box .text p{
+	font-size: 14px;
+	line-height: 40px;
+}
+.records-box .text .sign{
+	display: block;
+    padding: 12px 40px;
+    border-radius: 6px;
+    background: #FF7F02;
+    color: #fff;
+    font-size: 16px;
+    /*font-weight: bold;*/
+    margin: 20px auto;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.records-box .text .sign.already{
+	background: #C0C0C0;
+}
+.records-box .records{
+	width: 60%;
+	
+}
+.records-box .records .calendar{
+	margin: 20px auto;
+}
+.records-box .records .calendar .week{
+	border-bottom: 1px solid #ff7f02;
+}
+.calendar .calendar-views .now {
+    color: #fff;
+    background: #ff7f01!important;
+}
+/*主体部分*/
+

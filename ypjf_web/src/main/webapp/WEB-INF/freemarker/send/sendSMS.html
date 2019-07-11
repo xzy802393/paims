@@ -1,0 +1,261 @@
+<#escape x as x?html>
+
+<SCRIPT type="text/javascript">
+<!--
+
+jQuery(document).ready(function(){
+	//回选 下拉框
+	//jQuery("#search_state option[value='是']").prop("selected",true);
+	
+	/*
+	$('.date-picker').datepicker({
+		    autoclose: true,
+		    format: 'yyyy-mm-dd',
+		    language: 'zh-CN'
+		    //,todayBtn: 'linked',
+		    //startDate:new Date(2014,10,27),
+			//endDate:'+60d',
+		    //startDate: '+1d',
+		}).next().on(ace.click_event, function(){
+			$(this).prev().focus();
+		});
+	*/
+
+    //投资期限
+    $.ajax({
+        url : ctx+"/system/projectdeadline/list/json",
+        type : "post",
+        dataType : "json",
+        success : function(_json) {
+            if (_json.status == "error") {
+                return;
+            }
+            //先清除原来的数据
+            $("#deadLine").empty();
+            jQuery("#deadLine").append("<option value='0'>无限制</option>");
+            jQuery(_json.data).each(function (i, _obj) {
+                if(_obj.deadline != '0'){
+                    jQuery("#deadLine").append("<option value='" + _obj.deadline + "'>" + _obj.deadline + "个月</option>");
+                }
+            });
+            jQuery("#deadLine").val($("#inputDeadLine").val());
+        }
+    });
+
+
+    $("#type").on('change',function(){
+        var type = $("#type").val();
+        if(1 == type){
+            $("#rateDiv").hide();
+            $("#moneyDiv").show();
+        }else{
+            $("#rateDiv").show();
+            $("#moneyDiv").hide();
+        }
+    });
+
+
+    $("#inputType").on('change',function(){
+        var type = $("#inputType").val();
+        if(1 == type){
+            $("#phoneDiv").show();
+            $("#uploadDiv").hide();
+        }else if(3 == type){
+            $("#uploadDiv").show();
+            $("#phoneDiv").hide();
+        }else{
+            $("#phoneDiv").hide();
+            $("#uploadDiv").hide();
+        }
+    });
+
+	
+    $('#templateID').change(function(e) {
+    	var content = $('#templateID>option:selected').attr('content');
+    	var varNum = 0;
+    	var searchArr = [], varReg = /%s/g;
+    	
+    	if (!!content) {
+    		while((searchArr = varReg.exec(content)) != null) {
+    			varNum++;
+    		}
+    	}
+    	
+   		$('#content').html(content || '');
+		$('#variables').empty();
+    	if (varNum != 0) {
+			for (var i = 0; i < varNum; i++) {
+				$('#variables').append('<div class="space-2"></div>\
+					<div class="form-group">\
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="name" >变量' + i + '</label>\
+					<div class="col-xs-12 col-sm-9">\
+						<div class="clearfix">\
+							<input type="text" name="variable" maxLength="30" />\
+						</div>\
+					</div>\
+				</div>');
+			}
+    	}
+    });
+
+
+
+    $('#uploadFile').on('click',function(e){
+        $('#file').click();
+
+    });
+    $('#file').on('change',function(e){
+    	if ($(this).val().indexOf('.xls') == -1) {
+    		layer.alert('文件类型必须为Excel，请重新选择!');
+    		return;
+    	}
+        $.ajaxFileUpload({
+            url: '/yingpu/adminFileUpload',
+            type: 'post',
+            secureuri: false, //一般设置为false
+            fileElementId: 'file', // 上传文件的id、name属性名
+            dataType: 'application/json', //返回值类型，一般设置为json、application/json
+            success: function(result){
+                $('#fileUrl').show();
+                jQuery("#fileUrl").val(result);
+                $('#file').hide();
+                $('#uploadFile').hide();
+
+            }
+
+        });
+    });
+	
+});
+
+function submit(){
+    var val = $("#rateInput").val() ;
+    val = (val/100).toFixed(4) ;
+    jQuery("#rate").val(val);
+
+    if (!$('#inputType').val()) {
+    	layer.alert('请先选择发送类型！');
+    	return;
+    }
+    
+    if ($('#inputType').val() == 1) {
+    	if (!$('[name=phone]').val()) {
+	    	layer.alert('请填写手机号码！');
+    		return;
+    	}
+    	
+    	if (!/^\d{11}$/.test($('[name=phone]').val())) {
+    		layer.alert('手机号必须为11位！');
+    		return;
+    	}
+    }
+    
+    if ($('#inputType').val() == 3 && !$('[name=fileUrl]').val()) {
+    	layer.alert('请选择Excel文件！');
+    	return;
+    }
+    
+    if (!$('[name=templateID]').val()) {
+    	layer.alert('请选择模板ID！');
+    	return;
+    }
+    
+    var input = null;
+    if ((input = $('#variables input').filter(function(i, e) {
+    		return !e.value;
+    	}).first()).end().size()) {
+    	layer.alert('变量' + $('#variables input').index(input) + '值不能为空！');
+    	return;
+    }
+    
+    jQuery("#submit").click();
+}
+
+	
+//-->
+</SCRIPT>
+
+
+
+<div class="row">
+	<div class="col-xs-12">
+		<form class="form-horizontal" id="validation-form" method="POST" action="${ctx}/system/sms/send-sms" >
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="inputType" >类型</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<select id="inputType" name="inputType" class="col-10" >
+							<option value="">--</option>
+							<option value="1">单个用户</option>
+							<option value="2">全部用户</option>
+							<option value="3">导入用户</option>
+						</select>
+					</div><div class="help-block" for="inputType"></div>
+				</div>
+			</div>
+			<div class="space-2"></div>
+			<div class="form-group" id="phoneDiv" style="display: none">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="phone" >手机号</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<input name="phone" class="col-xs-12 col-sm-6" id="phone"  type="text" />
+					</div><div class="help-block" for="phone"></div>
+				</div>
+			</div>
+			<div class="space-2"></div>
+			<div class="form-group" id="uploadDiv" style="display: none">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="file" >excel文件</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<input name="fileUrl" readonly class="col-xs-12 col-sm-6" id="fileUrl" style="display: none" type="text" />
+						<input name="file" class="col-xs-12 col-sm-6" id="file" style="display: none" type="file" />
+					</div>
+					<span id="uploadFile" class="btn btn-mini btn-inverse"   style="float: left; margin-left: 1%;margin-top: 5px;">
+						上传文件
+					</span><div class="help-block" for="file"></div>
+				</div>
+			</div>
+			<div class="space-2"></div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="name" >模板ID</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<select name="templateID" class="col-xs-12 col-sm-6" id="templateID">
+						 <option value="">请选择</option>
+						 <#if (returnDatas.data??)&&(returnDatas.data?size>0)>
+							<#list returnDatas.data as _data>
+								<option value="${(_data.template_id)!''}" content="${(_data.content)!''}">${(_data.name)}</option>
+							</#list>
+						 </#if>
+						</select>
+					</div><div class="help-block" for="templateID"></div>
+				</div>
+			</div>
+			
+			<div class="space-2"></div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" >模板内容</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<div id="content" readOnly class="col-xs-12 col-sm-6" style="padding: 8px 0;" ></div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="variables">
+			
+			</div>
+		</form>
+		<div class="wizard-actions">
+			<button class="btn btn-success btn-info" data-last="Finish" onclick="submit()" style="float: left; margin-left: 24%;">
+				发送
+			</button>
+			<button id="submit" class="btn btn-success btn-info" style="display: none"  data-last="Finish" onclick="commonUpdateForm('validation-form','');" style="float: left;margin-left: 25.4%;">
+				保存
+			</button>
+		</div>
+	</div>
+</div>
+
+
+</#escape>

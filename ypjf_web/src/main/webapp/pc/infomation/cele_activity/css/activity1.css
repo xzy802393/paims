@@ -1,0 +1,308 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+img{
+    border: none;
+}
+ul,li{
+    list-style: none;
+}
+body{
+    font-family: 'Microsoft YaHei',Arial;
+    width: 100%;
+    height: 100%;
+}
+.content{
+    width: 100%;
+    height: 870px;
+    background: url("../img/banner_01.png") no-repeat center;
+    background-size:100% 100%;
+    text-align: center;
+}
+.content img{
+    margin-top: 40px;
+}
+.content p{
+    color: #ffffff;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 25px;
+}
+.content .p1{
+    margin-top: 20px;
+    font-weight:100;
+}
+.sction{
+    width: 100%;
+    height: 1000px;
+    background:url("../img/body.png") no-repeat center;
+    background-size: 100% 100%;
+    display: inline-block;
+    margin-top: -2px;
+}
+.sction .k1,.k2,.k3,.k4{
+    width: 65%;
+    height: 210px;
+    margin: 30px auto;
+    border: 3px solid #A4C1D1;
+    border-radius: 10px;
+
+}
+.sction .k1{
+    background-color: rgba(247,202,199,0.5);
+    position: relative;
+}
+.sction .k1 .d1{
+    width: 65%;
+    height: 100%;
+    border-right: 3px solid #A4C1D1;
+    display: inline-block;
+    position: relative;
+}
+.sction .k1 .d1 img{
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.sction .k1 .d1 p{
+    position: absolute;
+    top: 40%;
+    left: 28%;
+    font-size: 27px;
+    font-style: italic;
+    display: inline-block;
+}
+.sction .k1 .d2{
+    display: inline-block;
+    position: absolute;
+    width: 35%;
+    height: 210px;
+}
+.sction .k1 .d2 .total{
+    display: inline;
+    position: absolute;
+    top: 10px;
+    left: 5%;
+    font-size: 20px;
+    font-style: italic;
+}
+.sction .k1 .d2 .total2{
+    display: inline-block;
+    position: absolute;
+    bottom: 25px;
+    right: 117px;
+    font-size: 20px;
+
+}
+.sction .k1 .d2  .onself1{
+    position: absolute;
+    left: 5%;
+    top: 80%;
+    font-size: 20px;
+    font-style: italic;
+}
+.sction .k1 .d2  .onself2{
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.sction .k2{
+    background-color:rgba( 234,176,159,0.5);
+    position: relative;
+}
+.sction .k2 .d2{
+    width: 35%;
+    height: 100%;
+    position: relative;
+    border-right: 3px solid #A4C1D1;
+    display: inline-block;
+}
+.sction .k2 .d2 .total{
+    display: inline;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 20px;
+    font-style: italic;
+}
+.sction .k2 .d2  .onself1{
+    position: absolute;
+    left: 25px;
+    font-size: 20px;
+    font-style: italic;
+    bottom: 20px;
+}
+.sction .k2 .d2  .onself2{
+    position: absolute;
+    left: 50%;
+    font-size: 20px;
+    font-style: italic;
+    top: 80%;
+}
+.sction .k2 .d1{
+    display: inline-block;
+    position: absolute;
+    width: 65%;
+    height: 100%;
+}
+.sction .k2 .d1 p{
+    position: absolute;
+    right: 30%;
+    top: 40%;
+    font-size: 27px;
+    font-style: italic;
+}
+.sction .k2 .d1 img{
+    position: absolute;
+    right: 5%;
+    top: 30px;
+
+}
+.sction .k3{
+    background-color:rgba(185,186,180,0.5);
+    position: relative;
+}
+.sction .k3 .d1{
+    position: relative;
+    width: 65%;
+    height: 100%;
+    border-right: 3px solid #A4C1D1;
+    display: inline-block;
+}
+.sction .k3 .d1 img{
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.sction .k3 .d1 p{
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    left: 28%;
+    font-size: 27px;
+    font-style: italic;
+}
+.sction .k3 .d2{
+    display: inline-block;
+    position: absolute;
+    width: 35%;
+    height: 210px;
+
+}
+.sction .k3 .d2 .total{
+    display: inline;
+    position: absolute;
+    top: 10px;
+    left: 5%;
+    font-size: 20px;
+    font-style: italic;
+}
+.sction .k3 .d2  .onself1{
+    position: absolute;
+    left: 5%;
+    top: 80%;
+    font-size: 20px;
+    font-style: italic;
+}
+.sction .k3 .d2  .onself2{
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    font-size: 20px;
+    font-style: italic;
+}
+.sction .k4{
+    background-color:rgba(209,212,211,0.5);
+    position: relative;
+}
+.sction .k4 .d2{
+    width: 35%;
+    height: 100%;
+    border-right: 3px solid #A4C1D1;
+    display: inline-block;
+    position: relative;
+}
+.sction .k4 .d2 .total{
+    display: inline;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 20px;
+    font-style: italic;
+}
+.sction .k4 .d2  .onself1{
+    position: absolute;
+    left: 25px;
+    font-size: 20px;
+    font-style: italic;
+    bottom: 20px;
+}
+.sction .k4 .d2  .onself2{
+    position: absolute;
+    left: 50%;
+    font-size: 20px;
+    font-style: italic;
+    top: 80%;
+}
+.sction .k4 .d1{
+    display: inline-block;
+    position: absolute;
+    width: 65%;
+    height: 100%;
+}
+.sction .k4 .d1 p{
+    position: absolute;
+    right: 30%;
+    top: 40%;
+    font-size: 27px;
+    font-style: italic;
+}
+.sction .k4 .d1 img{
+    position: absolute;
+    right: 5%;
+    top: 30px;
+}
+.footer{
+    width: 100%;
+    height: 800px;
+    background:url("../img/footer.png") no-repeat center;
+    background-size: 100% 100%;
+    text-align: center;
+    margin-top: -2px;
+    display: inline-block;
+}
+.footer .p3{
+    margin-left:-20%;
+    margin-top: 43px;
+}
+.footer .sp1{
+    font-size: 34px;
+    color: #ffffff;
+    font-weight:bold;
+    font-style: italic;
+    cursor: pointer;
+
+}
+.smmb{
+    width: 40%;
+    height: 347px;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 15%;
+}
+.footer .smmb .sp2{
+    font-size: 33px;
+    color: #622217;
+    font-weight:bold;
+    font-style: italic;
+    margin-bottom: 50px;
+
+}
+.footer .smmb p{
+    font-size: 20px;
+    color: #ffffff;
+    font-style: italic;
+    line-height:36px;
+}

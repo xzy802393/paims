@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=1220" />
+		<title>营普金服-我的账户</title>
+		<link rel="shortcut icon" href="../img/logo1.icon"/>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/account.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="../js/common-head.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.project-rec ul li:first-child{
+			 	position: relative;
+			 }
+		 	.project-rec ul li:first-child .add-interest{
+		 		position: absolute;
+    right: 4px;
+    top: -7px;
+    padding: 0 5px;
+    font-size: 12px;
+    color: #fff;
+    background: #FFA24D;
+    border-radius: 10px;
+    height: 20px;
+    line-height: 20px;
+		 	}
+		</style>
+	</head>
+	<body>
+		<!--顶部-->
+		<iframe src="../head.html" class="iframe-head" width="100%" scrolling="no"  style="border:0px;"></iframe>
+		<!--<div class="header" id="header">
+			
+		</div>-->
+		<!--主体-->
+		<div class="account-box">
+			<div class="center clearfix">
+				<!--左边导航-->
+				
+				<div class="account-nav left">
+					
+					<iframe src="../myaccount/account_sidebar.html" width="100%" height="622" scrolling="no"  style="border:0px;"></iframe>
+					
+				</div>
+				<!--右边主体部分-->
+				
+				<div class="account-main left">
+					<!--资产统计-->
+					<div class="assets-count" id="assetsCount">	
+						<!--个人头像等-->
+						<div class="account-msg clearfix">
+							<div class="account-personal left">
+								<div class="personal-pic left">
+									<img src="../img/account/account-pic.png"/>
+									<span class="renzhen over"></span>
+									<span class="renzhen"></span>
+									<span class="renzhen"></span>
+									<span class="renzhen"></span>
+								</div>
+								<div class="personal-txt left">
+									<p class="name">您好，赵丹红</p>
+									<p class="des">做一个平静的人，做一个善良人的人，做一个微笑挂在嘴边，快乐放在心上的人。</p>
+								</div>
+							</div>
+							<div class="line left"></div>
+							<div class="account-sign right">
+								<input type="button" id="" value="每日签到" />
+								<p>每天签到，领现金奖励</p>
+								<a href="#">查看签到记录</a>
+							</div>
+						</div>
+						
+						<!--个人投资收益等-->
+						<div class="account-sum">
+							<ul>
+								<li class="list">
+									<p class="num org">2.62</p>
+									<p class="des">累计收益（元）<span class="icon"></span></p>
+								</li>
+								<li class="center-line"></li>
+								<li class="list">
+									<p class="num">0:00</p>
+									<p class="des">资产总额（元）<span class="icon"></span></p>
+								</li>
+								<li class="center-line"></li>
+								<li class="list">
+									<p class="num">0:00</p>
+									<p class="des">带获取收益（元）<span class="icon"></span></p>
+								</li>
+							</ul>
+						</div>
+						
+						<!--个人资产分布等-->
+						<div class="asset-allocation clearfix">
+							<div class="asset-allocation-l left">
+								<h3>资产分布</h3>
+								<div class="asset-allocation-chart">
+									<div class="chart-text left">
+										<p><span class="asset-icon1"></span>可用余额</p><span class="money">￥1.20元</span>
+										<p class="even"><span class="asset-icon2"></span>待收收益</p>  <span class="money">￥0.00元</span>
+										<p><span class="asset-icon3"></span>待收本金</p>  <span class="money">￥0.00元</span>
+										<p class="even"><span class="asset-icon4"></span>提现在途</p>  <span class="money">￥9,570元</span>
+										<p><span class="asset-icon5"></span>冻结资金</p>  <span class="money">￥0.00元</span>
+									</div>
+									<div class="chart-pic left" id="chartPie" style="width: 250px;height: 250px;margin-left: 20px;"></div>
+								</div>
+							</div>
+							<div class="asset-allocation-r left">
+								<div class="asset-useable">
+									<p class="num">0:00</p>
+									<p class="des">可用余额（元）</p>
+								</div>
+								<div class="asset-flow">
+									<ul class="clearfix">
+										<li class="list left">
+											<p class="num">2.62</p>
+											<p class="des">冻结金额（元）<span class="icon"></span></p>
+										</li>
+										<li class="center-line left"></li>
+										<li class="list left">
+											<p class="num">0:00</p>
+											<p class="des">提现在途（元）<span class="icon"></span></p>
+										</li>
+									</ul>
+								</div>
+								<div class="asset-flow-btn">
+									<input type="button" name="" id="" value="充值" class="over"/>
+									<input type="button" name="" id="" value="提现" />
+								</div>
+								<div class="asset-list">
+									<a href="#">查看交易记录</a>
+								</div>
+							</div>
+						</div>
+					
+						<!--为您推荐-->
+						<div class="project-rec">
+							<h3>为您推荐</h3>
+							<div class="project-title">
+								<h4>车商贷 玛莎拉蒂171775-2 
+									<span class="jian"></span>
+									<span class="quan"></span>
+									<span class="xi"></span>
+								</h4>
+							</div>
+							<ul class="clearfix">
+								<li>
+									<p><span class="large org" id="rate">9.90</span><span class="small">%</span> </p>
+									<p>预期年化收益率</p>
+									<!--<span class="add-interest">加息0.5%</span>-->
+								</li>
+								<li>
+									<p><span class="large" id="term">90</span><span class="small">天</span> </p>
+									<p>借款期限</p>
+								</li>
+								<li>
+									<p><span class="large" id="quota">100</span><span class="small">元</span> </p>
+									<p>起投金额</p>
+								</li>
+								<li>
+									<div class="progress-circle" id="indicatorContainer"></div>
+									<p>投资进度</p>
+								</li>
+								<li>
+									<a href="#" class="invest-btn">立即投资</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--底部导航-->
+		<iframe src="../footer.html" width="100%" scrolling="no"  style="border:0px;height:308px;"></iframe>
+		
+		<!--加载js文件-->
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/build/dist/echarts.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/radialIndicator.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+//		$(function(){
+//			//a标签样式
+//			$("#sideBar li a").each(function(){
+//			   $(this).click(function(){ 
+//			   	  //console.log($("#sideBar li"));
+////			 	  $("#sideBar li h4").removeClass("on");
+////			 	  $(this).parent().find("h4").addClass("on");
+//			 	  $("#sideBar li a").removeClass("active");
+//			 	  $(this).addClass("active");
+//			 	  console.log($(this)) 
+//			   });
+//	   	  	});
+//	   	  	//点击标题收起
+//	   	  	$("#sideBar li h4").each(function(){
+//			   $(this).click(function(){ 
+//			   	  //console.log($("#sideBar li"));
+//			   	  $(this).toggleClass('on');
+//			 	  $(this).parent().find("a").toggle('slow');
+//			   });
+//	   	  	});
+//		});	
+
+			//资产分布图表
+		$(function(){
+			//配置路径
+			require.config({
+	            paths: {
+	                echarts: '../js/build/dist'
+	            }
+	       });
+	        // 使用
+	        require(
+	            [
+	                'echarts',
+	                'echarts/chart/pie' // 使用柱状图就加载bar模块，按需加载
+	            ],
+	         function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('chartPie')); 
+				var option = {
+				     tooltip : {
+				        trigger: 'item',
+				        formatter: "{a} <br/>{b} : {c} ({d}%)"
+				    },
+ 
+				    calculable : true,
+				    series : [
+				        {
+				            name:'资产分布',
+				            type:'pie',
+				            radius : ['40%', '70%'],
+				            itemStyle : {
+				                normal : {
+				                    label : {
+				                        show : false
+				                    },
+				                    labelLine : {
+				                        show : false
+				                    }
+				                },
+				                emphasis : {
+				                    label : {
+				                        show : true,
+				                        position : 'center',
+				                        textStyle : {
+				                            fontSize : '14',
+				                            fontWeight : 'normal'
+				                        }
+				                    }
+				                }
+				            },
+				            data:[
+				                {value:200, name:'可用余额'},
+				                {value:300, name:'待收收益'},
+				                {value:25, name:'待收本金'},
+				                {value:9570, name:'提现在途'},
+				                {value:1548, name:'冻结资金'}
+				            ]
+				        }
+				    ]
+				};	
+	        //使用制定的配置项和数据显示图表
+	        myChart.setOption(option);
+	     	}
+        );
+    });
+    
+    //为您推荐的圆形进度条
+    $(function(){
+	    var radialObj2 = $('#indicatorContainer').radialIndicator({
+	        barColor: '#ff7f01',
+	        barWidth: 8,
+//		        initValue: 40,
+	        roundCorner: true,  //如果设置为true则圆形指示器的刻度bar有圆角。
+	        percentage: true, //设置为true显示圆形指示器的百分比数值。
+	        fontSize: 20,
+	        fontColor: '#666'
+	    }).data('radialIndicator');
+	    radialObj2.animate(50);//启动动画
+    });
+	</script>
+		
+		
+
+		
+	</body>
+</html>

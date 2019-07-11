@@ -1,0 +1,359 @@
+body{
+	width:100%;
+	height:100%;
+	background: #fff;
+	margin:0 auto;
+}
+em{
+	font-style: normal;
+}
+input{
+	padding:0;
+	margin:0;
+}
+
+/* banner */
+#banner{
+	width:100%;
+	height:276px;
+	text-align: center;
+	width: 100%;
+	text-align: center;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background:#c0c0c0;
+	margin:0 auto;
+}
+#banner img{
+	width:1920px;
+	height:276px;
+	margin:0 auto;
+}
+
+#title{
+	width:100%;
+	margin:0 auto;
+	height:60px;
+	border-bottom:1px solid #f7f7f7;
+	box-shadow: 0 2px 2px 0 #f7f7f7;
+}
+#title .nav{
+	width:1200px;
+	margin:0 auto;
+}
+#title .nav li{
+	float:left;
+	padding:0 50px;
+	
+}
+#title .nav li:nth-child(1){
+	padding-left:10px;
+}
+#title .nav li span{
+	font-size:16px;
+	color:#787878;
+	line-height:58px;
+	cursor: pointer;
+}
+#title .nav span.active{
+	display: block;
+	color:#ff7d54;
+	line-height:59px;
+	border-bottom:2px solid #f06725;
+}
+#title .nav span a{
+	display: block;
+	color:#403e3e;
+}
+#content{
+	width:1200px;
+	margin:0 auto;
+}
+#content #tab .btn{
+	text-align: left;
+	padding:24px 0;
+	border-bottom: 1px solid #d0d0d0;
+	padding-left:10px;
+}
+#content #tab .btn dt{
+	display: inline-block;
+	font-size:14px;
+	color:#161616;
+	line-height:36px;
+}
+#content #tab .btn dd{
+	display: inline-block;
+	font-size:14px;
+	color:#7b7b7b;
+	line-height:36px;
+	padding:0 6px;
+	cursor: pointer;
+	width:84px;
+	text-align: center;
+}
+#content #tab .btn a{
+	display: inline-block;
+	font-size:14px;
+	color:#7b7b7b;
+	line-height:36px;
+	padding:0 6px;
+	cursor: pointer;
+	width:117px;
+	text-align: center;
+}
+#content #tab .btn a:hover{
+	color:#161616;
+}
+#content #tab .btn dd.active{
+	color:#ff7d54;
+}
+
+#content #tab .btn a.active{
+	color:#ff7d54;
+}
+
+
+/* 项目列表 */
+#content .xiangmu{
+	width:1200px;
+	margin:0 auto;
+}
+#content .xiangmu #tab{
+	width:1200px;
+	margin:0 auto;
+}
+#content .tab1{
+	 height:700px;
+}
+#content #tab .list{
+	width:1200px;
+	margin:0 auto;
+}
+#content #tab .list .items{
+	padding-left:10px;
+	border-bottom: 1px solid  #d0d0d0;
+}
+#content #tab .list .item{
+	display: flex;
+	height:90px;
+	
+	
+}
+#content #tab .list .item .a1{
+	flex: 1;
+}
+#content #tab .list .item .a2{
+	flex: 2;
+}
+#content #tab .list .item .a1 .name{
+	font-size:18px;
+	color:#7b7b7b;
+	line-height:147px;
+}
+#content .tab3 .items .names {
+    font-size: 18px;
+    color: #403e3e;
+    line-height: 56px;
+    text-align: left;
+}
+#content .tab3 .items .names a{
+	font-size: 18px;
+	color: #403e3e;
+	line-height: 56px;
+}
+#content .tab3 .items .names a:hover{
+	color:#fe6228;
+}
+#content #tab .list .item .a1 .nhl{
+	font-size:24px;
+	color:#fe6228;
+	line-height:32px;
+	padding:48px 0 10px 0;
+}
+#content #tab .list .item .a1 .p2{
+	font-size:18px;
+	color:#787878;
+	line-height:32px;
+	padding:57px 0 5px 0;
+}
+#content #tab .list .item .a1 .qX{
+	font-size:14px;
+	color:#fe6228;
+	line-height:32px;
+	padding:48px 0 7px 0;
+}
+#content #tab .list .item .a1 .p1 .num{
+	font-size:24px;
+}
+#content #tab .list .item .a1 .text{
+	font-size:14px;
+	color:#787878;
+	line-height:14px;
+}
+#content #tab .list .item .a1 .btnCJ{
+	display: inline-block;
+	width:117px;
+	height:35px;
+	border-radius:4px ;
+	background:#ff7251;
+	font-size:14px;
+	color:#fff;
+	line-height:35px;
+	margin-top:56px;
+}
+#content #tab .list .item .a2 .box{
+	width:232px;
+	margin:0 auto;
+}
+#content #tab .list .item .a2 .box .text{
+	font-size:14px;
+	color:#787878;
+	line-height:14px;
+}
+#content #tab .list .item .a2 .box .text .shengyuED{
+	color:#fe5049;
+}
+#content #tab .list .item .a2 .box .progress{
+	margin:63px 0 14px 0;
+	width:230px;
+	height:14px;
+	border:1px solid #ff9a80;
+	border-radius: 7px;	
+}
+#content #tab:nth-child(3) .list .item .a2 .box .progress{
+	margin:16px 0 14px 0;
+	width:230px;
+	height:14px;
+	border:1px solid #ff9a80;
+	border-radius: 7px;	
+}
+#content #tab .list .item .a2 .box .progress .boxKuang{
+	display: block;
+	width:222px;
+	height:10px;
+	margin:2px 4px;
+	border-radius: 5px;
+}
+#content #tab .list .item .a2 .box .progress .boxKuang .jindu{
+	display: block;
+	height:10px;
+	background: #ff6d50;
+	border-radius: 8px;
+	width:10%;
+}
+#content #tab:nth-child(3) .list .items .item .a1 .btnCJ{
+	display: inline-block;
+	width:117px;
+	height:35px;
+	border-radius:4px ;
+	background:#ff7251;
+	font-size:14px;
+	color:#fff;
+	line-height:35px;
+	margin-top:6px;
+}
+/* 债券转让 */
+#content .tab4  .items .names{
+	font-size:18px;
+	color:#7b7b7b;
+	line-height:56px;
+	text-align: left;
+}
+#content #tab .list .items .item .a1 .nhl{
+	font-size:24px;
+	color:#fe6228;
+	line-height:32px;
+	padding:3px 0 7px 0;
+}
+#content #tab .list .items .item .a1 .qX{
+	font-size:14px;
+	color:#fe6228;
+	line-height:32px;
+	padding:3px 0 4px 0;
+}
+#content #tab .list .item .a1 .p2{
+	font-size:18px;
+	color:#787878;
+	line-height:32px;
+	padding:8px 0 5px 0;
+}
+#content #tab .list .item .a1 .p3{
+	font-size:18px;
+	color:#787878;
+	line-height:32px;
+	padding:56px 0 5px 0;
+}
+#content #tab .list .item .a1 .zongE{
+	font-size:14px;
+	color:#403e3e;
+	line-height:32px;
+	padding:8px 0 5px 0;
+}
+#content #tab .list .item .a1 .fangShi{
+	font-size:14px;
+	color:#403e3e;
+	line-height:32px;
+	padding:8px 0 5px 0;
+}
+#content #tab .list .items .item .a1 .btnCJ{
+	display: inline-block;
+	width:117px;
+	height:35px;
+	border-radius:4px ;
+	background:#ff7251;
+	font-size:16px;
+	color:#fff;
+	line-height:35px;
+	margin-top:20px;
+}
+#content #tab #newShou .item{
+	display: flex;
+	height:147px;
+	border-bottom: 1px solid  #d0d0d0;
+}
+#content #tab .list .items .item .a1:nth-child(1){
+	flex: 1;
+	text-align: left;
+	margin-right:-46px;
+}
+
+/* 翻页 */
+#content .record-page-list{
+	width: 1200px;
+	text-align: center;
+	padding:30px 0;
+	margin:0 auto;
+}
+#content .record-page-list a{
+	display: inline-block;
+	padding: 5px 10px;
+	font-size: 12px;
+	border: 1px solid #aaa;
+	margin-left: 10px;
+	border-radius: 4px;
+	color:#afafaf;
+}
+#content .record-page-list a.active{
+	background: #ff7200;
+	border: none;
+	padding: 6px 11px;
+	color: #fff;
+}
+#content .record-page-list span{
+	border: none;
+    text-align: center;
+    display: inline-block;
+    width: 12px;
+    margin-left: 10px;
+}
+#content .record-page-list a.on{
+	color: #aaa;
+}
+#content .record-page-list a:hover{
+	background: #ff7200;
+	border: none;
+	padding: 6px 11px;
+	color: #fff;
+}

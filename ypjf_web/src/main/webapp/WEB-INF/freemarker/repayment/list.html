@@ -1,0 +1,269 @@
+<#escape x as x?html>
+
+<script type="text/javascript" src="${ctx}/js/userproject/userproject.js"></script>
+
+<script type="text/javascript">
+
+function deleteUserProject(){
+	var id=jQuery("#id").val();
+	if(!id||id==""){
+		myalert("请选择你要删除的记录");
+		return;
+	}else{
+		var _url="${ctx}/userproject/delete?id="+id;
+		var listurl="${ctx}/userproject/list";
+		mydelete(_url,listurl);
+	}
+}
+
+$('.date-picker').datepicker({
+    autoclose: true,
+    format: 'yyyy-mm-dd',
+    language: 'zh-CN',
+    todayBtn: 'linked',
+    startDate:new Date(2014,10,27),
+    endDate:'+6000d',
+    startDate: '-6000d',
+}).next().on(ace.click_event, function(){
+    $(this).prev().focus();
+});
+
+function daochu(formid,url) {
+	var a = $('#'+formid).attr('action');
+	$('#' + formid).attr('action',url).submit();
+	setTimeout(function() {
+		$('#' + formid).attr('action', a);
+	}, 500);
+}
+
+function showDetail(id) {
+	layer.open({
+		type : 2,
+		content : '${ctx}/system/useraccounthistory/invest-history/json?id=' + id,
+		area : ['80%', '80%']
+	});
+}
+</script>
+
+
+	
+
+<!-- /.page-header -->
+
+<div class="row">
+    <div class="col-xs-12">
+<div class="operate panel panel-default" style="height:65px;">
+	<div class="panel-body">
+		<div class="pull-left">
+ <form class="form-horizontal" name="searchForm" id="searchForm" action="${ctx}/system/userproject/repay/list" role="form">
+            <input type="hidden" name="pageIndex" id="pageIndex" value="${(returnDatas.page.pageIndex)!'1'}"/>
+            <input type="hidden" name="sort" id="page_sort" value="${(returnDatas.page.sort)!'desc'}"/>
+            <input type="hidden" name="order" id="page_order" value="${(returnDatas.page.order)!'id'}"/>
+	 		<label for="search_userName"><b>用户名称:</b></label>
+	 		<input type="text" id="search_userName"  name="userName" placeholder="请填写用户名称"  value="${(returnDatas.queryBean.userName)!''}">
+			 <label for="search_projectName"><b>项目名称:</b></label>
+	 		<input type="text" id="search_projectName"  name="projectName" placeholder="请填写项目名称"  value="${(returnDatas.queryBean.projectName)!''}">
+	 		<!--<label for="type_invest"><b>投资方式:</b></label>
+	 		 <select id="type_invest" name="type_invest" class="col-10" >
+				<option value="">全部</option>
+				<option value="1" <#if (((returnDatas.map.type_invest)!'') == '1')>selected</#if> value="1">投资1</option>
+		 		<option value="2" <#if (((returnDatas.map.type_invest)!'') == '2')>selected</#if> value="2">投资2</option>
+	 		</select> -->
+	 		<label for="search_startTime"><b>交易时间:</b></label>
+	 			<input name="startTime"  class="date-picker"  style="width:100px;" id="search_startTime" value="${(returnDatas.queryBean.startTime?string('yyyy-MM-dd HH:mm:ss'))!''}"  type="text"/>
+	 				-
+	 		<label for="search_endTime"><b></b></label>
+	 			<input name="endTime"  class="date-picker"  style="width:100px;" id="search_endTime" value="${(returnDatas.queryBean.endTime?string('yyyy-MM-dd HH:mm:ss'))!''}"  type="text"/>
+	 		<label ><b></b></label>
+			<a  href="javascript:mySubmitForm('searchForm');"
+				class="btn btn-purple btn-sm">
+					查询 <i class="ace-icon fa fa-search icon-on-right bigger-10"></i>
+				</a>
+				 <button onclick="daochu('searchForm','${ctx}/system/userproject/repay/export/json');" class="btn  btn-sm  btn-primary">
+                      
+                       导出
+                   </button>
+	 <!-- <label><b>总余额:</b></label> -->
+	 <span  style="display: inline-block;">
+	 ${(returnDatas.queryBean.money)!''}
+	 </span>
+</form>
+		</div>
+		<div class="pull-right">
+			    <@shiro.hasPermission name="/userproject/repay/export" >
+				  <button onclick="myexport('searchForm','${ctx}/userproject/repay/export/list');" class="btn  btn-sm  btn-primary">
+                      
+                        导出
+                    </button>
+		    	</@shiro.hasPermission>
+			    <@shiro.hasPermission name="/system/userproject/update" >
+				  <button onclick="myhref('${ctx}/userproject/update/pre');" class="btn  btn-sm  btn-primary">
+                        添加
+                    </button>
+			    </@shiro.hasPermission>
+			    <@shiro.hasPermission name="/userproject/delete" >
+			    |
+				  <button onclick="deleteUserProject();" class="btn btn-sm btn-danger">
+                        删除
+                    </button>
+			    </@shiro.hasPermission>
+			
+		</div>
+	</div>
+</div>
+
+   <div class="row">
+            <div class="col-xs-12">
+	            <!--start_export-->
+                <table id="listDataTable" border="1" class="table table-striped table-bordered table-hover">
+                    <!--end_no_export-->
+                    <!--first_start_export-->
+                    <thead>
+                    <tr>
+                        <!--first_start_no_export
+                        <th class="center">
+                            <label class="position-relative">
+                                <input class="ace" type="checkbox">
+                                <span class="lbl"></span>
+                            </label>
+                        </th>
+                        <th>操作</th>-->
+                        <!--first_end_no_export-->
+						<th>借款人姓名</th>
+						<th>借款人ID</th>
+						<th>电话</th>
+						<th id="th_userId" >项目名称</th>
+						<th id="th_status" >项目编号</th>
+						<th id="th_projectId" >还款年利率</th>
+						<th id="th_money" >投资期限</th>
+						<th id="th_payType" >项目总金额</th>
+						<th id="th_interest" >还款方式</th>
+						<th id="th_rate" >项目状态</th>
+						<th>项目发布时间</th>
+						<th>项目放款时间</th>
+						<th>项目结束时间</th>
+						<!--<th id="th_totolInterest" >还款期数</th>-->
+						<!--<th id="th_rest" >还款时间</th>-->
+						<th id="th_deadLine" >真实金额</th>
+						<th id="th_createTime" >总利息</th>
+						<th id="th_projectStatus" >合计回款</th>
+						<!--<th id="th_osType" >借款人</th>-->
+						 <!--first_start_no_export-->
+						<th></th>
+						 <!--first_end_no_export-->
+						<!-- <th id="th_cardType" >卡券类型</th>
+						<th id="th_cardPrice" >投资抵扣券金额</th>
+						<th id="th_cardRate" >加息券利息</th> -->
+                    </tr>
+                    </thead>
+                    <!--first_end_export-->
+
+                    <!--start_export-->
+                    <tbody>
+           
+				   <#if (returnDatas.data??)&&(returnDatas.data?size>0)>
+					 <#list returnDatas.data as _data>
+
+                            <tr class="">
+								<td >
+									${(_data.userRealName)!''}
+								</td>
+
+								<td>
+									${(_data.borrowerCode)!''}
+								</td>
+
+								<td>
+									${(_data.legalPersonPhone)!''}
+								</td>
+
+								<td >
+									${(_data.name)!''}
+								</td>
+
+								<td >
+									${(_data.code)!''}
+									<!--${(_data.status)!0}-->
+								</td>
+
+								<td >
+									${(_data.repayRate)?string('0.###')!0}
+								</td>
+
+								<td >
+									${(_data.deadLine)!1}
+								</td>
+
+								<td >
+									${(_data.totalAmount)!''}
+								</td>
+
+								<td >
+									${(_data.repay)!''}
+								</td>
+
+								<td >
+								<#if _data.status??>
+									<#if _data.status == 1>
+										即将上线
+										<#elseif _data.status == 2>
+											热售中
+											<#elseif _data.status == 3>
+												还款中
+												<#elseif _data.status == 4>
+													已结束
+													<#elseif _data.status == 5>
+														待放款
+									</#if>
+								</#if>
+								</td>
+				   			<td>
+								${((_data.startTime)?string('yyyy-MM-dd HH:mm:ss'))!''}
+							</td>
+
+				   			<td>
+					   			${((_data.releaseTime)?string('yyyy-MM-dd HH:mm:ss'))!''}
+				   			</td>
+
+				   			<td>
+								${((_data.endTitme)?string('yyyy-MM-dd HH:mm:ss'))!''}
+							</td>
+				   			<!--<td >-->
+								<!--${(_data.repaymentNum)!0}-->
+							<!--</td>-->
+							<!--<td >-->
+								<!--${(_data.nextInterest)!''}-->
+							<!--</td>-->
+							<td >
+								${(_data.realAmount)!0}
+							</td>
+							<td >
+							
+								${(_data.totalInterest)!'0'}
+							</td>
+							
+							<td >
+
+								${(_data.remainRepayment)!'0'}
+							</td>
+							<!--start_no_export-->
+							 <td>
+	  						 	<a href="javascript:void(showDetail(${(_data.id)!'0'}))">查看详情</a>
+	  						 </td>
+	  						 <!--end_no_export-->
+						</tr>
+					</#list>
+					 </#if>
+                    </tbody>
+                </table>
+                <!--end_export-->
+            </div>
+            <!-- /.span -->
+        </div>
+        <#if returnDatas.page??>	
+            <@h.pagetoolbar page=returnDatas.page formId='searchForm' />
+         </#if>
+    </div>
+</div>
+<!-- /.main-container -->
+</#escape>

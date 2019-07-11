@@ -1,0 +1,69 @@
+.safe-contain{
+	width: 100%;
+	height: auto;
+}
+.safe-contain .safe-head{
+	width: 100%;
+	height: 558px;
+	text-align: center;
+	margin-bottom: 100px;
+}
+.safe-contain .safe-head img:nth-child(1){
+	width: 100%;
+	height: 374px;
+}
+.safe-contain .safe-head img:nth-child(2){
+	margin-top: -160px;
+}
+.safe-contain .safe-main{
+	width: 1200px;
+}
+.safe-contain .safe-main ul li.list .text{
+	float: left;
+	width: 682px;
+}
+.safe-contain .safe-main ul li.list .text h3{
+	font-size: 30px;
+	color: #53b2fa;
+	font-weight: normal;
+	height: 56px;
+}
+.safe-contain .safe-main ul li.list .text dl dt{
+	font-size: 18px;
+	color: #666;
+	height: 30px;
+}
+.safe-contain .safe-main ul li.list .text dl dd{
+	font-size: 14px;
+	color: #999;
+	line-height: 22px;
+	margin-bottom: 14px;
+}
+.safe-contain .safe-main ul li.list .pic{
+	float: left;
+	width: 518px;
+	text-align: center;
+}
+.safe-contain .safe-main ul li.list .pic img{
+	margin-top: 60px;
+}
+.safe-contain .safe-main ul li.line{
+	width: 100%;
+	text-align: center;
+	margin: 40px auto;
+}
+
+.xuanzhuan {
+    transition: All 0.8s ease-in-out;
+    -webkit-transition: All 0.8s ease-in-out;
+    -moz-transition: All 0.8s ease-in-out;
+    -o-transition: All 0.8s ease-in-out;
+}
+
+.xuanzhuan:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+}

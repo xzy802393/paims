@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- bootstrap & fontawesome -->
+			<link rel="stylesheet" href="${ctx}/ace/css/bootstrap.min.css" />
+			<link rel="stylesheet" href="${ctx}/ace/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+			<!-- page specific plugin styles -->
+
+			<!-- text fonts -->
+			<link rel="stylesheet" href="${ctx}/ace/css/fonts.googleapis.com.css" />
+
+			<!-- ace styles -->
+			<link rel="stylesheet" href="${ctx}/ace/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+			<!--[if lte IE 9]>
+			<link rel="stylesheet" href="${ctx}/ace/css/ace-part2.min.css" class="ace-main-stylesheet" />
+			<![endif]-->
+			<link rel="stylesheet" href="${ctx}/ace/css/ace-skins.min.css" />
+			<link rel="stylesheet" href="${ctx}/ace/css/ace-rtl.min.css" />
+
+			<!--[if lte IE 9]>
+			<link rel="stylesheet" href="${ctx}/ace/css/ace-ie.min.css" />
+			<![endif]-->
+
+			<!-- inline styles related to this page -->
+
+			<!-- ace settings handler -->
+			<script src="${ctx}/ace/js/ace-extra.min.js"></script>
+
+			<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+			<!--[if lte IE 8]>
+			<script src="${ctx}/ace/js/html5shiv.min.js"></script>
+			<script src="${ctx}/ace/js/respond.min.js"></script>
+			<![endif]-->
+	<style>
+		table { border: 1px solid #cfcfcf; border-collapse:collapse; width: 100%; }
+		table tr td { border: 1px solid #cfcfcf; padding: 10px 0; width: auto; }
+		table th { font-weight: 300; background: #eee; padding: 10px 0; width: auto; }
+	</style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    function deleteProject(){
+        var id=jQuery("#id").val();
+        if(!id||id==""){
+            myalert("请选择你要删除的记录");
+            return;
+        }else{
+            var _url="${ctx}/project/delete?id="+id;
+            var listurl="${ctx}/project/list";
+            mydelete(_url,listurl);
+        }
+    }
+
+    function daochu(formid,url){
+        var a = $('#'+formid).attr('action');
+        $('#' + formid).attr('action',url).submit();
+        setTimeout(function() {
+            $('#' + formid).attr('action', a);
+        }, 500);
+    }
+
+</script>
+
+
+
+
+<!-- /.page-header -->
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="operate panel panel-default" style="height:65px;">
+            <div class="panel-body">
+                <div class="pull-left">
+                    <form class="form-horizontal" name="searchForm" id="searchForm" action="${ctx}/system/project/si/repayment/list" role="form">
+                        <input type="hidden" name="pageIndex" id="pageIndex" value="${(returnDatas.page.pageIndex)!'1'}"/>
+                        <input type="hidden" name="sort" id="page_sort" value="${(returnDatas.page.sort)!'desc'}"/>
+                        <input type="hidden" name="order" id="page_order" value="${(returnDatas.page.order)!'id'}"/>
+                        <label for="search_name"><b>项目名称:</b></label>
+                        <input type="text" id="search_name"  name="name" placeholder="请填写项目名称"  value="${(returnDatas.queryBean.name)!''}">
+                        <label for="startTime"><b>还款时间:</b></label>
+                        <input name="startTime"  class="date-picker"  style="width:100px;" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});" readonly="readonly"
+                               id="search_startTime" value="${(returnDatas.queryBean.startTime?string('yyyy-MM-dd HH:mm:ss'))!''}"  type="text"/>
+                        -
+                        <label for="search_endTitme"><b></b></label>
+                        <input name="endTitme"  class="date-picker"  style="width:100px;" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});" readonly="readonly"
+                               id="search_endTitme" value="${(returnDatas.queryBean.endTitme?string('yyyy-MM-dd HH:mm:ss'))!''}"  type="text"/>
+                        <label ><b></b></label>
+
+                        <a  href="javascript:mySubmitForm('searchForm');"
+                            class="btn btn-purple btn-sm">
+                            查询 <i class="ace-icon fa fa-search icon-on-right bigger-10"></i>
+                        </a>
+                       <!-- <button onclick="daochu('searchForm','${ctx}/system/project/si/repayment/list/export');" class="btn  btn-sm  btn-primary">
+
+                            导出
+                        </button>-->
+                    </form>
+                </div>
+                <div class="pull-right">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <!--start_export-->
+                <table id="listDataTable" border="1" class="table table-striped table-bordered table-hover">
+                    <!--end_no_export-->
+                    <!--first_start_export-->
+                    <thead>
+                    <tr>
+                        <!--first_start_no_export-->
+                        <!--<th class="center">
+                            <label class="position-relative">
+                                <input class="ace" type="checkbox">
+                                <span class="lbl"></span>
+                            </label>
+                        </th>-->
+                        <!--first_end_no_export-->
+                        <th id="th_name" >项目名称</th>
+                        <th id="th_repayRate" >还款年利率</th>
+                        <th id="th_deadLine" >投资期限</th>
+                        <th id="th_totalAmount" >项目总金额</th>
+                        <th id="" >真实金额</th>
+                        <th id="" >虚拟金额</th>
+                        <th id="th_code" >项目编号</th>
+                        <th id="th_repayment" >还款方式</th>
+                        <th id="th_status" >项目状态</th>
+                        <th id="th_startTime" >项目开始时间</th>
+                        <th id="th_endTitme" >项目结束日期</th>
+                        <th id="th_repaymentThis" >本期还款状态</th>
+                        <th id="th_repaymentNum" >还款期数</th>
+                        <th id="th_sendNum" >发放利息次数</th>
+                        <th id="th_createTime" >创建时间</th>
+                        <th id="th_enoughTime" >满标时间</th>
+                        <th id="th_nextInterest" >下次还款时间</th>
+                        <th id="th_repaymentMoney" >还款金额</th>
+                    </tr>
+                    </thead>
+                    <!--first_end_export-->
+
+                    <!--start_export-->
+                    <tbody>
+
+                    <#if (returnDatas.data??)&&(returnDatas.data?size>0)>
+                    <#list returnDatas.data as _data>
+
+                    <tr class="">
+
+                        <td >
+                            ${(_data.name)!''}
+                        </td>
+                        <td >
+                            ${(_data.repayRate)!0}
+                        </td>
+                        <td >
+                            ${(_data.deadLine)!0}月
+                        </td>
+                        <td >
+                            ${(_data.totalAmount)!0}
+                        </td>
+                        <td >
+                            ${(_data.realAmount)!0}
+                        </td>
+                        <td >
+                            ${(_data.dummyAmount)!0}
+                        </td>
+                        <td >
+                            ${(_data.code)!''}
+                        </td>
+                        <td >
+                            <#if _data.repayment??>
+                            <#if _data.repayment == '1'>
+                            按月付息/到期还本
+                            <#elseif _data.repayment == '2'>
+                            等额本息
+                            <#elseif _data.repayment == '3'>
+                            到期还本还息
+                        </#if>
+                    </#if>
+                    </td>
+                    <td >
+                        <#if _data.status??>
+                        <#if _data.status == 1>
+                        即将上线
+                        <#elseif _data.status == 2>
+                        热售中
+                        <#elseif _data.status == 3>
+                        还款中
+                        <#elseif _data.status == 4>
+                        已结束
+                    </#if>
+                    </#if>
+                    </td>
+                    <td >
+                        <!--日期型-->
+                        ${((_data.startTime)?string('yyyy-MM-dd HH:mm:ss'))!''}
+                    </td>
+                    <td >
+                        <!--日期型-->
+                        ${((_data.endTitme)?string('yyyy-MM-dd HH:mm:ss'))!''}
+                    </td>
+                    <td >
+                        <#if _data.repaymentThis??>
+                        <#if _data.repaymentThis == 1>
+                        未还款
+                        <#elseif _data.repaymentThis == 2>
+                        已还款
+                    </#if>
+                </#if>
+                </td>
+                <td >
+                    ${(_data.repaymentNum)!0}
+                </td>
+                <td >
+                    ${(_data.sendNum)!0}
+                </td>
+                <td >
+                    <!--日期型-->
+                    ${((_data.createTime)?string('yyyy-MM-dd HH:mm:ss'))!''}
+                </td>
+                <td >
+                    <!--日期型-->
+                    ${((_data.enoughTime)?string('yyyy-MM-dd HH:mm:ss'))!''}
+                </td>
+                <td >
+                    <!--日期型-->
+                    ${((_data.nextInterest)?string('yyyy-MM-dd HH:mm:ss'))!''}
+                </td>
+                <td >
+                    ${(_data.repaymentMoney)!0}
+                </td>
+</tr>
+</#list>
+</#if>
+</tbody>
+</table>
+<!--end_export-->
+</div>
+<!-- /.span -->
+</div>
+<#if returnDatas.page??>
+<@h.pagetoolbar page=returnDatas.page formId='searchForm' />
+</#if>
+</div>
+</div>
+</body>
+</html>

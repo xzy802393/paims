@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=1220" />
+		<title>九趣贷 — 贷快乐，更带梦想</title>
+		<link rel="shortcut icon" href="/yingpu/pc/img/logo.icon.png"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sanbiao.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		
+	</head>
+	<body>
+		<div id="accountBox" class="clearFix">
+			<!-- 左边导航 -->
+			<div id="aside">
+				<iframe src="account-sideBar.html" width="100%" height="744px" scrolling="no"  style="border:0px;"></iframe>
+			</div>
+			
+			<!-- 右边内容 -->
+			<div id="account">
+				<div class="trans-records">
+					<div class="nav">
+						<span class="active">交易记录</span>
+						<span>充值记录</span>
+						<span>提现记录</span>
+					</div>
+					<ul class="tabs">
+						<!-- 交易记录 -->
+						<li class="tab" style="display: block;">
+							<div class="trans-choice">						
+								<dl class="trans-choice-date clearfix">
+									<dt>项目期限:</dt>
+									<dd class="active">全部</dd>
+									<dd>最近1个月</dd>
+									<dd>最近3个月</dd>
+									<dd>最近1年</dd>
+									<div class="trans-choice-date-box">
+										时间:
+										<div class="calendarWarp">
+											<input type="text" class="ECalendar" id="ECalendar_date" value="起止日">
+										</div>
+										<span>至</span>
+										<div class="calendarWarp">
+											<input type="text" class="ECalendar" id="ECalendar_date2" value="截止日">
+										</div>
+										<input type="submit" name="" id="search" value="查询记录" />
+									</div>
+								</dl>
+							
+								<dl class="trans-choice-type clearfix">
+									<dt>项目状态:</dt>
+									<dd class="active">全部</dd>
+									<dd>投资</dd>
+									<dd>收益</dd>
+								</dl>
+							</div>
+							<div id="list"">
+								<table border="0">
+									<tr class="title">
+										<th>日期</th>
+										<th>交易金额(元)</th>
+										<th>交易类型</th>
+										<th>交易状态</th>
+									</tr>
+									<tr>
+										<td>2019/1/1</td>
+										<td>2100.00</td>
+										<td>车融贷</td>
+										<td class="jyz">交易中</td>
+									</tr>
+									<tr>
+										<td>2019/1/1</td>
+										<td>2100.00</td>
+										<td>车融贷</td>
+										<td class="ywc">已完成</td>
+									</tr>
+								</table>
+								
+							</div>
+						</li>
+						<!-- 充值记录 -->
+						<li class="tab" style="display: none;">
+							<div class="trans-choice">						
+								<dl class="trans-choice-date clearfix">
+									<dt>项目期限:</dt>
+									<dd class="active">全部</dd>
+									<dd>最近1个月</dd>
+									<dd>最近3个月</dd>
+									<dd>最近1年</dd>
+									<div class="trans-choice-date-box">
+										时间:
+										<div class="calendarWarp">
+											<input type="text" class="ECalendar" id="ECalendar_date" value="起止日">
+										</div>
+										<span>至</span>
+										<div class="calendarWarp">
+											<input type="text" class="ECalendar" id="ECalendar_date2" value="截止日">
+										</div>
+										<input type="submit" name="" id="search" value="查询记录" />
+									</div>
+								</dl>
+							
+								<dl class="trans-choice-type clearfix">
+									<dt>项目状态:</dt>
+									<dd class="active">全部</dd>
+									<dd>处理中</dd>
+									<dd>成功</dd>
+									<dd>失败</dd>
+								</dl>
+							</div>
+							<div id="list">
+								<table border="0">
+									<tr class="title">
+										<th>日期</th>
+										<th>充值金额(元)</th>
+										<th>充值银行</th>
+										<th>充值方式</th>
+										<th>状态</th>
+									</tr>
+									<tr>
+										<td>2019/1/1</td>
+										<td>2100.00</td>
+										<td>农业银行（5734）</td>
+										<td>线上充值</td>
+										<td class="jyz">处理中</td>
+									</tr>
+									<tr>
+										<td>2019/1/1</td>
+										<td>2100.00</td>
+										<td>农业银行（5734）</td>
+										<td>线上充值</td>
+										<td>失败</td>
+									</tr>
+									<tr>
+										<td>2019/1/1</td>
+										<td>2100.00</td>
+										<td>农业银行（5734）</td>
+										<td>线上充值</td>
+										<td>成功</td>
+									</tr>
+								</table>
+								
+							</div>
+						</li>
+						<!-- 提现记录 -->
+						<li class="tab" style="display: none;">
+							<div class="trans-choice">						
+								<dl class="trans-choice-date clearfix">
+									<dt>项目期限:</dt>
+									<dd class="active">全部</dd>
+									<dd>最近1个月</dd>
+									<dd>最近3个月</dd>
+									<dd>最近1年</dd>
+									<div class="trans-choice-date-box">
+										时间:
+										<div class="calendarWarp">
+											<input type="text" class="ECalendar" id="ECalendar_date" value="起止日">
+										</div>
+										<span>至</span>
+										<div class="calendarWarp">
+											<input type="text" class="ECalendar" id="ECalendar_date2" value="截止日">
+										</div>
+										<input type="submit" name="" id="search" value="查询记录" />
+									</div>
+								</dl>
+							
+								<dl class="trans-choice-type clearfix">
+									<dt>项目状态:</dt>
+									<dd class="active">全部</dd>
+									<dd>处理中</dd>
+									<dd>成功</dd>
+									<dd>失败</dd>
+								</dl>
+							</div>
+							<div id="list"">
+								<table border="0">
+									<tr class="title">
+										<th>日期</th>
+										<th>提现金额(元)</th>
+										<th>提取银行</th>
+										<th>手续费(元)</th>
+										<th>实际到账金额(元)</th>
+										<th>状态</th>
+									</tr>
+									<tr>
+										<td>2019/1/1</td>
+										<td>400.00</td>
+										<td>农业银行（5734）</td>
+										<td>10.00</td>
+										<td>390.00</td>
+										<td class="jyz">处理中</td>
+									</tr>
+									<tr>
+										<td>2019/1/1</td>
+										<td>400.00</td>
+										<td>农业银行（5734）</td>
+										<td>10.00</td>
+										<td>390.00</td>
+										<td>失败</td>
+									</tr>
+									<tr>
+										<td>2019/1/1</td>
+										<td>400.00</td>
+										<td>农业银行（5734）</td>
+										<td>10.00</td>
+										<td>390.00</td>
+										<td>成功</td>
+									</tr>
+								</table>
+								
+							</div>
+						</li>
+					</ul>
+					
+					
+					
+					<!--页码-->
+					<div class="page">
+						<div class="page-list" id="pageList">
+							<a href="#" class="on">首页</a>
+							<a href="#">上一页</a>
+							<a href="#" class="active">1</a>
+							<a href="#" onclick="$(this).parent().find('a').removeClass('active');$(this).addClass('active');">2</a>
+							<a href="#">下一页</a>
+							<a href="#">尾页</a>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/calendar2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/history.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#ECalendar_date").ECalendar({
+					 type:"time",
+					 stamp:false,
+					 offset:[0,2],   //弹框手动偏移量;
+					 skin:'#ff7f01',
+					 format:"yyyy/mm/dd",
+					 callback:function(v,e)
+					 {
+						 $(".callback span").html(v)
+					 }
+				});
+				$("#ECalendar_date2").ECalendar({
+					 type:"time",
+					 stamp:false,
+					 offset:[0,2],   //弹框手动偏移量;
+					 skin:'#ff7f01',
+					 format:"yyyy/mm/dd",
+					 callback:function(v,e)
+					 {
+						 $(".callback span").html(v)
+					 }
+				});
+			});
+		</script>
+	</body>
+	
+</html>

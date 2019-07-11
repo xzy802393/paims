@@ -1,0 +1,322 @@
+#laybox{
+	width:100%;
+	height:auto;
+	margin:0 auto;
+}
+
+/* banner */
+#banner{
+	width:100%;
+	height:375px;
+	text-align: center;
+	width: 100%;
+	text-align: center;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background:#272727;
+}
+#banner img{
+	width:1920px;
+	height:375px;
+	margin:0 auto;
+}
+
+/* 三角号 */
+.sanjiao{
+	width:100%;
+	height:12pxs;
+	margin:0 auto;
+}
+.sanjiao img{
+	display: block;
+	width:27px;
+	height:12px;
+	margin:0 auto;
+}
+
+.laybox{
+	width:1200px;
+	height:auto;
+	margin:0 auto;
+}
+
+
+/* 标题*/
+.laybox #title{
+	width:100%;
+	height:40px;
+	border-bottom:1px dashed #8d8d8d;
+	padding:30px 0;
+	text-align: left;
+}
+.laybox #title span{
+	display: inline-block;
+	width:10px;
+	height:40px;
+	background: #3e3e3e;
+	vertical-align: middle;
+}
+.laybox #title img{
+	display: inline-block;
+	padding-left:18px;
+	vertical-align: middle;
+}
+
+
+/* 等级 */
+.laybox #dengji{
+	width:100%;
+	margin:0 auto;
+}
+.laybox #dengji .content{
+	width:100%;
+	margin:0 auto;
+}
+.laybox #dengji .content img.dengji{
+	display: block;
+	width:1082px;
+	height:160px;
+	margin:0 auto;
+	padding-top:70px;
+}
+.laybox #dengji .content div.text{
+	font-size:14px;
+	color:#666666;
+	line-height:24px;
+	width:880px;
+	margin:0 auto;
+	text-align: center;
+	padding:50px 0 50px;
+	letter-spacing: 1px;
+}
+
+
+/* 专属 */
+.laybox #zhuanshu{
+	width:100%;
+	margin:0 auto;
+	padding-bottom:20px;
+}
+.laybox #zhuanshu .content{
+	width:100%;
+	margin:0 auto;
+}
+.laybox #zhuanshu .content .fuli{
+	width:100%;
+	margin:0 auto;
+}
+.laybox #zhuanshu .content .fuli .line1,
+.laybox #zhuanshu .content .fuli .line2{
+	width:1200px;
+	margin:0 auto;
+	padding-top:60px;
+	height:150px;
+}
+.laybox #zhuanshu .content .fuli .line2{
+	padding-top:0;
+}
+.laybox #zhuanshu .content .fuli .line1 .aleft,
+.laybox #zhuanshu .content .fuli .line2 .aleft{
+	float:left;
+	width:160px;
+	height:130px;
+	border-right:1px solid #858585;
+	/* margin-top:28px; */
+	text-align: center;
+}
+.laybox #zhuanshu .content .fuli .line2 .aleft{
+	border:none;
+	margin-top:0;
+	height:150px;
+}
+.laybox #zhuanshu .content .fuli .line2 .aleft .box img{
+	display: block;
+	width:60px;
+	height:60px;
+	margin:0 auto;
+	padding-bottom:10px;
+}
+.laybox #zhuanshu .content .fuli .line1 .aleft p.p1{
+	font-size:22px;
+	color:#3e3e3e;
+	line-height:130px;
+}
+.laybox #zhuanshu .content .fuli .line2 .aleft .box p.p2{
+	font-size:16px;
+	color:#3e3e3e;
+	line-height:46px;
+}
+.laybox #zhuanshu .content .fuli .line2 .aleft .box p.p3{
+	font-size:14px;
+	color:#3e3e3e;
+	line-height:24px;
+}
+.laybox #zhuanshu .content .fuli .line1 .aright,
+.laybox #zhuanshu .content .fuli .line2 .aright{
+	float:right;
+	width:1038px;
+	height:150px;
+	display: flex;
+}
+.laybox #zhuanshu .content .fuli .line1 .aright li.item,
+.laybox #zhuanshu .content .fuli .line2 .aright li.item{
+	float:left;
+	flex:1;
+}
+.laybox #zhuanshu .content .fuli .line1 .aright li.item .box,
+.laybox #zhuanshu .content .fuli .line2 .aright li.item .box{
+	width:180px;
+	margin:0 auto;
+	text-align: center;
+}
+.laybox #zhuanshu .content .fuli .line1 .aright li.item .box img,
+.laybox #zhuanshu .content .fuli .line2 .aright li.item .box img{
+	display: block;
+	width:60px;
+	height:60px;
+	margin:0 auto;
+	padding-bottom:10px;
+}
+.laybox #zhuanshu .content .fuli .line1 .aright li.item .box p.p2,
+.laybox #zhuanshu .content .fuli .line2 .aright li.item .box p.p2{
+	font-size:16px;
+	color:#3e3e3e;
+	line-height:46px;
+}
+.laybox #zhuanshu .content .fuli .line1 .aright li.item .box p.p3,
+.laybox #zhuanshu .content .fuli .line2 .aright li.item .box p.p3{
+	font-size:14px;
+	color:#3e3e3e;
+	line-height:24px;
+}
+
+
+/* 权益 */
+.laybox #zhuanshu .content .quanyi{
+	width:100%;
+	margin:0 auto;
+}
+.laybox #zhuanshu .content .quanyi .bleft{
+	float:left;
+	width:160px;
+	height:130px;
+	border-right:1px solid #858585;
+	text-align: center;
+}
+.laybox #zhuanshu .content .quanyi .bleft p.p1{
+	font-size:22px;
+	color:#3e3e3e;
+	line-height:130px;
+}
+.laybox #zhuanshu .content .quanyi .bright{
+	float:left;
+	width:975px;
+	padding-left:62px;
+}
+.laybox #zhuanshu .content .quanyi .bright p.p1{
+	font-size:16px;
+	color:#3e3e3e;
+	line-height:18px;
+	padding-bottom:12px;
+	text-align: left;
+}
+.laybox #zhuanshu .content .quanyi .bright p.p2{
+	font-size:14px;
+	color:#666666;
+	line-height:26px;
+	text-align: left;
+}
+.laybox #zhuanshu .content .quanyi .bright p.p3{
+	font-size:14px;
+	color:#666666;
+	line-height:26px;
+	padding-bottom:18px;
+	text-align: left;
+}
+
+
+
+/* 会员权益 */
+.laybox #quanyi .content{
+	width:100%;
+	margin:0 auto;
+	padding-bottom:50px;
+}
+.laybox #quanyi .content .box{
+	margin-top:58px;
+	width:1200px;
+	height:804px;
+	margin:58px auto 0;
+	background: url(../img/tablebk.jpg) no-repeat 0 0;
+	background-size:100% 100%;
+}
+.laybox #quanyi .content .box .table{
+	width:1177px;
+	height:783px;
+	margin:0 auto;
+	padding:11px;
+}
+.laybox #quanyi .content .box .table table{
+	width:1177px;
+	height:783px;
+}
+.laybox #quanyi .content .box .table table tr{
+	height:66px;
+	border-bottom:1px solid #cfcfcf;
+}
+.laybox #quanyi .content .box .table table tr:nth-last-child(1){
+	border:none;
+}
+.laybox #quanyi .content .box .table table tr th,
+.laybox #quanyi .content .box .table table tr td{
+	width:107px;
+	text-align: center;
+}
+.laybox #quanyi .content .box .table table tr.title th{
+	font-size:16px;
+	line-height:30px;
+	color:#3e3e3e;
+}
+.laybox #quanyi .content .box .table table tr td{
+	font-size:14px;
+	line-height:30px;
+	color:#858585;
+}
+.laybox #quanyi .content .box .table table td .gou{
+	display: inline-block;
+	width:15px;
+	height:15px;
+}
+.laybox #quanyi .content .box .table table td .cha{
+	display: inline-block;
+	width:10px;
+	height:12px;
+}
+.laybox #quanyi .content .box .table table td:nth-child(even),
+.laybox #quanyi .content .box .table table th:nth-child(even){
+	background:#f0f0f0;
+}
+.laybox #quanyi .content .box .table table td:nth-child(odd),
+.laybox #quanyi .content .box .table table th:nth-child(odd){
+	background:#fff;
+}
+.laybox #quanyi .content .box .table table th.tou{
+	width:;
+	height:;
+	background:url(../img/xiexian.png) no-repeat 0 0;
+	background-size:100% 100%;
+	background-color:#fff;
+	position: relative;
+}
+.laybox #quanyi .content .box .table table th.tou span.li{
+	position: absolute;
+	left:50px;
+	top:6px;
+}
+.laybox #quanyi .content .box .table table th.tou span.ji{
+	position: absolute;
+	left:22px;
+	top:38px;
+}

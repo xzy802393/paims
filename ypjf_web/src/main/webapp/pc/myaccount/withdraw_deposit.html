@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=1220" />
+		<title>九趣贷 — 贷快乐，更带梦想</title>
+		<link rel="shortcut icon" href="/yingpu/pc/img/logo.icon.png"/>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common4.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/account.css"/>
+		<link rel="stylesheet" type="text/css" href="css/deposit.css"/>
+		<!-- <link rel="stylesheet" type="text/css" href="/yingpu/pc/css/common4.css"/> -->
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+		.deposit-main .deposit-fun p.bank a span.bank-icon {
+		    display: inline-block;
+		    width: 23px;
+		    height: 23px;
+		    background: url(/yingpu/pc/img/account/deposit-bank-icon.png) no-repeat center;
+		    margin: 0 6px 0 6px;
+		    vertical-align: -7px;
+		}
+		
+		
+		p.bank a {
+		    display: inline-block;
+		    margin-left: 18px;
+		    width: auto;
+		    height: 38px;
+		    padding: 0px 10px;
+		    border: 1px solid #ddd;
+		    line-height: 38px;
+		}
+		</style>
+		<!--<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>-->
+	</head>
+	<body>
+		<!--顶部-->
+		
+		<iframe src="/yingpu/pc/head3.html" class="iframe-head" width="100%" scrolling="no"  style="border:0px;"></iframe>
+		<!--主体-->
+		<div class="account-box">
+			<div class="center clearfix">
+				<!--左边导航-->
+				
+				<div class="account-nav left">
+					
+					<iframe src="../myaccount/account_sidebar.html" width="100%" height="850px;" scrolling="no"  style="border:0px;"></iframe>
+					
+				</div>
+				<!--右边主体部分-->
+				
+				<div class="deposit-main left">
+					<h3>提现</h3>
+					<div class="deposit-fun cash">
+						<p class="bank">到银行卡  
+							<a class="active"><span class="bank-icon"><img id="bank-img" style="width: 120%; height: 120%; vertical-align:top;" /></span><span id="bank-card">****(7918)</span></a>
+						</p>
+						<p class="account-balance">账户余额 <span class="yue">0.00</span> 元
+						<p class="deposit-num">提现金额  
+							<input type="text" id="amount" placeholder="请输入可提现金额"/> <span>元</span>
+							<span class="tip" style="display:none;">*提现金额不能大于可提现金额</span>
+						</p>
+						<p class="account-balance">实际到账金额<span class="infact">0.00</span> 元
+						
+						<div class="next-btn">
+							<button class="">下一步</button>
+						</div>
+						
+					</div>
+					
+					<div class="reminders cash">
+						<p>温馨提示：</p>
+						<dl>
+							<dt>1、</dt>
+							<dd>提现免收手续费（平台垫付）。</dd>
+						</dl>
+						<dl>
+							<dt>2、</dt>
+							<dd>提现到账时间：根据银联及第三支付-富友的相关规定，提现采用T+1到账，工作日当日提现的，预计次日12:00前到账。实际到账时间取决于付款银行，遇到法定节假日顺延。</dd>
+						</dl>
+						<dl>
+							<dt>3、</dt>
+							<dd>同卡进出规定：为保护您的资金安全，九趣贷遵循同卡进出原则，每张银行卡只可提现此卡充值的金额及获得的收益。若需提现账户中其他银行卡充值的金额，请换卡操作。</dd>
+						</dl>
+						<dl>
+							<dt>4、</dt>
+							<dd>如果您填写的提现信息不正确可能会导致提现失败，如不确认银行卡的相关信息可致电发卡行客服进行咨询。</dd>
+						</dl>
+						<dl>
+							<dt>5、</dt>
+							<dd>当您的提现操作出现人为异常时（包括但不限于涉嫌非法套现等违法行为），九趣贷将视具体情况提高您的审核级别（包括但不限于要求提供证明、延长审核时间等），我们将最大限度保证您的资金安全。</dd>
+						</dl>
+						<dl>
+							<dt>6、</dt>
+							<dd>如有其他问题及建议，欢迎致电400-969-1811，九趣贷竭诚为您服务。</dd>
+						</dl>
+						
+					
+					</div>     
+				</div>	            
+		</div>                 
+		<div id="tankuang" class="deposit-alert" style="display:none;">
+			<div class="alert-tit" id="">
+				<p>提现提示</p>
+			</div>
+			<div class="alert-main">
+				<p class="icon"><span></span>请您在新打开的第三方支付页面上完成，完成前请不要关闭此窗口</p>
+				<div class="alert-btn">
+					<p>完成提现后请根据您的情况点击下面的按钮</p>
+					<input class="btn" type="button" onclick="location.href='account';" id="" value="提现遇到问题" />
+					<input class="red" type="button"  onclick="location.href='account';"  name="" id="" value="已完成提现" />
+				</div>
+				<p></p>
+			</div>
+		</div>
+		
+		<!--客服悬浮条-->
+			<!--悬浮条-->
+			<iframe src="/yingpu/pc/xuanfutiao1.html" class="iframe-xuanfu" width="100%" scrolling="no"  style="border:0px;display: none;"></iframe>
+			<iframe src="/yingpu/pc/yijianfankui.jsp" class="iframe-yijianfankui" scrolling="no" width="100%" style="border:0px;display: none;"></iframe>
+			<iframe src="/yingpu/pc/jisuanqi/jisuanqi.html" class="iframe-jisuanqi" scrolling="no" width="100%" style="border:0px;display: none;"></iframe>
+
+			<iframe src="bind_bankcard.jsp" id="bindBank" width="100%" style="position: absolute;top: 0;left: 0;display: none;z-index: 10;" scrolling="no"></iframe>
+
+		<!--底部导航-->
+			<iframe src="../footer2.html" width="100%" scrolling="no"  style="border:0px;height:308px;"></iframe>
+		
+		<!--加载js文件-->
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../layer-v3.0.3/layer/layer.js"></script>
+	<script src="../js/utils.js"></script>
+	<script src="../js/queryString.js"></script>
+			<script src="/yingpu/pc/newpc/js/xuanfutiao.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var balance,
+			availableBalance,
+			withdrawAmount,
+			withdrawFeeRate = 0,
+			fyWithdrawPageURL = '';
+
+		useLoadingShade();
+		$("#bindBank").height($(document).height());
+		var loadProfile = function() {
+			$.get('accountproile', {}, function(data) {
+				if (data.data) {
+					var profile = data.data[0];
+					balance = profile.balance;
+					availableBalance = profile.caBalance;
+					
+					$('.yue').html(commafy(returnFloat(availableBalance)));
+					if(profile.bankNum!=null&&profile.bankNum!=''){
+						$('#bank-card').html(profile.bankName+'(' + profile.bankNum.substr(-4) + ')');
+						$('#bank-img').attr('src',  profile.logo);
+						$('.bank-icon').css('background', 'none');
+					}else{
+						$('#bindBank').show();
+					}
+					
+				}
+			});
+		};
+		
+		
+		var checkInput = function() {
+			withdrawAmount = $('#amount').val();
+			return withdrawAmount > 0 && withdrawAmount <= availableBalance;
+		};
+		
+		
+		$('#amount').keyup(function() {
+			if (checkInput()) {
+				$('.next-btn button').addClass('active');
+			}
+			else {
+				$('.next-btn button').removeClass('active');
+			}
+			
+			withdrawAmount && $('.infact').html(commafy(returnFloat(parseFloat(accMul(withdrawAmount,(1 - withdrawFeeRate))).toFixed(2))));
+
+			if($('#amount').val()>$('.yue').text()){
+				$('.tip').show();
+			}else{
+				$('.tip').hide();
+			}
+		});
+		
+		$('.next-btn button').click(function() {
+			if (!$(this).hasClass('active')) {
+				return;
+			}
+			if(withdrawAmount<100){
+				layer.alert('提现金额必须大于100元');
+				return false;
+			}
+			$('#tankuang').show();
+			window.open('toWithdrawPage?amount=' + withdrawAmount);
+		});
+		
+		if(queryString('type')!=null&&queryString('type')!=undefined&&queryString('type')!=''){
+					$('#tankuang').show();
+		}
+		loadProfile();
+	</script>
+	</body>
+</html>

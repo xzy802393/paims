@@ -1,0 +1,401 @@
+.content{
+	width: 100%;
+	height: auto;
+	background: #000;
+	/*overflow: hidden;*/
+}
+.banner{
+	width: 100%;
+	height: 809px;
+	background: url(../img/img6/banner-bg.jpg) no-repeat center;
+	padding-top: 1px;
+}
+.act-tit{
+	margin-top: 122px;
+    text-align: right;
+    margin-right: 80px;
+}
+.prize-des{
+	width: 926px;
+    font-size: 24px;
+    color: #fff;
+    line-height: 44px;
+    margin-left: 156px;
+    margin-top: 100px;
+    text-align: center;
+    display: inline-block;
+}
+.prize-des p span{
+	font-size: 28px;
+	font-weight: bold;
+}
+.luckydraw-num,.luckydraw-des{
+	width: 823px;
+	height: 208px;
+	margin: 30px auto 110px;
+	background: url(../img/img6/btn-bg.png) no-repeat center;
+}
+
+.luckydraw-num p,.luckydraw-des p{
+	font-size: 25px;
+    text-align: left;
+    line-height: 268px;
+    /* font-weight: bold; */
+    color: #fff;
+    letter-spacing: 4px;
+    padding-left: 155px;
+}
+/*抽奖部分*/
+.luckydraw{
+	/*width: 1472px;
+	margin: 0 auto;*/
+	height: 4768px;
+	background: url(../img/img6/images/bg_03.jpg) no-repeat center;
+	padding-top: 1px;
+}
+
+.luckydraw .lucky-top{
+	position: relative;
+}
+.luckydraw .lucky-top .list{
+	margin: 155px auto;
+    width: 223px;
+    height: 274px;
+    background: url(../img/img4/scroll-bg.png) no-repeat center bottom;
+    overflow: hidden;
+    background-size: cover;
+}
+.luckydraw .lucky-top .list .prize-list{
+	width: 162px;
+    height: 110px;
+    margin: 102px auto 10px;
+    border-radius: 8px;
+}
+.luckydraw .lucky-top .list .prize-list table tr td img{
+	width: 162px;
+	height: 110px;
+	border: none;
+	margin: 0 10px;
+}
+#scroll_div{
+	width: 162px;
+	height: 45px;
+	overflow: hidden;
+}
+#scroll_div #scroll_begin,#scroll_div #scroll_end{
+	display: inline;
+	font-size: 14px;
+	font-style: italic;
+	font-weight: bold;
+	color: #b38655;
+}
+#scroll_div #scroll_begin span,#scroll_div #scroll_end span{
+	margin-right: 20px;
+}
+.luckydraw-main{
+	width: 1200px;
+	margin: 0 auto;
+}
+.luckydraw-box{
+	width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-content: space-between; */
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.prize{
+	width: 204px;
+	height: 244px;
+	overflow: hidden;
+	margin: 58px 20px;
+	cursor: pointer;
+}
+.prize1{
+	background-image: url(../img/img6/images/guoqi1_01.png);
+	background-position: 0 0;
+}
+.prize2{
+	background-image: url(../img/img6/images/guoqi1_01.png);
+    background-position: 820px 0px;
+}
+.prize3{
+	background-image: url(../img/img6/images/guoqi1_01.png);
+	background-position: 513px 0px;
+}
+.prize4{
+	background-image: url(../img/img6/images/guoqi1_01.png);
+	background-position: 205px 0;
+}
+.prize5{
+	background-image: url(../img/img6/images/guoqi1_01.png);
+	background-position: 0 242px;
+}
+.prize6{
+	background-image: url(../img/img6/images/guoqi1_01.png);
+    background-position: 820px 242px;
+}
+.prize7{
+	background-image: url(../img/img6/images/guoqi1_01.png);
+	background-position: 513px 242px;
+}
+.prize8{
+	background-image: url(../img/img6/images/guoqi1_01.png);
+	background-position: 205px 242px;
+}
+.prize9{
+	background-image: url(../img/img6/images/guoqi1_01.png);
+	background-position: 0 600px;
+}
+.prize10{
+	background-image: url(../img/img6/images/guoqi1_01.png);
+    background-position: 820px 600px;
+}
+.prize11{
+	background-image: url(../img/img6/images/guoqi1_01.png);
+	background-position: 513px 600px;
+}
+.prize12{
+	background-image: url(../img/img6/images/guoqi1_01.png);
+	background-position: 205px 600px;
+}
+.prize13{
+	background-image: url(../img/img6/images/guoqi1_01.png);
+	background-position: 0 956px;
+}
+.prize14{
+	background-image: url(../img/img6/images/guoqi1_01.png);
+    background-position: 820px 956px;
+}
+.prize15{
+	background-image: url(../img/img6/images/guoqi1_01.png);
+	background-position: 513px 956px;
+}
+.prize16{
+	background-image: url(../img/img6/images/guoqi1_01.png);
+	background-position: 205px 956px;
+}
+.prize17{
+	margin-top: 822px;
+    background-image: url(../img/img6/images/quoqi2_03.png);
+    background-position: 0 -3px;
+}
+.prize18{
+	margin-top: 822px;
+	background-image: url(../img/img6/images/quoqi2_03.png);
+    background-position: 820px -3px;
+}
+.prize19{
+	margin-top: 822px;
+	background-image: url(../img/img6/images/quoqi2_03.png);
+	background-position: 513px -3px;
+}
+.prize20{
+	margin-top: 822px;
+	background-image: url(../img/img6/images/quoqi2_03.png);
+	background-position: 205px -3px;
+}
+.prize21{
+    background-image: url(../img/img6/images/quoqi2_03.png);
+    background-position: 0 962px;
+}
+.prize22{
+	background-image: url(../img/img6/images/quoqi2_03.png);
+    background-position: 820px 962px;
+}
+.prize23{
+	background-image: url(../img/img6/images/quoqi2_03.png);
+	background-position: 513px 962px;
+}
+.prize24{
+	background-image: url(../img/img6/images/quoqi2_03.png);
+	background-position: 205px 962px;
+}
+.prize25{
+    background-image: url(../img/img6/images/quoqi2_03.png);
+    background-position: 0 603px;
+}
+.prize26{
+	background-image: url(../img/img6/images/quoqi2_03.png);
+    background-position: 820px 603px;
+}
+.prize27{
+	background-image: url(../img/img6/images/quoqi2_03.png);
+	background-position: 513px 603px;
+}
+.prize28{
+	background-image: url(../img/img6/images/quoqi2_03.png);
+	background-position: 205px 603px;
+}
+.prize29{
+    background-image: url(../img/img6/images/quoqi2_03.png);
+    background-position: 0 243px;
+}
+.prize30{
+	background-image: url(../img/img6/images/quoqi2_03.png);
+    background-position: 820px 243px;
+}
+.prize31{
+	background-image: url(../img/img6/images/quoqi2_03.png);
+	background-position: 513px 243px;
+}
+.prize32{
+	background-image: url(../img/img6/images/quoqi2_03.png);
+	background-position: 205px 243px;
+}
+.prize.rotate{-webkit-animation:transform-5 2s ease 500ms alternate none 1;animation:transform-5 2s ease 500ms alternate none 1;}
+@-webkit-keyframes transform-5 { 
+	from{-webkit-transform:perspective(400px) rotateY(180deg);transform:perspective(400px) rotateY(180deg) scale(1);} 
+    to{-webkit-transform:perspective(400px) rotateY(0deg);transform:perspective(400px) rotateY(0deg) scale(1.3);} 
+}
+@keyframes transform-5 { 
+	from{-webkit-transform:perspective(400px) rotateY(180deg);transform:perspective(400px) rotateY(180deg) scale(1);} 
+    to{-webkit-transform:perspective(400px) rotateY(0deg);transform:perspective(400px) rotateY(0deg) scale(1.3);} 
+}
+
+.btn{
+	margin: 50px auto 150px;
+	text-align: center;
+}
+.act-des{
+	width: 1200px;
+    margin: 0 auto;
+    height: 557px;
+    background: url(../img/img6/des-bg.png) no-repeat center;
+    /* padding-bottom: 150px; */
+    padding: 100px 130px;
+    box-sizing: border-box;
+    font-size: 18px;
+    background-size: 100% 100%;
+    position: relative;
+    top: -90px;
+}
+.instruction{
+	/*padding-bottom: 150px;*/
+}
+.act-des dl{
+	clear: both;
+    overflow: hidden;
+    line-height: 40px;
+    padding-left: 38px;
+}
+.act-des dl dt,.act-des dl dd{
+	float: left;
+	display: block;
+}
+.act-des dl dt{
+	width: 36px;
+}
+.act-des dl dd{
+	width: 860px;
+	text-align: left;
+}
+.act-tip{
+	margin-top: 60px;
+	text-align: center;
+	font-size: 20px;
+	line-height: 40px;
+}
+
+/*获奖弹框*/
+.black-overlay{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.7;
+	opacity:.70;
+	filter: alpha(opacity=70);
+}
+
+.rewards{
+	display: none;
+	width: 847px;
+	height: 702px;
+	background: url(../img/img6/prize-bg.png) no-repeat center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -351px;
+	margin-left: -423px;
+	z-index: 1002;
+	animation: bianda .3s cubic-bezier(1, -0.06, 1, 1) normal;
+	background-size: contain;
+}
+@keyframes bianda{
+	0%{transform: scale(.1);}
+	100%{transform: scale(1);}
+}
+
+.rewards-content{
+	position: absolute;
+	top: 353px;
+	width: 100%;
+}
+.rewards-content .close{
+	position: absolute;
+    right: 1px;
+    top: -9px;
+    width: 21px;
+    height: 21px;
+    border: 2px solid #DDDDDD;
+    background: url(../../../img/borrow-close.png) no-repeat center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.rewards-content .rewards-box{
+	margin-top: 30px;
+}
+.rewards-content .rewards-box .text{
+	width: 326px;
+    padding: 20px 0 0 80px;
+    text-align: center;
+    margin-left: 7px;
+}
+.rewards-content .rewards-box .text p:nth-child(1){
+	margin-top: 34px;
+	font-size: 50px;
+	color: #ff1600;
+}
+.rewards-content .rewards-box .text p:nth-child(2){
+	font-size: 24px;
+	color: #ff1600;
+	margin-top: 18px;
+}
+.rewards-content .rewards-box .text p:nth-child(2) span{
+	font-weight: bolder;
+}
+.rewards-content .rewards-box .text p:nth-child(3){
+	font-size: 14px;
+	color: #333;
+	margin-top: 50px;
+	line-height: 20px;
+}
+.rewards-content .rewards-box .pic{
+	margin: 36px 47px 0 74px;
+    width: 283px;
+    height: 181px;
+    overflow: hidden;
+    padding: 20px 30px 0 0;
+}
+.rewards-content .rewards-box .pic img{
+	width: 100%;
+	height: 100%;
+	/*border-radius: 10px;*/
+	/*overflow: hidden;
+	box-shadow: 0px 2px 4px 2px #AAAAAA;*/
+} 
+.bottom-bg{
+	width: 100%;
+	height: 873px;
+	background: url(../img/img6/images/bottom-bg_02.jpg) no-repeat center;
+	position: relative;
+}
+.instruction .des-tit{
+	padding-left: 235px;
+}

@@ -1,0 +1,184 @@
+.active-main .active-banner{
+    width: 100%;
+    height: 275px;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: #4973c9;
+    margin: 0 auto;
+}
+.active-main .active-banner img{
+	width: 1920px;
+    height: 275px;
+    margin: 0 auto;
+}
+/* .active-main .active-banner.house{
+	background: url(../../img/infomation/house-banner.png) no-repeat center;
+}
+.active-main .active-banner.company{
+	background: url(../../img/infomation/company-banner.png) no-repeat center;
+} */
+.active-project .tab-menu{
+	margin-top: 28px;
+}
+.active-project .tab-menu li{
+	float: left;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	font-size: 16px;
+	color: #333;
+	cursor: pointer;
+}
+.active-project .tab-menu li.active{
+	border-bottom: 2px solid #FF7F01;
+	color: #FF7F01;
+}
+.tab-main .item.active-xiaofei .process li p:first-child {
+    white-space: nowrap;
+}
+/*车贷融*/
+.tab-main .item{
+	width: 100%;
+	height: auto;
+}
+.tab-main .item.active-car{
+	width: 100%;
+}
+.tab-main .item .des{
+	margin-top: 30px;
+	width: 1180px;
+	padding: 20px 10px;
+	background: #F5F5F5;	
+}
+.tab-main .item .des p{
+	font-size: 14px;
+	color: #666;
+	line-height: 22px;
+}
+.tab-main .item .des p span{
+	font-size: 16px;
+	color: #333;
+	font-weight: bold;
+}
+.tab-main h3{
+	font-size: 20px;
+	text-align: center;
+	margin-top: 60px;
+	font-weight: normal;
+}
+
+.tab-main .item .process{
+	width: 100%;
+	margin-top: 56px;
+	margin-bottom: 30px;
+}
+.tab-main .item .process li{
+	float: left;
+	text-align: center;
+	width: 170px;
+	height: 240px;
+}
+.tab-main .item .process li p:first-child{
+	font-size: 14px;
+	color: #333;
+}
+.tab-main .item .process li p:nth-child(2){
+	font-size: 18px;
+	color: #fff;
+	font-weight: bolder;
+}
+.tab-main .item .process li p:nth-child(3){
+	font-size: 16px;
+	color: #fdfd63;
+	font-weight: bolder;
+}	
+.tab-main .item .process li:nth-child(odd){
+	background: url(../../img/infomation/active-process-bg.png) no-repeat 30px 28px;
+}
+.tab-main .item .process li:nth-child(even){
+	background: url(../../img/infomation/active-process-bg2.png) no-repeat 30px 65px;
+}
+
+.tab-main .item .process li:nth-child(odd) p.num{
+	margin-top: 17px;
+}
+.tab-main .item .process li:nth-child(odd) p.tit{
+	margin-top: 62px;
+}
+.tab-main .item .process li:nth-child(even) p.num{
+	margin-top: -46px;
+}
+.tab-main .item .process li:nth-child(even) p.tit{
+	margin-top: -96px;
+}
+.tab-main .item .process li:nth-child(even) p:first-child{
+	margin-top: 222px;
+}
+.tab-main .item .more{
+	margin-bottom: 56px;
+	margin-right: 30px;
+	text-align: right;	
+}
+.tab-main .item .more a{
+	font-size: 16px;
+	color: #fcaa02;
+}
+
+
+/*房贷*/
+.tab-main .item.active-house{
+	width: 100%;
+}
+.tab-main .item.active-house .process li{
+	width: 150px;
+}
+.tab-main .item.active-house .process li:nth-child(odd){
+	background: url(../../img/infomation/active-process-bg.png) no-repeat 20px 28px;
+}
+.tab-main .item.active-house .process li:nth-child(even){
+	background: url(../../img/infomation/active-process-bg2.png) no-repeat 20px 65px;
+}
+
+.tab-main .item.active-house .process li:nth-child(odd) p.num{
+	font-size: 16px;
+	color: #fff;
+	font-weight: bolder;
+	margin-top: 30px;
+}
+.tab-main .item.active-house .process li:nth-child(odd) p.tit{
+	color: #fdfd63;
+}
+
+.tab-main .item.active-house .process li:nth-child(even) p.num{
+	margin-top: 190px;
+	font-size: 18px;
+	color: #fff;
+	font-weight: bolder;
+}
+.tab-main .item.active-house .process li:nth-child(even) p.tit{
+	color: #fdfd63;
+}
+
+.tab-main .process-house{
+	margin: 56px auto;
+}
+
+/*优企贷*/
+.tab-main .item.active-company .process li{
+	width: 150px;
+	text-align: center;
+}
+.tab-main .item.active-company .process li:nth-child(odd){
+	background: url(../../img/infomation/active-process-bg.png) no-repeat 20px 28px;
+}
+.tab-main .item.active-company .process li:nth-child(even){
+	background: url(../../img/infomation/active-process-bg2.png) no-repeat 20px 65px;
+}
+.tab-main .item.active-company .process li p:first-child{
+	white-space: nowrap;
+}

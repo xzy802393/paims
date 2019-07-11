@@ -1,0 +1,452 @@
+#accountBox{
+	width:1200px;
+	margin:0 auto;
+	/* padding-top:28px; */
+}
+
+#accountBox #aside{
+	float:left;
+	width:140px;
+	height:auto;
+	margin-right:24px;
+	border:1px solid #e8e8e8;
+}
+#accountBox #account{
+	float:right;
+	width:1032px;
+	/* height:1700px; */
+	border:1px solid #e8e8e8;
+	margin-bottom:60px;
+}
+
+/* banner */
+#accountBox #account #banner{
+	width:100%;
+	margin:0 auto;
+}
+#accountBox #account #banner img{
+	display: inline-block;
+	width:1034px;
+	height:270px;
+}
+
+#accountBox #account #box{
+	width:990px;
+	margin:0 auto;
+}
+
+
+/*邀请链接 */
+#accountBox #account #box .inviteLink{
+	width:990px;
+	/* height:170px; */
+}
+#accountBox #account #box .inviteLink p.title{
+	font-size:16px;
+	color:#666666;
+	line-height:56px;
+	padding-top:6px;
+	letter-spacing: 1px;
+}
+#accountBox #account #box .inviteLink .link{
+	width:100%;
+	height:45px;
+}
+#accountBox #account #box .inviteLink .link .linkLeft{
+	float:left;
+	width:487px;
+}
+#accountBox #account #box .inviteLink .link .linkLeft textarea{
+	width:320px;
+	height:43px;
+	border:1px solid #f2f2f2;
+	font-size:14px;
+	color:#666666;
+	line-height:20px;
+	padding-left: 10px;
+	outline: none;
+	resize: none;
+	vertical-align: middle;
+}
+#accountBox #account #box .inviteLink .link .linkLeft .copy-btn{
+	display: inline-block;
+	width:145px;
+	height:45px;
+	background: #ff744c;
+	font-size:16px;
+	color:#fff;
+	line-height:45px;
+	text-align: center;
+	margin-left:6px;
+	cursor: pointer;
+	vertical-align: middle;
+
+}
+#accountBox #account #box .inviteLink .link .linkRight{
+	float:right;
+	width:455px;
+	position: relative;
+}
+#accountBox #account #box .inviteLink .link .linkRight .lianjie{
+	position: absolute;
+	left:0;
+	top:0;
+	width:455px;
+	height:45px;
+}
+#accountBox #account #box .inviteLink .link .linkRight .visit-code{
+	position: absolute;
+	left:25px;
+	top:-120px;
+	width:101px;
+	height:120px;
+	display: none;
+}
+#accountBox #account #box .inviteLink .link .linkRight .visit-code p.miaoshu{
+	font-size:12px;
+	color:#292929;
+	line-height:12px;
+	text-align: center;
+}
+#accountBox #account #box .inviteLink .link .linkRight .code{
+	width:101px;
+	height:100px;
+}
+#accountBox #account #box .inviteLink .link .linkRight a{
+	display: inline-block;
+	width:145px;
+	height:45px;
+	margin-right:6px;
+}
+#accountBox #account #box .inviteLink .link .linkRight a:nth-last-child(1){
+	margin-right:0px;
+}
+#accountBox #account #box .inviteLink .link .linkRight a img.img{
+	width:145px;
+	height:45px;
+}
+#accountBox #account #box .inviteLink p.text{
+	
+	font-size:18px;
+	color:#292929;
+	line-height:97px;
+	padding-top:6px;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+
+/* 奖励 */
+#accountBox #account #box .jiangli{
+	width:100%;
+	margin:0 auto;
+}
+#accountBox #account #box .jiangli p.title{
+	text-align: center;
+	font-size:22px;
+	color:#ff744b;
+	line-height:22px;
+	padding-bottom:14px;
+	border-bottom:1px dashed #858585;
+}
+#accountBox #account #box .jiangli p.subtitle{
+	text-align: center;
+	font-size:14px;
+	color:#3e3e3e;
+	line-height:36px;
+}
+
+
+/* 奖励列表 */
+#accountBox #account #box .items{
+	width:930px;
+	height:680px;
+	margin:0 auto;
+	padding-top:32px;
+}
+#accountBox #account #box .items li{
+	float:left;
+	width:271px;
+	height:315px;
+	margin-right:58px;
+	position: relative;
+	
+}
+#accountBox #account #box .items li .zheng{
+	position: absolute;
+	right:15px;
+	top:174px;
+	width:230px;
+	height:138px;
+	text-align: center;
+}
+#accountBox #account #box .items li .zheng p.text{
+	font-size:12px;
+	line-height:18px;
+	color:#292929;
+}
+#accountBox #account #box .items li .zheng p.btn{
+	padding-top:27px;
+}
+#accountBox #account #box .items li .zheng p.btn img{
+	wdith:130px;
+	height:25px;
+	margin:0 auto;
+	cursor: pointer;
+}
+#accountBox #account #box .items li:nth-child(1){
+	background:url(../img/invite-img/item1.jpg) no-repeat 0 0;
+}
+#accountBox #account #box .items li:nth-child(2){
+	background:url(../img/invite-img/item2.jpg) no-repeat 0 0;
+}
+#accountBox #account #box .items li:nth-child(3){
+	background:url(../img/invite-img/item3.jpg) no-repeat 0 0;
+	margin-right:0;
+}
+#accountBox #account #box .items li:nth-child(4){
+	background:url(../img/invite-img/item4.jpg) no-repeat 0 0;
+	margin-top:36px;
+}
+#accountBox #account #box .items li:nth-child(5){
+	background:url(../img/invite-img/item5.jpg) no-repeat 0 0;
+	margin-top:36px;
+}
+#accountBox #account #box .items li:nth-child(6){
+	background:url(../img/invite-img/item6.jpg) no-repeat 0 0;
+	margin-right:0;
+	margin-top:36px;
+}
+
+#accountBox #account #box .items #share_box{
+	position: absolute;
+	left:11px;
+	top:14px;
+	width:260px;
+	height:243px;
+	background:rgba(0,0,0,0.5);
+	
+}
+#accountBox #account #box .items #share_box .social-share .social-share-icon{
+	width: 50px !important;
+	height: 50px !important;
+	line-height: 50px !important;
+	/* margin-left: 0.5rem; */
+	display: inline-block;
+}
+#accountBox #account #box .items #share_box .social-share img{
+	width:50px;
+	height:50px;
+}
+#accountBox #account #box .items #share_box .share_title{
+	color:#fff;
+	text-align: center;
+	font-size:22px;
+	line-height:22px;
+	font-weight:normal;
+	padding:74px 0 24px;
+}
+
+/* 邀请到的好友 */
+#accountBox #account #box .friends{
+	width:926px;
+	height:386px;
+	margin:0 auto;
+}
+#accountBox #account #box .friends .title{
+	font-size:16px;
+	color:#666666;
+	line-height:58px;
+}
+
+
+
+#accountBox #account #box .friends .box .table{
+	width:926px;
+	/*height:235px;*/
+	margin:0 auto;
+	border:1px solid #e8e8e8;
+}
+#accountBox #account #box .friends .box .table table{
+	width:926px;
+	/* height:235px; */
+	table-layout: fixed;
+}
+#accountBox #account #box .friends .box .table table tr{
+	height:54px;
+	border-bottom:1px solid #e8e8e8;
+}
+#accountBox #account #box .friends .box .table table thead tr{
+	border:none;
+}
+#accountBox #account #box .friends .box .table table tr:nth-last-child(1){
+	border:none;
+}
+#accountBox #account #box .friends .box .table table tr th{
+	font-size:16px;
+	line-height:64px;
+	color:#7b7b7b;
+	background: #fafafa;
+	border-bottom: none;
+}
+#accountBox #account #box .friends .box .table table tr td{
+	font-size:14px;
+	line-height:54px;
+	color:#7b7b7b;
+	text-align: center;
+}
+
+
+
+/* 页码 */
+#accountBox #account #box .friends .box .btn{
+	width:300px;
+	height:30px;
+	padding-top:26px;
+	margin:0 auto;
+}
+#accountBox #account #box .friends .box .btn span{
+	display: inline-block;
+	border:1px solid #aaaaaa;
+	font:16px/30px "微软雅黑 ";
+	padding:0 10px;
+	margin:0 5px;
+}
+
+
+/* 规则 */
+#accountBox #account #box .rules{
+	width:992px;
+	height:750px;
+	margin:0 auto;
+}
+#accountBox #account #box .rules p.title{
+	text-align: center;
+    font-size: 22px;
+    color: #ff744b;
+    line-height: 22px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed #858585;
+	
+}
+#accountBox #account #box .rules p.subTitle{
+	text-align: center;
+    font-size: 14px;
+    color: #3e3e3e;
+    line-height: 36px;
+	padding-bottom:8px;
+}
+#accountBox #account #box .rules div.text{
+	width:932px;
+	margin:0 auto;
+	height:auto;
+}
+#accountBox #account #box .rules div p.p1{
+	font-size: 14px;
+	color: #292929;
+	line-height: 24px;
+	padding-bottom:18px;
+}
+#accountBox #account #box .rules div p.p2{
+	font-size: 14px;
+	color: #9b9b9b;
+	line-height: 24px;
+	padding-bottom:18px;
+}
+
+
+
+/*  复制链接弹框*/
+.copy-tips{
+	position:fixed;
+	z-index:999;
+	bottom:52%;
+	left:51%;
+	margin:0 0 -20px -80px;
+	background-color:rgba(0, 0, 0, 0.2);
+	filter:progid:DXImageTransform.Microsoft.Gradient(startColorstr=#30000000, endColorstr=#30000000);padding:6px;
+}
+.copy-tips-wrap{
+	padding:10px 20px;
+	text-align:center;
+	border:1px solid #F4D9A6;
+	background-color:#FFFDEE;
+	font-size:14px;
+}
+
+
+/* 微信分享二维码 */
+.linkRight .icon-wechat{
+	position: relative;
+	
+}
+.linkRight .icon-wechat .wechat-qrcode{
+	position: absolute;
+	left:25px;
+	top:-120px;
+	width:101px;
+	height:120px;
+	display: none;
+}
+.linkRight .icon-wechat .wechat-qrcode .qrcode img{
+	width:88px;
+	height:88px;
+	background:#fff;
+	padding:6px;
+}
+
+
+
+/* 兑换邀请 */
+.items #share_box .social-share .icon-wechat{
+	display: inline-block;
+	position: relative;
+	
+}
+.items #share_box .social-share .icon-wechat .wechat-qrcode{
+	position: absolute;
+	left:-7px;
+	top:54px;
+	width:101px;
+	height:120px;
+	display: none;
+}
+.items #share_box .social-share .icon-wechat .wechat-qrcode .qrcode img{
+	width:88px;
+	height:88px;
+	background:#fff;
+	padding:6px;
+}
+.items #share_box .social-share .icon-wechat .wechat-qrcode .help{
+	display: none;
+}
+/*翻页*/
+.page-list{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 30px;
+	padding-top: 30px;
+}
+.page-list a{
+	display: inline-block;
+	padding: 8px 12px;
+	font-size: 12px;
+	border: 1px solid #aaa;
+	margin-left: 10px;
+	cursor: default;
+}
+.page-list a.active{
+	background: #ff7200;
+	border: none;
+	padding: 9px 13px;
+	color: #fff;
+}
+.page-list a.on{
+	color: #aaa;
+}
+.page-list a:hover{
+	background: #FF7200;
+	border: none;
+	padding: 9px 13px;
+	color: #fff;
+}

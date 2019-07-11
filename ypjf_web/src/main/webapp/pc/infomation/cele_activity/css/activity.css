@@ -1,0 +1,323 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+img{
+    border: none;
+}
+ul,li{
+    list-style: none;
+}
+body{
+    font-family: 'Microsoft YaHei',Arial;
+    width: 1920px;
+    height: 100%;
+}
+.content{
+    width: 100%;
+    height: 700px;
+    background: url("../img/banner-bg_01.jpg") no-repeat center;
+    background-size:100% 100%;
+    position: relative;
+    text-align: center;
+}
+.content img{
+    margin-top: 80px;
+}
+.content p{
+    color: #FF13C8;
+    font-size: 24px;
+    font-style: italic;
+    line-height: 46px;
+}
+.content .p1{
+    margin-top: 80px;
+}
+.sction{
+    width: 100%;
+    height: 1205px;
+    background:url("../img/mid-bg_02.jpg") no-repeat center;
+    position: relative;
+}
+.sction div{
+    display: inline-block;
+}
+.sction .k1,.k2,.k3,.k4{
+    margin:0px 136px;
+}
+.sction .k1{
+    position: absolute;
+    top: 5%;
+    left: 2%;
+}
+ .sction .k2{
+     position: absolute;
+     top: 10%;
+     right:2%;
+}
+.sction .k3{
+    position: absolute;
+    top: 60%;
+    left: 2%;
+}
+ .sction .k4{
+     position: absolute;
+     top: 65%;
+     right:2%;
+}
+ .sction p{
+     display: inline;
+     font-size: 24px;
+     font-style: italic;
+ }
+ .sction .d1{
+     position: absolute;
+     top: 52px;
+     left: 128px;
+ }
+ .sction .d2{
+     position: absolute;
+     top: 53px;
+     left: 49px;
+ }
+ .sction .d3{
+     position: absolute;
+     top: 51px;
+     left: 143px;
+ }
+ .sction .d4{
+     position: absolute;
+     top: 50px;
+     left: 88px;
+ }
+ .sction .bg1{
+     width: 523px;
+     height: 393px;
+     /*background: #ffffff;*/
+     position: absolute;
+     top: 295px;
+     left: 136px;
+ }
+ .sction .k1 .bg1 .p1{
+     margin-top: 50px;
+     margin-left: 50px;
+ }
+.sction .k1 .bg1 .p1 .span0{
+    color: #915113;
+}
+.sction .k1 .bg1 .p1 .span1{
+    position: absolute;
+    right: 70px;
+    color: #248F52;
+}
+.sction .k1 .bg1 .p2 .span2{
+    color: #C3902F;
+}
+.sction .k1 .bg1 .p2{
+    margin-top: 129px;
+    margin-left: 47px;
+}
+.sction .k1 .bg1 button{
+    position: relative;
+    font-size: 20px;
+    left: 383px;
+    top: -24px;
+    padding: 9px;
+    background: #CA0F8F;
+    color: #F7F82D;
+    border: none;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+}
+.sction .bg2{
+    width: 558px;
+    height: 392px;
+   /* background: #ffffff;*/
+    position: absolute;
+    top: 289px;
+}
+.sction .k2 .bg2 .p1{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.sction .k2 .bg2 .p1 .span0{
+    color: #915113;
+}
+.sction .k2 .bg2 .p1 .span1{
+    position: absolute;
+    right: 115px;
+    color: #248F52;
+}
+.sction .k2 .bg2 .p2 .span2{
+    color: #C3902F;
+}
+.sction .k2 .bg2 .p2{
+    margin-top: 129px;
+    margin-left: 47px;
+}
+.sction .k2 .bg2 button{
+    position: relative;
+    font-size: 20px;
+    left: 350px;
+    top: -32px;
+    padding: 9px;
+
+    background: #CA0F8F;
+    color: #F7F82D;
+    border: none;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+}
+.sction .bg3{
+    width: 558px;
+    height: 392px;
+    /* background: #ffffff;*/
+    position: absolute;
+    top: 285px;
+    left: 105px;
+}
+.sction .k3 .bg3 .p1{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.sction .k3 .bg3 .p1 .span0{
+    color: #915113;
+}
+.sction .k3 .bg3 .p1 .span1{
+    position: absolute;
+    right: 70px;
+    color: #248F52;
+}
+.sction .k3 .bg3 .p2 .span2{
+    color: #C3902F;
+}
+.sction .k3 .bg3 .p2{
+    margin-top: 129px;
+    margin-left: 47px;
+}
+.sction .k3 .bg3 button{
+    position: relative;
+    font-size: 20px;
+    left: 346px;
+    top: -32px;
+    padding: 9px;
+    background: #000BE6;
+    color: #21E6D1;
+    border: none;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+}
+.sction .bg4{
+    width: 558px;
+    height: 397px;
+    /* background: #ffffff;*/
+    position: absolute;
+    top: 282px;
+}
+.sction .k4 .bg4 .p1{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.sction .k4 .bg4 .p1 .span0{
+    color: #915113;
+}
+.sction .k4 .bg4 .p1 .span1{
+    position: absolute;
+    right: 70px;
+    color: #248F52;
+}
+.sction .k4 .bg4 .p2 .span2{
+    color: #C3902F;
+}
+.sction .k4 .bg4 .p2{
+    margin-top: 129px;
+    margin-left: 47px;
+}
+.sction .k4 .bg4 button{
+    position: relative;
+    font-size: 20px;
+    left: 383px;
+    top: -24px;
+    padding: 9px;
+    background: #000BE6;
+    color: #21E6D1;
+    border: none;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+}
+.sction .bg1 img{
+    position: absolute;
+    top: 0px;
+}
+.sction .bg2 img{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.sction .bg3 img{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.sction .bg4 img{
+    height: 278px;
+    width: 523px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.sction .bg1 p{
+    display: block;
+}
+.sction .bg2 p{
+    display: block;
+}
+.sction .bg3 p{
+    display: block;
+}
+.sction .bg4 p{
+    display: block;
+}
+.footer{
+    width: 100%;
+    height: 950px;
+    background:url("../img/bottom-bg_03.jpg") no-repeat center;
+}
+.footer .touzi{
+    position: relative;
+    text-align:center;
+}
+.footer .touzi .sp1{
+    font-size: 34px;
+    color: #FF2502;
+    font-weight:bold;
+    font-style: italic;
+    position: absolute;
+    top: 326px;
+    left: 801px;
+    cursor: pointer;
+}
+.smmb{
+    width: 835px;
+    height: 347px;
+    display: inline-block;
+    position: relative;
+    top: 477px;
+    text-align: left;
+}
+.footer .touzi .smmb .sp2{
+    font-size: 34px;
+    color: #FF2502;
+    font-weight:bold;
+    font-style: italic;
+}
+.footer .touzi .smmb p{
+    font-size: 24px;
+    color: #00A9FF;
+    font-style: italic;
+    line-height:36px;
+}

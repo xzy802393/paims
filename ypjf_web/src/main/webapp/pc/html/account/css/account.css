@@ -1,0 +1,558 @@
+#accountBox{
+	width:1200px;
+	margin:0 auto;
+	/* padding-top:28px; */
+}
+
+#accountBox #aside{
+	float:left;
+	width:146px;
+	height:auto;
+	margin-right:18px;
+	border:1px solid #e8e8e8;
+}
+#accountBox #account{
+	float:right;
+	width:1034px;
+}
+
+
+/* 个人信息 */
+#accountBox #account .person{
+	width:1032px;
+	height:208px;
+	border:1px solid #e8e8e8;
+	text-align: center;
+}
+#accountBox #account .person .left{
+	float:left;
+	width:276px;
+	border-right:1px solid #e8e8e8;
+	height:100%;
+	
+}
+#accountBox #account .person .center{
+	float:left;
+	width:464px;
+	height:100%;
+	border-right:1px solid #e8e8e8;
+}
+#accountBox #account .person .right{
+	float:left;
+	width:290px;
+	height:100%;
+	text-align: center;
+}
+#accountBox #account .person .left .touXiang{
+	width:100px;
+	height:100px;
+	margin:0 auto;
+	margin-top:14px;
+	position: relative;
+}
+#accountBox #account .person .left .touXiang .shade{
+	position: absolute;
+	left:0;
+	top:0;
+	line-height:100px;
+	width:100px;
+	height:100px;
+	text-align: center;
+	z-index:1000;
+	background:#000;
+	opacity: 0;
+	cursor: pointer;
+	border-radius: 50%;
+}
+#accountBox #account .person .left .touXiang .shade span{
+	font-size:12px;
+	color:#fff;
+	line-height:100px;
+}
+#accountBox #account .person .left .touXiang img{
+	position: absolute;
+	left:0;
+	top:0;
+	width:100px;
+	height:100px;
+	box-shadow: 1px 2px 5px 1px #c3c3c3;
+	border-radius: 50%;
+}
+#accountBox #account .person .left .text{
+	font-size:12px;
+	color:#666666;
+	line-height:22px;
+}
+#accountBox #account .person .left .text .name{
+	padding-top:8px;
+}
+#accountBox #account .person .left .text .name span{
+	display: inline-block;
+}
+#accountBox #account .person .left .text .name a.bq{
+	display: inline-block;
+	width:53px;
+	height:20px;
+	background:url(../img/btnbg.png) no-repeat center;
+	border-radius: 6px;
+	font-size:10px;
+	line-height:20px;
+	color:#fff;
+	margin-left:20px;
+}
+#accountBox #account .person .left .message{
+	/*width:;*/
+	/*height:;*/
+}
+#accountBox #account .person .left .message a{
+	display: inline-block;
+	width:20px;
+	height:20px;
+	padding-top:8px;
+}
+#accountBox #account .person .left .message a img{
+	display: inline-block;
+	width:20px;
+	height:20px;
+}
+#accountBox #account .person .left .message a.renzheng{
+	width: 20px;
+    height: 20px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.6;
+}
+
+
+#accountBox #account .person .center li.items{
+	float:left;
+	width:32%;
+	padding-top:80px;
+}
+#accountBox #account .person .center li.items .money{
+	font-size:22px;
+	line-height:22px;
+	font-weight:bold;
+}
+#accountBox #account .person .center li.items .text{
+	font-size:14px;
+	line-height:20px;
+	color:#666666;
+	padding-top:8px;
+}
+
+#accountBox #account .person .right .rightTop{
+	height:104px;
+	border-bottom:1px solid #e8e8e8;
+}
+#accountBox #account .person .right .rightTop .money{
+	font-size:20px;
+	line-height:22px;
+	color:#292929;
+	padding-top:10px;
+}
+#accountBox #account .person .right .rightTop .text{
+	font-size:12px;
+	line-height:30px;
+	color:#666666;
+	padding-bottom:2px;
+}
+#accountBox #account .person .right .rightTop .cz-btn{
+	display: inline-block;
+	width:83px;
+	height:28px;
+	background:#3289e4;
+	border-radius: 4px;
+	font-size:14px;
+	line-height:30px;
+	color:#fff;
+}
+#accountBox #account .person .right .rightCenter{
+	width:100%;
+	height:39px;
+	padding:13px 0;
+}
+#accountBox #account .person .right .rightCenter .a1{
+	float:left;
+	width:49%;
+}
+#accountBox #account .person .right .rightCenter .a1:nth-child(1){
+	border-right:1px solid #e8e8e8;
+}
+#accountBox #account .person .right .rightCenter .a1 .money{
+	font-size:20px;
+	line-height:20px;
+	color:#292929;
+}
+#accountBox #account .person .right .rightCenter .a1 .text{
+	font-size:12px;
+	line-height:12px;
+	color:#666666;
+	padding-top:10px;
+}
+#accountBox #account .person .right .tx-btn{
+	display:block;
+	width:83px;
+	height:28px;
+	background:#FF4848;
+	border-radius: 4px;
+	font-size:14px;
+	line-height:30px;
+	color:#fff;
+	margin:0 auto;
+}
+
+
+/* 资产分布 */
+#accountBox #account .assets{
+	width:100%;
+	text-align: center;
+}
+#accountBox #account .assets .title{
+	font-size:16px;
+	line-height:50px;
+	color:#292929;
+	text-align: left;
+}
+#accountBox #account .assets .assets-box{
+	width: 1032px;
+    height: 250px;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+}
+#accountBox #account .assets .assets-box .tuli-left{
+	float: left;
+    width: 387px;
+    height: 166px;
+    padding: 42px 0 42px 114px;
+}
+#accountBox #account .assets .assets-box .tuli-left .item{
+	float:left;
+	width:100%;
+	height:16px;
+	padding-bottom:14px;
+	text-align: left;
+}
+#accountBox #account .assets .assets-box .tuli-left .item .bg{
+	display: inline-block;
+	width:10px;
+	height:10px;
+}
+#accountBox #account .assets .assets-box .tuli-left .item .text{
+	display: inline-block;
+	padding-left:6px;
+	font-size:15px;
+	line-height:16px;
+	color:#666666;
+}
+#accountBox #account .assets .assets-box .tu{
+	float:left;
+	width:340px;
+	height:100%;
+}
+#accountBox #account .assets .assets-box .tu #echart{
+	width:260px;
+	height:260px;
+	margin:0 auto;
+	/* margin-top:20px; */
+}
+
+/* 回款日历 */
+#accountBox #account .money-back{
+	width:100%;
+	text-align: center;
+}
+#accountBox #account .money-back .title{
+	font-size:16px;
+	line-height:50px;
+	color:#292929;
+	text-align: left;
+}
+#accountBox #account .money-back .back-box{
+	width: 1032px;
+	height: 428px;
+	border: 1px solid #e8e8e8;
+	text-align: center;
+}
+#accountBox #account .money-back .back-box .subTitle{
+	height:58px;
+	border-bottom: 1px solid #e8e8e8;
+}
+#accountBox #account .money-back .back-box .subTitle p{
+	float:left;
+	padding-left:22px;
+	font-size:16px;
+	line-height:56px;
+	color:#292929;
+}
+#accountBox #account .money-back .back-box .subTitle .wh{
+	float:left;
+	width:12px;
+	height:12px;
+	padding:22px 0 0 10px;
+	cursor: pointer;
+}
+#accountBox #account .money-back .back-box .subTitle span{
+	float:right;
+	display: inline-block;
+	margin-right:30px;
+	margin-top:23px;
+	width:15px;
+	height:12px;
+	cursor: pointer;
+}
+#accountBox #account .money-back .back-box .subTitle span img{
+	width:15px;
+	height:15px;
+}
+#accountBox #account .money-back .back-box .rili{
+	width:100%;
+	height:369px;
+}
+#accountBox #account .money-back .back-box .rili .rili-left{
+	float:left;
+	width:216px;
+	height:100%;
+}
+#accountBox #account .money-back .back-box .rili .rili-right{
+	float:right;
+	width:816px;
+	height:100%;
+	position: relative;
+}
+#accountBox #account .money-back .back-box .rili .rili-left .bt{
+	font-size:14px;
+	line-height:53px;
+	color:#666666;
+	text-align: left;
+	border-bottom:1px solid #e8e8e8;
+	padding-left:22px;
+}
+#accountBox #account .money-back .back-box .rili .rili-left .bt span{
+	color:#ff7552;
+	display: inline-block;
+	padding-left:6px;
+}
+#accountBox #account .money-back .back-box .rili .rili-left .neir{
+	width:100%;
+	height:315px;
+	border-right:1px solid #e8e8e8;
+}
+#accountBox #account .money-back .back-box .rili .rili-left .neir .date{
+	padding-left:22px;
+	text-align: left;
+	font-size:14px;
+	line-height:50px;
+	color:#292929;
+	padding-bottom:30px;
+}
+#accountBox #account .money-back .back-box .rili .rili-left .neir .meiyou .text{
+	width:125px;
+	margin:0 auto;
+	text-align: left;
+	font-size:14px;
+	line-height:20px;
+	color:#292929;
+	text-align: center;
+	padding-top:100px;
+	font-family: 'Microsoft YaHei';
+}
+#accountBox #account .money-back .back-box .rili .rili-left .neir .meiyou .text .cj{
+	color:#ff7552;
+}
+#accountBox #account .money-back .back-box .rili .rili-left .neir .you .text{
+	font-size:14px;
+	line-height:20px;
+	color:#292929;
+	text-align: center;
+	padding-top:32px;
+	font-family: 'Microsoft YaHei';
+}
+#accountBox #account .money-back .back-box .rili .rili-left .neir .you .num{
+	font-size:14px;
+	line-height:20px;
+	color:#ff7552;
+	text-align: center;
+	padding-top:6px;
+	font-family: 'Microsoft YaHei';
+	font-weight: bold;
+}
+#accountBox #account .money-back .back-box .rili .rili-right #ca{
+	position: absolute;
+	left:138px;
+	top:0;
+	width:540px;
+	margin:0 auto;
+}
+#accountBox #account .money-back .back-box .rili .rili-right .line{
+	position: absolute;
+	left:0;
+	top:53px;
+	width:100%;
+	height:1px;
+	background: #e8e8e8; 
+	z-index:100;
+}
+#accountBox #account .money-back .back-box .tabs{
+	width:100%;
+	height:369px;
+}
+#accountBox #account .money-back .back-box .tabs .nav{
+	width:100%;
+	height:64px;
+	border-bottom:1px solid #e8e8e8;
+	text-align: left;
+}
+#accountBox #account .money-back .back-box .tabs .nav span{
+	display: inline-block;
+	padding:0 26px;
+	font-size:14px;
+	color:#292929;
+	line-height:64px;
+	cursor: pointer;
+}
+#accountBox #account .money-back .back-box .tabs .nav span.active{
+	color:#fe6228;
+}
+
+
+/* 记录 */
+#accountBox #account .money-back .back-box .tabs .tab{
+	width:100%;
+	margin:0 auto;
+	height:302px;
+	overflow: auto;
+}
+
+#accountBox #account .money-back .back-box .tabs .tab table{
+	width: 100%;
+	/* margin: 30px auto; */
+	font-size: 14px;
+}
+#accountBox #account .money-back .back-box .tabs .tab table tr{
+	height: 50px;
+	line-height: 50px;
+	color: #313131;
+}
+#accountBox #account .money-back .back-box .tabs .tab table tr th{
+	font-weight: normal;
+}
+#accountBox #account .money-back .back-box .tabs .tab table tr th{
+	color:#666666;
+	text-align: center;
+	font-size:14px;
+}
+
+#accountBox #account .money-back .back-box .tabs .tab table tr.title{
+	/* background: #fafafa; */
+	color: #333;
+}
+
+/* 热门推荐 */
+#accountBox #account .hot{
+	height:194px;
+	width:100%;
+	text-align: center;
+	padding-bottom:54px;
+}
+
+#accountBox #account .hot .title{
+	font-size:16px;
+	line-height:50px;
+	color:#292929;
+	text-align: left;
+}
+#accountBox #account .hot .items{
+	width: 1032px;
+	height: 142px;
+	text-align: center;
+}
+#accountBox #account .hot .items .item{
+	width:317px;
+	height:140px;
+	border:1px solid #e8e8e8;
+	margin-right:36px;
+	float:left;
+}
+#accountBox #account .hot .items .item:nth-last-child(1){
+	margin-right:0;
+}
+#accountBox #account .hot .items .item .bt{
+	font-size:16px;
+	line-height:56px;
+	color:#292929;
+	text-align: left;
+	padding-left:20px;
+}
+#accountBox #account .hot .items .item .box{
+	width:256px;
+	margin:0 auto;
+}
+#accountBox #account .hot .items .item .box div{
+	float:left;
+	width:50%;
+	text-align: center;
+	font-family: 'Microsoft YaHei';
+}
+#accountBox #account .hot .items .item .box div p.text{
+	font-size:14px;
+	line-height:14px;
+	color:#666666;
+	padding-top:8px;
+}
+#accountBox #account .hot .items .item .box div p.p1{
+	font-size:16px;
+	line-height:30px;
+	color:#292929;
+}
+#accountBox #account .hot .items .item .box div p.p1 span{
+	font-size:26px;
+	line-height:30px;
+	color:#fe6228;
+}
+#accountBox #account .hot .items .item .box div p.p2{
+	font-size:16px;
+	line-height:30px;
+	color:#292929;
+}
+#accountBox #account .hot .items .item .box div p.p2 span{
+	font-size:26px;
+	line-height:30px;
+	color:#292929;
+}
+.renzhen.over{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	-webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+	filter: grayscale(0%);
+	opacity: 1;
+}
+.renzhen{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+	filter: grayscale(100%);
+	opacity: 0.6;
+}
+.renzhen.dxrz{
+	background: url(/yingpu/pc/img/account/account-dxrz.png) no-repeat center;
+}
+.renzhen.smrz{
+	background: url(/yingpu/pc/img/account/account-smrz.png) no-repeat center;
+}
+.renzhen.yhkrz{
+	background: url(/yingpu/pc/img/account/account-yhkrz.png) no-repeat center;
+}
+.renzhen.yxyz{
+	background: url(/yingpu/pc/img/account/account-yxyz.png) no-repeat center;
+}
+a:hover span.renzhen{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	-webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+	filter: grayscale(0%);
+	opacity: 1;
+}

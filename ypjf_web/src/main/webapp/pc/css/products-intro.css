@@ -1,0 +1,152 @@
+/*车贷融*/
+
+.lend-process{
+	border: 1px solid #ddd;
+	padding: 0 10px;
+	margin-top: 10px;
+}
+.lend-process:hover{
+	box-shadow: 3px 3px 3px 0px #ddd;
+}
+.lend-process .zhonglei{
+	width: 100%;
+	height: auto;
+}
+.lend-process .zhonglei.active-car{
+	width: 100%;
+}
+.lend-process .zhonglei .des{
+	margin-top: 30px;
+	width: 1160px;
+	padding: 20px 10px;
+	background: #F5F5F5;	
+}
+.lend-process .zhonglei .des p{
+	font-size: 14px;
+	color: #666;
+	line-height: 22px;
+}
+.lend-process .zhonglei .des p span{
+	font-size: 16px;
+	color: #333;
+	font-weight: bold;
+}
+.lend-process h4{
+	font-size: 16px;
+	text-align: center;
+	margin-top: 40px;
+	font-weight: normal;
+}
+
+.lend-process .zhonglei .process{
+	width: 100%;
+	margin-top: 56px;
+	margin-bottom: 30px;
+}
+.lend-process .zhonglei .process li{
+	float: left;
+	text-align: center;
+	width: 168px;
+	height: 240px;
+}
+.lend-process .zhonglei .process li p:first-child{
+	font-size: 14px;
+	color: #333;
+}
+.lend-process .zhonglei .process li p:nth-child(2){
+	font-size: 18px;
+	color: #fff;
+	font-weight: bolder;
+}
+.lend-process .zhonglei .process li p:nth-child(3){
+	font-size: 16px;
+	color: #fdfd63;
+	font-weight: bolder;
+}	
+.lend-process .zhonglei .process li:nth-child(odd){
+	background: url(../img/infomation/active-process-bg.png) no-repeat 30px 28px;
+}
+.lend-process .zhonglei .process li:nth-child(even){
+	background: url(../img/infomation/active-process-bg2.png) no-repeat 30px 65px;
+}
+
+.lend-process .zhonglei .process li:nth-child(odd) p.num{
+	margin-top: 17px;
+	margin-left: 3px;
+}
+.lend-process .zhonglei .process li:nth-child(odd) p.tit{
+	margin-top: 62px;
+}
+.lend-process .zhonglei .process li:nth-child(even) p.num{
+	margin-top: -46px;
+	margin-left: 3px;
+}
+.lend-process .zhonglei .process li:nth-child(even) p.tit{
+	margin-top: -96px;
+}
+.lend-process .zhonglei .process li:nth-child(even) p:first-child{
+	margin-top: 222px;
+}
+.lend-process .zhonglei .more{
+	margin-bottom: 56px;
+	margin-right: 30px;
+	text-align: right;	
+}
+.lend-process .zhonglei .more a{
+	font-size: 16px;
+	color: #fcaa02;
+}
+
+
+/*房贷*/
+.lend-process .zhonglei.active-house{
+	width: 100%;
+}
+.lend-process .zhonglei.active-house .process li{
+	width: 147px;
+}
+.lend-process .zhonglei.active-house .process li:nth-child(odd){
+	background: url(../img/infomation/active-process-bg.png) no-repeat 20px 28px;
+}
+.lend-process .zhonglei.active-house .process li:nth-child(even){
+	background: url(../img/infomation/active-process-bg2.png) no-repeat 20px 65px;
+}
+
+.lend-process .zhonglei.active-house .process li:nth-child(odd) p.num{
+	font-size: 16px;
+	color: #fff;
+	font-weight: bolder;
+	margin-top: 30px;
+}
+.lend-process .zhonglei.active-house .process li:nth-child(odd) p.tit{
+	color: #fdfd63;
+}
+
+.lend-process .zhonglei.active-house .process li:nth-child(even) p.num{
+	margin-top: 190px;
+	font-size: 18px;
+	color: #fff;
+	font-weight: bolder;
+}
+.lend-process .zhonglei.active-house .process li:nth-child(even) p.tit{
+	color: #fdfd63;
+}
+
+.lend-process .process-house{
+	margin: 56px auto;
+}
+
+/*优企贷*/
+.lend-process .zhonglei.active-company .process li{
+	width: 147px;
+	text-align: center;
+}
+.lend-process .zhonglei.active-company .process li:nth-child(odd){
+	background: url(../img/infomation/active-process-bg.png) no-repeat 20px 28px;
+}
+.lend-process .zhonglei.active-company .process li:nth-child(even){
+	background: url(../img/infomation/active-process-bg2.png) no-repeat 20px 65px;
+}
+.lend-process .zhonglei.active-company .process li p:first-child{
+	white-space: nowrap;
+}

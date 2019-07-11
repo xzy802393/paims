@@ -1,0 +1,144 @@
+body{
+	background: #f7f7f7;
+}
+.mall-nav{
+	height: 42px;
+	line-height: 42px;
+	font-size: 14px;
+	color: #000;
+	background: #e1e1e1;
+	font-weight: bold;
+}
+.mall-nav .cur-nav{
+	color: #666;
+}
+.mall-nav .cur-nav a{
+	color: #666;
+}
+.mall-nav a:hover{
+	color: #FF7F01;
+}
+.main{
+	margin-top: 40px;
+}
+.product{
+	height: auto;
+	background: #fff;
+	padding: 74px 44px;
+	box-sizing: border-box;
+}
+.product .product-pic{
+	width: 398px;
+	height: 448px;
+	border: 2px solid #bfbfbf;
+	margin-right: 46px;	
+}
+.product .product-pic img{
+	    margin: 76px 51px;
+    width: 300px;
+    height: 300px;
+}
+.product-des{
+	width: 664px;
+}
+.product-des .name{
+	margin-top: 20px;
+	padding-bottom: 38px;
+	border-bottom: 1px solid #BFBFBF;
+}
+.product-des .name p{
+	width: 506px;
+	font-size: 18px;
+	color: #666;
+	font-weight: bold;
+	line-height: 30px;
+}
+.product-des .score{
+	margin-top: 20px;
+	line-height: 48px;
+	font-size: 16px;
+	color: #666;
+	letter-spacing: 2px;
+}
+.product-des .score p:first-child{
+	color: #FF7F01;
+	font-weight: bold;
+}
+.product-des .score p{
+	height:48px;
+}
+.product-des .score .choice span{
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	font-size: 16px;
+	border: 1px solid #BFBFBF;
+	color: #000;
+	cursor: pointer;
+}
+.product-des .score .choice span:nth-child(2){
+	border-right: none;
+	border-left: none;
+}
+.product-des .score .choice input{
+	display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    background: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+.product-des .btn{
+	margin-top: 40px;
+}
+.product-des .btn a{
+	font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    padding: 11px 70px;
+    background: #FF7F01;
+    border-radius: 6px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.details{
+	padding: 20px 40px 60px;
+	background: #fff;
+	box-sizing: border-box;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.details h4{
+	font-size: 20px;
+	color: #666;
+	font-weight: 500;
+}
+.details .tip{
+	font-size: 15px;
+	width: 754px;
+	margin: 68px auto;
+	line-height: 30px;
+	color: #666;
+}
+.details .tip dl{
+	width: 100%;
+	clear: both;
+	height: 30px;
+}
+
+.details .tip dl dt,.details .tip dl dd{
+	float: left;
+}
+.details-pic{	
+	text-align: center;
+}

@@ -1,0 +1,194 @@
+.xuanfutiao{
+		position: fixed;
+		top: 0;
+		right: 20px;
+		width: 154px;
+		height: 212px;
+		z-index: 1000000;
+	}
+	.xuanfutiao ul{
+		width: 100%;		
+	}
+	.xuanfutiao ul li{
+		width: 154px;
+		text-align: right;
+		margin-bottom: 4px;
+		text-align: right;
+	}
+	.xuanfutiao ul li div.now,.xuanfutiao ul li div.go-top{
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		border-radius: 6px;
+		background: #FF860E;
+		margin-left: 114px;
+		cursor: pointer;
+	}
+	.xuanfutiao ul li div.now-app{
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		border-radius: 6px;
+		background: #FF860E;
+		margin-left: 114px;
+		cursor: pointer;
+	}
+	.xuanfutiao ul li div.now img,.xuanfutiao ul li div.go-top img{
+		display: inline-block;
+		vertical-align: middle;	
+		margin-top: 9px;
+	}
+	.xuanfutiao ul li div.tip{
+		width: 134px;
+		height: 40px;
+		background: #FF860E;
+		line-height: 40px;
+		border-radius: 6px;
+		color: #fff;
+		font-size: 14px;
+		display: none;
+		text-align: left;
+		padding-left: 20px;
+		cursor: pointer;
+	}
+	.xuanfutiao ul li div.tip img{
+		vertical-align: middle;
+		text-align: right;
+	}
+	.xuanfutiao ul li div.app{
+		width: 140px;
+	    margin-right: 53px;
+	    position: absolute;
+	    top: 0;
+	    right: -12px;
+	    display: none;
+	}
+	.xuanfutiao ul li div.app img{
+		width: 140px;
+		height: 140px;
+	}
+	
+
+/*遮罩层*/
+.black-overlay{
+	/*display: none;*/
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.2;
+	opacity:.20;
+	filter: alpha(opacity=20);
+}
+.counter{
+	/*display: none;*/
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -269px;
+	margin-top: -260px;
+	width: 528px;
+	height: 520px;
+	background-color: white;
+	z-index:1002;
+	overflow: auto;
+	/*border-radius: 6px;*/
+	/*box-shadow: 5px 5px 5px 0 #b5acac;*/
+	color: #333;
+}
+.counter .counter-tit{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: left;
+	background: #f0f1f3;
+	color: #333;
+	font-size: 18px;
+	position: relative;
+	border-bottom: 1px solid #ddd;
+}
+.counter .counter-tit p{
+	margin-left: 10px;
+}
+.counter .counter-tit .close{
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	background: url(../img/tip-close.png) no-repeat center;
+	/*margin-top: -35px;
+	margin-left: 470px;*/
+	cursor: pointer;
+	position: absolute;
+    right: 15px;
+    top: 11px;
+}
+.counter-form{
+	width: 100%;
+
+}
+
+
+.counter-form form{
+	width: 100%;
+}
+.counter-form form label{
+	margin-top: 24px;
+	height: 40px;
+	line-height: 40px;
+	display: block;
+	font-size: 14px;
+	color: #666;
+	margin-left: 114px;
+}
+.counter-form form label input,.counter-form form label select{
+	width: 180px;
+	height: 38px;
+	border: 1px solid #aaa;
+	margin-left: 14px;
+	padding-left: 8px;
+}
+.counter-form form p.tip{
+	height: 26px;
+	line-height: 26px;
+	font-size: 12px;
+	color: #666;
+}
+.counter-form form p.tip span{
+	color: #ff0000;
+}
+
+/*.counter-form form label select.province{
+	width: 106px;
+}
+.counter-form form label select.city{
+	width: 106px;
+	margin-left: 10px;
+}*/
+.counter-form form input.counter-btn{
+	width: 80px;
+	height: 30px;
+	border: none;
+	margin-top: 34px;
+	margin-left: 200px;
+	background: #FF0000;
+	color: #fff;
+	font-size: 14px;
+	outline: none;
+}
+
+.counter-form .result{
+	font-size: 14px;
+	line-height: 30px;
+	margin-left: 114px;
+	margin-top: 20px;
+	color: #666;
+}
+.counter-form .result p span{
+	font-weight: bold;
+	color: #FF0000;
+}

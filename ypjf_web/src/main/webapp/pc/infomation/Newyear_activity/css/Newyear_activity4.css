@@ -1,0 +1,193 @@
+.content{
+	width: 100%;
+	height: auto;
+}
+.content .section{
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+.content .section.banner{
+	height: 1279px;
+	background: url(../img/img4/images/act-bg-1_02_02.jpg) no-repeat center;
+}
+.content .section.banner .act-tit{
+	width: 100%;
+	text-align: center;
+	padding-top: 76px;
+}
+.content .section.banner .center{
+	position: relative;
+}
+.content .section.banner .center .list{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 223px;
+	height: 342px;
+	background: url(../img/img4/scroll-bg.png) no-repeat center;
+}
+.content .section.banner .center .list .prize-list{
+	width: 162px;
+    height: 122px;
+    margin: 149px auto 10px;
+    border-radius: 68px 68px 33px 33px;	
+}
+.content .section.banner .center .list .prize-list table tr td img{
+	width: 162px;
+	height: 122px;
+	border: none;
+}
+#scroll_div{
+	width: 162px;
+	height: 45px;
+	overflow: hidden;
+}
+#scroll_div #scroll_begin,#scroll_div #scroll_end{
+	display: inline;
+	font-size: 14px;
+	font-style: italic;
+	font-weight: bold;
+	color: #b38655;
+}
+#scroll_div #scroll_begin span,#scroll_div #scroll_end span{
+	margin-right: 20px;
+}
+.prize-des p{
+	font-size: 16px;
+	font-weight: bold;
+	font-style: italic;
+	color: #127a7c;
+	line-height: 25px;
+}
+.prize-des{
+	margin-top: 45px;
+}
+.prize-des p span{
+	font-size: 18px;
+	color: #f5304c;
+}
+.prize-num p{
+	font-size: 28px;
+	color: #007a4b;
+	font-weight: bold;
+	font-style: italic;
+	margin-top: 367px;
+}
+
+/*帐篷部分*/
+.content .section.luckydraw{
+	width: 100%;
+	height: 1585px;
+	background: url(../img/img4/images/act-bg-2_01.png) no-repeat center;
+	margin-top: -264px;
+}
+.content .section.luckydraw .luckydraw-box{
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding-top: 132px;
+}
+.content .section.luckydraw .luckydraw-box .prize{
+	float: left;
+	width: 50%;
+	height: 330px;
+	position: relative;
+}
+.content .section.luckydraw .luckydraw-box .prize.prize1 img{
+	margin-top: -64px;
+    margin-left: 328px;
+}
+.content .section.luckydraw .luckydraw-box .prize.prize2 img{
+	margin-top: 23px;
+    margin-left: 253px;
+}
+.content .section.luckydraw .luckydraw-box .prize.prize3 img{
+	margin-top: -34px;
+    margin-left: -110px;
+}
+.content .section.luckydraw .luckydraw-box .prize.prize4 img{
+	margin-top: 24px;
+    margin-left: -256px;
+}
+.content .section.luckydraw .luckydraw-box .prize.prize5 img{
+	margin-top: -6px;
+    margin-left: 285px;
+}
+.content .section.luckydraw .luckydraw-box .prize.prize6 img{
+	margin-top: 34px;
+    margin-left: 284px;
+}
+.content .section.luckydraw .luckydraw-box .prize.prize7 img{
+	margin-top: -79px;
+    margin-left: -290px;
+}
+.content .section.luckydraw .luckydraw-box .prize.prize8 img{	
+    margin-top: 4px;
+    margin-left: -316px;
+}
+.content .section.instruction{
+	width: 100%;
+    height: 625px;
+    background: url(../img/img4/images/act-bg-3.png) no-repeat center;
+    margin-top: -199px;
+    padding-top: 1px;
+}
+.content .section.instruction .btn{
+	width: 158px;
+	height: 172px;
+	background: url(../img/img4/images/invest-bg.png) no-repeat center;
+	padding-top: 1px;
+	margin: 40px 260px;
+}
+.content .section.instruction .btn a{
+	display: block;
+	width: 156px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 22px;
+	color: #6d3923;
+	font-style: italic;
+	font-weight: 500;
+}
+.act-des{
+	width: 916px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #b38655;
+    font-style: oblique;
+    font-weight: 500;
+}
+.act-des h5{
+	font-size: 27px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.act-des dl{
+	clear: both;
+    overflow: hidden;
+    line-height: 30px;
+}
+.act-des dl dt,.act-des dl dd{
+	float: left;
+	display: block;
+}
+.act-des dl dt{
+	width: 36px;
+}
+.act-des dl dd{
+	width: 870px;
+	text-align: left;
+}
+
+/*弹框*/
+.layui-layer.layui-layer-dialog.layer-anim{
+	border-radius: 10px;
+}
+.layui-layer.layui-layer-dialog.layer-anim .layui-layer-title{
+	border-radius: 10px 10px 0 0;
+}
+.layui-layer-btn.layui-layer-btn- .layui-layer-btn0{
+	border-color: #cce07d;
+    background-color: #cce07d;
+}

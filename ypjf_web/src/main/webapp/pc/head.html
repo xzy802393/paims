@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyHtml.html</title>
+<!--	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    -->
+    <meta charset="UTF-8"/>
+  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <style>
+	    #msg-info:hover {
+	    	cursor: pointer;
+	    }
+	   
+	    
+    </style>
+  </head>
+  
+  <body>
+      <!--顶部-->
+    <div class="header">
+      <div class="header-top">
+        <div class="center">
+          <div class="contact left">
+          	<a href="javascript:void(0)" class="tel" style="cursor:default;"><img src="img/images/head-tel_03.png"/></a>
+            <p>客服电话：400-969-1811 (客服时间 9:00-20:00)</p>
+            <a href="#" class="weixin"><img src="img/images/head-weixin_03.png"/>
+            	<span id="wxsaoyisao">
+								<img src="img/weixin-fuwuhao.jpg" style="width: 100%;height: 100%;" />
+							</span>
+            </a>
+            <a href="javascript:void(0)" onclick="top.window.open('https://weibo.com/6382739532/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1','_blank');" class="weibo"><img src="img/images/head-weibo_03.png"/>
+            	<!--<span id="wbsaoyisao">
+								<img src="img/weixin-fuwuhao.jpg" style="width: 100%;height: 100%;" />
+							</span>-->
+            </a>
+            <a href="javascript:void(0)" class="qq" style="border: 0;" title="QQ群号：417778462">
+            	<img src="img/qq.png"/>
+            </a>
+          </div>
+          
+          <div class="nav right">
+            <ul class="nav-item clearfix" id="Menu">
+                <li style="margin-top: 4px;"><a href="javascript:tiaozhuan('../pc/pointsmall/points_mall.jsp');"><span class="new-icon"></span>营普客栈</a></li>
+            	<li style="display: none;" id="user"><a href="javascript:tiaozhuan('myaccount/account')"><span id="username"></span></a> <a href="javascript:signout();">【安全退出】</a></li>
+            	<li style="display: none;cursor:pointer;" id="xiaoxi"  > <span class="head-msg" style="display: none;"></span><span id="msg-info">我的消息</span></li>
+            	<li id="denglu" ><a href="javascript:tiaozhuan('../pc/login')" class="bold">登录</a></li>
+              <li  id="zhuce"><a href="javascript:tiaozhuan('../pc/register')" class="bold">注册</a></li>
+              
+              <li class="app">
+              	<a href="javascript:tiaozhuan('../pc/html/appload.jsp ');" class="org">
+              		<img src="img/head-phone.png"/> 手机APP
+              	</a>
+              </li>
+              <li><a href="javascript:tiaozhuan('../pc/infomation/aboutUs/platform_intro.html');"><!-- <img src="img/head-vip.png"/> --> 关于我们 </a></li>
+
+              <li><a href="javascript:tiaozhuan('../pc/infomation/help.html');">帮助中心</a></li>
+              <li><a href="javascript:tiaozhuan('../pc/infomation/Novice_boot.jsp');">新手引导</a></li>
+              <!--<li><a href="javascript:tiaozhuan('/yingpu/pc/index');">前往新版本</a></li>-->
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-nav">
+        <div class="center clearfix">
+          <div class="logo left" onclick="javascript:tiaozhuan('/')">
+          <!--<img src="img/logo.png" style="cursor: pointer;"/>-->
+          </div>
+         <!-- <div class="logo-text left">
+          	<div id="logo_1">
+          		&lt;!&ndash;<p class="red">新金融倡导者</p>
+            	<p class="black">营创智慧金融，普享财富人生</p>&ndash;&gt;
+            	&lt;!&ndash;<p class="red">参股商业银行的互金平台</p>&ndash;&gt;
+            	&lt;!&ndash;<img style="margin-top: 10px;" src="img/head-logo-c.png"/>&ndash;&gt;
+          	</div>
+           &lt;!&ndash; <div id="logo_2" style="display: none;">
+            	<p class="red">前海股权交易中心</p>
+              <p class="black" style="margin-left: 3px;">股权代码：366066</p>
+            </div> &ndash;&gt;
+          </div>-->
+          
+          <div class="nav right">
+            <ul class="nav-list clearfix">
+              <li><a href=" javascript:tiaozhuan('/yingpu/pc/index');" >首页</a></li>
+              <li><a href="javascript:tiaozhuan('../pc/project/list');">我要投资<span class="num" id="num"></span></a></li>
+              <li><a href=" javascript:tiaozhuan('./borrow');">我要借款</a></li>
+              <!--  -->
+              <li><a href="javascript:tiaozhuan('./html/safe/safe.html?index=3');">安全保障</a></li>
+
+              <li class="nav-pull" dd="dd">
+              	<a href="javascript:tiaozhuan('./infomation/aboutUs/platform_intro.html');" class="msg-pilou">信息披露<span class="pull"></span></a>
+              	<ul class="" id="list" style="display:blcok;" >
+                    <li><a href="javascript:tzurl('infomation/aboutUs/message.html');">信披声明</a></li>
+              		<li><a href="javascript:tzurl('infomation/aboutUs/platform_intro.html');">平台简介</a></li>
+              		<li><a href="javascript:tzurl('infomation/operation_data.html');">运营数据</a></li>
+              		<li><a href="javascript:tzurl('infomation/list');">公告动态</a></li>
+              		<li><a href="javascript:tzurl('active_center');">活动中心</a></li>
+              		<li><a href="javascript:tzurl('infomation/lend_process.jsp');">产品中心</a></li>
+              		<li><a href="javascript:tzurl('infomation/list2');">风险教育</a></li>
+              		<li><a href="javascript:tzurl('infomation/aboutUs/contacts_us.html');">联系我们</a></li>
+              	</ul>
+              </li>
+              <li><a href="javascript:tiaozhuan('./active_center')">活动中心<span class="hot"></span></a></li>
+              <li style="margin-left: 22px;"><a href="javascript:tiaozhuan('../pc/myaccount/account');" class="account"><img src="img/account.png"/> 我的账户</a></li>
+            </ul>
+            		
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/queryString.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+  	
+//   	$(document).ready(function(){
+// 			var worker = setInterval(function(){
+// 				if($("#logo_2").css("display")=='none' ){
+// 					$("#logo_1").hide();
+// 					$("#logo_2").show();
+// 				}else{
+// 					$("#logo_1").show();
+// 					$("#logo_2").hide();
+// 				}	
+// 			},2000);
+// 
+// 		})
+  	
+  	
+  	$(function(){
+     
+//       if(sessionStorage.user!=null&&sessionStorage.user!=undefined){
+//          var user=JSON.parse(sessionStorage.user);
+//          $('#username').text('尊敬的:'+user.name);
+//          $('#user').show();
+//          $('#xiaoxi').show();
+//          $('#denglu').hide();
+//          $('#zhuce').hide();
+//       }      
+       	
+       	$('.nav-item').find('li').each(function(i,e){       		     		
+       			if(i==queryString("num")){
+							$(this).children('a').addClass('current');
+					  }
+       		})
+       		
+       
+       
+  			$('.nav-list').find('li').each(function(i,e){
+					if(i==queryString("index")){
+							$(this).children('a').addClass('active');
+					}
+  			}); 
+  	});
+
+    function tiaozhuan(url){
+      window.top.location.href=url;
+    }
+    function signout(){
+      sessionStorage.user=null;
+      //document.cookie = 'SHAREJSESSIONID=121212;expires=-1';
+        delete sessionStorage.user;
+      tiaozhuan('../pc/logout')
+    }
+    $('.msg-pilou').mouseover(function(e){
+  		$('#list').show(); 
+
+  		var $that=$('#list').clone(); 
+        $(window.parent.document).find('body').append(
+             $that.css({'display':'block','z-index':'1000','width':'94px','marginLeft':'8px','background': '#fff','border': '1px solid #ddd','border-top':'2px solid #ff8601', 'position':'absolute','left':$('#list').offset().left,'top':$('#list').offset().top})
+          );
+        
+        $('#list').hide();
+    });
+
+  /*  $('.weixin').mouseover(function(e){
+      $('#wxsaoyisao').show(); 
+
+      var $that=$('#wxsaoyisao').clone(); 
+        $(window.parent.document).find('body').append(
+             $that.css({'display':'block','z-index':'1000','width':'200px','background': '#fff','border': '1px solid #ddd','border-top':'0', 'position':'absolute','left':$('#wxsaoyisao').offset().left,'top':$('#wxsaoyisao').offset().top})
+          );
+        
+        $('#wxsaoyisao').hide();
+    });
+*/
+     $('.header').mousemove(function(e){
+   
+      if($(e.target).parents('li[dd="dd"]').size()<=0){
+        $(window.parent.document).find('body').find('ul[id="list"]').remove();  
+      }
+      if($(e.target).parents('.weixin').size()<=0){
+        $(window.parent.document).find('body').find('span[id="wxsaoyisao"]').remove();  
+      }
+      
+        $('#list').hide();
+    });
+     $(window.parent.document).find('.borrow-banner').mousemove(function(e){
+      console.log($(e.target));
+      if($(e.target).parents('li[dd="dd"]').size()<=0){
+        $(window.parent.document).find('body').find('ul[id="list"]').remove(); 
+      }
+        $('#list').hide();
+    });
+     
+     var gUserProfile = {},
+     	 gIsProfileLoaded = false,
+     	 gPromise = {
+    		 promise : {},
+    		 done : function(callback) {
+    			 this.promise = callback;
+    		 }
+    	 },
+     	 loadUserProfile = function(callback, isRefresh) {
+	   	 	var promise = Object.create(gPromise);
+    	 	var invoke = function(c, d) {
+    	 		typeof c == 'function' && c(d);
+    	 	};
+    	 	
+    	 	isRefresh = isRefresh || callback == true; 
+    	 	if (gIsProfileLoaded && !isRefresh) {
+    	 		setTimeout(function() {
+	    	 		invoke(callback || promise.promise, gUserProfile);
+    	 		}, 100);
+    	 		return promise;
+    	 	}
+    	 	
+	    	 $.get('myaccount/accountproile', {}, function(data) {
+	    		 var profile = data.data && data.data[0] || null;
+	    		 if (profile) {
+	    			 gUserProfile = profile;
+	    			 gIsProfileLoaded = true;
+	    			 invoke(callback || promise.promise, gUserProfile);
+	    		 }
+	    	 });
+	    	 
+	    	 return promise;
+	     };
+	    
+     
+     $(document).on('click', '#msg-info', function() {
+    	 if (gUserProfile.msgNum != -1) {
+//     	 if (gUserProfile.msgNum != 0) {
+    		 top.location.href = '/yingpu/pc/myaccount/message.html';
+     	 }
+     });
+     
+     
+     var showInvestableCount = function(c) {
+    	 if (c) {
+    		 $('#num').html('[' + c + ']');
+    	 }
+     };
+     
+     
+     $(function() {
+         var sessionUser;
+         if (sessionStorage.user) {
+             try {
+                 sessionUser = JSON.parse(sessionStorage.user);
+             }
+             catch (e) {
+                 console.log(e);
+             }
+         }
+
+         if (sessionUser) {
+             var user = sessionUser;
+             $('#username').html('<a href="javascript:tiaozhuan(\'../pc/myaccount/account\');">'+'尊敬的:'+(user.userCode)+'</a>');
+             $('#user').show();
+             $('#xiaoxi').show();
+             $('#denglu').hide();
+             $('#zhuce').hide();
+             if (user.msgNum != 0) {
+                 $('.head-msg').show();
+                 $('#msg-info').html('未读消息<em style="color: red;">(' + user.msgNum + ')</em>');
+             }
+             return;
+         }
+
+    	 loadUserProfile().done(function(data) {
+    		 if (data.msgNum != 0) {
+    		     $('.head-msg').show();
+    			 $('#msg-info').html('未读消息<em style="color: red;">(' + data.msgNum + ')</em>');
+    		 }
+
+   	         var user=data;
+   	         $('#username').html('<a href="javascript:tiaozhuan(\'../pc/myaccount/account\');">'+'尊敬的:'+(user.userCode)+'</a>');
+   	         $('#user').show();
+   	         $('#xiaoxi').show();
+   	         $('#denglu').hide();
+   	         $('#zhuce').hide();
+    	 });
+
+
+
+     });
+
+    $.get('project/investable/count/json', { }, function(data) {
+        console.log(data.data);
+        var count = data.data && data.data[0]['COUNT(id)'];
+        showInvestableCount(count);
+    });
+  </script>
+</html>

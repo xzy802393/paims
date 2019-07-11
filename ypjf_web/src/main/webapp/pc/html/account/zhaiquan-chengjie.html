@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=1220" />
+		<title>营普金服-我的账户</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/zhaizhuan-detail.css"/>
+		
+	</head>
+	<body>
+		<div id="accountBox" class="clearFix">
+			<!-- 左边导航 -->
+			<div id="aside">
+				<iframe src="account-sideBar.html" width="100%" height="744px" scrolling="no"  style="border:0px;"></iframe>
+			</div>
+			
+			<!-- 右边内容 -->
+			<div id="account">
+				<div class="nav clearFix">
+					<span class="active">债权承接——详情 </span>
+					</div>
+				<div id="table" class="list" style="display: block;">
+					<table border="0">
+                        <thead>
+						<tr class="title">
+							<th>日期</th>
+							<th>项目名称</th>
+							<th>剩余期限(月)</th>
+							<th>到期时间</th>
+							<th>预期年化利率</th>
+							<th>本金(元)</th>
+							<th>利息(元)</th>
+							<th>操作</th>
+						</tr>
+                        </thead>
+                        <tbody></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+        <script type="x-tpl" id="tpl">
+            <tr>
+                <td>$startDate</td>
+                <td>$name</td>
+                <td>$remainsMonth</td>
+                <td>$expiresDate</td>
+                <td>$earningRate</td>
+                <td>$projectAmount</td>
+                <td>$interest</td>
+                <td><a href="#">查看项目</a></td>
+            </tr>
+        </script>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../layer-v3.0.3/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/utils.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/queryString.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$.get('/yingpu/pc/myaccount/debt/detail', {id : queryString('id')}, function(result) {
+			    if (result.data) {
+			        var tpl = $('#tpl').html(),
+                        html = '';
+			        $.each(result.data, function(i, e) {
+			            e.remainsMonth = e.deadLine - e.holdMonths;
+			            e.projectAmount = e.amount - e.interest;
+			            html += tpl.formatStr(e);
+                    });
+                    $('table>tbody').html(html);
+                }
+            });
+		</script>
+	</body>
+	
+</html>

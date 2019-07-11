@@ -1,0 +1,258 @@
+.main{
+	width: 100%;
+	height: auto;
+}
+.banner{
+	width: 100%;
+    background: #00a62a;
+    text-align: center;
+    height: 750px;
+}
+.banner img{
+	margin: 30px auto;
+}
+.content{
+	width: 100%;
+	height: auto;
+	background: #fde200;
+}
+.section{
+	width: 100%;
+	padding-top: 1px;
+}
+.section .tit{
+	width: 1181px;
+	height: 186px;
+	background: url(images/img6/tit-bg.png) no-repeat center;
+	margin: 50px auto 60px;
+	text-align: center;
+}
+.tit img{
+	margin-top: 88px;
+}
+.section .hongbao{
+	width: 1200px;
+	margin: 0 auto;
+}
+.section .hongbao ul{
+	width: 100%;
+}
+.hb{
+	width: 212px;
+	height: auto;
+	float: left;
+	text-align: center;
+	margin-bottom: 82px;
+}
+.hb .money{
+	width: 212px;
+    height: 211px;
+    background: url(images/img6/hongbao-bg.png) no-repeat center;
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    line-height: 177px;
+    letter-spacing: -3px;
+    padding-right: 14px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.hb:first-child{
+	margin-left: 140px;
+}
+.hb:nth-child(2){
+	margin: 0 150px;
+}
+.hb:nth-child(5),.hb:nth-child(6),.hb:nth-child(7){
+	margin-left: 117px;
+}
+.hb .des{
+	font-size: 16px;
+	height: 26px;
+}
+.des span{
+	font-size: 24px;
+	color: #ff0000;
+}
+.btn{
+	text-align: center;
+}
+.section-two .hb{
+	margin-left: 306px;
+}
+.section-two .hb:nth-child(2){
+	margin-left: 162px;
+}
+.tip{
+	width: 838px;
+	margin: 55px auto 0;
+	font-size: 18px;
+	line-height: 30px;
+}
+.tip span{
+	font-size: 20px;
+}
+
+
+.section-three{
+	width: 100%;
+	height: auto;
+	background: url(images/img6/images/invite-bg_02.png) no-repeat center;
+}
+.visit ul{
+	width: 890px;
+    margin: 0 auto 44px;
+    padding: 0 54px;
+}
+.visit ul li{
+	float: none;
+	background: none;
+}
+.visit ul li div.photo{
+	width: 138px;
+	height: auto;
+	text-align: center;
+}
+.visit ul li div.photo img{
+	display: block;
+	width: 34px;
+	height: 54px;
+	padding: 6px 13px 0;
+	background: #ff6600;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+.visit ul li div.photo.right img{
+	background: #ffe3ce;
+}
+.visit ul li div.photo span.name{
+	font-size: 16px;
+    color: #fff;
+    margin-top: 8px;
+    display: block;
+}
+.visit ul li div.photo.right span.name{
+	color: #fff;
+}
+.visit ul li div.text{
+	
+}
+.visit ul li div.text p{
+	font-size: 16px;
+	color: #3b3b3b;
+	padding: 12px 20px;
+	background: #fde200;
+	border-radius: 10px;
+	margin: 20px 6px;
+}
+.visit ul li div.text p span.sj{
+	display: inline-block;
+	width: 15px;
+	height: 10px;
+	background: url(images/img6/visit-bg-1.png) no-repeat center;
+	margin-left: -27px;
+	margin-right: 10px;
+}
+.visit ul li div.text.right p{
+	background: #fff;
+}
+.visit ul li div.text.right p span.sj{
+	background: url(images/img6/visit-bg-2.png) no-repeat center;
+	margin-right: -27px;
+	margin-left: 10px;
+}
+.visit ul li div.text.left p span{
+	color: #3B3B3B;
+	font-weight: bold;
+ 	color: 18px;
+}
+.visit ul li div.text.right p span{
+	color: #3B3B3B;
+	font-weight: bold;
+	color: 18px;
+}
+.visit ul .des-txt.btn a{ 
+	display: block;
+	width: 134px;
+	height: 40px;
+	margin: 30px auto 0;
+	background: #7aa96e;
+	border-radius: 20px;
+	line-height: 40px;
+	font-size: 18px;
+	color: #fff;
+	font-weight: normal;
+}
+
+.section-three .btn{
+	padding-bottom: 60px;
+}
+.bg{
+	width: 100%;
+	height: 858px;
+	background: url(images/img6/images/sign-bg-2_02.png) no-repeat center;
+}
+.sign p{
+	font-size: 30px;
+	color: #06bd7b;
+	text-align: center;
+	height: 70px;
+}
+.sign p span{
+	font-size: 35px;
+}
+.section-four .btn{
+	margin: 0px auto 50px;
+}
+
+
+
+.instruction{
+	width: 100%;
+	height: 2205px;
+	background: url(images/img6/images/bottom-bg_02.jpg) no-repeat bottom;
+	text-align: center;
+	/*padding-bottom: 20px;*/
+	padding-top: 2px;
+    margin-top: -3px;
+}
+.instruction h4{
+	font-size: 20px;
+    color: #6b4700;
+    margin-bottom: -24px;
+    font-weight: normal;
+}
+.instruction .des-bg{
+	width: 1071px;
+	height: 575px;
+	/*background: url(images/img3/des-bg_03.jpg) no-repeat center;*/
+	margin: 0 auto;
+	padding-top: 2px;
+	margin-top: 132px;
+}
+.instruction dl{
+	width: 872px;
+    margin: 0 auto;
+    clear: both;
+    overflow: hidden;
+    font-size: 18px;
+    color: #000;
+    line-height: 32px;
+}
+.instruction dl dt,.instruction dl dd{
+	float: left;
+}
+.instruction dl dd{
+	width: 841px;
+	text-align: left;
+}
+.instruction p{
+	margin-top: -17px;
+}
+.instruction h5{	
+    margin-top: 398px;
+    font-size: 25px;
+    color:  #fff;
+    letter-spacing: 8px;
+}

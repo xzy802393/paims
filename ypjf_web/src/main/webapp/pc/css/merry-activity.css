@@ -1,0 +1,168 @@
+.black-overlay{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.8;
+	opacity:.80;
+	filter: alpha(opacity=80);
+}
+
+
+.merryPic{
+	width: 639px;
+	height: 592px;
+	background: url(../img/merry-fix-pic.png) no-repeat center;
+	background-size: cover;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -296px;
+	margin-left: -320px;
+	z-index: 1002;
+	/*animation: bianda .3s cubic-bezier(1, -0.06, 1, 1) normal;*/
+}
+
+.merryPic .close{
+	width: 30px;
+	height: 30px;
+	background: url(../img/borrow-close.png) no-repeat center;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	right: -4px;
+	cursor: pointer;
+}
+.merryPic .merry{
+	width: 100%;
+	height: 100%;
+}
+.merryPic .merry .oldman{
+	display: block;
+	width: 123px;
+	height: 111px;
+	background: url(../img/merry-oldman.png) no-repeat center;
+	background-size: cover;
+	position: absolute;
+	top: 94px;
+	left: 50%;
+	margin-left: -60px;	
+	
+}
+.merryPic .merry .oldman.donghua{
+	animation: oldman 7s linear infinite alternate;
+}
+@keyframes oldman{
+	0%{margin-left: -60px;}
+	50%{margin-left: -120px;}
+	100%{margin-left: 0px;}
+}
+
+
+.merry-tree{
+	position: fixed;
+	width: 176px;
+	height: 247px;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -793px;
+	/*display: none;*/
+}
+
+
+
+/*双12红包雨*/
+.hb-reward{
+	width: 533px;
+	height: 605px;	
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -302px;
+	margin-left: -267px;
+	z-index: 99999999;
+}
+.hb-reward .hb-y{
+	width: 533px;
+	height: 605px;	
+	background: url(../img/hb-rain-bg.png) no-repeat center;
+	background-size: cover;
+	position: relative;
+}
+.hb-reward .hb-y .hb-money{
+	width: 366px;
+	height: 123px;
+	background: url(../img/hb-rain-money-bg.png) no-repeat center;
+	position: absolute;
+	top: 178px;
+	left: 50%;
+	margin-left: -194px;
+}
+.hb-reward .hb-y .hb-money .left{
+	width: 50%;
+	text-align: center;
+	font-size: 17px;
+}
+.hb-reward .hb-y .hb-money .right{
+	width: 50%;
+	text-align: center;
+	font-size: 17px;
+}
+.hb-reward .hb-y .hb-money .right p:nth-child(1){
+	color: #970d14;
+	margin-top: 44px;
+}
+.hb-reward .hb-y .hb-money .left p:nth-child(1){
+	color: #970d14;
+	margin-top: 30px;
+}
+.hb-reward .hb-y .hb-money .left p span{
+	font-size: 34px;
+	color: #970d14;
+}
+.hb-reward .hb-y .hb-money .left p:nth-child(2),.hb-reward .hb-y .hb-money .right p:nth-child(2){
+	color: #e49c00;
+	margin-top: 10px;
+}
+.hb-reward .hb-y .use-btn a{
+	position: absolute;
+	width: 313px;
+	height: 62px;
+	background: url(../img/hb-rain-btn-bg.png) no-repeat center;
+	bottom: 50px;
+	left: 50%;
+	margin-left: -156px;
+	line-height: 62px;
+	font-size: 20px;
+	color: #f7470e;
+	text-align: center;
+}
+.hb-reward .hb-n{
+	width: 533px;
+	height: 605px;	
+	background: url(../img/hb-rain-bg-n.png) no-repeat center;
+	background-size: cover;
+	position: relative;
+}
+
+.hb-reward .hb-n .use-btn a{
+	position: absolute;
+	width: 195px;
+	height: 62px;
+	background: url(../img/hb-rain-btn-n.png) no-repeat center;
+	background-size: cover;
+	bottom: 50px;	
+	line-height: 62px;
+	font-size: 20px;
+	color: #f7470e;
+	text-align: center;
+	left: 52px;
+}
+.hb-reward .hb-n .use-btn a:last-child{
+	left: auto;
+	right: 77px;
+}

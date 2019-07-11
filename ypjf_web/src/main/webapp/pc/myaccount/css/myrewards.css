@@ -1,0 +1,576 @@
+.rewards{
+	width: 939px;
+	margin-left: 28px;
+}
+.rewards .rewards-ad{
+	position: relative;
+}
+.rewards .rewards-ad img{
+	/*position: absolute;*/
+}
+.rewards .rewards-ad a{
+	position: absolute;
+    display: block;
+    width: 156px;
+    height: 34px;
+    background: #FF7F01;
+    background: -webkit-linear-gradient(top, #ff9649, rgba(255, 50, 1, 1));
+    border-radius: 17px;
+    top: 112px;
+    left: 308px;
+    line-height: 34px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    text-shadow: 0px 5px 5px #757474;
+}
+.rewards-visit,.rewards-visit-f{
+	margin-top: 30px;
+	width: 937px;
+	border: 1px solid #ddd;
+}
+.rewards-visit h3,.rewards-visit-f h3{
+	font-size: 16px;
+	color: #333;
+	height: 35px;
+	border-bottom: 1px solid #ddd;
+	background: #F7F7F7;
+	line-height: 35px;
+	padding-left: 20px;
+	font-weight: normal;
+}
+.rewards-visit .rewards-visit-link,.rewards-visit .rewards-visit-code{
+	width: 448px;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+.rewards-visit div.line{
+	width: 1px;
+	height: 126px;
+	background: #DDDDDD;
+	margin-top: 34px;
+}
+.rewards-visit .rewards-visit-link p,.rewards-visit .rewards-visit-code p{
+	font-size: 14px;
+	color: #333;
+	line-height: 20px;
+    margin-right: 20px;
+}
+.rewards-visit .rewards-visit-link p span,.rewards-visit .rewards-visit-code p span{
+	font-weight: 700;
+}
+.rewards-visit-link .visit-link{
+	width: 276px;
+	border: 5px solid #ddd;
+	padding: 16px 20px;
+	margin-left: 82px;
+	margin-top: 14px;
+	/*overflow: hidden;*/
+}
+.rewards-visit-link .visit-link p{
+	width: 280px;
+	word-break:break-all;
+	line-height: 20px;
+	font-size: 12px;
+	color: #ff781d;
+}
+.rewards-visit .rewards-visit-link .copy-btn{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background: #239afb;
+	font-size: 14px;
+	color: #fff;
+	margin: 14px auto;
+}
+.rewards-visit-code .visit-code img.code{
+	width: 110px;
+	height: 110px;
+	border: 2px solid #ddd;
+	margin-right: 40px;
+}
+.rewards-visit-code .visit-code{
+	margin-left: 166px;
+	margin-top: 10px;
+}
+
+.rewards-visit-f table{
+	width: 937px;
+}
+.rewards-visit-f table tr{
+	width: 99%;
+	height: 38px;
+	text-align: center;
+	color: #666;
+	font-size: 13px;
+}
+.rewards-visit-f table tr:nth-child(even){
+	background: #f8f8f8;
+}
+.rewards-visit-f table tr.title{
+	height: 44px;
+	color: #333;
+	font-size: 14px;
+	background: #eee;
+	font-weight: normal;
+}
+.rewards-visit-f table tr th{
+	color: #333;
+	font-weight: normal;
+	width: 33%;
+}
+.rewards-tip{
+	margin-top: 42px;
+	margin-left: 60px;
+}
+.rewards-tip p{
+	color: #666;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+/*优惠券*/
+.coupons{
+	width: 939px;
+	margin-left: 28px;
+}
+.coupons h3{
+	font-size: 16px;
+	font-weight: normal;
+}
+.coupons .coupons-item{
+	margin-top: 28px;
+	width: 937px;
+	border: 1px solid #ddd;
+}
+.coupons .coupons-item ul{
+	width: 100%;
+}
+.coupons .coupons-item ul li.list{
+	float: left;
+	width: 233px;
+	text-align: center;
+	margin: 20px auto;
+	font-size: 14px;
+	color: #666666;
+	line-height: 24px;
+}
+.coupons .coupons-item ul li span.line{
+	float: left;
+	width: 1px;
+	height: 25px;
+	background: #ddd;
+	margin-top: 34px;
+}
+.coupons .coupons-item ul li p .num{
+	font-size: 20px;
+	font-weight: bold;
+}
+.coupons .coupons-item ul li p .num.true{
+	color: #ff7f01;
+}
+/*加息券*/
+.coupons-contain{
+	margin-top: 28px;	
+}
+.coupons-contain h4{
+	font-size: 16px;
+	font-weight: normal;
+	margin-bottom: 28px;
+}
+.coupons-contain h4 a{
+	/*margin-right: 10px;*/
+}
+.coupons-contain h4 a.active{
+	color: #FF7F01;
+	font-weight: bold;
+}
+
+.coupons-contain .tab-menu li{
+	float: left;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	cursor: pointer;
+}
+.coupons-contain .tab-menu li.active{
+	border-bottom: 2px solid #FF7F01;
+	color: #FF7F01;
+	font-weight: bold;
+}
+
+.coupons-contain .coupons-box{
+	width: 937px;
+	height: auto;
+	border: 1px solid #ddd;	
+	padding-bottom: 28px;
+}
+.coupons-contain .coupons-box ul{
+	padding: 25px 0px 0px 34px;
+}
+.coupons-contain .coupons-box ul li{
+	float: left;
+	width: 271px;
+	height: 132px;
+	background: url(../../img/account/coupons-bg.png) no-repeat center;
+	position: relative;
+	margin-right: 28px;
+	margin-bottom: 34px;
+}
+.coupons-contain .coupons-box ul li.jiaxi{
+	background: url(../../img/coupons-bg-jx.png) no-repeat center;
+}
+
+.coupons-contain .coupons-box ul li.jiaxi .deadline{
+	color: #935900;
+}
+.coupons-contain .coupons-box ul li.dikoulv{
+	background: url(../../img/coupons-bg-dkl.png) no-repeat center;
+}
+.coupons-contain .coupons-box ul li.dikoulv .deadline{
+	color: #935900;
+}
+.coupons-contain .coupons-box ul li.guoqi{
+	background: url(../../img/coupons-bg-gq.png) no-repeat center;
+}
+.coupons-contain .coupons-box ul li.guoqi .deadline{
+	color: #fff;
+}
+.coupons-contain .coupons-box ul li.jxysy{
+	background: url(../../img/coupons-bg-jxysy.png) no-repeat center;
+}
+.coupons-contain .coupons-box ul li.djysy{
+	background: url(../../img/coupons-bg-djysy.png) no-repeat center;
+}
+.coupons-contain .coupons-box ul li.dklysy{
+	background: url(../../img/coupons-bg-dklysy.png) no-repeat center;
+}
+.coupons-contain .coupons-box ul li.yishiyong .deadline{
+	color: #fff;
+}
+.coupons-contain .coupons-box ul li .coupons-style{
+	font-size: 12px;
+    color: #890000;
+    margin-top: 4px;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 7px;
+    top: 14px;
+    font-weight: bold;
+}
+.coupons-contain .coupons-box ul li .coupons-txt{
+	margin-top: 24px;
+	margin-left: 10px;
+}
+.coupons-contain .coupons-box ul li .coupons-txt .coupons-txt-l{
+	float: left;
+}
+.coupons-txt .coupons-txt-l p{
+	font-size: 10px;
+	-webkit-transform:scale(0.9);
+	color: #fff;
+	line-height: 16px;
+}
+.coupons-txt .coupons-txt-l p:first-child{
+	font-size: 18px;
+	color: #fff;
+	line-height: 30px;
+}
+.coupons-contain .coupons-box ul li p.deadline{
+	text-align: center;
+	margin-top: 18px;
+	font-size: 10px;
+	-webkit-transform:scale(0.9);
+	color: #ffdf00;
+}
+.coupons-contain .coupons-box ul li .coupons-txt .coupons-txt-r{
+	float: left;
+	width: 101px;
+	/*margin-right: 30px;*/
+}
+.coupons-txt .coupons-txt-r p{
+	font-size: 20px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	
+}
+.coupons-txt .coupons-txt-r p span.money{
+	font-size: 48px;
+	vertical-align: -31px;
+}
+/* .diloulv .coupons-txt .coupons-txt-r p span.money{
+	font-size: 48px;
+	vertical-align: -31px;
+} */
+
+/*翻页*/
+.page-list{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.page-list a{
+	display: inline-block;
+	padding: 8px 12px;
+	font-size: 12px;
+	border: 1px solid #aaa;
+	margin-left: 10px;
+	cursor: default;
+}
+.page-list a.active{
+	background: #ff7200;
+	border: none;
+	padding: 9px 13px;
+	color: #fff;
+}
+.page-list a.on{
+	color: #aaa;
+}
+.page-list a:hover{
+	background: #FF7200;
+	border: none;
+	padding: 9px 13px;
+	color: #fff;
+}
+.rewards-tip .title{
+	font-weight: bold;
+	font-size: 13px;
+	color: #333;
+	line-height: 26px;
+}
+
+/*签到奖励*/
+.signrewards{
+	width: 937px;
+	margin-left: 30px;
+	/*display: none;*/
+}
+.signrewards-main{
+	width: 672px;
+	height: 430px;
+	border: 1px solid #ddd;
+	float: left;
+}
+.signrewards-sign{
+	width: 270px;
+	text-align: center;
+}
+.signrewards-sign .sign-btn{
+	display: block;
+	width: 90px;
+	height: 90px;
+	background: url(../../img/account/sign-btn.png) no-repeat center;
+	margin: 22px auto 13px;
+}
+.signrewards-sign .sign-btn.no{
+	filter: grayscale(100%);	
+}
+.signrewards-sign .sign-btn.no a{
+	cursor: default;
+}
+.signrewards-sign .sign-btn a{
+	display: block;
+	color: #fff;
+	width: 90px;
+	height: 90px;
+	text-align: center;
+	line-height: 90px;
+	font-size: 13px;
+}
+.signrewards-sign .day{
+	font-size: 16px;
+}
+.signrewards-sign .day span{
+	color: #FF7F01;
+	font-size: 20px;
+	font-weight: bold;
+}
+.signrewards-sign img{
+	width: 186px;
+	height: 163px;
+	margin: 26px auto 10px;
+}
+.signrewards-sign p.get{
+	width: 160px;
+	height: 26px;
+	margin: 0 auto;
+	background: #ff523b;
+	font-size: 14px;
+	color: #fff;
+	line-height: 26px;
+	border-radius: 4px;
+}
+.signrewards-sign p.money{
+	margin-top: 12px;
+	font-size: 16px;
+}
+.signrewards-sign p.money span{
+	color: #FF7F01;
+	font-size: 20px;
+	font-weight: bold;
+}
+.signrewards-records{
+	width: 384px;
+	height: 310px;
+	margin-top: 36px;
+}
+
+.signrewards-records button{
+	background: #ff7f01;
+    width: 112px;
+    height: 40px;
+    display: block;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    margin: 32px auto;
+    cursor: pointer;
+    outline: none;
+}
+.signrewards-list{
+	float: left;
+	width: 241px;
+	height: 432px;
+	background: url(../../img/account/sign-list-bg.png) no-repeat center;
+	margin-left: 22px;
+}
+.signrewards-list-bc{
+	width: 227px;
+    height: 393px;
+    background: #cde0ff;
+    margin-top: 7px;
+    margin-left: 7px;
+    text-align: center;
+    padding-top: 25px;
+}
+.signrewards-list-bc .date .date-date{
+	display: inline-block;
+	font-size: 80px;	
+}
+.signrewards-list-bc .date .date-day{
+	display: inline-block;
+    font-size: 22px;
+    overflow: hidden;
+    width: 22px;
+    height: 66px;
+    margin-left: 12px;
+    margin-top: 4px;	
+}
+.signrewards-list-bc p.num{
+	width: 185px;
+	height: 34px;
+	font-size: 14px;
+	color: #fff;
+	background: #0064a3;
+	margin: 10px auto 0;
+	line-height: 34px;
+}
+.signrewards-list-contain{
+	width: 165px;
+	height: 218px;
+	overflow: hidden;
+	margin: 20px auto;
+}
+.signrewards-list-contain p{
+	font-size: 12px;
+	line-height: 22px;
+	width: 165px;
+	overflow: hidden;
+	color: #333;
+}
+/*签到记录*/
+.sign-records{
+	width: 939px;
+	margin-left: 28px;
+	display: none;
+}
+.sign-records h3{
+	font-size: 16px;
+	font-weight: normal;
+	margin-bottom: 28px;
+}
+.sign-records .sign-earn{
+	width: 936px;
+	height: 94px;
+	border: 1px solid #ddd;
+	margin-top: 28px;
+	margin-bottom: 28px;
+}
+
+.sign-records .sign-earn ul{
+	width: 100%;
+}
+.sign-records .sign-earn ul li{
+	float: left;
+	font-size: 16px;
+}
+.sign-records .sign-earn ul li.list{
+	width: 33%;
+	text-align: center;
+	margin: 36px auto;
+}
+.sign-records .sign-earn ul li.line span{
+	display: block;
+	width: 2px;
+	height: 28px;
+	background: #ddd;
+	margin-top: 34px;
+}
+.sign-records .sign-earn ul li.list p span{
+	font-size: 20px;
+	color: #FF7F01;
+}
+.sign-records .sign-earn ul li.list:last-child{
+	height: 94px;
+	border-left: 1px solid #ddd;
+	margin: 0;
+	line-height: 94px;	
+}
+.sign-records .sign-earn ul li.list:last-child button{
+	display: inline-block;
+	width: 130px;
+	height: 40px;
+	border-radius: 20px;
+	background: #3a95e0;
+	border: none;
+	outline: none;
+	color: #fff;
+	outline: none;
+}
+.sign-records table{
+	width: 937px;
+	margin-bottom: 28px;
+}
+.sign-records table tr{
+	width: 99%;
+	height: 38px;
+	text-align: center;
+	color: #666;
+	font-size: 13px;
+}
+.sign-records table tr:nth-child(odd){
+	background: #f8f8f8;
+}
+.sign-records table tr.title{
+	height: 44px;
+	color: #333;
+	font-size: 14px;
+	background: #eee;
+	font-weight: normal;
+}
+.sign-records .sign-rule{
+	margin-top: 30px;
+	font-size: 14px;
+	color: #666;
+	line-height: 24px;
+}
+.sign-records .sign-rule p:first-child{
+	font-size: 16px;
+	line-height: 34px;
+	color: #000;
+}

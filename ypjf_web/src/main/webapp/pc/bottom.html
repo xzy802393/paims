@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyHtml.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+  </head>
+  
+  <body>
+    <div class="footer">
+      <div class="center clearfix">
+        <div class="footer-nav left">
+          <ul class="list">
+            <li>关于营普
+              <ul>
+                <li><a href="#">平台简介</a></li>
+                <li><a href="#">高管团队</a></li>
+                <li><a href="#">运营报告</a></li>
+              </ul>
+            </li>
+            <li>安全保障
+              <ul>
+                <li><a href="#">风控措施</a></li>
+                <li><a href="#">银行存管</a></li>
+                <li><a href="#">政策法规</a></li>
+              </ul>
+            </li>
+            <li>帮助中心
+              <ul>
+                <li><a href="#">新手引导</a></li>
+                <li><a href="#">常见问题</a></li>
+                <li><a href="#">网站地图</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="line left"></div>
+        <div class="footer-contact left">
+          <p class="title">服务中心</p>
+          <p class="num">400-969-1811</p>
+          <p class="time">(服务时间:9:00-20:00)</p>
+        </div>
+        <div class="line left"></div>
+        <div class="footer-code left">
+          <ul>
+            <li>营普金服服务号
+              <img src=""/>
+            </li>
+            <li>营普金服APP
+              <img src=""/>
+            </li>
+            <li>营普金服客服微信
+              <img src=""/>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-pic">
+          <a href="#"><img src="./img/footer-2.1.png"/></a>
+          <a href="#"><img src="./img/footer-2.2.png"/></a>
+          <a href="#"><img src="./img/footer-2.3.png"/></a>
+        </div>
+        <div class="footer-bottom-txt">
+          <p>© 2016-2017 All rights reserved | 沪ICP备15044282号-1</p>
+          <p>市场有风险，投资需谨慎</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/queryString.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+  	
+  	$(function(){
+  			$('.nav-list').find('li').each(function(i,e){
+  						if(i==queryString("index")){
+  								$(this).children('a').addClass('active');
+  						}
+  			});
+  	});
+
+    function tiaozhuan(url){
+      window.parent.location.href=url;
+    }
+  </script>
+</html>

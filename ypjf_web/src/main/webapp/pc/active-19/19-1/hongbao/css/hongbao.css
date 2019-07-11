@@ -1,0 +1,249 @@
+/* css reset */
+body,section,h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dd,th,td { 
+	margin: 0;
+	padding: 0;  
+}  
+
+a{
+	text-decoration: none;
+}
+img { 
+	border: none;
+	vertical-align: middle;
+} 
+ul {
+	list-style: none; 
+}
+.clearFix:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.clearFix{
+	zoom:1;
+}
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html { overflow-y: scroll; }
+
+
+body{
+	width:100%;
+	text-align: center;
+	color:#000;
+	max-width:1920px;
+	min-width:1210px;
+	margin:0 auto;
+}
+
+
+#content{
+	max-width:1920px;
+	min-width:1210px;
+	margin:0 auto;
+}
+#content .top{
+	width:100%;
+	height:1068px;
+	background: url(../img/topBg.png) no-repeat 0 0;
+	background-size: 100% 100%;
+	padding-top:104px;
+}
+#content .center{
+	width:100%;
+	height:1352px;
+	background: url(../img/zhong.png) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+#content .bottom{
+	width:100%;
+	height:744px;
+	background: url(../img/xia.png) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+
+
+#content .top .banner{
+	width:975px;
+	height:1039px;
+	background: url(../img/bannerBg.png) no-repeat 0 0;
+	margin:0 auto;
+}
+#content .top .banner .title{
+	width:646px;
+	height:336px;
+	margin:0 auto;
+	padding-top:143px;
+}
+#content .top .banner .text{
+	width:377px;
+	margin:0 auto;
+	font:16px/30px "微软雅黑";
+	padding-top:30px;
+}
+
+
+#content .center .touzi{
+	
+	width:100%;
+	text-align: center;
+	height:105px;
+	
+}
+#content .center .touzi .miaoshu{
+	/* position: relative; */
+	background: url(../img/touzi.png) no-repeat 0 0;
+	width:537px;
+	height:79px;
+	margin:0 auto;
+	
+}
+#content .center .touzi .miaoshu p{
+	/* position: absolute;
+	left:90px;
+	top:68px; */
+	font:30px/70px "微软雅黑";
+	letter-spacing: 6px;
+	color:#d03d32;
+	margin-left:81px;
+}
+
+
+#content .center .touzi .time{
+	font:14px/30px "微软雅黑";
+	margin-left:76px;
+	letter-spacing: 2px;
+	color:#fff;
+}
+
+
+
+
+#content .center .hblist{
+	width:1203px;
+	height:1089px;
+	background: url(../img/centerBg.png) no-repeat 0 0;
+	margin:35px auto 0;
+	
+}
+#content .center .hblist .list{
+	width:1203px;
+	height:439px;
+	overflow: hidden;
+	padding-top:45px;
+}
+#content .center .hblist .list .hb{
+	float:left;
+	width:33%;
+	height:439px;
+	/* margin-bottom:70px;
+	margin-right:230px; */
+}
+#content .center .hblist .list .hb img{
+	display: inline;
+	widht:291px;
+	height:332px;
+}
+#content .center .hblist .list .hb .low{
+	display: block;
+	margin-top:10px;
+	font:16px/30px "微软雅黑";
+}
+#content .center .hblist .list .hb .zhangshu{
+	display: block;
+	font: 16px/30px "微软雅黑";
+}
+#content .center .hblist .list .hb .num{
+	font:22px/22px "微软雅黑";
+	color:#dd2b0f;
+}
+
+#content .center .hblist .list1{
+	width:1203px;
+	height:468px;
+	overflow: hidden;
+	padding-top:135px;
+}
+#content .center .hblist .list1 .hb{
+	float:left;
+	width:33%;
+	height:387px;
+}
+#content .center .hblist .list1 .hb img{
+	display: inline;
+	widht:291px;
+	height:332px;
+}
+#content .center .hblist .list1 .hb .low{
+	display: block;
+	margin-top:10px;
+	font:16px/30px "微软雅黑";
+}
+#content .center .hblist .list1 .hb .zhangshu{
+	display: block;
+	font: 16px/30px "微软雅黑";
+}
+#content .center .hblist .list1 .hb .num{
+	font:22px/22px "微软雅黑";
+	color:#dd2b0f;
+}
+  
+	
+	#content .center .zhuce{
+		width:332px;
+		height:73px;
+		margin:0 auto;
+		padding-top:29px;
+	}
+	#content .center .zhuce h1{
+		background: url(../img/zhuce.png) no-repeat 0 0;
+		width:332px;
+		height:73px;
+		margin:0 auto;
+	}
+	#content .center .zhuce h1 a{
+		display: inline-block;
+		/* padding:50px 0 0 30px; */
+		font:28px/73px "微软雅黑";
+		letter-spacing: 6px;
+		color:#d03d32;
+	}
+	
+	
+	#content .bottom .title{
+		padding-top:69px;
+
+	}
+	#content .bottom .title h1{
+		width:528px;
+		height:145px;
+		background: url(../img/shuoming.png) no-repeat 0 0;
+		margin:0 auto;
+	}
+	#content .bottom .title .miaoshu{
+		font:30px/117px "微软雅黑";
+		color:#feecce;
+		letter-spacing: 6px;
+		margin-left:10px;
+	}
+	
+	#content .bottom .active{
+		width:953px;
+		height:486px;
+		background: url(../img/bottomBg.png) no-repeat 0 0;
+		margin:0 auto;
+	}
+	#content .bottom .active .text{
+		width:576px;
+		height:320px;
+		
+		margin:0 auto;
+		padding-top:80px;
+	}
+	#content .bottom .active p{
+		font:18px/26px "微软雅黑";
+		text-align: left;
+		color:#f92f18;
+		letter-spacing: 4px;
+		margin-bottom:20px;
+	}
+	

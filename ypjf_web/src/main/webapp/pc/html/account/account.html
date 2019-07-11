@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=1220" />
+		<title>营普金服-我的账户</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/account.css"/>
+		<link rel="stylesheet" type="text/css" href="css/calendar.css"/>
+		
+		
+		
+	</head>
+	
+	<body>
+		
+		<!-- 头像上传框 -->
+		<input type="file" style="display: none;" id="file-input" name="file" />
+		<!-- 主体 -->
+		<div id="accountBox" class="clearFix">
+			<!-- 左边导航 -->
+			<div id="aside">
+				<iframe src="account-sideBar.html" width="100%" height="744px" scrolling="no"  style="border:0px;"></iframe>
+			</div>
+			<!-- 右边内容 -->
+			<div id="account">
+				<!-- 个人信息 -->
+				<div class="person">
+					<div class="left">
+						<div class="touXiang">
+							<div class="shade">
+								<span>更换头像</span>
+							</div>
+							<img src="img/touxiang.jpg" alt="用户头像">
+						</div>
+						<!-- <div class="up-img-cover touXiang"  id="up-img-touch" >
+							<div class="shade">
+								<span>更换头像</span>
+							</div>
+							<img class="am-circle" alt="点击图片上传" src="img/touxiang.jpg">
+						</div> -->
+						<div class="text">
+							<p class="name"><span class="nm">您好,151*****731</span><a class="bq" href="../level/level.html">普通会员</a></p>
+							<p class="wenhou"></p>
+						</div>
+						<div class="message">
+							<a href="#" class="renzheng"><img src="img/account-dxrz.png" ></a>
+							<a href="#" class="renzheng"><img src="img/account-smrz.png" ></a>
+							<a href="#" class="renzheng"><img src="img/account-yhkrz.png" ></a>
+							<a href="#" class="renzheng"><img src="img/account-yxyz.png" ></a>
+						</div>
+					</div>
+					<ul class="center clearFix">
+						<li class="items">
+							<p class="money" style="color:#042b6c;">0.00</p>
+							<p class="text">资产总额(元)</p>
+						</li>
+						<li class="items">
+							<p class="money" style="color: #ff7552;">0.00</p>
+							<p class="text">累计收益(元）</p>
+						</li>
+						<li class="items">
+							<p class="money" style="color:#042b6c;">0.00</p>
+							<p class="text">待获取收益(元）</p>
+						</li>
+					</ul>
+					<div class="right">
+						<div class="rightTop">
+							<p class="money">0.00</p>
+							<p class="text">可用余额(元)</p>
+							<a href="#" class="cz-btn">充值</a>
+						</div>
+						<ul class="rightCenter clearFix">
+							<li class="a1">
+								<p class="money">0</p>
+								<p class="text">冻结金额(元)</p>
+							</li>
+							<li class="a1">
+								<p class="money">0</p>
+								<p class="text">提现在途(元)</p>
+							</li>
+						</ul>
+						<a href="#" class="tx-btn">提现</a>
+					</div>
+				</div>
+				<!-- 资产分布 -->
+				<div class="assets">
+					<p class="title">资产分布</p>
+					<div class="assets-box clearFix">
+						<ul class="tuli-left clearFix">
+							<li class="item">
+								<span class="bg" style="background: #ff8247;"></span>
+								<p class="text">可用金额：￥<span class="money">0.00</span></p>
+							</li>
+							<li class="item">
+								<span class="bg" style="background: #9f79ee;"></span>
+								<p class="text">新手专享：￥<span class="money">0.00</span></p>
+							</li>
+							<li class="item">
+								<span class="bg" style="background: #87ceff;"></span>
+								<p class="text">X快享智能投标：￥<span class="money">1000.00</span></p>
+							</li>
+							<li class="item">
+								<span class="bg" style="background: #ff69b4;"></span>
+								<p class="text">账户自由金：￥<span class="money">5000.00</span></p>
+							</li>
+							<li class="item">
+								<span class="bg" style="background: #e5abff;"></span>
+								<p class="text">散标：￥<span class="money">5000.00</span></p>
+							</li>
+							<li class="item">
+								<span class="bg" style="background: #fabd04;"></span>
+								<p class="text">代收本金：￥<span class="money">20000.00</span></p>
+							</li>
+						</ul>
+						<div class="tu">
+							<div id="echart" style="width:250px;height:250px;"></div>
+						</div>
+					</div>
+				</div>
+				<!-- 回款日历 -->
+				<div class="money-back">
+					<p class="title">回款日历</p>
+					<div class="back-box">
+						<div class="subTitle clearFix">
+							<p>收款明细</p>
+							<img src="img/wenhao.png" class="wh" id="tishi" onmouseover="show('tishi')" onmouseout="hide()">
+							<span class="list"><img src="img/listBg.png" ></span>
+						</div>
+						<div class="rili clearFix" style="display: block;">
+							<div class="rili-left">
+								<p class="bt">当月待收(元)<span class="money">503.25</span></p>
+								<div class="neir">
+									<p class="date"></p>
+									<div class="you" style="display: block;">
+										<p class="text">当日待收(元)</p>
+										<p class="num">503.25</p>
+										<p class="text">当日已收(元)</p>
+										<p class="num">0.00</p>
+									</div>
+									<div class="meiyou" style="display: none;">
+										<p class="text">当天没有项目回款<a href="#" class="cj">快去出借</a>吧...</p>
+									</div>
+								</div>
+							</div>
+							<div class="rili-right">
+								<div class="line"></div>
+								<div id="ca"></div>
+							</div>
+						</div>
+						<ul class="tabs" style="display: none;">
+							<div class="nav">
+								<span class="active">X快享智能投标</span>
+								<span>散标</span>
+							</div>
+							<li class="tab" style="display: block;">
+								<table border="0" cellspacing="20" cellpadding="20">
+									<tr class="title">
+										<th>当前/总(期)</th>
+										<th>项目名称</th>
+										<th>待收日期</th>
+										<th>待收本金(元)</th>
+										<th>待收利息(元)</th>
+										<th>状态</th>
+									</tr>
+									<tr>
+										<td>1/2</td>
+										<td>奥迪A4L</td>
+										<td>2019-06-04</td>
+										<td>500</td>
+										<td>1.75</td>
+										<td>待回款</td>
+									</tr>
+									<tr>
+										<td>1/2</td>
+										<td>奥迪A4L</td>
+										<td>2019-06-04</td>
+										<td>500</td>
+										<td>1.75</td>
+										<td>待回款</td>
+									</tr>
+									<tr>
+										<td>1/2</td>
+										<td>奥迪A4L</td>
+										<td>2019-06-04</td>
+										<td>500</td>
+										<td>1.75</td>
+										<td>待回款</td>
+									</tr>
+									<tr>
+										<td>1/2</td>
+										<td>奥迪A4L</td>
+										<td>2019-06-04</td>
+										<td>500</td>
+										<td>1.75</td>
+										<td>待回款</td>
+									</tr>
+									<tr>
+										<td>1/2</td>
+										<td>奥迪A4L</td>
+										<td>2019-06-04</td>
+										<td>500</td>
+										<td>1.75</td>
+										<td>待回款</td>
+									</tr>
+								</table>
+							</li>
+							<li class="tab" style="display: none;">
+								<table border="0" cellspacing="20" cellpadding="20">
+									<tr class="title">
+										<th>当前/总(期)</th>
+										<th>项目名称</th>
+										<th>待收日期</th>
+										<th>待收本金(元)</th>
+										<th>待收利息(元)</th>
+										<th>状态</th>
+									</tr>
+									<tr>
+										<td>1/2</td>
+										<td>奥迪A4L</td>
+										<td>2019-06-04</td>
+										<td>500</td>
+										<td>1.75</td>
+										<td>待回款</td>
+									</tr>
+									
+								</table>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 热门推荐 -->
+				<div class="hot">
+					<p class="title">热门推荐</p>
+					<ul class="items">
+						<li class="item">
+							<p class="bt">新手专享</p>
+							<div class="box clearFix">
+								<div class="hot-left">
+									<p class="p1"><span>12</span>%</p>
+									<p class="text">预期年化收益率</p>
+								</div>
+								<div class="hot-right">
+									<p class="p2"><span>1</span>个月</p>
+									<p class="text">服务期限</p>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<p class="bt">新手专享</p>
+							<div class="box clearFix">
+								<div class="hot-left">
+									<p class="p1"><span>15</span>%</p>
+									<p class="text">预期年化收益率</p>
+								</div>
+								<div class="hot-right">
+									<p class="p2"><span>3</span>个月</p>
+									<p class="text">服务期限</p>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<p class="bt">X快享智能投标</p>
+							<div class="box clearFix">
+								<div class="hot-left">
+									<p class="p1"><span>7.5</span>%</p>
+									<p class="text">预期年化收益率</p>
+								</div>
+								<div class="hot-right">
+									<p class="p2"><span>1</span>个月</p>
+									<p class="text">服务期限</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/calendar.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/account.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../layer-v3.0.3/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/coms/ajaxfileupload/ajaxfileupload.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// echart 图表
+			var myChart = echarts.init(document.getElementById('echart'));
+			var option2 = {
+				tooltip: {
+					trigger: 'item',
+					formatter: "{a} <br/>{b}: {c} %"
+				},
+				color:["#ff8247","#9f79ee","#87ceff","#ff69b4","#e5abff","#fabd04"],
+				 series: [
+		    {
+		        name:'资产分布',
+		        type:'pie',
+		        radius: ['50%', '70%'],
+		        avoidLabelOverlap: false,
+		        label: {
+		            normal: {
+		                show: false,
+		                position: 'center'
+		            },
+		            emphasis: {
+		                show: true,
+		                textStyle: {
+							color:'#666',
+		                    fontSize: '18',
+		                    fontWeight: 'bold'
+							
+		                }
+		            }
+		        },
+		        labelLine: {
+		            normal: {
+		                show: false
+		            }
+		        },
+		        data:[
+		            {value:335, name:'可用金额'},
+		            {value:310, name:'新手专享'},
+		            {value:234, name:'X快享智能投标'},
+		            {value:135, name:'账户自由金'},
+		            {value:1548, name:'散标'},
+					{value:1548, name:'代收本金'}
+		        ]
+		    }
+		]
+			};
+		myChart.setOption(option2);
+	</script>
+	<script type="text/javascript">
+		var tip_index = 0;
+		function show(id) {
+			tip_index = layer.tips("<div style='color:#666666;'>1.当日待收/次月待收包括您在本平台出借的所有出借项目。<br/>2.X快享智能投资实际收到利息以实际回款为准。</div>", "#"+id+"", {
+			  tips: [3, "#fff"],
+			  area: ['350px', 'auto'],
+			});
+		};
+		function hide(){
+			 layer.close(tip_index);
+		}
+	</script>	
+	
+	</body>
+	
+</html>

@@ -1,0 +1,63 @@
+/*body{
+
+		background-image: url(../img/img2/cjbg.jpg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+	*{
+		margin-left: 0;padding-left: 0;
+	}*/
+	#title{
+		width: 560px;
+		height: 321px;
+		margin: 200px auto 0 auto;
+	}
+
+	.shanDeng,.shanDeng2{
+		width: 858px;
+		height: 858px;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		margin: 88px auto 0 auto;
+	}
+
+	.shanDeng{
+		background-image: url(../img/img2/shandeng1.png);
+	}
+	.shanDeng2{
+		background-image: url(../img/img2/shandeng2.png);
+	}
+
+	#btn .cjBtnDom,#btn .cjBtn,.shanDeng .active,.shanDeng td{
+		width: 180px;
+		height: 180px;
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+
+	#btn.cjBtn{
+	    vertical-align: bottom;
+	    height: 30px;
+	    line-height: 42px;
+	    font-size: 18px;
+		background-image: url(../img/img2/buttonUp.png);
+		cursor: pointer;
+	}
+	#btn.cjBtnDom{
+		background-image: url(../img/img2/buttonDown.png);
+	}
+
+
+	#luck .active{
+		background-image: url(../img/img2/active.png);
+		/*transform: scale(1.3);*/
+	}
+	.shanDeng td{
+		text-align: center;
+		background-image: url(../img/img2/proBj.png);
+	}
+	.shanDeng table{
+		padding-left: 63px;
+		padding-top: 63px;
+		border-collapse: inherit;
+	}

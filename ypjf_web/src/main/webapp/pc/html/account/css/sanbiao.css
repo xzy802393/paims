@@ -1,0 +1,200 @@
+/*投资记录页样式*/  
+/*借款记录页样式*/
+#accountBox{
+	width:1200px;
+	margin:0 auto;
+	/* padding-top:28px; */
+	padding-bottom: 30px;
+}
+
+#accountBox #aside{
+	float:left;
+	width:140px;
+	height:auto;
+	margin-right:24px;
+	border:1px solid #e8e8e8;
+}
+#accountBox #account{
+	float:right;
+	width:1032px;
+	height:743px;
+	border:1px solid #e8e8e8;
+}
+
+
+.trans-records{
+	width: 988px;
+	margin:0 auto;
+}
+.trans-records .nav{
+	width:100%;
+	height:55px;
+	border-bottom:1px solid #e8e8e8;
+}
+.trans-records .nav span{
+	font-size: 16px;
+	line-height:54px;
+	color: #292929;
+	display: inline-block;
+	margin-right:68px;
+	cursor: pointer;
+}
+.trans-records .nav span:nth-child(1){
+	margin-left:30px;
+}
+.trans-records .nav span.active{
+	color:#ff7d54;
+	border-bottom:2px solid #f06725;
+}
+
+.trans-records .trans-choice{
+	width:933px;
+	height:68px;
+	padding:20px 0;
+	margin:0 auto;
+}
+
+/*散标列表*/
+.trans-records table{
+	width: 933px;
+	max-height:350px;
+	margin:0 auto;
+	margin-bottom: 32px;
+	table-layout: fixed;
+}
+.trans-records table tr{
+	height: 55px;
+	text-align: center;
+	border-bottom:1px solid #e8e8e8;
+}
+.trans-records table tr td{
+	color: #7b7b7b;
+	font-size: 14px;
+	/*line-height:54px;*/
+	height: 54px;
+}
+.trans-records table tr td.btn{
+	color:#ff7d54;
+}
+.trans-records table tr td.btn a{
+	color:#ff7d54;
+}
+.trans-records table tr td.jyz{
+	color:#ff7d54;
+}
+
+.trans-records table tr.title{
+	height: 65px;
+	color: #333;
+	font-size: 14px;
+	background: #fafafa;
+	font-weight: normal;
+	border:none;
+}
+.trans-records table tr.title th{
+	color: #7b7b7b;
+	font-weight: normal;
+}
+.trans-records table tr.title th:nth-child(1){
+	width:72px;
+	height: 54px; 
+	overflow: hidden;
+	text-overflow: ellipsis; 
+	white-space: nowrap;
+}
+.trans-records table tr td:nth-child(1){
+	overflow: hidden;
+	text-overflow: ellipsis; 
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+
+/*散标记录*/
+.trans-records .trans-choice{
+	font-size: 14px;
+}
+.trans-records .trans-choice dl{
+	width:930px;
+	height:34px;
+	margin:0 auto;
+	line-height:34px;
+}
+.trans-records .trans-choice dl dt{
+	float: left;
+	color:#161616;	
+}
+.trans-records .trans-choice dl dd{
+	float: left;
+	color:#7b7b7b;	
+	cursor: pointer;
+	width:100px;
+	text-align: center;
+}
+
+.trans-records .trans-choice dl dd.active{
+	color:#ff7d54;	
+}
+.trans-choice-date-box{
+	text-align: right;
+	/* margin-right: 78px; */
+}
+.trans-choice-date-box .calendarWarp{
+	position: relative;
+	display: inline-block;
+	text-align: left;
+	width:122px;
+	margin:0 10px;
+}
+
+.trans-choice-date-box input[type="text"]{
+	width: 120px;
+	height:30px;
+	outline: none;
+	font-size: 12px;
+	color: #666;
+	cursor: default;
+	border:1px solid #e8e8e8;
+	text-indent:1em;
+}
+.trans-choice-date-box input[type="submit"]{
+	border: none;
+	background: #ff6f50;
+	color: #fff;
+	outline: none;
+	cursor: pointer;
+	width:85px;
+	height:31px;
+	border-radius: 4px;
+}
+
+
+
+/*翻页样式*/
+.page-list{
+	width: 100%;
+	text-align: center;
+}
+.page-list a{
+	display: inline-block;
+	padding: 8px 12px;
+	font-size: 12px;
+	border: 1px solid #aaa;
+	margin-left: 10px;
+	cursor: default;
+}
+.page-list a.active{
+	background: #ff7200;
+	border: none;
+	padding: 9px 13px;
+	color: #fff;
+}
+/* .page-list a.on{
+	color: #aaa;
+} */
+.page-list a:hover{
+	background: #FF7200;
+	border: none;
+	padding: 9px 13px;
+	color: #fff;
+}

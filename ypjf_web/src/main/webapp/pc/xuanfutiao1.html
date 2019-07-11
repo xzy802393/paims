@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* css reset */
+			body,section,h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dd,th,td { 
+				margin: 0;
+				padding: 0; 
+				font-family: "微软雅黑";
+				color:#000;
+			}  
+			body{
+				position: relative;
+			}
+			a{
+				text-decoration: none;
+			}
+			img { 
+				border: none;
+				vertical-align: middle;
+			} 
+			ul {
+				list-style: none; 
+			}
+			.clearFix:after{
+				content:"";
+				display:block;
+				clear:both;
+			}
+			.clearFix{
+				zoom:1;
+			}
+			/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+			/* html { overflow-y: scroll; }
+			html,body{
+				width: 100%;
+				height: 100%;
+				max-width:1920px;
+				min-width:1200px;
+				margin:0 auto;
+				text-align: center;
+			} */
+			
+			.xuanfutiao{
+				width:59px;
+				/* height:290px; */
+				border:1px solid #e5e5e5;
+				margin-left:170px;
+				
+			}
+			li{
+				width:59px;
+				height:57px;
+				border-bottom:1px solid #e5e5e5;
+				text-align: center;
+				background: #fff;
+			}
+			ul li:last-child{
+				border:none;
+			}
+			.yiru{
+				background: url(img/xf-bg.png) repeat-y 0 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="xuanfutiao">
+			<ul>
+				<li id="kf">
+					<div class="now" style="display: block;"><img style="margin-top: 14px;" src="images/xf-kf.png"/></div>
+					<div class="yiruh" style="display: none"><img style="margin-top: 14px;" src="images/xf-kfh.png"/></div>
+					<div class="tip" style="display: none;width:59px;text-align:center;">
+						<a href="#" style="display:inline-block;width:32px;padding-top:10px;font:14px/20px '微软雅黑';color:#fff;" onclick="doyoo.util.openChat('g=10075903');return false;">联系客服</a>
+					</div>
+				</li>
+				<li id="app" style="position: relative;">
+					<div class="now" style="display: block"><img style="margin-top: 11px;" src="images/xf-app.png"/></div>
+					<div class="yiruh" style="display: none"><img style="margin-top: 11px;" src="images/xf-apph.png"/></div>
+					<div class="tip" style="display: none;width:59px;text-align:center;"><a href="#" style="display:inline-block;width:42px;padding-top:18px;font:14px/20px '微软雅黑';color:#fff;">App</a></div>
+					<div class="app" style="position:absolute;right:64px;top:0;display: none;"><img src="images/dyh1.png"/></div>
+				</li>
+				<li id="jisuanqi">
+					<div class="now" style="display: block;"><img style="margin-top: 15px;" src="images/xf-jsq.png"/></div>
+					<div class="yiruh" style="display: none"><img style="margin-top: 15px;" src="images/xf-jsqh.png"/></div>
+					<div class="tip" style="display: none;width:59px;text-align:center;"><a href="#" style="display:inline-block;width:42px;padding-top:18px;font:14px/20px '微软雅黑';color:#fff;">计算器</a></div>
+				</li>
+				<li  id="yijianfankui">
+					<div class="now" style="display: block;"><img style="margin-top: 16px;" src="images/xf-yjfk.png"/></div>
+					<div class="yiruh" style="display: none"><img style="margin-top: 16px;" src="images/xf-yjfkh.png"/></div>
+					<div class="tip" id="yijian" style="display: none;width:59px;text-align:center;"><a href="#" style="display:inline-block;width:32px;padding-top:10px;font:14px/20px '微软雅黑';color:#fff;">意见反馈</a></div>
+				</li>
+				<li id="go-top" >
+					<div class="now" style="display: block;"><img style="margin-top: 17px;"  src="images/xf-zd.png"/></div>
+					<div class="yiruh" style="display: none"><img style="margin-top: 17px;" src="images/xf-zdh.png"/></div>
+					<div class="tip" style="display: none"><img style="margin-top: 17px;" src="images/xf-zdh.png"/></div>
+				</li>
+			</ul>
+		</div>
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8" src="http://lead.soperson.com/20003063/10087323.js"></script>
+		<script src="js/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+            $(function(){
+                var timer = setInterval(function(){
+                    $('#doyoo_panel').css({"top":"-180px","display":"none"});
+                    $('#talk99_message').hide();
+                    $("#doyoo_f_chat").css("cssText", "display:none !important;");
+                },0);
+                setTimeout(function(){
+                    clearInterval(timer);
+                },5000);
+
+            });
+		</script>
+	</body>
+</html>

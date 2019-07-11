@@ -1,0 +1,260 @@
+/* css reset */
+body,section,h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dd,th,td { 
+	margin: 0;
+	padding: 0;  
+}  
+
+a{
+	text-decoration: none;
+}
+img { 
+	border: none;
+	vertical-align: middle;
+} 
+ul {
+	list-style: none; 
+}
+.clearFix:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.clearFix{
+	zoom:1;
+}
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html { overflow-y: scroll; }
+
+
+body{
+	width:100%;
+	text-align: center;
+	color:#000;
+}
+
+
+#content{
+	max-width:1920px;
+	min-width:1210px;
+	margin:0 auto;
+}
+#content .top{
+	width:100%;
+	height:480px;
+	background: url(../img/topBg.jpg) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+#content .center{
+	width:100%;
+	height:1615px;
+	background: url(../img/zhongBg.jpg) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+#content .bottom{
+	width:100%;
+	height:665px;
+	background: url(../img/bottomBg.jpg) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+
+
+#content .top .banner{
+	width:1200px;
+	height:480px;
+	margin:0 auto;
+	padding-top:136px;
+}
+#content .top .banner .title{
+	width:551px;
+	height:264px;
+	padding-left:20px;
+}
+#content .top .banner .title img{
+	width:551px;
+	height:264px;
+}
+#content .top .banner .text{
+	width:508px;
+	margin:0 auto;
+	font:16px/20px "微软雅黑";
+	padding-top:132px;
+	color:#4d987e;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+
+#content .center .touzi{
+	width:100%;
+	text-align: center;
+	/* height:628px; */
+	/* padding-top:60px; */
+}
+#content .center .touzi .miaoshu{
+	background: url(../img/touziTitle.png) no-repeat 0 0;
+	background-size:100% 100%;
+	width:628px;
+	height:85px;
+	margin:0 auto;
+	font:28px/85px "微软雅黑";
+	color:#fff;
+	letter-spacing: 6px;
+}
+
+
+#content .center .touzi .time{
+	font:18px/34px "微软雅黑";
+	letter-spacing: 1px;
+	color:#fff;
+	padding-top:20px;
+	width:736px;
+	margin:0 auto;
+}
+
+#content .center .hongbao{
+	width:1312px;
+	/* height:953px; */
+	margin:0 auto;
+}
+
+
+#content .center .hongbao .hblist{
+	width:1246px;
+	/* height:586px; */
+	margin:0 auto;
+}
+/* 红包列表 */
+#content .center .hongbao .hblist .list1{
+	width:870px;
+	height:392px;
+	margin:0 auto;
+	padding-top:50px;
+}
+#content .center .hongbao .hblist .list1 .list{
+	float:left;
+	width:50%;
+	height:392px;
+}
+#content .center .hongbao .hblist .list1 .list .chujie{
+	display: block;
+	width:381px;
+	height:392px;
+}
+#content .center .hongbao .hblist .list1 .list img{
+	display: block;
+	width:381px;
+	height:392px;
+	margin:0 auto;
+}
+#content .center .hongbao .hblist .list2{
+	width:1200px;
+	height:392px;
+	margin:0 auto;
+	padding-top:58px;
+}
+#content .center .hongbao .hblist .list2 .list{
+	float:left;
+	width:33.33%;
+	height:392px;
+}
+#content .center .hongbao .hblist .list2 .list .chujie{
+	display: block;
+	width:381px;
+	height:392px;
+}
+#content .center .hongbao .hblist .list2 .list img{
+	display: block;
+	width:381px;
+	height:392px;
+	margin:0 auto;
+}
+#content .center .hongbao .hblist .list3{
+	width:1200px;
+	height:392px;
+	margin:0 auto;
+	padding-top:56px;
+}
+#content .center .hongbao .hblist .list3 .list{
+	float:left;
+	width:33.33%;
+	height:392px;
+}
+#content .center .hongbao .hblist .list3 .list .chujie{
+	display: block;
+	width:381px;
+	height:392px;
+}
+#content .center .hongbao .hblist .list3 .list img{
+	display: block;
+	width:381px;
+	height:392px;
+	margin:0 auto;
+}	
+
+
+
+#content .center .zhuce{
+	width:391px;
+	height:85px;
+	margin:0 auto;
+	padding-top:20px;
+	/* margin-top:-20px; */
+}
+#content .center .zhuce h1{
+	width:391px;
+	height:85px;
+	background:url(../img/zhuce.png) no-repeat center;
+	background-size:100% 100%;
+}
+#content .center .zhuce h1 a{
+	display: inline-block;
+	width:391px;
+	height:85px;
+	text-align: center;
+	color:#fff;
+	letter-spacing: 6px;
+	font:28px/85px "微软雅黑";
+}
+
+
+
+
+
+#content .bottom .box{
+	width:997px;
+	height:541px;
+	margin:0 auto;
+	padding-top:50px;
+}
+#content .bottom .active{
+	
+	width:997px;
+	height:541px;
+	background: url(../img/textBg.png) no-repeat 0 0;
+	margin:0 auto;
+}
+#content .bottom .title{
+	width:100%;
+	text-align: center;
+
+}
+	
+#content .bottom .title .miaoshu{
+	font:28px/28px "微软雅黑";
+	color:#fff;
+	letter-spacing: 4px;
+	text-align: center;
+	padding-top:56px;
+	padding-bottom:90px;
+}
+#content .bottom .active .text{
+	width:800px;
+	margin:0 auto;
+}
+#content .bottom .active p{
+	font:bold 18px/40px "微软雅黑";
+	text-align: left;
+	color:#c26f29;
+	letter-spacing: 2px;
+	/* padding-bottom:10px; */
+}

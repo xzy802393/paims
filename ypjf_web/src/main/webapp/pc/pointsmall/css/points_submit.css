@@ -1,0 +1,379 @@
+.mall{
+	width: 100%;
+	height: auto;
+}
+.banner{
+	width: 100%;
+	height: 375px;
+	background: url(../img/banner-jiuqu.jpg) no-repeat center;
+	position: relative;
+	margin-top: -2px;
+}
+.banner .center{
+	position: absolute;
+	left: 50%;
+	margin-left: -600px;
+}
+.login-box,.login-ok-box{
+	position: absolute;
+	top: 58px;
+	right: 0px;	
+	width: 280px;
+	height: 250px;
+	background: rgba(102,102,102,.6);
+	z-index: 31;
+	text-align: center;
+}
+.login-box h4{
+	margin-top: 38px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: normal;
+}
+.login-box .rate{
+	color: #ff682c;
+	font-size: 34px;
+	line-height: 60px;
+	margin-top: 10px;
+	font-weight: bold;
+}
+.login-box .active{
+	width: 210px;
+	height: 38px;
+	text-align: center;
+	line-height: 38px;
+	background: #ff682c;
+	border-radius: 2px;
+    margin: 10px auto;
+}
+.login-box .active a{
+	font-size: 18px;
+	color: #fff;
+}
+.login-box .login-btn{
+	margin-left: 100px;
+    color: #fff;
+}
+.login-box .login-btn a{
+	color: #ff682c;
+}
+.login-ok-box{
+	display: block;
+}
+.login-ok-box h4{
+	margin-top: 38px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: normal;
+}
+.login-ok-box div.yue p:first-child{
+	font-size: 18px;
+    color: #fff;
+    margin-top: 26px;
+    line-height: 30px;
+    
+}
+.login-ok-box div.yue p:last-child{
+	font-size: 14px;
+    color: #666;  
+}
+.login-ok-box div.yue p:last-child span{
+	font-size: 30px;
+    color: #ff682c;
+    font-weight: bold;
+    line-height: 44px;
+}
+.login-ok-box .deposit-btn{
+	text-align: right;
+	font-size: 16px;
+	padding-right: 30px;
+}
+.login-ok-box .deposit-btn a{
+	color: #FF8601;
+}
+.login-ok-box .myaccount a{
+	display: block;
+    width: 204px;
+    height: 37px;
+    background: #ff682c;
+    line-height: 37px;
+    color: #fff;
+    font-size: 20px;
+    margin: 21px auto;
+    border-radius: 3px;
+}
+/**主体提交部分*/
+.content{
+	width: 100%;
+    height: auto;
+    background: #F7F7F7;
+    position: relative;
+    padding-bottom: 20px;
+}
+.main{
+	width: 70%;
+	height: auto;
+	margin: 20px auto;
+	background: #FFFFFF;
+	padding: 2rem;
+}
+.navbar-text{
+	text-align: left;
+	width: 100%;
+	height: auto;
+	background: #E1E1E1;
+	display: inline-block;
+}
+.navbar-text>p{
+	width: 80%;
+	font-size: 15px;
+	color: #6D6D6D;
+	margin: 10px auto;
+}
+.right{
+	color: #FF7F01;
+}
+.p1:after{
+   display:block;
+   clear:both;
+   content:"";
+   visibility:hidden;
+   height:0;
+		}
+.p1{
+   	zoom:1;
+   	line-height: 2rem;
+   }
+ .right{
+   	cursor: pointer;
+   }
+.defaultDZ{
+   	border: 2px solid #FF7F01;
+   	padding: 0 10px;
+   	margin: 10px 0px;
+   	cursor: pointer;
+   }
+.peisong{
+	border-top:1px solid #DDDDDD ;
+	border-bottom:1px solid #DDDDDD ;
+	display: inline-block;
+	width: 100%;
+	height: auto;
+}
+
+.peisong>ul>li{
+	float: left;
+	width: 150px;
+	height: 45px;
+	margin: 15px;
+	border: 1px solid #DDDDDD;
+	text-align: center;
+	line-height: 47px;
+	cursor: pointer;
+}
+/*.peisong>ul>li:first-child{
+	border: none;
+	background:url("../img/bg-dianji.png")no-repeat;
+	background-size: 100%;
+}*/
+.peisong>ul>.active{
+	border: none;
+    background: url(../img/bg-dianji.png)no-repeat;
+    background-size: 100%;  
+}
+.lipin{
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	border: 1px solid #DDDDDD;
+}
+.lipin ul li{
+	float: left;
+	text-align: center;
+}
+.lipin_hand:after{
+	display:block;
+	clear:both;
+	content:"";
+	visibility:hidden;
+	height:0;
+}
+.lipin_hand{
+	zoom:1;
+	}
+.lipin_hand>ul{
+	width: 100%;display: table;
+	}
+.lipin_hand>ul>li{
+	width: 20%;
+	line-height: 50px;
+	color: #000000;
+	}
+.lipin_hand>ul>li:nth-child(1){
+	width: 40%;
+	line-height: 50px;
+	}
+	
+.layui-form-radio {
+    line-height: 20px;
+    cursor: pointer;
+    font-size: 0;
+    margin: 0;
+    padding-right: 0;
+}
+.layui-form-radio i {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 15px;
+    color: #FF7F01;
+}
+.layui-form-radio i:hover{
+	color: #FF7F01;
+}
+
+.lipin .lipinxiaoji{
+	border-top: #DDDDDD 1px solid;
+	border-bottom: #DDDDDD 1px dotted;
+}
+.lipin .lipinxiaoji>ul{
+	width: 100%;
+	display: flex;
+}
+.lipin .lipinxiaoji>ul>li{
+	width: 20%;
+	line-height: 105px;
+}
+.lipin .lipinxiaoji>ul>li:first-child{
+	width: 40%;
+}
+.layui-btn-warm {
+    background-color: #FF7F01;
+    width: 30%;
+    border-radius: 5px;
+}
+.lipin .lipinxiaoji>ul>li:first-child>div{
+	display: inline-block;
+	border: #DDDDDD 1px solid;
+	padding: 0px 25px;
+	margin: 10px;
+}
+.baonangxiaoji p{
+	line-height: 20px;
+}
+.layui-form-item span{
+	color: #FF7F01;
+}
+.lipin .lipinxiaoji>ul>li:nth-child(2)>.choice>span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 15px;
+    border: 1px solid #BFBFBF;
+    color: #000;
+    cursor: pointer;
+}
+.lipin .lipinxiaoji>ul>li:nth-child(2)>.choice>span>input{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.lipin .lipinxiaoji>ul>li:nth-child(3),li:nth-child(4){
+	color: #FF7F01;
+}
+.defaultDZ2{
+	border: none;
+	margin-left: 73px;
+}
+			/*灰色遮罩层*/
+			.fade{
+			    width:100%;
+			    height:100%;
+			    background:rgba(0, 0, 0, 0.5);
+			    position: fixed;
+			    left: 0;
+			    top: 0;
+			    z-index: 99;
+			}
+			/*弹出层*/ 
+			.succ-pop{
+			    position: fixed;
+			    left: 50%;
+			    top: 50%;
+			    transform:translateX(-50%) translateY(-50%);
+			    z-index: 999;
+			    
+			    }   
+			#mytable {   
+			width: 900px;
+			text-align: center;   
+			padding: 0;   
+			margin: 0;   
+			}   
+			#mytable th {   
+			color: #000;   
+			border-bottom: 1px solid #DCD8D8;   
+			border-top: 1px solid #DCD8D8;   
+			letter-spacing: 2px;   
+			/*text-transform: uppercase;*/   
+			padding: 6px;   
+			background: #DCD8D8;   
+			} 
+			#mytable tr{
+				line-height: 60px;
+			}  
+			#mytable td {   
+			border-bottom: 1px solid #DCD8D8;   
+			background: #fff;   
+			font-size:14px;   
+			padding:6px;   
+			color: #000;   
+			} 
+			#mytable td:last-child span{
+				padding: 4px;
+				color: #FF7F01;
+				cursor:pointer;
+			}  
+
+/*================城区选择样式===================*/
+#address-list input[type=radio]{
+	display: inline-block;
+	vertical-align: middle;
+}
+.address-choice{
+	display: flex;
+}
+
+.form-group{
+	display: inline-block;
+    width: 130px;
+}
+.address-choice select{
+	display: block;
+    height: 38px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+.form-group .sr-only{
+	position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+.layui-layer-content{
+	padding-top: 60px;
+	/*margin-left: 80px;*/
+}
+.layui-layer-content .layui-form{
+	padding-left: 100px;
+}

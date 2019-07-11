@@ -1,0 +1,182 @@
+/* css reset */
+body,section,h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dd,th,td { 
+	margin: 0;
+	padding: 0;  
+}  
+
+a{
+	text-decoration: none;
+}
+img { 
+	border: none;
+	vertical-align: middle;
+} 
+ul {
+	list-style: none; 
+}
+.clearFix:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.clearFix{
+	zoom:1;
+}
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html { overflow-y: scroll; }
+
+
+
+
+
+
+
+#content{
+	/* min-width:1200px; */
+	max-width:1920px;
+	margin:0 auto;
+	
+}
+
+/* header */
+#content .header{
+	position: relative;
+	background: url(../img/header.png) no-repeat 0 0;
+  background-size: 100% 100%;
+    width: 100%;
+    height: 1490px;
+    text-align: center;
+}
+#content .header img{
+	margin-top:50px;
+	width:80%;
+	height:450px;
+}
+#content .header .text{
+	position: absolute;
+	left:40%;
+	top:28%;
+	font:18px/34px "微软雅黑";
+	width: 38%;
+	height:100px;
+	text-align: left;
+	color: #fff;
+	font-weight: 350;
+}
+
+/* bodyer */
+#content .bodyer{
+	position: relative;
+	background: url(../img/body.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 650px;
+    text-align: center;
+}
+#content .bodyer #invite {
+    width: 60%;
+    margin: 0 auto;
+    overflow: hidden;
+	
+}
+#content .bodyer .press{
+	background: url(../img/flow.png) no-repeat;
+    background-size: 100% 100%;
+    width: 430px;
+    height: 84px;
+    margin: 0px auto;
+}
+#content .bodyer .press h1{
+	font:bold 36px/80px "微软雅黑";
+    color: #fff;
+    letter-spacing: 15px;
+    text-align: center;
+}
+
+#content .bodyer .invite_list{
+	zoom: 1;
+    margin: 40px auto;
+    height: 360px;
+	width:90%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+#content .bodyer .invite_list li{
+	display: inline-block;
+	width: 134px;
+	height: 338px;
+}
+#content .bodyer .invite_list li h1 {
+    line-height: 28px;
+    margin: 20px 0;
+    font-size: 17px;
+	color:#000;
+}
+
+#content .bodyer .invite_list li h1:nth-child(1) {
+    color: #C7A65F;
+}
+#content .bodyer .invite_list li h1:nth-child(2) {
+    font-size:16px;
+	height:74px;
+}
+ #content .bodyer .invite_list li h1:last-child {
+     font-size:16px;
+ }  
+#content .bodyer .invite_list li:nth-child(2) img, li:nth-child(4) img, li:nth-child(6) img {
+    margin-top: 189px;
+}
+
+#content .bodyer .now{
+	width:100%;
+	height:60px;
+	text-align: center;
+}
+#content .bodyer .now h1{
+	background: url(../img/now.png) no-repeat 0 0;
+	width:286px;
+	margin:2px auto;
+	letter-spacing: 15px;
+	font:bold 24px/60px "微软雅黑";
+	
+}
+#content .bodyer .now h1 a{
+	color:#fff;
+   
+}
+
+/* footer */
+#content .footer{
+	position: relative;
+	background: url(../img/footer.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 790px;
+}
+#content .footer .rules{
+	width:100%;
+	text-align: center;
+}
+#content .footer .rules h1{
+	background: url(../img/rules.png) no-repeat 0 0;
+	width:438px;
+	height:90px;
+	margin:0px auto;
+	letter-spacing: 15px;
+	font:bold 36px/78px "微软雅黑";
+	color:#fff;
+}
+#content .footer .ruleText{
+	width: 48%;
+	height:450px;
+	margin: 50px auto;
+	overflow: hidden;
+}
+#content .footer .ruleText p {
+	font-size: 18px;
+    line-height: 35px;
+    letter-spacing: 4px;
+    color: #3B3B3B;
+}
+    

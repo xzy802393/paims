@@ -1,0 +1,180 @@
+<#escape x as x?html>
+
+<!--<script type="text/javascript" src="${ctx}/js/project/project.js"></script>-->
+
+<script type="text/javascript">
+
+function deleteProject(){
+	var id=jQuery("#id").val();
+	if(!id||id==""){
+		myalert("请选择你要删除的记录");
+		return;
+	}else{
+		var _url="${ctx}/project/delete?id="+id;
+		var listurl="${ctx}/project/list";
+		mydelete(_url,listurl);
+	}
+}
+
+
+</script>
+
+
+	
+
+<!-- /.page-header -->
+
+<div class="row">
+    <div class="col-xs-12">
+<div class="operate panel panel-default" style="height:65px;">
+	<div class="panel-body">
+		<div class="pull-left">
+ <form class="form-horizontal" name="searchForm" id="searchForm" action="${ctx}/system/useraccounthistory/repaymentDetailList" role="form">
+            <input type="hidden" name="pageIndex" id="pageIndex" value="${(returnDatas.page.pageIndex)!'1'}"/>
+            <input type="hidden" name="sort" id="page_sort" value="${(returnDatas.page.sort)!'desc'}"/>
+            <input type="hidden" name="order" id="page_order" value="${(returnDatas.page.order)!'id'}"/>
+	 		<label for="search_projectName"><b>项目名称:</b></label>
+	 		<input type="text" id="search_projectName"  name="projectName" placeholder="请填写项目名称"  value="${(returnDatas.queryBean.projectName)!''}">
+			 <label for="search_realName"><b>用户姓名:</b></label>
+			 <input type="text" id="search_realName"  name="realName" placeholder="请填写用户名称"  value="${(returnDatas.queryBean.realName)!''}">
+             <label for="search_code"><b>项目ID:</b></label>
+             <input type="text" id="search_code"  name="code" placeholder="请填写项目ID"  value="${(returnDatas.queryBean.code)!''}">
+             <label for="search_phone"><b>手机:</b></label>
+             <input type="text" id="search_phone"  name="phone" placeholder="请填写手机号码"  value="${(returnDatas.queryBean.phone)!''}">
+             <label for="search_usercode"><b>用户ID:</b></label>
+             <input type="text" id="search_usercode"  name="usercode" placeholder="请填写用户ID"  value="${(returnDatas.queryBean.usercode)!''}">
+	 <a  onclick="$('#pageIndex').val(1)"  href="javascript:mySubmitForm('searchForm');"
+				class="btn btn-purple btn-sm">
+					查询 <i class="ace-icon fa fa-search icon-on-right bigger-10"></i>
+				</a>
+
+</form>
+		</div>
+		<div class="pull-right">
+			
+		</div>
+	</div>
+</div>
+
+   <div class="row">
+            <div class="col-xs-12">
+	            <!--start_export-->
+                <table id="listDataTable" border="1" class="table table-striped table-bordered table-hover">
+                    <!--end_no_export-->
+                    <!--first_start_export-->
+                    <thead>
+                    <tr>
+                        <!--first_start_no_export
+                        <th class="center">
+                            <label class="position-relative">
+                                <input class="ace" type="checkbox">
+                                <span class="lbl"></span>
+                            </label>
+                        </th>
+                        <th>操作</th>-->
+                        <!--first_end_no_export-->
+						<th id="th_realName" >真实姓名</th>
+						<th>手机号</th>
+						<th id="th_projectName" >项目名称</th>
+                        <th id="th_projectId" >项目ID</th>
+						<th id="th_deadLine">项目期数</th>
+						<th id="th_money" >还款金额</th>
+						<th id="th_projectStatus">项目状态</th>
+						<th id="th_createTime" >还款时间</th>
+						<th id="th_status" >还款状态</th>
+						<th id="th_tradeNo" >交易号</th>
+
+                    </tr>
+                    </thead>
+                    <!--first_end_export-->
+
+                    <!--start_export-->
+                    <tbody>
+           
+				   <#if (returnDatas.data??)&&(returnDatas.data?size>0)>
+					 <#list returnDatas.data as _data>
+
+                            <tr class="">
+								<!--start_no_export
+                                <td class="center">
+                                    <label class="position-relative">
+                                        <input name="check_li" value="${_data.id}" class="ace" type="checkbox">
+                                        <span class="lbl"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <div class="hidden-sm hidden-xs btn-group hidden-lg">
+
+                                    </div>
+                                    <div class="hidden-md ">
+                                        <div class="inline position-relative">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>-->
+                                <!--end_no_export-->
+
+							<td >
+								${(_data.realName)!''}
+							</td>
+							<td >
+								${(_data.phoneNumber)!''}
+							</td>
+							<td >
+								${(_data.projectName)!''}
+							</td>
+                            <td >
+                                ${(_data.code)!''}
+                            </td>
+							<td>
+								${(_data.deadLine)!''}
+							</td>
+							<td >
+								${(_data.money)!0}
+							</td>
+							<td>
+								<#if _data.projectStatus??>
+									<#if _data.projectStatus == 3>
+										还款中
+										<#elseif _data.projectStatus == 4>
+											已结束
+									</#if>
+								</#if>
+							</td>
+								<td >
+									<!--日期型-->
+									${((_data.createtime)?string('yyyy-MM-dd HH:mm:ss'))!''}
+								</td>
+							<td >
+								<#if _data.status??>
+									<#if _data.status == 1>
+										处理中
+										<#elseif _data.status == 2>
+											成功
+											<#elseif _data.status == 3>
+												失败
+
+									</#if>
+								</#if>
+							</td>
+
+	  						 <td >
+		  						 ${(_data.tradeNo)!''}
+	  						 </td>
+						</tr>
+					</#list>
+					 </#if>
+                    </tbody>
+                </table>
+                <!--end_export-->
+            </div>
+            <!-- /.span -->
+        </div>
+        <#if returnDatas.page??>	
+            <@h.pagetoolbar page=returnDatas.page formId='searchForm' />
+         </#if>
+    </div>
+</div>
+<!-- /.main-container -->
+</#escape>

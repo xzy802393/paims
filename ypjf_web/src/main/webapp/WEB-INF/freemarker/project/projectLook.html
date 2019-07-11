@@ -1,0 +1,394 @@
+<#escape x as x?html>
+
+	<SCRIPT type="text/javascript">
+        <!--
+
+        jQuery(document).ready(function(){
+            //回选 下拉框
+            //jQuery("#search_state option[value='是']").prop("selected",true);
+
+			/**/
+            $('.date-picker').datepicker({
+                autoclose: true,
+                format: 'yyyy-mm-dd',
+                language: 'zh-CN'
+                //,todayBtn: 'linked',
+                //startDate:new Date(2014,10,27),
+                //endDate:'+60d',
+                //startDate: '+1d',
+            }).next().on(ace.click_event, function(){
+                $(this).prev().focus();
+            });
+
+
+            //编辑时元素的默认
+            //是否信任专享
+            var isNewCode = $('#isNew').attr('code') ;
+            $('#isNew').val(isNewCode) ;
+            //是否推荐
+            var isRecommendCode = $('#isRecommend').attr('code') ;
+            $('#isRecommend').val(isRecommendCode) ;
+
+
+            //投资期限
+//            $.ajax({
+//                url : ctx+"/system/projectdeadline/list/json",
+//                type : "post",
+//                dataType : "json",
+//                success : function(_json) {
+//                    if (_json.status == "error") {
+//                        return;
+//                    }
+//                    //先清除原来的数据
+//                    $("#deadLine").empty();
+//                    jQuery(_json.data).each(function (i, _obj) {
+//                    });
+//                }
+//            });
+            //借款人
+            $.ajax({
+                url : ctx+"/system/borrower/list/json",
+                type : "post",
+                dataType : "json",
+                success : function(_json) {
+                    if (_json.status == "error") {
+                        return;
+                    }
+                    //先清除原来的数据
+                    jQuery(_json.data).each(function (i, _obj) {
+                        if(_obj.id == $('#inputBorrowerId').attr('code')){
+                            $('#inputBorrowerId').val(_obj.legalPerson) ;
+						}
+                    });
+                }
+            });
+            //还款方式
+            $.ajax({
+                url : ctx+"/system/repayway/list/json",
+                type : "post",
+                dataType : "json",
+                success : function(_json) {
+                    if (_json.status == "error") {
+                        return;
+                    }
+                    console.log(_json) ;
+                    //先清除原来的数据
+                    $("#repayment").empty();
+                    jQuery(_json.data).each(function (i, _obj) {
+                        if (_obj.id == $('#inputRepayment').attr('code')){
+                            $('#inputRepayment').val(_obj.repay) ;
+						}
+                    });
+                }
+            });
+//            //分类
+//            $.ajax({
+//                url : ctx+"/system/projectcategory/list/json",
+//                type : "post",
+//                dataType : "json",
+//                success : function(_json) {
+//                    if (_json.status == "error") {
+//                        return;
+//                    }
+//                    console.log(_json) ;
+//                    //先清除原来的数据
+//                    $("#categoryId").empty();
+//                    jQuery(_json.data).each(function (i, _obj) {
+//                        jQuery("#categoryId").append("<option value='" + _obj.id + "'>" + _obj.name + "</option>");
+//                    });
+//                    jQuery("#categoryId").val($("#inputCategoryId").val()) ;
+//                }
+//            });
+
+            //多图上传初始化
+            initimages("add_promise_div","addPgod");
+        });
+
+        /**
+         * 上传图片
+         */
+        function lunboImages(){
+            jQuery("#filed").click();
+        }
+
+        $(document).on("change", "#filed", function() {
+            //...
+
+            $.ajaxFileUpload({
+                url : '/yingpu/adminFileUpload',
+                secureuri : false,
+                fileElementId : 'filed',
+                dataType : 'text',
+                data : {},
+                success : function(data, status) {
+
+                    jQuery("#businessLicenseI").attr('src',data);
+                    jQuery("#businessLicenseI").attr('value',data);
+                    jQuery("#businessLicense").attr('value',data);
+                },
+                error : function(data, status, e) {
+                    myalert("上传出错");
+                }
+            })
+
+            return false;
+        });
+
+
+        //-->
+	</SCRIPT>
+
+
+
+	<div class="row">
+		<div class="col-xs-12">
+			<form class="form-horizontal" id="validation-form" method="POST" novalidate="novalidate" action="${ctx}/system/project/update" >
+				<input type="hidden" id="id" name="id" value="${(returnDatas.data.id)!''}"/>
+				<!--input  hidden  End-->
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="name" >项目名称*</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<input name="name" datatype="*" readonly="false"   nullmsg="项目名称不能为空" class="col-xs-12 col-sm-6" id="name" value="${(returnDatas.data.name)!''}"  type="text" />
+						</div><div class="help-block" for="name"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right"  >分类</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<input   class="col-xs-12 col-sm-6"  readonly="false" id="inputCategoryId" value="${(returnDatas.data.categoryName)!''}"  type="text" />
+						</div><div class="help-block" for="categoryId"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right"  >借款人</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<input  readonly="false" class="col-xs-12 col-sm-6" id="inputBorrowerId" code="${(returnDatas.data.borrowerId)!''}"  type="text" />
+						</div><div class="help-block" for="categoryId"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="isNew" >是否新人专享</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<input  readonly="false" class="col-xs-12 col-sm-6" id="isNew" code="${(returnDatas.data.isNew)!''}"  type="text" />
+						</div><div class="help-block" for="isNew"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="isRecommend" >是否推荐</label>
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="clearfix">
+							<input  readonly="false" class="col-xs-12 col-sm-6" id="isRecommend" code="${(returnDatas.data.isRecommend)!''}"  type="text" />
+                        </div><div class="help-block" for="isRecommend"></div>
+                    </div>
+                </div>
+                <div class="space-2"></div>
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="repayRate" >还款年化率*</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<input name="repayRate" readonly="false" class="col-xs-12 col-sm-6" id="repayRate" value="${(returnDatas.data.repayRate * 100)!'0'}"  type="text" datatype="*"   nullmsg="还款年利率不能为空" />%
+						</div><div class="help-block" for="estimatedAnnualRate"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="estimatedAnnualRate" >预计年化率*</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<input name="estimatedAnnualRate" readonly="false" class="col-xs-12 col-sm-6" id="estimatedAnnualRate" value="${(returnDatas.data.estimatedAnnualRate * 100)!'0'}"  type="text" datatype="*"   nullmsg="预计年化率不能为空"/>%
+						</div><div class="help-block" for="estimatedAnnualRate"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="totalAmount" >项目总金额*</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<input name="totalAmount" readonly="false" datatype="*"   nullmsg="项目总金额不能为空" class="col-xs-12 col-sm-6" id="totalAmount" value="${(returnDatas.data.totalAmount)!''}"  type="text" />
+						</div><div class="help-block" for="totalAmount"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="financingAmount" >项目剩余金额*</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<input name="financingAmount" readonly="false" datatype="*"   nullmsg="项目总金额不能为空" class="col-xs-12 col-sm-6" id="financingAmount" value="${(returnDatas.data.financingAmount)!''}"  type="text" />
+						</div><div class="help-block" for="totalAmount"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="inputDeadLine" >投资期限</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<input readonly="false" class="col-xs-12 col-sm-6" id="inputDeadLine" value="${(returnDatas.data.deadLine)+'个月'!''}"  type="text" />
+						</div><div class="help-block" for="deadLine"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="code" >项目编号*</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<input name="code" datatype="*"   nullmsg="项目编号不能为空" class="col-xs-12 col-sm-6" id="code" value="${(returnDatas.data.code)!''}"  type="text" />
+						</div><div class="help-block" for="code"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="inputRepayment" >还款方式</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<input readonly="false" class="col-xs-12 col-sm-6" id="inputRepayment" code="${(returnDatas.data.repayment)!''}"  type="text" />
+						</div><div class="help-block" for="repayment"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+				<!--日期型-->
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="startTime" >项目上线时间*</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<div class="input-group col-xs-12 col-sm-6">
+								<input name="startTime" datatype="*"   nullmsg="项目上线时间不能为空"  class="form-control "  id="startTime" readonly="false" value="${(returnDatas.data.startTime)!''}"  type="text" />
+								<span class="input-group-addon">
+								<i class="fa fa-calendar bigger-110"></i>
+							</span>
+							</div>
+
+						</div><div class="help-block" for="startTime"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+				<!--日期型-->
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="endTime" >项目流标时间*</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<div class="input-group col-xs-12 col-sm-6">
+								<input name="endTime" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control"  id="endTime" readonly="false" value="${(returnDatas.data.endTime)!''}"  type="text" />
+								<span class="input-group-addon">
+								<i class="fa fa-calendar bigger-110"></i>
+							</span>
+							</div>
+
+						</div><div class="help-block" for="startTime"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+				<!--日期型-->
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="enoughTime" >项目满标时间*</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<div class="input-group col-xs-12 col-sm-6">
+								<input name="enoughTime" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control"  id="enoughTime" readonly="false" value="${(returnDatas.data.enoughTime)!''}"  type="text" />
+								<span class="input-group-addon">
+								<i class="fa fa-calendar bigger-110"></i>
+							</span>
+							</div>
+
+						</div><div class="help-block" for="startTime"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+				<!--日期型-->
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="releaseTime" >放款时间*</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<div class="input-group col-xs-12 col-sm-6">
+								<input name="endTime" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control"  id="releaseTime" readonly="false" value="${(returnDatas.data.releaseTime)!''}"  type="text" />
+								<span class="input-group-addon">
+								<i class="fa fa-calendar bigger-110"></i>
+							</span>
+							</div>
+
+						</div><div class="help-block" for="startTime"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="limitMoney" >起投金额*</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<input name="limitMoney" datatype="*"   nullmsg="起投金额不能为空" class="col-xs-12 col-sm-6" id="limitMoney" value="${(returnDatas.data.limitMoney)!''}"  type="text" />
+						</div><div class="help-block" for="limitMoney"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="images" >实景图</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<!--<input name="images" class="col-xs-12 col-sm-6" id="images" value="${(returnDatas.data.images)!''}"  type="text" />-->
+							<ul class="addPromise_photo promise"  id="addPgod" style="width:97%;overflow:hidden;margin:0 auto;margin-top:8px;margin-left:38px">
+								<input type="file" id="filedTmpImgs" class="filedImgs" name="filed" style="display:none">
+
+
+								<input name="images" class="col-xs-12 col-sm-6 imagesVal"  id="images" value="${(returnDatas.data.images)!''}" style="display:none"  type="text" />
+								<li class="addgoods_photo_a" style="float:left;width:100px;height:150px;border:1px solid #e6e6e6;padding:5px 16px 0px 16px;margin-right:20px">
+									<div class="move_Box" style="width:40px;"></div>
+									<div class="addgoods_photo_img">
+										<img  class="photoImgsVal"/>
+									</div>
+									<ul class="addgoods_photo_button">
+										<li><div class="layui-btn layui-btn-primary layui-btn-mini promise_edit" photo_no="1" style="float: left;width:46px;height:25px;line-height:25px;font-size:12px;margin-left: -8px;">上传</div>
+										</li>
+										<li class="button_float promise_deleteBt"><div class="layui-btn layui-btn-primary layui-btn-mini promise_delete" photo_no="1" style="float: left;width:46px;height:25px;line-height:25px;font-size:12px;background:#ccc;margin-left: -12px;">删除</div></li>
+									</ul>
+								</li>
+
+								<div id="add_promise_div">
+
+								</div>
+
+							</ul>
+						</div><div class="help-block" for="images"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="businessLicenseI" >企业执照</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<img  name="businessLicenseI" style="height: 200px;width: 200px;" id="businessLicenseI" value="${(returnDatas.data.businessLicense)!''}" src="${(returnDatas.data.businessLicense)!''}">
+						</div><div class="help-block" for="businessLicense"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+				<div class="form-group">
+					<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="descr" >文字简介</label>
+					<div class="col-xs-12 col-sm-9">
+						<div class="clearfix">
+							<textarea name="descr" rows="10" class="col-xs-12 col-sm-6" id="descr"  >${(returnDatas.data.descr)!''}</textarea>
+						</div><div class="help-block" for="descr"></div>
+					</div>
+				</div>
+				<div class="space-2"></div>
+			</form>
+			<div class="wizard-actions">
+			<button class="btn btn-success btn-info" data-last="Finish" onclick="submit()" style="float: left;margin-left: 24.4%;">
+				保存
+			</button>
+			<button id="submit" style="display: none"  class="btn btn-success btn-info" data-last="Finish" onclick="commonUpdateForm('validation-form','${ctx}/system/project/list');" style="float: left;margin-left: 25.4%;">
+				保存
+			</button>
+			<!--<button class="btn btn-success btn-info" data-last="Finish" onclick="updateLunbo(${(returnDatas.data.position)!''})" style="float: left;margin-left: 25.4%;">
+				保存
+			</button>-->
+		</div>
+		</div>
+	</div>
+
+
+</#escape>

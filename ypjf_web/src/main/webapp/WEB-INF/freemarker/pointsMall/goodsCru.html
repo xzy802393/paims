@@ -1,0 +1,228 @@
+<#escape x as x?html>
+<script type="text/javascript" src="${ctx}/js/DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript" charset="utf-8" src="${ctx}/js/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="${ctx}/js/ueditor/ueditor.all.min.js"> </script>
+	<!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+	<!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+	<script type="text/javascript" charset="utf-8" src="${ctx}/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+<SCRIPT type="text/javascript">
+<!--
+
+jQuery(document).ready(function(){
+    //$("#test").html("${(returnDatas.data.detail)!''}")
+	//回选 下拉框
+	//jQuery("#search_state option[value='是']").prop("selected",true);
+	
+	/*
+	$('.date-picker').datepicker({
+		    autoclose: true,
+		    format: 'yyyy-mm-dd',
+		    language: 'zh-CN'
+		    //,todayBtn: 'linked',
+		    //startDate:new Date(2014,10,27),
+			//endDate:'+60d',
+		    //startDate: '+1d',
+		}).next().on(ace.click_event, function(){
+			$(this).prev().focus();
+		});
+	*/
+	$('.date-picker').datepicker({
+    autoclose: true,
+    format: 'yyyy-mm-dd',
+    language: 'zh-CN',
+    todayBtn: 'linked',
+    startDate:new Date(2014,10,27),
+    endDate:'+6000d',
+    startDate: '-6000d',
+}).next().on(ace.click_event, function(){
+    $(this).prev().focus();
+});
+	if($('#goodsType').attr('code')=='1'){
+		$("#goodsType option[value='1']").prop("selected",true);
+	}	if($('#goodsType').attr('code')=='2'){
+        $("#goodsType option[value='2']").prop("selected",true);
+    }if($('#goodsType').attr('code')=='3'){
+        $("#goodsType option[value='3']").prop("selected",true);
+    }
+    if($('#goodsType').attr('code')=='4'){
+        $("#goodsType option[value='4']").prop("selected",true);
+    }
+
+	});
+
+//富文本编辑框
+var ue = UE.getEditor('editor');
+ue.ready(function(editor) {
+    ue.addListener('contentChange', function(e) {
+        $('#detail').val(ue.getContent());
+    });
+    ue.setContent($("#detail").val());
+});
+
+/**
+ * 上传图片
+ */
+function lunboImages(){
+    jQuery("#filed").click();
+}
+
+$(document).on("change", "#filed", function() {
+    //...
+
+    $.ajaxFileUpload({
+        url : '/yingpu/adminFileUpload',
+        secureuri : false,
+        fileElementId : 'filed',
+        dataType : 'text',
+        data : {},
+        success : function(data, status) {
+
+            jQuery("#lunboI").attr('src',data);
+            jQuery("#lunboI").attr('value',data);
+            jQuery("#logo").val(data);
+        },
+        error : function(data, status, e) {
+            myalert("上传出错");
+        }
+    })
+
+    return false;
+});
+
+/**
+ * 上传图片
+ */
+function lunboImages1(){
+    jQuery("#filed1").click();
+}
+
+$(document).on("change", "#filed1", function() {
+    //...
+
+    $.ajaxFileUpload({
+        url : '/yingpu/adminFileUpload',
+        secureuri : false,
+        fileElementId : 'filed1',
+        dataType : 'text',
+        data : {},
+        success : function(data, status) {
+            jQuery("#lunbo2").attr('src',data);
+            jQuery("#lunbo2").attr('value',data);
+            jQuery("#smLogo").val(data);
+        },
+        error : function(data, status, e) {
+            myalert("上传出错");
+        }
+    })
+
+    return false;
+});
+	
+//-->
+</SCRIPT>
+
+
+
+<div class="row">
+	<div class="col-xs-12">
+		<form class="form-horizontal" id="validation-form" method="POST" novalidate="novalidate" action="${ctx}/system/pointsMall/update" >
+			<input type="hidden" id="id" name="id" value="${(returnDatas.data.id)!''}"/>
+			<input type="hidden" id="detail" name="detail" value="${(returnDatas.data.detail)!''}"/>
+<!--input  hidden  End-->
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="goodsName" >商品名称</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<input name="goodsName" class="col-xs-12 col-sm-6" id="goodsName" value="${(returnDatas.data.goodsName)!''}"  type="text" />
+					</div><div class="help-block" for="name"></div>
+				</div>
+			</div>
+
+				<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="goodsDesc" >商品描述</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<input name="goodsDesc" class="col-xs-12 col-sm-6" id="goodsDesc" value="${(returnDatas.data.goodsDesc)!''}"  type="text" />
+					</div><div class="help-block" for="goodsDesc"></div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="realMoney" >真实价格</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<input name="realMoney" class="col-xs-12 col-sm-6" id="realMoney" value="${(returnDatas.data.realMoney)!''}"  type="text" />
+					</div><div class="help-block" for="realMoney"></div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="points" >所需积分</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<input name="points" class="col-xs-12 col-sm-6" id="points" value="${(returnDatas.data.points)!''}"  type="text" />
+					</div><div class="help-block" for="points"></div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="goodsCount" >权重</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<input name="goodsCount" class="col-xs-12 col-sm-6" id="goodsCount" value="${(returnDatas.data.goodsCount)!''}"  type="text" />
+					</div><div class="help-block" for="goodsCount"></div>
+				</div>
+			</div>
+	        <div class="space-2"></div>
+	        	<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="goodsType" >商品分类</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<select id="goodsType" name="goodsType" code="${(returnDatas.data.goodsType)!''}">
+							<option value="1">金券银票</option>
+							<option value="2">机关兵器</option>
+							<option value="3">胭脂水粉</option>
+							<option value="4">山珍奇货</option>
+						</select>
+					</div><div class="help-block" for="goodsType"></div>
+				</div>
+			</div>
+			<div class="space-2"></div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="logo" >商品大图</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<img  name="lunboI" style="height: 200px;width: 200px;" onclick="lunboImages();" id="lunboI" value="${(returnDatas.data.logo)!''}" src="${(returnDatas.data.logo)!''}">
+						<input type="file" id="filed" name="filed" style="display:none">
+						<input name="logo"  style="display:none"  class="col-xs-12 col-sm-6" id="logo" value="${(returnDatas.data.logo)!''}"  type="text" />
+					</div><div class="help-block" for="logo"></div>
+				</div>
+			</div>
+	        <div class="space-2"></div>
+
+	        <div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="smLogo" >商品小图</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<img  name="lunbo2" style="height: 200px;width: 200px;" onclick="lunboImages1();" id="lunbo2" value="${(returnDatas.data.smLogo)!''}" src="${(returnDatas.data.smLogo)!''}">
+						<input type="file" id="filed1" name="filed1" style="display:none">
+						<input name="smLogo"  style="display:none"  class="col-xs-12 col-sm-6" id="smLogo" value="${(returnDatas.data.smLogo)!''}"  type="text" />
+					</div><div class="help-block" for="smLogo"></div>
+				</div>
+			</div>
+	        <div class="space-2"></div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="detail" >奖品描述</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<script id="editor" type="text/plain" style="width:200px;height:500px;">
+						</script>
+                        </div>
+                        </div>
+                        </div>
+		</form>
+		<div class="wizard-actions">
+			<button class="btn btn-success btn-info" style="float: left;margin-left: 25.4%;" data-last="Finish" onclick="commonUpdateForm('validation-form','${ctx}/system/pointsMall/list');">
+				保存
+			</button>
+		</div>
+	</div>
+</div>
+</#escape>

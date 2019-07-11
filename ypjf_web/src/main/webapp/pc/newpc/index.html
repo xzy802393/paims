@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/indexfu.css"/>
+		
+		<style type="text/css">
+			html{
+				position: relative;
+			}
+			.fix{
+				position: fixed;
+				top:0;
+				left:0;
+				width:100%;
+				z-index:13;
+				background: #fff;
+				display: none;
+				color:#171717;
+			}
+			.fix #header .bottom .left a,
+			.fix #header .bottom .right a{
+				color:#171717;
+				letter-spacing: 1px;
+			}
+			.fix #header{
+				/* max-width: 1920px;
+				min-width: 1200px; */
+				width:100%;
+				height: 58px;
+				border:1px solid #eee;
+				margin:0 auto;
+			}
+			.fix #header .bottom .right a:hover{
+				font-weight:bold;
+			}
+			.fix #header .bottom .right .mac:hover{
+				font-weight:bold;
+				color:#537ce4;
+			}
+			.fix .kuangfix{
+				max-width: 1920px;
+			  min-width: 1200px;
+				height:30px;
+				background: #fff;
+				margin:0 auto;
+				display: none;
+			}
+			.fix .kuangfix ul{
+				width:1200px;
+				margin:0 auto;
+			}
+			.fix .kuangfix ul li{
+				float:left;
+				width:76px;
+				height:30px;
+				padding:0;
+			}
+			.fix .kuangfix ul li:nth-of-type(1){
+				padding-left:400px;
+			}
+			.fix .kuangfix ul li a{
+				display: block;
+				color: #333;
+				font-size:14px;
+				line-height:30px;
+				padding: 0;
+			}
+			.fix .kuangfix ul li a:hover{
+				color:#537ce4;
+			}
+			
+	.hezuo .swiper-container-free-mode>.swiper-wrapper {
+    -webkit-transition-timing-function: linear; /*之前是ease-out*/
+    -moz-transition-timing-function: linear;
+    -ms-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
+    margin: 0 auto;
+}
+			
+		</style>
+	</head>
+	<body>
+		<div class="fix">
+				<div id="header">
+						<div class="bottom clearFix">
+								<div class="left">
+									<a href="#"><img src="img/logofu.png" alt="营普金服" class="logo"></a>
+									<img src="img/logorightfu.png" alt="介绍" class="logoRight">
+								</div>
+								<div class="right">
+										<ul class="nav clearFix">
+											<li><a href="#">首页</a></li>
+											<li><a href="#">我要出借</a></li>
+											<li><a href="#">我要借款</li>
+											<li><a href="#">安全保障</a></li>
+											<!-- <li class="xiala"><a href="#">信息披露<img src="img/pull.png" alt="下拉菜单" class="pull"></a></li>
+											<li style="margin-right:122px;"><a href="#">营普客栈</a></li>
+											<li><a href="#" class="mac">我的账户</a></li>
+										 --></ul>
+								</div>
+						</div>
+					</div>
+					<div class="kuangfix" style="display: none;">
+						<ul class="clearFix">
+							<li  class="pulllist"><a href="javascript:tzurl('infomation/aboutUs/message.html');">信披声明</a></li>
+							<li  class="pulllist"><a href="javascript:tzurl('infomation/aboutUs/platform_intro.html');">平台简介</a></li>
+							<li  class="pulllist"><a href="javascript:tzurl('infomation/operation_data.html');">运营数据</a></li>
+							<li  class="pulllist"><a href="javascript:tzurl('infomation/list');">公告动态</a></li>
+							<li  class="pulllist"><a href="javascript:tzurl('active_center');">活动中心</a></li>
+							<li  class="pulllist"><a href="javascript:tzurl('infomation/lend_process.jsp');">产品中心</a></li>
+							<li  class="pulllist"><a href="javascript:tzurl('infomation/list2');">风险教育</a></li>
+							<li  class="pulllist"><a href="javascript:tzurl('infomation/aboutUs/contacts_us.html');">联系我们</a></li>
+						</ul>
+					</div>
+			</div>
+		</div>
+		<div id="banner">
+			<div class="banner">
+				
+				<!--顶部-->
+				<iframe src="head.html" class="iframe-head" width="100%" scrolling="no"  style="border:0px;display: block;z-index:1000"></iframe>
+				<div class="banner-list">
+					<!-- <ul class="imgList" style="width: 500%;">
+					
+						<li><a href="#"><img src="img/banner.jpg"></a></li>
+					
+						<li><a href="#"><img src="img/banner.jpg"></a></li>
+					
+						<li><a href="#"><img src="img/banner.jpg"></a></li>
+					
+						<li><a href="#"><img src="img/banner.jpg"></a></li>
+					
+						<li><a href="#"><img src="img/banner.jpg"></a></li>
+						
+					</ul> 
+					<div class="btn">
+						<span class="prev"><img src="img/prev.png" alt=""></span>
+						<span class="next"><img src="img/next.png" alt=""></span>
+					</div> -->
+					
+						<div class="swiper-container">
+							<div class="swiper-wrapper" >
+								<div class="swiper-slide" style="background:#5140b3;"><a href="/yingpu/pc/infomation/Feb_activity/invite-friends-new/index.html"><img src="img/banner-invite.jpg" alt=""  ondragstart="return false" oncontextmenu="return false"></a></div>
+								<div class="swiper-slide" style="background:#021233;"><a href="/yingpu/pc/infomation/detail?id=34&type=companystate"><img src="img/banner-xukezheng.jpg" alt="" ondragstart="return false" oncontextmenu="return false"></a></div>
+								<div class="swiper-slide" style="background:#01032c;"><a href="/yingpu/pc/active-19/19-7/huodong/index.html"><img src="img/banner-7-fanli.jpg" alt="" ondragstart="return false" oncontextmenu="return false"></a></div>
+								<div class="swiper-slide" style="background:#fc5c3c;"><a href="/yingpu/pc/active-19/19-6/hongbao/index.html"><img src="img/banner-6-hongbao.jpg" alt=""  ondragstart="return false" oncontextmenu="return false"></a></div>
+								<div class="swiper-slide" style="background:#fe4b47;"><a href="/yingpu/pc/pointsmall/points_mall.jsp"><img src="img/banner-jiuqu.jpg" alt="" ondragstart="return false" oncontextmenu="return false"></a></div>
+								<div class="swiper-slide" style="background:#27272f;"><a href="/yingpu/pc/html/level/level.html"><img src="img/banner-vip.jpg" alt="" ondragstart="return false" oncontextmenu="return false"></a></div>
+							</div>  
+						</div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+					
+					
+					
+				<!--分页器
+				<!-- <div style="width: 1200px;position: absolute;left: 50%;top:0;margin-left: -600px;z-index: 10;"> -->
+					
+					<!-- <ul class="indexList">
+
+					
+						<li class="">冬日温暖红包</li>
+					
+						<li class="indexOn">圣诞节抽奖</li>
+					
+						<li class="">邀请好友</li>
+					
+						<li class="">运营报告</li>
+					
+						<li class="">营普客栈</li>
+					
+					</ul> -->
+					
+					<!--登录之前-->
+					<!--登录之前-->
+	
+						<div class="login-box"  style="display: block;">
+							<h4>预期年化收益率</h4>
+							<p class="rate">7%-12%</p>
+							<p class="active"><a href="../pc/register">注册就送1888元大礼包</a></p>
+							<p class="login-btn">已有账户？<a href="../pc/login">立即登录</a></p>
+						</div>
+					
+					
+					<!--登录之后-->
+					<!--登录之后-->
+					<div class="login-ok-box" style="display: none;">
+						<h4>尊敬的123456789，您好<!-- <span id="wenhou"></span> --></h4>
+						<div class="yue">
+							<p>可用余额</p>
+							<p><span>0.0元</span></p>
+							<!-- <p><span>${pcuser.caBalance}元</span></p> -->
+						</div>
+						<!-- <p class="deposit-btn"><a href="#">去充值</a></p> -->
+						<p class="myaccount"><a href="myaccount/account">进入我的账户</a></p>
+					</div>
+					<div class="banner-tishi">
+						<p>广告 <span class="xian"></span> 市场有风险，投资需谨慎</p>
+					</div>
+					
+					
+				</div>				
+			</div>
+		</div>
+		<div id="content">
+			<div id="piaofu">
+				<div class="piaofuLayout" class="clearFix">
+					<div class="piaofuleft">
+						<img src="img/duilianL.png" >
+					</div>
+					<div class="piaofucenter">
+						<div class="content1">
+							<!-- <div class="annoce clearFix">
+								<div class="left">
+									<img src="img/laba.png" alt="公告">
+									<p>平台公告</p>
+								</div>
+								<ul class="center clearFix">
+									<li><a href="#">营普金服12月份活动公告</a></li>
+									<li><a href="#">营普金服12月份活动公告</a></li>
+									<li><a href="#">营普金服12月份活动公告</a></li>
+								</ul>
+								<div class="more">
+									<a href="#">查看更多</a>
+								</div>
+							</div> -->
+							<div class="ceng">
+								<ul class="xinxi clearFix">
+									<li class="clearFix">
+										<img src="img/cunguan.png" alt="存管银行">
+										<div class="wenben">
+											<p class="text1">银行存管</p>
+											<p class="text2">全民普惠，新金融倡导</p>
+										</div>
+										
+									</li>
+									<li class="clearFix">
+										<img src="img/anquan.png" alt="存管银行">
+										<div class="wenben">
+											<p class="text1">数据安全</p>
+											<p class="text2">电子合同，保障合法权益</p>
+										</div>
+										
+									</li>
+									<li class="clearFix">
+										<img src="img/bank.png" alt="存管银行">
+										<div class="wenben">
+											<p class="text1">参股银行</p>
+											<p class="text2">法人参股商业银行</p>
+										</div>
+										
+									</li>
+									<li class="clearFix">
+										<img src="img/anquan2.png" alt="存管银行">
+										<div class="wenben">
+											<p class="text1">严格风控</p>
+											<p class="text2">专业风控，甄选优质项</p>
+										</div>
+										
+									</li>
+									<li class="clearFix">
+										<img src="img/hegui.png" alt="存管银行">
+										<div class="wenben">
+											<p class="text1">合规透明</p>
+											<p class="text2">标的资料信息透明</p>
+										</div>
+										
+									</li>
+									<li class="clearFix">
+										<img src="img/yunying.png" alt="存管银行">
+										<div class="wenben">
+											<p class="text1">稳健运营</p>
+											<p class="text2">多重保障措施运营安全</p>
+										</div>
+										
+									</li>
+								</ul>
+							</div>
+							<div class="annoce clearFix">
+								<div class="left">
+									<img src="img/laba.png" alt="公告">
+									<p>平台公告</p>
+								</div>
+								<ul class="center clearFix">
+									<li><a href="#">营普金服12月份活动公告</a></li>
+									<li><a href="#">营普金服12月份活动公告</a></li>
+									<li><a href="#">营普金服12月份活动公告</a></li>
+								</ul>
+								<div class="more">
+									<a href="#">查看更多</a>
+								</div>
+							</div>
+						</div>
+						<!-- 数据 -->
+						<!-- <div class="content2">
+							<ul class="data clearFix">
+								<li>累计成交<span class="chengjiao">277,676,839.04</span>元</li>
+								<li>赚取收益<span class="shouyi">19,437,378.73</span>元</li>
+								<li>收获用户<span class="people">45,793</span>人</li>
+								<li>安全运营<span class="day">943</span>天</li>
+							</ul>
+						</div> -->
+						<!-- 新手专区，精彩活动，营普金服APP -->
+						<div class="content3">
+							<div class="box">
+								<h3 class="title">新手专区<span>新注册用户，限当月使用新手专享标的，次月作废。</span><span class="tishi" >!</span></h3>
+								<ul class="neirong clearFix">
+									<li>
+										<div class="kuang">
+											<p class="bt"><a href="#" class="btfu">新手专享</a></p>
+											<div class="zhong clearFix">
+												<div class="left">
+													<p class="p1"><span class="num">12</span>%</p>
+													<p class="p2">预期年化收益率</p>
+												</div>
+												<div class="right">
+													<p class="p1"><span class="num">1</span>个月</p>
+													<p class="p2">服务期限</p>
+												</div>
+											</div>
+											<div class="xia clearFix">
+												<div class="left">
+													<p class="p3">剩余可出借额度：</p>
+													<div class="progress">
+														<span class="jindu"><span class="tuli"></span></span>
+													</div>
+												</div>
+												<div class="right">
+													<p class="chujie"><a href="#">立即出借</a></p>
+												</div>
+											</div>
+										</div>
+										
+									</li>
+									<li>
+										<div class="kuang">
+											<p class="bt"><a href="#" class="btfu">新手专享</a></p>
+											<div class="zhong clearFix">
+												<div class="left">
+													<p class="p1"><span class="num">12</span>%</p>
+													<p class="p2">预期年化收益率</p>
+												</div>
+												<div class="right">
+													<p class="p1"><span class="num">1</span>个月</p>
+													<p class="p2">服务期限</p>
+												</div>
+											</div>
+											<div class="xia clearFix">
+												<div class="left">
+													<p class="p3">剩余可出借额度：</p>
+													<div class="progress">
+														<span class="jindu"><span class="tuli"></span></span>
+													</div>
+												</div>
+												<div class="right">
+													<p class="chujie"><a href="#">立即出借</a></p>
+												</div>
+											</div>
+										</div>
+										
+									</li>
+									<li class="third">
+										<div class="a1 clearFix">
+											<img src="img/hbfu.png" alt="红包">
+											<div class="wenben">
+												<p class="text1">注册领1888红包</p>
+												<p class="text2"><a href="#">立即注册 GO!</a></p>
+											</div>
+										</div>
+										<div class="a1 clearFix">
+											<img src="img/xinshoubidu.png" alt="新手引导" style="width:34px;height:30px;padding-top:38px;">
+											<div class="wenben">
+												<p class="text1">新手引导</p>
+												<p class="text2"><a href="">点击查看 GO!</a></p>
+											</div>
+										</div>
+									</li>
+									<li class="four">
+										<div class="bg">
+											
+											<img src="img/appbg.jpg" class="bag">
+											
+											<div class="text">
+												<p class="pw">九趣贷</p>
+												<p class="pa">手机APP</p>
+												<p class="pa1">操作更便捷</p>
+											</div>
+											<img src="img/appa.jpg" alt="" class="app">
+										</div>
+									</li>
+								</ul>
+							</div>
+							
+						</div>
+						
+					</div>
+					<div class="piaofuright">
+						<img src="img/duilianR.png" >
+					</div>
+					
+				</div>
+				
+			</div>
+			<!-- 智能投标 -->
+			<!-- <div class="zhitou">
+				<div class="box">
+					<h3 class="title">智能投标</h3>
+					<ul class="neirong clearFix">
+						<li>
+							<div class="a1">
+								<div class="kuang">
+									<p class="bt">X快享智能投标</p>
+									<div class="zhong clearFix">
+										<div class="left">
+											<p class="p1"><span class="num">7.5</span>%</p>
+											<p class="p2">预期年化收益率</p>
+										</div>
+										<div class="right">
+											<p class="p1"><span class="num">1</span>个月</p>
+											<p class="p2">服务期限</p>
+										</div>
+									</div>
+									<div class="xia clearFix">
+										<div class="left">
+											<p class="p3">剩余可出借额度：</p>
+											<div class="progress">
+												<span class="jindu"><span class="tuli"></span></span>
+											</div>
+										</div>
+										<div class="right">
+											<p class="chujie"><a href="#">立即出借</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="a1">
+								<div class="kuang">
+									<p class="bt">X快享智能投标</p>
+									<div class="zhong clearFix">
+										<div class="left">
+											<p class="p1"><span class="num">11</span>%</p>
+											<p class="p2">预期年化收益率</p>
+										</div>
+										<div class="right">
+											<p class="p1"><span class="num">6</span>个月</p>
+											<p class="p2">服务期限</p>
+										</div>
+									</div>
+									<div class="xia clearFix">
+										<div class="left">
+											<p class="p3">剩余可出借额度：</p>
+											<div class="progress">
+												<span class="jindu"><span class="tuli"></span></span>
+											</div>
+										</div>
+										<div class="right">
+											<p class="chujie"><a href="#">立即出借</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</li>
+						<li>
+							<div class="a1">
+								<div class="kuang">
+									<p class="bt">X快享智能投标</p>
+									<div class="zhong clearFix">
+										<div class="left">
+											<p class="p1"><span class="num">10</span>%</p>
+											<p class="p2">预期年化收益率</p>
+										</div>
+										<div class="right">
+											<p class="p1"><span class="num">3</span>个月</p>
+											<p class="p2">服务期限</p>
+										</div>
+									</div>
+									<div class="xia clearFix">
+										<div class="left">
+											<p class="p3">剩余可出借额度：</p>
+											<div class="progress">
+												<span class="jindu"><span class="tuli"></span></span>
+											</div>
+										</div>
+										<div class="right">
+											<p class="chujie"><a href="#">立即出借</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="a1">
+								<div class="kuang">
+									<p class="bt">X快享智能投标</p>
+									<div class="zhong clearFix">
+										<div class="left">
+											<p class="p1"><span class="num">12</span>%</p>
+											<p class="p2">预期年化收益率</p>
+										</div>
+										<div class="right">
+											<p class="p1"><span class="num">12</span>个月</p>
+											<p class="p2">服务期限</p>
+										</div>
+									</div>
+									<div class="xia clearFix">
+										<div class="left">
+											<p class="p3">剩余可出借额度：</p>
+											<div class="progress">
+												<span class="jindu"><span class="tuli"></span></span>
+											</div>
+										</div>
+										<div class="right">
+											<p class="chujie"><a href="#">立即出借</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</li>
+						<li>
+							<div class="a2">
+								<div class="kuang">
+									<p class="p1 clearFix"><span>营普客栈：</span><span>出借送银子礼品兑不停</span></p>
+									<p class="p2"><a href="#">兑换奖品</a></p>
+								</div>
+								<div class="kuang">
+									<p class="p1 clearFix" style="padding-top:42px;"><span>邀请好友：</span><span>老用户终身享好友预期收益的10%</span></p>
+									<p class="p2"><a href="#">立即邀请</a></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+			</div> -->
+			<!-- 产品展示 -->
+			<div class="content4 clearFix">
+				<div class="box">
+					<h3><span class="active">散标</span><em>/</em><span>债权转让</span></h3>
+					<div class="tab tab1" style="display: block;">
+						<ul class="left">
+							<li class="list listC"><p class="xiangMuList">车融贷</p></li>
+							<li class="list"><p class="xiangMuList">消费贷</p></li>
+							<li class="list"><p class="xiangMuList">房融贷</p></li>
+							<li class="list"><p class="xiangMuList">商企贷</p></li>
+						</ul>
+						<ul class="right">
+							<li class="list">
+								<div class="xiangmu">
+									<p class="title"><a href="#" class="tfu">车融贷20181201015</a></p>
+									<div class="detail clearFix" >
+										<div class="data">
+											<p class="p1"><span class="num">1</span>个月</p>
+											<p class="wenben">借款期限</p>
+										</div>
+										<div class="nianhua">
+											<p class="p2"><span class="num">7.0</span>%</p>
+											<p class="wenben">预期年化收益率</p>
+										</div>
+										<div class="total">
+											<p class="p1"><span class="num">10</span>万元</p>
+											<p class="wenben">借款金额</p>
+										</div>
+										<div class="progress">
+											<p class="jindutiao"><span class="jindu"><span class="tuli"></span></span></p>
+											<p class="shengyu">剩余额度：0万元</p>
+										</div>
+										<div class="chujie">
+											<p class="liji">
+												<a href="#">立即出借</a>
+											</p>
+											
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="list">
+								<div class="xiangmu">
+									<p class="title"><a href="#" class="tfu">车融贷20181201015</a></p>
+									<div class="detail clearFix" >
+										<div class="data">
+											<p class="p1"><span class="num">1</span>个月</p>
+											<p class="wenben">借款期限</p>
+										</div>
+										<div class="nianhua">
+											<p class="p2"><span class="num">7.0</span>%</p>
+											<p class="wenben">预期年化收益率</p>
+										</div>
+										<div class="total">
+											<p class="p1"><span class="num">10</span>万元</p>
+											<p class="wenben">借款金额</p>
+										</div>
+										<div class="progress">
+											<p class="jindutiao"><span class="jindu"><span class="tuli"></span></span></p>
+											<p class="shengyu">剩余额度：0万元</p>
+										</div>
+										<div class="chujie">
+											<p class="liji">
+												<a href="#">立即出借</a>
+											</p>
+											
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="list">
+								<div class="xiangmu">
+									<p class="title"><a href="#" class="tfu">车融贷20181201015</a></p>
+									<div class="detail clearFix" >
+										<div class="data">
+											<p class="p1"><span class="num">1</span>个月</p>
+											<p class="wenben">借款期限</p>
+										</div>
+										<div class="nianhua">
+											<p class="p2"><span class="num">7.0</span>%</p>
+											<p class="wenben">预期年化收益率</p>
+										</div>
+										<div class="total">
+											<p class="p1"><span class="num">10</span>万元</p>
+											<p class="wenben">借款金额</p>
+										</div>
+										<div class="progress">
+											<p class="jindutiao"><span class="jindu"><span class="tuli"></span></span></p>
+											<p class="shengyu">剩余额度：0万元</p>
+										</div>
+										<div class="chujie">
+											<p class="liji">
+												<a href="#">立即出借</a>
+											</p>
+											
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="list last">
+								<div class="xiangmu">
+									<p class="title"><a href="#" class="tfu">车融贷20181201015</a></p>
+									<div class="detail clearFix" >
+										<div class="data">
+											<p class="p1"><span class="num">1</span>个月</p>
+											<p class="wenben">借款期限</p>
+										</div>
+										<div class="nianhua">
+											<p class="p2"><span class="num">7.0</span>%</p>
+											<p class="wenben">预期年化收益率</p>
+										</div>
+										<div class="total">
+											<p class="p1"><span class="num">10</span>万元</p>
+											<p class="wenben">借款金额</p>
+										</div>
+										<div class="progress">
+											<p class="jindutiao"><span class="jindu"><span class="tuli"></span></span></p>
+											<p class="shengyu">剩余额度：0万元</p>
+										</div>
+										<div class="chujie">
+											<p class="liji">
+												<a href="#">立即出借</a>
+											</p>
+											<p class="huankuan">
+												<a href="#">还款中</a>
+											</p>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="tab" style="display: none;"></div>
+					<div class="tab tab2" style="display: none;">
+						<table border="0" cellspacing="" cellpadding="">
+							<tr>
+								<th>借款标题</th>
+								<th>借款期限</th>
+								<th>预期年化利率</th>
+								<th>剩余借款期限</th>
+								<th>转让总额</th>
+								<th>剩余金额</th>
+								<th>转让进度</th>
+								<th>操作</th>
+							</tr>
+							<tr>
+								<td>西安杨先生借款 </td>
+								<td class="text"><span class="num">12</span>个月</td>
+								<td class="text2"><span class="num">12</span>%</td>
+								<td class="text"><span class="num">6</span>个月</td>
+								<td>100000元</td>
+								<td>50000元</td>
+								<td style="position: relative;">
+										<canvas id="my_html" style="position: absolute;left:38px;top:17px;" width="46" height="46"></canvas>
+								</td>
+								<td class="chengjie">立即承接</td>
+							</tr>
+							<tr>
+								<td>西安杨先生借款 </td>
+								<td class="text"><span class="num">12</span>个月</td>
+								<td class="text2"><span class="num">12</span>%</td>
+								<td class="text"><span class="num">6</span>个月</td>
+								<td>100000元</td>
+								<td>50000元</td>
+								<td style="position: relative;">
+										<canvas id="my_html1" style="position: absolute;left:38px;top:17px;" width="46" height="46"></canvas>
+								</td>
+								<td class="chengjie">立即承接</td>
+							</tr>
+							<tr>
+								<td>西安杨先生借款 </td>
+								<td class="text"><span class="num">12</span>个月</td>
+								<td class="text2"><span class="num">12</span>%</td>
+								<td class="text"><span class="num">6</span>个月</td>
+								<td>100000元</td>
+								<td>50000元</td>
+								<td style="position: relative;">
+										<canvas id="my_html2" style="position: absolute;left:38px;top:17px;" width="46" height="46"></canvas>
+								</td>
+								<td class="chengjie">立即承接</td>
+							</tr>
+							<tr>
+								<td>西安杨先生借款 </td>
+								<td class="text"><span class="num">12</span>个月</td>
+								<td class="text2"><span class="num">12</span>%</td>
+								<td class="text"><span class="num">6</span>个月</td>
+								<td>100000元</td>
+								<td>50000元</td>
+								<td style="position: relative;">
+										<canvas id="my_html3" style="position: absolute;left:38px;top:17px;" width="46" height="46"></canvas>
+								</td>
+								<td class="chengjie">立即承接</td>
+							</tr>
+							<tr>
+								<td>西安杨先生借款 </td>
+								<td class="text"><span class="num">12</span>个月</td>
+								<td class="text2"><span class="num">12</span>%</td>
+								<td class="text"><span class="num">6</span>个月</td>
+								<td>100000元</td>
+								<td>50000元</td>
+								<td style="position: relative;">
+										<canvas id="my_html4" style="position: absolute;left:38px;top:17px;" width="46" height="46"></canvas>
+								</td>
+								<td class="chengjie">立即承接</td>
+							</tr>
+							<tr>
+								<td>西安杨先生借款 </td>
+								<td class="text"><span class="num">12</span>个月</td>
+								<td class="text2"><span class="num">12</span>%</td>
+								<td class="text"><span class="num">6</span>个月</td>
+								<td>100000元</td>
+								<td>50000元</td>
+								<td style="position: relative;">
+										<canvas id="my_html5" style="position: absolute;left:38px;top:17px;" width="46" height="46"></canvas>
+								</td>
+								<td class="chengjie">立即承接</td>
+							</tr>
+							<tr>
+								<td>西安杨先生借款 </td>
+								<td class="text"><span class="num">12</span>个月</td>
+								<td class="text2"><span class="num">12</span>%</td>
+								<td class="text"><span class="num">6</span>个月</td>
+								<td>100000元</td>
+								<td>50000元</td>
+								<td style="position: relative;">
+										<canvas id="my_html6" style="position: absolute;left:38px;top:17px;" width="46" height="46"></canvas>
+								</td>
+								<td class="chengjie">立即承接</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+			<!-- 动态和新闻 -->
+			<div class="content5">
+        <div class="gonggao  clearFix">
+            <p class="title"><span class="a1">营普动态:</span><span class="a2">行业新闻:<a href=" " class="more">查看更多</a></span></p >
+            <div class="neirong clearFix">
+                <div class="dongtai">
+                    <div class="dongtaibox">
+                       <div class="swiper-container dongtailist">
+							<div class="swiper-wrapper" >
+								<div class="swiper-slide">
+									<a class="clearFix">
+										<div class="img">
+											 <img src="img/a1.png" alt="">
+										</div>
+										<div class="totalText">
+											<div class="totalTextBox">
+												<p class="biaoti"><span class="bg"></span>营普小课堂：将关于金融牌照不了解的问题一网打尽</p>
+												<p class="time">发布时间：<span class="dateTime">2018-09-11 16:36:30</span> </p>
+												<p class="text">金融作为国内管制严格的行业之一，首当其冲的当然是执业资格问题，也就是牌照问题。金融监管根据时段划分为事前监管、事中监管、事后监管，市场准入制度是事前监管的核心，金融许可证则是市场...</p>
+												
+											</div>
+											
+										</div>
+									</a>
+								</div>
+								
+							</div>  
+						</div>
+					<!-- 	<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div> -->
+                    </div>
+                </div>
+				<div class="news">
+					<div class="newsbox">
+						<div class="swiper-container newslist">
+								<div class="swiper-wrapper" >
+									<div class="swiper-slide">
+										<a class="clearFix">
+											<div class="img">
+												 <img src="img/a1.png" alt="">
+											</div>
+											<div class="totalText">
+												<div class="totalTextBox">
+													<p class="biaoti"><span class="bg"></span><span>营普小课堂：将关于金融牌照不了解的问题一网打尽</span></p>
+													<p class="time">发布时间：<span class="dateTime">2018-09-11 16:36:30</span> </p>
+													<p class="text">金融作为国内管制严格的行业之一，首当其冲的当然是执业资格问题，也就是牌照问题。金融监管根据时段划分为事前监管、事中监管、事后监管，市场准入制度是事前监管的核心，金融许可证则是市场...</p>
+													
+												</div>
+												
+											</div>
+										</a>
+									</div>
+									
+								</div>  
+						</div>
+							<!-- <div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div> -->
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+						
+			<!-- 合作伙伴 -->
+			<div class="content6">
+				<div class="company">
+					<h3>合作伙伴：</h3>
+					<div class="hezuo" >
+						<div class="swiper-container">
+							<div class="swiper-wrapper" >
+								<div class="swiper-slide"><a href="#"><img src="img/chuizi.png" alt=""  style="display: inline-block;margin-top:0px;"></a></div>
+								<div class="swiper-slide"><a href="#"><img src="img/fuyou.png" alt=""  style="display: inline-block;margin-top:6px;"></a></div>
+								<div class="swiper-slide"><a href="#"><img src="img/wangdaizhijia.png" alt=""  style="display: inline-block;margin-top:5px;"></a></div>
+								<div class="swiper-slide"><a href="#"><img src="img/wangdaitianyan.png" alt=""  style="display: inline-block;margin-top:6px;"></a></div>
+								<div class="swiper-slide"><a href="#"><img src="img/luchengjituan.png" alt=""  style="display: inline-block;margin-top:4px;"></a></div>
+								<div class="swiper-slide"><a href="#"><img src="img/tongdunkeji.png" alt=""  style="display: inline-block;margin-top:0px;"></a></div>
+								<div class="swiper-slide"><a href="#"><img src="img/qianhaiguquan.png" alt=""  style="display: inline-block;margin-top:3px;"></a></div>
+								<div class="swiper-slide"><a href="#"><img src="img/wangyiyun.png" alt="" style="display: inline-block;margin-top:28px;"></a></div>
+								<div class="swiper-slide"><a href="#"><img src="img/baiduyun.png" alt=""  style="display: inline-block;margin-top:16px;"></a></div>
+								<div class="swiper-slide"><a href="#"><img src="img/yingpujinfu.png" alt=""  style="display: inline-block;margin-top:26px;"></a></div>
+								<div class="swiper-slide"><a href="#"><img src="img/yingpucaifu.png" alt="" style="display: inline-block;margin-top:26px;"></a></div>
+							</div>  
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+		<iframe src="foot.html" class="iframe-foot" width="100%" scrolling="no"  style="border:0px;display: block;"></iframe>
+	
+		<!--悬浮条-->
+		<!-- <iframe src="xuanfutiao.html" class="iframe-xuanfu" width="100%" scrolling="no"  style="border:0px;display: none;"></iframe> -->
+		<iframe src="yijianfankui.html" class="iframe-yijianfankui" scrolling="no" width="100%" style="border:0px;display: none;"></iframe>
+		<iframe src="jisuanqi/jisuanqi.html" class="iframe-jisuanqi" scrolling="no" width="100%" style="border:0px;display: none;"></iframe>
+		
+		
+		
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		
+		</script>
+		
+		
+		
+		
+	<script src="js/swiper-3.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/xuanfutiao.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/progress.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/fix.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		// 环形进度条
+		var p1 = new Progress({
+			el:'my_html',//canvas元素id
+			deg:10,//绘制角度
+			timer:7,//绘制时间
+			lineWidth:4,//线宽
+			lineBgColor:'#feac94',//底圆颜色
+			lineColor:'#fe4946',//动态圆颜色
+			textColor:'#fd625e',//文本颜色
+			fontSize:12,//字体大小
+			circleRadius:23//圆半径
+		});
+		var p2 = new Progress({
+			el:'my_html1',//canvas元素id
+			deg:20,//绘制角度
+			timer:7,//绘制时间
+			lineWidth:4,//线宽
+			lineBgColor:'#feac94',//底圆颜色
+			lineColor:'#fe4946',//动态圆颜色
+			textColor:'#fd625e',//文本颜色
+			fontSize:12,//字体大小
+			circleRadius:23//圆半径
+		});
+		var p3 = new Progress({
+			el:'my_html2',//canvas元素id
+			deg:30,//绘制角度
+			timer:7,//绘制时间
+			lineWidth:4,//线宽
+			lineBgColor:'#feac94',//底圆颜色
+			lineColor:'#fe4946',//动态圆颜色
+			textColor:'#fd625e',//文本颜色
+			fontSize:12,//字体大小
+			circleRadius:23//圆半径
+		});
+		var p4 = new Progress({
+			el:'my_html3',//canvas元素id
+			deg:50,//绘制角度
+			timer:7,//绘制时间
+			lineWidth:4,//线宽
+			lineBgColor:'#feac94',//底圆颜色
+			lineColor:'#fe4946',//动态圆颜色
+			textColor:'#fd625e',//文本颜色
+			fontSize:12,//字体大小
+			circleRadius:23//圆半径
+		});
+		var p5 = new Progress({
+			el:'my_html4',//canvas元素id
+			deg:40,//绘制角度
+			timer:7,//绘制时间
+			lineWidth:4,//线宽
+			lineBgColor:'#feac94',//底圆颜色
+			lineColor:'#fe4946',//动态圆颜色
+			textColor:'#fd625e',//文本颜色
+			fontSize:12,//字体大小
+			circleRadius:23//圆半径
+		});
+		var p6 = new Progress({
+			el:'my_html5',//canvas元素id
+			deg:50,//绘制角度
+			timer:7,//绘制时间
+			lineWidth:4,//线宽
+			lineBgColor:'#feac94',//底圆颜色
+			lineColor:'#fe4946',//动态圆颜色
+			textColor:'#fd625e',//文本颜色
+			fontSize:12,//字体大小
+			circleRadius:23//圆半径
+		});
+		var p7 = new Progress({
+			el:'my_html6',//canvas元素id
+			deg:60,//绘制角度
+			timer:7,//绘制时间
+			lineWidth:4,//线宽
+			lineBgColor:'#feac94',//底圆颜色
+			lineColor:'#fe4946',//动态圆颜色
+			textColor:'#fd625e',//文本颜色
+			fontSize:12,//字体大小
+			circleRadius:23//圆半径
+		});
+	</script>
+	</body>
+</html>

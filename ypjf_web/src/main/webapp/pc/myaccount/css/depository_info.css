@@ -1,0 +1,114 @@
+.depository{
+	width: 938px;
+	margin-left: 30px;
+}
+.depository h3{
+	font-size: 16px;
+	font-weight: normal;
+	margin-bottom: 26px;
+}
+.depository-n .depository-box{
+	width: 936px;
+	border: 1px solid #ddd;
+}
+/*未开通银行存管*/
+.depository .depository-n{
+	width: 100%;
+	display: none;
+}
+.depository-n .depository-box ul{
+	width: 100%;
+}
+.depository-n .depository-box ul li{
+	float: left;
+	font-size: 14px;
+}
+.depository-n .depository-box ul li img{
+	margin: 14px 58px;
+}
+.depository-n .depository-box ul li p{
+	width: 200px;
+	margin-top: 46px;
+}
+.depository-n .depository-box ul li a{
+	display: block;
+	margin-top: 46px;
+	color: #05a0dd;
+}
+
+/*已开通银行存管*/
+.depository-y{
+	position: relative;
+}
+.depository-y h3 span.cqfm{
+	display: inline-block;
+	width: 44px;
+	height: 24px;
+	background: url(../../img/account/depository-cqfm.png) no-repeat center;
+	margin-right: 20px;
+	vertical-align: middle;
+}
+.depository-y h3 span{
+	display: inline-block;
+	font-size: 14px;
+	color: #05A0DD;
+	margin-left: 30px;
+}
+.depository-y .depository-box{
+	width: 100%;
+}
+.depository-y .depository-box dl{
+	width: 100%;
+	padding: 20px 0;
+	border-bottom: 1px solid #ddd;
+	clear: both;
+	overflow: hidden;
+	height: 36px;
+	line-height: 36px;
+}
+.depository-y .depository-box dl dt{
+	width: 136px;
+	float: left;
+	font-size: 14px;
+	margin-left: 24px;
+}
+.depository-y .depository-box dl dd{
+	float: left;
+	font-size: 12px;
+	color: #666;
+	width: 258px;
+	margin-right: 98px;
+}
+.depository-y .depository-box dl dd:last-child{
+	width: 60px;
+	/*text-align: center;*/
+	margin-right: 0px;
+}
+.depository-y .depository-box dl dd p{
+	line-height: 18px;
+}
+.depository-y .depository-box dl dd a{
+	color: #FF7F01;
+}
+.depository-y .tip{
+	margin-top: 60px;
+	width: 878px;
+	margin-left: 26px;
+	color: #666;
+	line-height: 18px;
+}
+.depository-y .tip span{
+	color: #ff0000;
+}
+.depository-y .zhezhao{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 938px;
+    /* height: 871px; */
+    text-align: center;
+    padding: 200px 0;
+    background: rgba(102,102,102,0.5);
+    font-size: 20px;
+    color: #fff;
+}

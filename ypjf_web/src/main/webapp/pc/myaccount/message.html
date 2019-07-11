@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=1220" />
+		<title>九趣贷 — 贷快乐，更带梦想</title>
+		<link rel="shortcut icon" href="/yingpu/pc/img/logo.icon.png"/>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/account_common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/message.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>-->
+	</head>
+	<body>
+		<!--顶部-->
+		
+		<iframe src="../head3.html" class="iframe-head" width="100%" scrolling="no"  style="border:0px;"></iframe>
+		<!--主体-->
+		<div class="account-box">
+			<div class="center clearfix">
+				<!--左边导航-->
+				<div class="account-nav left">
+					<iframe src="account_sidebar.html" width="100%" height="850" scrolling="no"  style="border:0px;"></iframe>
+				</div>
+				<!--右边主体部分-->
+				
+				<!--投资记录-->
+				<div class="message-contain left">
+					<h3>站内信</h3>
+					<div class="tab-menu" id="menu">
+						<ul class="clearfix">
+							<li class="active" data="{type:'', pushType: ''}">所有消息<span></span></li>
+							<li data="{type:'', pushType: '1-2-3-8-6'}">投资通知<span></span></li>
+							<li data="{type:'', pushType: '4-5'}">收益通知<span></span></li>
+							<!-- <li data="{type:2, pushType: ''}">提现通知<span></span></li>
+							<li data="{type:2, pushType: ''}">充值通知<span></span></li> -->
+							<li data="{type:'1', pushType: ''}">系统通知<span id="msg-num"></span></li>
+							<button id="read">标为已读</button>
+							<button id="deletes">删除</button>
+						</ul>
+					</div>
+					
+					<div class="message-box">
+						<div class="message-fun">
+							<input type="checkbox" class="check-all" name="" id="CheckAll" value="" />
+							<input type="button" class="deleteall" id="Delete" value="全选" />
+						</div>
+						<div class="message-list" id="messageList">
+							<ul>
+								
+							</ul>
+						</div>
+					</div>
+					
+					
+					<!--页码-->
+					<div class="page">
+						<div class="page-list" id="pageList">
+							<a onclick="go('home')">首页</a>
+							<a onclick="go('prev')">上一页</a>
+							<span id="page-nav-btn">
+							</span>
+							<a onclick="go('next')">下一页</a>
+							<a onclick="go('tail')">尾页</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--客服悬浮条-->
+		<!--客服悬浮条-->
+		<!-- <iframe src="../xuanfutiao.jsp" class="iframe-xuanfutiao" onload="$(this).show()" scrolling="no"></iframe>
+		<iframe src="../jisuanqi/jisuanqi.html" class="iframe-jisuanqi" scrolling="no"></iframe>
+		<script src="../js/xuanfutiao.js" type="text/javascript" charset="utf-8"></script>
+		 --><!--底部导航-->
+		
+		<iframe src="../footer2.html" width="100%" scrolling="no"  style="border:0px;height:308px;"></iframe>
+		<!--加载js文件-->
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../layer-v3.0.3/layer/layer.js"></script>
+	<script src="../js/utils.js"></script>
+	<script type="text/tpl" id="list_item">
+								<li mid="$id">
+									<div class="message-title">
+										<span><input type="checkbox" name="subBox" id="" value="" /></span>
+										<span class="shuxing$isRead"></span>
+										<span class="title"><a onclick="readMsg($id)">$name</a></span>
+										<!--<span class="time">$createTime</span>-->
+										<span><input type="button" class="delete" onclick="deleteMsg($id)" value="删除" /></span>
+									</div>
+									<div class="message-content">
+										 <p>$content</p>                                                           
+									</div>
+								</li>
+	</script>
+
+	<script type="text/javascript">	
+	
+		var gReads = {},
+			gStatus = {
+				1 : '新理财项目提醒',
+				2 : '项目满标提醒',
+				3 : '项目不满标到期提醒',
+				4 : '项目还款分润提醒',
+				5 : '项目全部结清提醒',
+				6 : '余额宝投资提醒',
+				10 : '申请合伙人成功提醒',
+				11 : '申请合伙人失败提醒',
+				12 : '优惠券发放提醒',
+				13 : '优惠券到期提醒'
+			},
+			gOldData = {
+				
+			};
+
+		$(function(){
+			//投资记录切换
+			$("#menu li").each(function(){
+				$(this).click(function(){
+					$("#menu li").removeClass("active");
+					$(this).addClass("active");
+				})
+			})
+			
+			
+			//全选
+		
+				
+//			$("#CheckAll").click(function() { 
+//				
+//				var flag = $(this).attr("checked"); 
+//				
+//				$("[name=subBox]:checkbox").each(function() { 
+//					$(this).attr("checked", flag); 
+//				}) 
+//			}) 
+				
+
+		});
+		
+		
+		useLoadingShade();
+		function loadList(type, pushType) {
+			gOldData = {
+				pageIndex : pageIndex,
+				type : type == undefined ? gOldData.type : type,
+				pushType : pushType == undefined ? gOldData.pushType : pushType
+			};
+			
+			$.get('mail/list/json', gOldData, function(data) {
+				var tpl = $('#list_item').html();
+				var html = '';
+				
+				pageIndex = data.page.pageIndex;
+				pageCount = data.page.pageCount || 1;
+				pageSize = data.page.pageSize;
+				$.each(data.data || [], function(k, v) {
+					v.index = (~-pageIndex * pageSize) + -~k;
+					v.isRead = v.isRead == 1 ? ' open' : ' unread';
+					v.name = v.name || gStatus[v.pushType] || '消息提醒';
+					v.createTime = fmtDate(v.createTime);
+					html += tpl.formatStr(v);
+				});
+				
+				$('.message-list>ul').html(html 
+						|| '<span style="display: block; text-align: center; width:988px;"><img src="/yingpu/pc/img/zanwu.png" alt=""></span>');
+
+				generatePaginationNav(pageIndex, pageCount, '#page-nav-btn');
+			});
+			loadMsgNum();
+		}
+		
+		
+		function loadMsgNum() {
+			$.get('msg/count', { type : 1 }, function(data) {
+				$.each(data.data || [], function(i, v) {
+					v['COUNT(id)'] && $('#menu>ul>li:eq(' + i + ')>span').html(v['COUNT(id)']);
+				});
+			});
+		}
+		
+		
+		function readMsg(mid) {
+			if (!mid) return;
+
+   			$(event.target || event.srcElement).parent().parent().find('.shuxing').removeClass('unread').addClass('open');
+   			$(event.target || event.srcElement).parent().parent().parent().find(".message-content").slideToggle();
+   			
+   			if (!gReads[mid]) {
+				$.post('msg/read', { mid : mid }, function(data) {
+					if (data.status == 'success') {
+						gReads[mid] = true;
+					}	
+				});
+				loadMsgNum();
+   			}
+		}
+		
+		
+		function deleteMsg(mid, prompt, cb) {
+			if (!mid) return;
+			
+			var del = function() {
+				$.post('msg/delete', { mid : mid }, function(data) {
+					if (data.status == 'success') {
+						$('li[mid=' + mid + ']').remove();
+						
+						if (!prompt) {
+							loadList();
+							layer.msg('消息删除成功！');
+						}
+						typeof cb == 'function' && cb();
+					}
+				});
+			};
+			
+			if (prompt) {
+				del();
+				return;
+			}
+			
+			var index = layer.confirm('是否删除本条消息？', function() {
+				layer.close(index);
+				del();
+			}, function() {
+				
+			});
+		}
+		
+		
+		$('#menu').on('click', 'li', function() {
+			var data = eval('(' + $(this).attr('data') + ')');
+			if (!!data) {
+				loadList(data.type, data.pushType);
+			}
+		});
+		
+		
+		loadList();
+		loadMsgNum();
+	</script>	
+	<script language="javascript">
+    $(function(){
+        //给全选的复选框添加事件
+        $("#CheckAll").click(function(){
+            // this 全选的复选框
+            var userids=this.checked;
+            //获取name=box的复选框 遍历输出复选框
+            $("input[name=subBox]").each(function(){
+                this.checked=userids;
+            });
+        });
+        
+        //给name=box的复选框绑定单击事件
+        $("input[name=subBox]").click(function(){
+            //获取选中复选框长度
+            var length=$("input[name=subBox]:checked").length;
+            //未选中的长度
+            var len=$("input[name=subBox]").length;
+            if(length==len){
+                $("#CheckAll").get(0).checked=true;
+            }else{
+                $("#CheckAll").get(0).checked=false;
+            }
+        });
+        
+        
+        //批量删除 
+		$("#deletes").click(function(){
+            var checks = $("input[name='subBox']:checked");
+            if(checks.length == 0){ alert('没有勾选要删除的通知！');return false;}
+			if(confirm('确定删除已勾选的通知吗?')){
+			     //将获取的值存入数组   
+			     var checkData = new Array();
+			     checks.each(function(i, v){ 
+			        var li = $(this).parents("li");  // 获取checkbox所在行的顺序
+			        deleteMsg(li.attr('mid'), true, i == checks.length - 1  && function() {
+			        	loadList();
+			        	layer.msg('消息删除成功！');
+			        });
+			     });      
+			     
+			};
+		});
+		$("#read").click(function(){
+		    var checks = $("input[name='subBox']:checked");
+		    if(checks.length==0){
+		        alert('没有选择有效的通知！');
+		        return false;
+			}
+			if(confirm('确定将所勾选的通知标为已读？')){
+                var checkData = new Array();
+                checks.each(function(i,v){
+                    var li = $(this).parents("li");
+                    // checkData.push(li);
+                    // console.log(checkData);
+                    readMs(li.attr('mid'));
+                });
+
+			}
+		});
+
+        function readMs(mid) {
+            if (!mid) return;
+
+            // $(event.target || event.srcElement).parent().parent().find('.shuxing').removeClass('unread').addClass('open');
+            // $(event.target || event.srcElement).parent().parent().parent().find(".message-content").slideToggle();
+
+            if (!gReads[mid]) {
+                $.post('msg/read', { mid : mid }, function(data) {
+                    if (data.status == 'success') {
+                        gReads[mid] = true;
+                    }
+                });
+                loadMsgNum();
+                window.location.reload();
+            }
+        }
+
+		
+		
+		//删除本行
+		/* $(".delete").click(function() {
+	        $("input[name='subBox']:checked").each(function() { // 遍历选中的checkbox
+	            n = $(this).parents("li").index();  // 获取checkbox所在行的顺序
+	            $("#messageList").find("li:eq("+n+")").remove();
+	        });
+    	}); */
+    	
+		
+    });
+    
+    
+</script>
+	</body>
+</html>

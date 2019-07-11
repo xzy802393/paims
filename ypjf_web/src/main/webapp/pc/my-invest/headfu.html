@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/commonfu.css"/>
+	</head>
+	<body>
+		<div class="dingbu">
+			<div id="header">
+				<div class="top clearFix">
+					<div class="left">
+						<p>服务热线：400-9690-900(服务时间:9:00-20:00)</p>
+					</div>
+					<div class="right">
+						<ul class="subNav clearFix">
+							<li class="dengluqian" style="display:block;"><a href="javascript:tiaozhuan('login')">登录</a></li>
+							<li style="display: none;" id="user"><span id="username"></span> <a href="javascript:signout();">【安全退出】</a></li>
+							<li><a href="javascript:tiaozhuan('register');">注册</a></li>
+							<li><a href="javascript:tiaozhuan('html/appload.jsp');"><img src="img/phoneLogofu.png" alt="手机">手机APP</a></li>
+							<li><a href="javascript:tiaozhuan('infomation/help.html');">帮助中心</a></li>
+							<li><a href="javascript:tiaozhuan('active_center');" class="last">活动中心</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="bottom clearFix">
+					<div class="left">
+						<a href="javascript:tiaozhuan('index');"><img src="img/logofu.png" alt="营普金服" class="logo"></a>
+						<img src="img/logoRightfu.png" alt="介绍" class="logoRight">
+					</div>
+					<div class="right">
+						<ul class="nav clearFix">
+							<li><a href="javascript:tiaozhuan('index');">首页</a></li>
+							<li><a href="javascript:tiaozhuan('project/list');">我要出借</a></li>
+							<li><a href="javascript:tiaozhuan('borrow')">我要借款</a></li>
+							<li><a href="javascript:tiaozhuan('html/safe-2.html?index=3');">安全保障</a></li>
+							<li class="xiala">
+								<a href="javascript:tiaozhuan('infomation/aboutUs/platform_intro.html');">信息披露<img src="img/pullfu.png" alt="下拉菜单" class="pull"></a>
+								<ul>
+									<li  class="pulllist"><a href="javascript:tzurl('infomation/aboutUs/message.html');">信披声明</a></li>
+									<li  class="pulllist"><a href="javascript:tzurl('infomation/aboutUs/platform_intro.html');">平台简介</a></li>
+									<li  class="pulllist"><a href="javascript:tzurl('infomation/operation_data.html');">运营数据</a></li>
+									<li  class="pulllist"><a href="javascript:tzurl('infomation/list');">公告动态</a></li>
+									<li  class="pulllist"><a href="javascript:tzurl('active_center');">活动中心</a></li>
+									<li  class="pulllist"><a href="javascript:tzurl('infomation/lend_process.jsp');">产品中心</a></li>
+									<li  class="pulllist"><a href=" javascript:tzurl('infomation/list2');">风险教育</a></li>
+									<li  class="pulllist"><a href=" javascript:tzurl('infomation/aboutUs/contacts_us.html');">联系我们</a></li>
+								</ul>
+							</li>
+							<li><a href="javascript:tiaozhuan('pointsmall/points_mall.jsp');">营普客栈</a></li>
+							<li><a href="javascript:tiaozhuan('myaccount/account');">我的账户</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+		$('#header .bottom .right li a').mouseover(function(){
+			$(this).addClass('hover');
+		});
+		$('#header .bottom .right li a').mouseout(function(){
+			$(this).removeClass('hover');
+		});
+		$('#header .bottom .right li').eq(4).mouseover(function(){
+			$(this).find('ul').show();
+            $(this).find('ul li a').removeClass('hover');
+		});
+		$('#header .bottom .right li').eq(4).mouseout(function(){
+			$(this).find('ul').hide();
+		});
+		$('#header .bottom .right li a').click(function(){
+			$(this).addClass('hover');
+		});
+
+        function tzurl(url){
+            top.location.href='/yingpu/pc/'+url;
+        }
+
+        function tiaozhuan(url) {
+            tzurl(url);
+        }
+        function signout(){
+            sessionStorage.user=null;
+            //document.cookie = 'SHAREJSESSIONID=121212;expires=-1';
+            delete sessionStorage.user;
+            tiaozhuan('logout')
+        }
+        $('.msg-pilou').mouseover(function(e){
+            $('#list').show();
+
+            var $that=$('#list').clone();
+            $(window.parent.document).find('body').append(
+                $that.css({'display':'block','z-index':'1000','width':'94px','marginLeft':'8px','background': '#fff','border': '1px solid #ddd','border-top':'2px solid #ff8601', 'position':'absolute','left':$('#list').offset().left,'top':$('#list').offset().top})
+            );
+
+            $('#list').hide();
+        });
+
+        $(function() {
+            var sessionUser;
+            if (sessionStorage.user) {
+                try {
+                    sessionUser = JSON.parse(sessionStorage.user);
+                }
+                catch (e) {
+                    console.log(e);
+                }
+            }
+
+            if (sessionUser) {
+                var user = sessionUser;
+                $('#username').html('<a href="javascript:tiaozhuan(\'../myaccount/account\');">'+'欢迎:JQDCJR'+(user.phone).slice(8)+'</a>');
+                $('#user').show();
+                // $('#xiaoxi').show();
+                $('.dengluqian').hide();
+                $('#zhuce').hide();
+                // if (user.msgNum != 0) {
+                //     $('.head-msg').show();
+                //     $('#msg-info').html('未读消息<em style="color: red;">(' + user.msgNum + ')</em>');
+                // }
+                return;
+            }
+
+        });
+
+	</script>
+		
+	</body>
+</html>

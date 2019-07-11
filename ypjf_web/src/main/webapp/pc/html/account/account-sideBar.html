@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/account-common.css"/>
+		
+	</head>
+	<body>
+		
+		<div class="account-nav-bar" id="sideBar">
+			<ul>
+				<li>
+					<h4 onclick="window.parent.location='../myaccount/account'">账户总览</h4>
+					<!--<a href="javascript:void(0)" onclick="window.parent.location='../myaccount/account'">资产统计</a>-->
+				</li>
+				<li>
+					<h4>投资管理<span></span></h4>
+					<a href="javascript:void(0)" onclick="window.parent.location='sanbiao.html'">散标</a>
+					<a href="javascript:void(0)" onclick="window.parent.location='xinshou.html'">新手专享</a>
+					<a href="javascript:void(0)" onclick="window.parent.location='Xzhitou.html'">X快享智能投标</a>
+					<a href="javascript:void(0)" onclick="window.parent.location='history.html'">交易记录</a>
+				</li>
+				<li>
+					<h4>债权转让<span></span></h4>
+					<a href="javascript:void(0)" onclick="window.parent.location='zhaiquanzhuanrang.html'">债权转让</a>
+				</li>
+				<li>
+					<h4>银行存管<span></span></h4>
+					<a href="javascript:void(0)" onclick="window.parent.location='depository_info.html'">存管信息</a>								
+				</li>
+				<li>
+					<h4>我的奖励<span></span></h4>
+					<a href="javascript:void(0)" onclick="window.parent.location='../myaccount/myrewards'">邀请奖励</a>
+					<a href="javascript:void(0)" onclick="window.parent.location='../myaccount/mycoupons'">优惠券</a>
+					<a href="javascript:void(0)" onclick="window.parent.location='../myaccount/mysignrewards'">签到奖励</a>
+					<a href="javascript:void(0)" onclick="window.parent.location='../myaccount/myluckydraw.jsp'">抽奖奖励</a>
+					<!-- <a href="javascript:void(0)" onclick="window.parent.location='../myaccount/1yuemylucky_draw.jsp'">一月抽奖奖励</a> -->
+				</li>
+				<li>
+					<h4>账户管理<span></span></h4>
+					<a href="javascript:void(0)" onclick="window.parent.location='security_settings.jsp'">安全设置</a>
+					<a href="javascript:void(0)" onclick="window.parent.location='mycard.jsp'">我的银行卡</a>
+				</li>
+				<li>
+					<h4>系统消息<span></span></h4>
+					<a href="javascript:void(0)" onclick="window.parent.location='message.html'">站内信</a>
+				</li>
+				<!--<li>-->
+					<!--<h4>年度账单<span></span></h4>-->
+					<!--<a href="javascript:void(0)" onclick="window.parent.location='zhangdan2018.jsp'">2018年度账单</a>-->
+				<!--</li>-->
+				<!--<li>
+					<h4>虚拟体验金<span></span></h4>
+					<a href="javascript:void(0)" onclick="">虚拟体验金</a>
+				</li>-->
+				<!--<li>
+					<h4>我的积分<span></span></h4>
+					<a href="javascript:void(0)" onclick="window.parent.location='integral_record.html'">积分记录</a>
+				</li>-->
+			</ul>
+		</div>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var $this;
+				$("#sideBar li a").each(function(k, v) {
+					try {
+						if ((paths = top.location.pathname.split('/')) && paths[paths.length - 1].indexOf(
+								(a = /(\w+(?:\.\w+)?)\'$/.exec($(v).attr('onclick'))) && a[1] || '-') != -1) {
+							$(v).addClass('active');
+						}
+					}
+					catch(e) {
+						console.log(e);
+					}
+				});
+				 
+				
+				//点击标题收起   
+				$("#sideBar li h4").each(function(){
+				   	$(this).click(function(){ 
+				   	    //console.log($("#sideBar li"));
+				   	    $(this).toggleClass('on');				   	
+				 	    $(this).parent().find("a").toggle(500);
+				   	});
+	   	  		});
+			});    
+		</script>
+		<script type="text/javascript">
+			var lists = $('#sideBar li a');
+			lists.hover(function(){
+				$(this).css({'background':'#f9f9f9',
+							'box-shadow':'0px 2px 6px 0px rgba(226,226,226,1)',
+							'font-size':'15px',
+							'color':'#FF7F01',
+							'border-right':'4px solid #FF7F01',
+							'padding-left':'40px'
+						})
+			},function(){
+				$(this).css({'background':'#fff',
+							'box-shadow':'none',
+							'font-size':'14px',
+							'color':'#666',
+							'border-right':'none',
+							'padding-left':'32px'
+						})
+			});
+		</script>
+	</body>
+</html>

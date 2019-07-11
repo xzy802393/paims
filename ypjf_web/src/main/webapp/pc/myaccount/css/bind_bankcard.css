@@ -1,0 +1,167 @@
+/*遮罩层*/
+.black-overlay{
+	/*display: none;*/
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.4;
+	opacity:.40;
+	filter: alpha(opacity=40);
+}
+.open-fuyou{
+	/*display: none;*/
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -269px;
+	margin-top: -260px;
+	width: 528px;
+	height: 520px;
+	background-color: white;
+	z-index:1002;
+	overflow: auto;
+	border-radius: 6px;
+	/*box-shadow: 5px 5px 5px 0 #b5acac;*/
+}
+.open-fuyou .open-fuyou-tit{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: #FF8A27;
+	color: #fff;
+	font-size: 22px;
+	position: relative;
+}
+.open-fuyou .open-fuyou-tit .close{
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	background: url(../../img/borrow-close.png) no-repeat center;
+	/*margin-top: -35px;
+	margin-left: 470px;*/
+	cursor: pointer;
+	position: absolute;
+    right: 15px;
+    top: 11px;
+}
+.open-fuyou-form{
+	width: 100%;
+	text-align: center;
+}
+.open-fuyou-form p{
+	height: 60px;
+	line-height: 60px;
+	font-size: 14px;
+	color: #999;
+}
+.open-fuyou-form p a{
+	color: #239afb;
+}
+.open-fuyou-form form{
+	width: 100%;
+}
+.open-fuyou-form form label{
+	margin-top: 14px;
+	height: 34px;
+	line-height: 34px;
+	display: block;
+	font-size: 14px;
+	color: #333;
+}
+.open-fuyou-form form label input,.open-fuyou-form form label select{
+	width: 228px;
+	height: 32px;
+	border: 1px solid #aaa;
+	margin-left: 14px;
+	padding-left: 8px;
+}
+.open-fuyou-form form p.tip{
+	height: 26px;
+	line-height: 26px;
+	font-size: 12px;
+	color: #666;
+}
+.open-fuyou-form form p.tip span{
+	color: #ff0000;
+}
+
+.open-fuyou-form form label select.province{
+	width: 106px;
+}
+.open-fuyou-form form label select.city{
+	width: 106px;
+	margin-left: 10px;
+}
+
+/*开通富有金账户按钮*/
+.open-fuyou-form form input.open-fuyou-btn{
+	width: 298px;
+	height: 48px;
+	border: none;
+	margin-top: 40px;
+	background: #999;
+	color: #fff;
+	font-size: 18px;
+	outline: none;
+}
+.open-fuyou-form form input.open-fuyou-btn.active{
+	background: #FF8A27;
+	cursor: pointer;
+}
+
+/*开通富有成功弹框*/
+
+.open-fuyou-ok{
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -269px;
+	margin-top: -191px;
+	width: 528px;
+	height: 282px;
+	background-color: white;
+	z-index:1002;
+	overflow: auto;
+	border-radius: 6px;
+	/*box-shadow: 5px 5px 5px 0 #b5acac;*/
+}
+.open-fuyou-ok .open-fuyou-tit{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+	color: #333;
+	font-size: 22px;
+}
+.open-fuyou-ok .open-fuyou-tit .close{
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	background: url(../img/tip-close.png) no-repeat center;
+	margin-top: -35px;
+	margin-left: 470px;
+	cursor: pointer;
+}
+.open-fuyou-ok .open-fuyou-txt{
+	width: 100%;
+	text-align: center;
+	color: #333;
+	font-size: 16px;
+	padding-top: 36px;
+}
+.open-fuyou-ok .open-fuyou-txt p.open-ok{
+	margin-top: 16px;
+}
+.open-fuyou-ok .open-fuyou-txt p:last-child{
+	margin-top: 38px;
+}
+.open-fuyou-ok .open-fuyou-txt p:last-child span{
+	color: #ff0000;
+}

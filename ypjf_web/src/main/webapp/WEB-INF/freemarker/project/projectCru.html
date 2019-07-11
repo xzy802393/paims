@@ -1,0 +1,1500 @@
+<#escape x as x?html>
+	<script type="text/javascript" charset="utf-8" src="${ctx}/js/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="${ctx}/js/ueditor/ueditor.all.min.js"> </script>
+	<!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+	<!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+	<script type="text/javascript" charset="utf-8" src="${ctx}/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+	<script type="text/javascript" charset="utf-8" src="${ctx}/js/queryString.js"></script>
+    <style>
+        .borrower-info input {
+            width: auto;
+        }
+
+        .borrower-info .col-sm-6{
+            width: 100%;
+        }
+        .borrower-info .col-sm-9{
+            width: 45%;
+        }
+        .borrower-info {
+            display: block;
+            margin: 10px 3%;
+            float: left;
+            height: auto;
+            width: 94%;
+        }
+        .borrower-info:after {
+            clear: both;
+        }
+
+        .borrower-info .form-group {
+            margin: 5px 0px;
+            float: left;
+            height: auto;
+            width: 20%;
+        }
+
+        .borrower-info .form-group2 {
+            margin: 5px 0px;
+            float: left;
+            height: auto;
+            width: 50%;
+            clear: left;
+        }
+
+        .borrower-info .form-group input {
+            width: 100%;
+        }
+
+        .borrower-info .form-group>div {
+            margin: 8px 3px;
+            display: block;
+            float: left;
+        }
+        .borrower-info .form-group label {
+            width: 45%;
+            margin: 5px 3px;
+            clear: left;
+        }
+        .section-title {
+            position: relative;
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            float: none;
+            width:auto;
+            overflow: hidden;
+        }
+
+        .section-title:after {
+            display: inline-block;
+            position: absolute;
+            margin-left: 10px;
+            top: 50%;
+            content: " ";
+            background: #ccc;
+            height: 1px;
+            width: 100%;
+        }
+        .div-block {
+            display: block;
+            float: none;
+            clear: left;
+        }
+
+        .input-line input, .input-line textarea { padding: 5px 3px; width: 50%; margin: 5px 0px;  border: 1px solid #ccc; }
+        .input-desc {
+            padding: 10px 0px; margin: 2px 0; margin-right: 10px; text-align: right; min-width: 12%; display: inline-block;
+            display: table-cell;
+        }
+
+    </style>
+
+	<SCRIPT type="text/javascript">
+<!--
+
+
+
+
+jQuery(document).ready(function(){
+
+   /* $.ajax({
+        url : ctx+"/system/project/findcode/",
+        type : "post",
+        dataType : "json",
+        success : function (_json) {
+            $('#code').val(_json.code);
+        }
+    });*/
+	//回选 下拉框
+	//jQuery("#search_state option[value='是']").prop("selected",true);
+
+	/*
+	$('.date-picker').datepicker({
+		    autoclose: true,
+		    format: 'yyyy-mm-dd',
+		    language: 'zh-CN'
+		    //,todayBtn: 'linked',
+		    //startDate:new Date(2014,10,27),
+			//endDate:'+60d',
+		    //startDate: '+1d',
+		}).next().on(ace.click_event, function(){
+			$(this).prev().focus();
+		});*/
+
+		//编辑时元素的默认
+		//是否信任专享
+		var isNewCode = $('#isNew').attr('code') ;
+    	$('#isNew').val(isNewCode) ;
+		//是否推荐
+		var isRecommendCode = $('#isRecommend').attr('code') ;
+    	$('#isRecommend').val(isRecommendCode) ;
+
+    $('#editor').html($('#descr').val()) ;
+    	//投资期限
+    	$.ajax({
+            url : ctx+"/system/projectdeadline/list/json",
+            type : "post",
+            dataType : "json",
+            success : function(_json) {
+                if (_json.status == "error") {
+                    return;
+                }
+                //先清除原来的数据
+                $("#deadLine").empty();
+                jQuery(_json.data).each(function (i, _obj) {
+                    if(_obj.deadline != '0'){
+                        jQuery("#deadLine").append("<option value='" + _obj.deadline + "'>" + _obj.deadline + "个月</option>");
+                    }
+                });
+                jQuery("#deadLine").val($("#inputDeadLine").val());
+            }
+            });
+
+    //投资期限
+    $.ajax({
+        url : ctx+"/system/project/type/list/json",
+        type : "post",
+        dataType : "json",
+        success : function(_json) {
+            if (_json.status == "error") {
+                return;
+            }
+            //先清除原来的数据
+            $("#type").empty();
+            jQuery(_json.data).each(function (i, _obj) {
+                if(_obj.deadline != '0'){
+                    jQuery("#type").append("<option value='" + _obj.id + "'>" + _obj.type + "</option>");
+                }
+            });
+            jQuery("#type").val($("#inputtype").val());
+        }
+    });
+    //合同编号
+    $.ajax({
+        url : ctx+"/system/project/code/json",
+        type : "post",
+        dataType : "json",
+        success : function(_json) {
+            $("#code").attr("value",_json);
+        }
+    });
+    	//借款人
+    	$.ajax({
+            url : ctx+"/system/borrower/list/json",
+            type : "post",
+            dataType : "json",
+            success : function(_json) {
+                if (_json.status == "error") {
+                    return;
+                }
+                //先清除原来的数据
+                $("#borrowerId").empty();
+                jQuery(_json.data).each(function (i, _obj) {
+                    if(_obj.isOpenFuiou != '否'){
+                        jQuery("#borrowerId").append("<option value='" + _obj.id + "'>" + _obj.legalPerson + "</option>");
+					}
+
+                });
+                jQuery("#borrowerId").val($("#inputBorrowerId").val());
+            }
+            });
+    	//还款方式
+    	$.ajax({
+            url : ctx+"/system/repayway/list/json",
+            type : "post",
+            dataType : "json",
+            success : function(_json) {
+                if (_json.status == "error") {
+                    return;
+                }
+//                console.log(_json) ;
+                //先清除原来的数据
+                $("#repayment").empty();
+                jQuery(_json.data).each(function (i, _obj) {
+                    jQuery("#repayment").append("<option value='" + _obj.id + "'>" + _obj.repay + "</option>");
+                });
+                jQuery("#repayment").val($("#inputRepayment").val());
+            }
+            });
+    	//分类
+    	$.ajax({
+            url : ctx+"/system/projectcategory/list/json",
+            type : "post",
+            dataType : "json",
+            success : function(_json) {
+                if (_json.status == "error") {
+                    return;
+                }
+//                console.log(_json) ;
+                //先清除原来的数据
+                $("#categoryId").empty();
+                jQuery(_json.data).each(function (i, _obj) {
+                    jQuery("#categoryId").append("<option value='" + _obj.id + "'>" + _obj.name + "</option>");
+                });
+                jQuery("#categoryId").val($("#inputCategoryId").val()) ;
+            }
+            });
+
+    	//优惠券
+    /*	$.ajax({
+            url : ctx+"/system/card/list/json",
+            type : "post",
+            dataType : "json",
+            success : function(_json) {
+            	alert(JSON.stringify(_json));
+                if (_json.status == "error") {
+                    return;
+                }
+//                console.log(_json) ;
+                //先清除原来的数据
+                $("#cardId").empty();
+                jQuery(_json.data).each(function (i, _obj) {
+                    jQuery("#cardId").append("<option value='" + _obj.id + "'>" + _obj.name + "</option>");
+                });
+                jQuery("#cardId").val($("#inpucardId").val()) ;
+            }
+            });*/
+
+
+
+    $("#isGift").on('change',function(){
+        var isGift = $("#isGift").val();
+        if('是' == isGift){
+            //优惠券
+            $.ajax({
+                url : ctx+"/system/card/list/json?cardType=2",
+                type : "post",
+                dataType : "json",
+                success : function(_json) {
+                    if (_json.status == "error") {
+                        return;
+                    }
+                    console.log(JSON.stringify(_json));
+                    //先清除原来的数据
+                    $("#cardId").empty();
+                    console.log($('#cardId').html());
+                    jQuery(_json.data).each(function (i, _obj) {
+                        jQuery("#cardId").append("<option value='" + _obj.id + "'>" + _obj.name + "</option>");
+
+                    });
+                    console.log($('#cardId').html());
+                    jQuery("#cardId").val($("#inputCardId").val());
+                }
+            });
+            $("#cardDiv").show();
+            $("#limitDiv").show();
+        }else{
+            $("#cardDiv").hide();
+            $("#limitDiv").hide();
+        }
+    });
+
+
+    	//多图上传初始化
+    	initimages("add_promise_div","addPgod");
+    initimages("add_businessLicense_div","addBusinessLicense");
+	});
+
+/**
+ * 上传图片
+ */
+function lunboImages(){
+    jQuery("#filed").click();
+}
+
+$(document).on("change", "#filed", function() {
+    //...
+
+    $.ajaxFileUpload({
+        url : '/yingpu/adminFileUpload',
+        secureuri : false,
+        fileElementId : 'filed',
+        dataType : 'text',
+        data : {},
+        success : function(data, status) {
+
+            jQuery("#businessLicenseI").attr('src',data);
+            jQuery("#businessLicenseI").attr('value',data);
+            jQuery("#businessLicense").val(data);
+        },
+        error : function(data, status, e) {
+            myalert("上传出错");
+        }
+    })
+
+    return false;
+});
+function submit(xiaosu){
+    var readya=xiaosu;
+    jQuery("#descr").val(UE.getEditor('editor').getContent());
+
+    if(readya=="0"){
+        jQuery("#submit").click();
+    }else{
+        jQuery("#submit1").click();
+    }
+
+
+}
+
+
+//-->
+</SCRIPT>
+
+
+
+<div class="row">
+	<div class="col-xs-12">
+		<form class="form-horizontal" id="validation-form" method="POST" novalidate="novalidate" action="${ctx}/system/project/update" >
+			<input type="hidden" id="id" name="id" value="${(returnDatas.data.id)!''}"/>
+<!--input  hidden  End-->
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="name" >项目名称*</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<input name="name" datatype="*"   nullmsg="项目名称不能为空" class="col-xs-12 col-sm-6" id="name" value="${(returnDatas.data.name)!''}"  type="text" />
+					</div><div class="help-block" for="name"></div>
+				</div>
+			</div>
+	        <div class="space-2"></div>
+            <div class="form-group">
+                <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="type" >项目类型</label>
+                <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                        <input  style="display: none;" class="col-xs-12 col-sm-6" id="inputtype" value="${(returnDatas.data.type)!''}"  type="text" />
+                        <select id="type" code="${(returnDatas.data.type)!''}"name="type" class="col-xs-12 col-sm-6" >
+                        </select>
+                    </div><div class="help-block" for="type"></div>
+                </div>
+            </div>
+            <div class="space-2"></div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="categoryId" >分类</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<input  style="display: none;" class="col-xs-12 col-sm-6" id="inputCategoryId" value="${(returnDatas.data.categoryId)!''}"  type="text" />
+						<select id="categoryId" code="${(returnDatas.data.categoryId)!''}"name="categoryId" class="col-xs-12 col-sm-6" >
+						</select>
+					</div><div class="help-block" for="categoryId"></div>
+				</div>
+			</div>
+	        <div class="space-2"></div>
+            <div class="form-group">
+                <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="securityLevel" >安全级别*</label>
+                <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                        <input name="securityLevel" datatype="*"   nullmsg="安全级别不能为空"  class="col-xs-12 col-sm-6"
+                               id="securityLevel" value="${(returnDatas.data.securityLevel)!''}"  type="text" />
+                    </div><div class="help-block" for="estimatedAnnualRate"></div>
+                </div>
+            </div>
+	        <div class="space-2"></div>
+            <div class="form-group">
+                <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="borrowerCondition" >出借人条件*</label>
+                <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                        <input name="borrowerCondition" datatype="*"   nullmsg="出借人条件不能为空"  class="col-xs-12 col-sm-6"
+                               id="borrowerCondition" value="${(returnDatas.data.borrowerCondition)!''}"  type="text" />
+                    </div><div class="help-block" for="estimatedAnnualRate"></div>
+                </div>
+            </div>
+	        <div class="space-2"></div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="categoryId" >借款人</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<input  style="display: none;" class="col-xs-12 col-sm-6" id="inputBorrowerId" value="${(returnDatas.data.borrowerId)!''}"  type="text" />
+						<select id="borrowerId" code="${(returnDatas.data.borrowerId)!''}"name="borrowerId" class="col-xs-12 col-sm-6" >
+						</select>
+					</div><div class="help-block" for="categoryId"></div>
+				</div>
+			</div>
+	        <div class="space-2"></div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="isNew" >是否新人专享</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<select id="isNew" code="${(returnDatas.data.isNew)!''}" name="isNew" class="col-10" >
+							<option value="">--</option>
+							<option value="是">是</option>
+							<option value="否">否</option>
+						</select>
+					</div><div class="help-block" for="isNew"></div>
+				</div>
+			</div>
+	        <div class="space-2"></div>
+			<!--
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="isRecommend" >是否推荐</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<!--<input name="isRecommend" class="col-xs-12 col-sm-6"   type="text" />--
+						<select id="isRecommend" code="${(returnDatas.data.isRecommend)!''}"name="isRecommend" class="col-10" >
+							<option value="">--</option>
+							<option value="是">是</option>
+							<option value="否">否</option>
+						</select>
+					</div><div class="help-block" for="isRecommend"></div>
+				</div>
+			</div>
+	        <div class="space-2"></div>-->
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="repayRate" >还款年化率*</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<input name="repayRate" class="col-xs-12 col-sm-6" id="repayRate" value="${(returnDatas.data.repayRate * 100)!'0'}"  type="text" datatype="*"   nullmsg="还款年利率不能为空" />%
+					</div><div class="help-block" for="estimatedAnnualRate"></div>
+				</div>
+			</div>
+	        <div class="space-2"></div>
+			<div class="form-group">
+                <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="estimatedAnnualRate" >预计年化率*</label>
+                <div class="col-xs-12 col-sm-9" style="display: flex;">
+                    <div class="clearfix" style="flex: 1;">
+                        <input name="estimatedAnnualRate" style="width: 90%;" class="col-xs-8 col-sm-4" style="" id="estimatedAnnualRate" value="${(returnDatas.data.estimatedAnnualRate * 100)!'0'}"  type="text" datatype="*"   nullmsg="预计年化率不能为空"/>%
+                    </div><div class="help-block" for="estimatedAnnualRate"></div>+
+                    <div class="clearfix" style="flex: 1;">
+                        <input name="interestAdd" class="col-xs-4 col-sm-2" id="interestAdd" value="${(returnDatas.data.interestAdd * 100)!'0'}" type="text" datatype="*" />%
+                    </div><div class="help-block" for="estimatedAnnualRate"></div>
+                </div>
+            </div>
+            <div class="space-2"></div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="totalAmount" >项目总金额*</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<input name="totalAmount" datatype="*"   nullmsg="项目总金额不能为空" class="col-xs-12 col-sm-6" id="totalAmount" value="${(returnDatas.data.totalAmount)!''}"  type="text" />
+					</div><div class="help-block" for="totalAmount"></div>
+				</div>
+			</div>
+			<div class="space-2"></div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="deadLine" >投资期限</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<input style="display: none;" class="col-xs-12 col-sm-6" id="inputDeadLine" value="${(returnDatas.data.deadLine)!''}"  type="text" />
+						<select id="deadLine" code="${(returnDatas.data.deadLine)!''}"name="deadLine" class="col-xs-12 col-sm-6" >
+						</select>
+					</div><div class="help-block" for="deadLine"></div>
+				</div>
+			</div>
+	        <div class="space-2"></div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="code" >项目编号*</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<input name="code" datatype="*"   nullmsg="项目编号不能为空" class="col-xs-12 col-sm-6" id="code" type="text" disabled="disabled"/>
+					</div><div class="help-block" for="code"></div>
+				</div>
+			</div>
+	        <div class="space-2"></div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="repayment" >还款方式</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<input  style="display: none;" class="col-xs-12 col-sm-6" id="inputRepayment" value="${(returnDatas.data.repayment)!''}"  type="text" />
+						<select id="repayment" code="${(returnDatas.data.repayment)!''}"name="repayment" class="col-xs-12 col-sm-6" >
+						</select>
+					</div><div class="help-block" for="repayment"></div>
+				</div>
+			</div>
+	        <div class="space-2"></div>
+					<!--日期型-->
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="startTime" >项目上线时间*</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+					 <div class="input-group col-xs-12 col-sm-6">
+						<!--<input name="startTime" datatype="*"   nullmsg="项目上线时间不能为空"  class="form-control date-picker"  id="startTime" readonly="readonly" value="${(returnDatas.data.startTime)!''}"  type="text" />-->
+
+						 <input onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',})" datatype="*" name="startTime" nullmsg="项目上线时间不能为空"  class="form-control"  id="startTime" readonly="readonly"  value="${(returnDatas.data.startTime)!''}"  type="text" />
+
+						 <span class="input-group-addon">
+								<i class="fa fa-calendar bigger-110"></i>
+							</span>
+					   </div>
+
+					</div><div class="help-block" for="startTime"></div>
+				</div>
+			</div>
+
+			<div class="space-2"></div>
+					<!--日期型-->
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="releaseExpectedTime" >项目预期放款时间*</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+					 <div class="input-group col-xs-12 col-sm-6">
+						<!--<input name="releaseExpectedTime" datatype="*"   nullmsg="项目预期放款时间"  class="form-control date-picker"  id="releaseExpectedTime" readonly="readonly"  value="${(returnDatas.data.releaseExpectedTime)!''}"  type="text" />-->
+						 <input onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',})" datatype="*" name="releaseExpectedTime" nullmsg="项目预期放款时间"  class="form-control"  id="releaseExpectedTime" readonly="readonly"  value="${(returnDatas.data.releaseExpectedTime)!''}"  type="text" />
+					        <span class="input-group-addon">
+								<i class="fa fa-calendar bigger-110"></i>
+							</span>
+					   </div>
+
+					</div><div class="help-block" for="startTime"></div>
+				</div>
+			</div> <div class="space-2"></div>
+			<!--日期型-->
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="endTitme" >项目流标时间*</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<div class="input-group col-xs-12 col-sm-6">
+							<!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+							<input onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',})" datatype="*" name="endTitme" nullmsg="项目流标时间不能为空"  class="form-control"  id="endTitme" readonly="readonly"  value="${(returnDatas.data.endTitme)!''}"  type="text" />
+							<span class="input-group-addon">
+								<i class="fa fa-calendar bigger-110"></i>
+							</span>
+						</div>
+
+					</div><div class="help-block" for="startTime"></div>
+				</div>
+			</div>
+	        <div class="space-2"></div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="limitMoney" >起投金额*</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<input name="limitMoney" datatype="*"   nullmsg="起投金额不能为空" class="col-xs-12 col-sm-6" id="limitMoney" value="${(returnDatas.data.limitMoney)!''}"  type="text" />
+					</div><div class="help-block" for="limitMoney"></div>
+				</div>
+			</div>
+	        <div class="space-2"></div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="images" >实景图</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<!--<input name="images" class="col-xs-12 col-sm-6" id="images" value="${(returnDatas.data.images)!''}"  type="text" />-->
+						<ul class="addPromise_photo promise"  id="addPgod" style="width:97%;overflow:hidden;margin:0 auto;margin-top:8px;margin-left:38px">
+							<input type="file" id="filedTmpImgs" class="filedImgs" name="filed" style="display:none">
+
+
+							<input name="images" class="col-xs-12 col-sm-6 imagesVal"  id="images" value="${(returnDatas.data.images)!''}" style="display:none"  type="text" />
+							<li class="addgoods_photo_a" style="float:left;width:100px;height:150px;border:1px solid #e6e6e6;padding:5px 16px 0px 16px;margin-right:20px">
+								<div class="move_Box" style="width:40px;"></div>
+								<div class="addgoods_photo_img">
+									<img  class="photoImgsVal"/>
+								</div>
+								<ul class="addgoods_photo_button">
+									<li><div class="layui-btn layui-btn-primary layui-btn-mini promise_edit" photo_no="1" style="float: left;width:46px;height:25px;line-height:25px;font-size:12px;margin-left: -8px;">上传</div>
+									</li>
+									<li class="button_float promise_deleteBt"><div class="layui-btn layui-btn-primary layui-btn-mini promise_delete" photo_no="1" style="float: left;width:46px;height:25px;line-height:25px;font-size:12px;background:#ccc;margin-left: -12px;">删除</div></li>
+								</ul>
+							</li>
+
+							<div id="add_promise_div">
+
+							</div>
+
+							<div>
+								<span class="add_promise_li" div="add_promise_div" style="font-size:80px;color:#949494;font-family:-webkit-body;">+</span><br/>
+								<span >点击添加</span>
+							</div>
+						</ul>
+					</div><div class="help-block" for="images"></div>
+				</div>
+			</div>
+	        <div class="space-2"></div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="businessLicense" >企业执照</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<!--<input name="images" class="col-xs-12 col-sm-6" id="images" value="${(returnDatas.data.images)!''}"  type="text" />-->
+						<ul class="addPromise_photo promise"  id="addBusinessLicense" style="width:97%;overflow:hidden;margin:0 auto;margin-top:8px;margin-left:38px">
+							<input type="file" id="filedBusinessLicense" class="filedImgs" name="filed" style="display:none">
+
+
+							<input name="businessLicense" class="col-xs-12 col-sm-6 imagesVal"  id="businessLicense" value="${(returnDatas.data.businessLicense)!''}" style="display:none"  type="text" />
+							<li class="addgoods_photo_a" style="float:left;width:100px;height:150px;border:1px solid #e6e6e6;padding:5px 16px 0px 16px;margin-right:20px">
+								<div class="move_Box" style="width:40px;"></div>
+								<div class="addgoods_photo_img">
+									<img  class="photoImgsVal"/>
+								</div>
+								<ul class="addgoods_photo_button">
+									<li><div class="layui-btn layui-btn-primary layui-btn-mini promise_edit" photo_no="1" style="float: left;width:46px;height:25px;line-height:25px;font-size:12px;margin-left: -8px;">上传</div>
+									</li>
+									<li class="button_float promise_deleteBt"><div class="layui-btn layui-btn-primary layui-btn-mini promise_delete" photo_no="1" style="float: left;width:46px;height:25px;line-height:25px;font-size:12px;background:#ccc;margin-left: -12px;">删除</div></li>
+								</ul>
+							</li>
+
+							<div id="add_businessLicense_div">
+
+							</div>
+
+							<div>
+								<span class="add_promise_li" div="add_businessLicense_div" style="font-size:80px;color:#949494;font-family:-webkit-body;">+</span><br/>
+								<span >点击添加</span>
+							</div>
+						</ul>
+					</div><div class="help-block" for="images"></div>
+				</div>
+			</div>
+	        <div class="space-2"></div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="descr" >文字简介</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<script id="editor" type="text/plain" style="width:1024px;height:500px;">
+
+						</script>
+						<input type="hidden" id="descr" name="descr" value="${(returnDatas.data.descr)!''}"/>
+						<!--<textarea name="descr" rows="10" class="col-xs-12 col-sm-6" id="descr"  >${(returnDatas.data.descr)!''}</textarea>-->
+					</div><div class="help-block" for="descr"></div>
+				</div>
+			</div>
+	        <div class="space-2"></div>
+			<div class="form-group">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="isGift" >是否开启赠送卡券</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<select id="isGift" code="${(returnDatas.data.isGift)!''}" name="isGift" class="col-10" >
+							<option value="">--</option>
+							<option value="是">是</option>
+							<option value="否">否</option>
+						</select>
+					</div><div class="help-block" for="isGift"></div>
+				</div>
+			</div>
+			<div class="space-2"></div>
+			<div class="form-group" id="cardDiv" style="display: none;">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="cardId" >优惠券</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<input  style="display: none;" class="col-xs-12 col-sm-6" id="inputCardId" value="${(returnDatas.data.cardId)!''}"  type="text" />
+						<select id="cardId" code="${(returnDatas.data.cardId)!''}"name="cardId" class="col-xs-12 col-sm-6" >
+						</select>
+					</div><div class="help-block" for="cardId"></div>
+				</div>
+			</div>
+			<div class="space-2"></div>
+			<div class="form-group" id="limitDiv" style="display: none">
+				<label class="control-label col-xs-12 col-sm-3 no-padding-right" for="cardId" >赠送限制</label>
+				<div class="col-xs-12 col-sm-9">
+					<div class="clearfix">
+						<!--<input  id="giftLimit" value="1"  type="checkbox" />-->
+						<label><input name="giftLimit" type="checkbox" value="1" />1 </label>
+						<label><input name="giftLimit" type="checkbox" value="2" />2 </label>
+						<label><input name="giftLimit" type="checkbox" value="3" />3 </label>
+						<label><input name="giftLimit" type="checkbox" value="4" />4 </label>
+						<label><input name="giftLimit" type="checkbox" value="5" />5 </label>
+						<label><input name="giftLimit" type="checkbox" value="6" />6 </label>
+						<label><input name="giftLimit" type="checkbox" value="7" />7 </label>
+						<label><input name="giftLimit" type="checkbox" value="8" />8 </label>
+						<label><input name="giftLimit" type="checkbox" value="9" />9</label>
+						<label><input name="giftLimit" type="checkbox" value="0" />0</label>
+					</div><div class="help-block" for="giftLimit"></div>
+				</div>
+			</div>
+			<div class="space-2"></div>
+
+            <div class="borrower-info">
+
+                <div class="section-title">借款人信息</div>
+
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.name" >姓名</label>
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="clearfix">
+                            <div class="input-group col-xs-12 col-sm-6">
+                                <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                                <input name="bi.name"    class="col-xs-12 col-sm-6"  value="${(returnDatas.queryBean.name)!''}"  type="text" />
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.idNumber" >证件号码</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.idNumber"  class="col-xs-12 col-sm-6"  value="${(returnDatas.queryBean.idNumber)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.monthlyIncome" >月收入</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.monthlyIncome"    class="col-xs-12 col-sm-6"  value="${(returnDatas.queryBean.monthlyIncome)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.repayingSource" >还款来源</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.repayingSource"    class="col-xs-12 col-sm-6"  value="${(returnDatas.queryBean.repayingSource)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.contactWay" >联系方式</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.contactWay"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.contactWay)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.sex" >性别</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.sex"    class="col-xs-12 col-sm-6"  value="${(returnDatas.queryBean.sex)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.address" >户籍</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.address"    class="col-xs-12 col-sm-6"  value="${(returnDatas.queryBean.address)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.debtSituation" >负债情况</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.debtSituation"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.debtSituation)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.whetherToBuy" >是否购房</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.whetherToBuy"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.whetherToBuy)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.otherLoanInformation" >其他借款人信息</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.otherLoanInformation"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.otherLoanInformation)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.age" >年龄</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.age"    class="col-xs-12 col-sm-6"  value="${(returnDatas.queryBean.age)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.theMainProperties" >主体性质</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.theMainProperties"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.theMainProperties)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.purposeOfLoan" >借款用途</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.purposeOfLoan"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.purposeOfLoan)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.whetherTheCar" >是否购车</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.whetherTheCar"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.whetherTheCar)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.refinance" >是否续贷</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.refinance"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.refinance)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.education" >学历</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.education"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.education)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.industryInvolved" >所属行业</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.industryInvolved"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.industryInvolved)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.creditReport" >征信报告</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.creditReport"    class="col-xs-12 col-sm-6"  value="${(returnDatas.queryBean.creditReport)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.whetherFertility" >是否生育</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.whetherFertility"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.whetherFertility)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.residentialAddress" >居住地点</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.residentialAddress"    class="col-xs-12 col-sm-6"  value="${(returnDatas.queryBean.residentialAddress)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.marital" >婚姻状况</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.marital"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.marital)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.jobNature" >工作性质</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.jobNature"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.jobNature)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.creditConditions" >征信情况</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.creditConditions"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.creditConditions)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.socialSecurity" >是否有社保</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.socialSecurity"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.socialSecurity)!''}"  type="text" />
+
+
+                    </div>
+
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div category="13" style="display: none;">
+            <div class="borrower-info">
+                <div class="section-title">抵押物质信息</div>
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >车辆型号</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.carModel"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.carModel)!''}"  type="text" />
+                    </div>
+                    </div>
+                    </div>
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.carLicenseNumber" >车牌号</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.carLicenseNumber"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.carLicenseNumber)!''}"  type="text" />
+                    </div>
+
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >购买时间</label>
+                <div class="col-xs-12 col-sm-9">
+                <div class="clearfix">
+                <div class="input-group col-xs-12 col-sm-6">
+                <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                <input name="bi.carPurchaseDate"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.carPurchaseDate)!''}"  type="text" />
+                </div>
+                </div>
+                </div>
+                </div><div class="form-group">
+                <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >购买价格</label>
+                <div class="col-xs-12 col-sm-9">
+                <div class="clearfix">
+                <div class="input-group col-xs-12 col-sm-6">
+                <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                <input name="bi.carPriceOnBuy"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.carPriceOnBuy)!''}"  type="text" />
+                </div>
+
+                </div>
+                </div>
+                </div><div class="form-group">
+                <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >抵押估价</label>
+                <div class="col-xs-12 col-sm-9">
+                <div class="clearfix">
+                <div class="input-group col-xs-12 col-sm-6">
+                <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                <input name="bi.carValuation"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.carValuation)!''}"  type="text" />
+
+
+                </div>
+
+                </div>
+                </div>
+                </div><div class="form-group">
+                <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >行驶公里 </label>
+                <div class="col-xs-12 col-sm-9">
+                <div class="clearfix">
+                <div class="input-group col-xs-12 col-sm-6">
+                <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                <input name="bi.carRunMileage"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.carRunMileage)!''}"  type="text" />
+
+
+                </div>
+
+                </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+        <div category="14" style="display: none;">
+            <div class="borrower-info">
+                <div class="section-title">企业信息</div>
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >企业名称</label>
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="clearfix">
+                            <div class="input-group col-xs-12 col-sm-6">
+                                <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                                <input name="bi.enterpriseName"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.enterpriseName)!''}"  type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >成立时间</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.establishmentDate"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.establishmentDate)!''}"  type="text" />
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >证件号码</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.certificateNumber"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.certificateNumber)!''}"  type="text" />
+                    </div>
+                    </div>
+                    </div>
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >经营收益</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.operationRevenue"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.operationRevenue)!''}"  type="text" />
+                    </div>
+
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >所属行业</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.enterpriseIndustryInvolved"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.enterpriseIndustryInvolved)!''}"  type="text" />
+                    </div>
+                    </div>
+                    </div>
+
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >企业征信</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.enterpriseCreditInvestigation"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.enterpriseCreditInvestigation)!''}"  type="text" />
+                    </div>
+
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >注册资本</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.registeredCapital"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.registeredCapital)!''}"  type="text" />
+                    </div>
+
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >注册地址</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.registeredAddress"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.registeredAddress)!''}"  type="text" />
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div category="15" style="display: none;">
+            <div class="borrower-info">
+                <div class="section-title">企业信息</div>
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >房屋地址</label>
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="clearfix">
+                            <div class="input-group col-xs-12 col-sm-6">
+                            <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                            <input name="bi.houseAddress"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.houseAddress)!''}"  type="text" />
+                        </div>
+                        </div>
+                    </div>
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >房产估值价</label>
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="clearfix">
+                            <div class="input-group col-xs-12 col-sm-6">
+                            <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                            <input name="bi.housePropertyValuation"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.housePropertyValuation    )!''}"  type="text" />
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >房龄</label>
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="clearfix">
+                            <div class="input-group col-xs-12 col-sm-6">
+                            <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                            <input name="bi.houseAge"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.houseAge)!''}"  type="text" />
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >房产产权人</label>
+                    <div class="col-xs-12 col-sm-9">
+                    <div class="clearfix">
+                    <div class="input-group col-xs-12 col-sm-6">
+                    <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                    <input name="bi.housePropertyOwner"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.housePropertyOwner    )!''}"  type="text" />
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >购买年限</label>
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="clearfix">
+                            <div class="input-group col-xs-12 col-sm-6">
+                            <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                            <input name="bi.purchaseAgeLimit"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.purchaseAgeLimit)!''}"  type="text" />
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >房屋面积</label>
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="clearfix">
+                            <div class="input-group col-xs-12 col-sm-6">
+                            <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                            <input name="bi.houseArea"    class="col-xs-12 col-sm-6" id="bidard" value="${(returnDatas.queryBean.houseArea)!''}"  type="text" />
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div type="extras" style="display: none;">
+            <div class="borrower-info">
+                <div class="div-block input-line" belong="13,14,15,16">
+                <span class="input-desc">担保措施</span><input name="bi.guaranteeMeasure" value="${(returnDatas.queryBean.guaranteeMeasure)!''}" />
+                </div>
+                <div class="div-block input-line" belong="14">
+                    <span class="input-desc">风控措施</span><textarea name="bi.riskControlMeasures"rows="7">${(returnDatas.queryBean.riskControlMeasures)!''}</textarea>
+                </div>
+                <div class="div-block input-line" belong="14" >
+                    <span class="input-desc">还款来源</span><textarea name="bi.repaymentSourceDetails"rows="7">${(returnDatas.queryBean.repaymentSourceDetails)!''}</textarea>
+                </div>
+                <div class="div-block input-line" belong="14,15,16">
+                    <!--<div class="borrower-info">-->
+                        <div class="section-title">征信报告情况</div>
+                        <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.breakContractAccountNumber" >当前违约账户数:</label>
+                        <div class="col-xs-12 col-sm-9">
+                        <div class="clearfix">
+                        <div class="input-group col-xs-12 col-sm-6">
+                        <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                        <input name="bi.breakContractAccountNumber"  class="col-xs-12 col-sm-6"  value="${(returnDatas.queryBean.breakContractAccountNumber)!''}"  type="text" />
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.breakContractAmount" >当前违约金额:</label>
+                        <div class="col-xs-12 col-sm-9">
+                        <div class="clearfix">
+                        <div class="input-group col-xs-12 col-sm-6">
+                        <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                        <input name="bi.breakContractAmount"  class="col-xs-12 col-sm-6"  value="${(returnDatas.queryBean.breakContractAmount)!''}"  type="text" />
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.badnessAccountNumber" >当前不良账户数:</label>
+                        <div class="col-xs-12 col-sm-9">
+                        <div class="clearfix">
+                        <div class="input-group col-xs-12 col-sm-6">
+                        <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                        <input name="bi.badnessAccountNumber"  class="col-xs-12 col-sm-6"  value="${(returnDatas.queryBean.badnessAccountNumber)!''}"  type="text" />
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.badnessAmount" >当前不良金额</label>
+                        <div class="col-xs-12 col-sm-9">
+                        <div class="clearfix">
+                        <div class="input-group col-xs-12 col-sm-6">
+                        <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                        <input name="bi.badnessAmount"  class="col-xs-12 col-sm-6"  value="${(returnDatas.queryBean.badnessAmount)!''}"  type="text" />
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bi.statusDescription" >账户状态说明:</label>
+                        <div class="col-xs-12 col-sm-9">
+                        <div class="clearfix">
+                        <div class="input-group col-xs-12 col-sm-6">
+                        <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                        <input name="bi.statusDescription"  class="col-xs-12 col-sm-6"  value="${(returnDatas.queryBean.statusDescription)!''}"  type="text" />
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                    <!--</div>-->
+                  <!--  <span class="input-desc">征信报告情况</span><textarea name="bi.creditReportSituation"rows="7">${(returnDatas.queryBean.creditReportSituation)!''}</textarea>-->
+                </div>
+            </div>
+        </div>
+        <div class="borrower-info">
+            <div class="div-block input-line">
+                <span class="input-desc">借款人说明</span><textarea name="bi.introduction"rows="7">${(returnDatas.queryBean.introduction)!''}</textarea>
+            </div>
+        </div>
+
+        <div class="borrower-info">
+            <div class="section-title">借款记录</div>
+            <div class="form-group">
+                <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >借贷笔数</label>
+                <div class="col-xs-12 col-sm-9">
+                <div class="clearfix">
+                <div class="input-group col-xs-12 col-sm-6">
+                <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                <input name="bi.loanTimes"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.loanTimes)!''}"  type="text" />
+                </div>
+
+                </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >历史还清数</label>
+                <div class="col-xs-12 col-sm-9">
+                <div class="clearfix">
+                <div class="input-group col-xs-12 col-sm-6">
+                <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                <input name="bi.payOffPeriods"    class="col-xs-12 col-sm-6"  value="${(returnDatas.queryBean.payOffPeriods )!''}"  type="text" />
+
+
+                </div>
+
+                </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >逾期总金额</label>
+                <div class="col-xs-12 col-sm-9">
+                <div class="clearfix">
+                <div class="input-group col-xs-12 col-sm-6">
+                <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                <input name="bi.overdueAmount"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.overdueAmount)!''}"  type="text" />
+                </div>
+
+                </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >待还款</label>
+                <div class="col-xs-12 col-sm-9">
+                <div class="clearfix">
+                <div class="input-group col-xs-12 col-sm-6">
+                <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                <input name="bi.toBeRepayPeriods"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.toBeRepayPeriods)!''}"  type="text" />
+                </div>
+
+                </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >历史逾期数</label>
+                <div class="col-xs-12 col-sm-9">
+                <div class="clearfix">
+                <div class="input-group col-xs-12 col-sm-6">
+                <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                <input name="bi.overdueTimes"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.overdueTimes)!''}"  type="text" />
+                </div>
+
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="borrower-info">
+            <div class="section-title">借款人情况跟踪</div>
+
+            <div class="form-group2">
+                <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >借款人资金运用情况</label>
+                <div class="col-xs-12 col-sm-9">
+                <div class="clearfix">
+                <div class="input-group col-xs-12 col-sm-6">
+                <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                <input name="bi.fundUsedCondition"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.fundUsedCondition)!''}"  type="text" />
+                </div>
+
+                </div>
+                </div>
+            </div>
+            <div class="form-group2">
+                <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >借款人经营情况及财务情况</label>
+                <div class="col-xs-12 col-sm-9">
+                <div class="clearfix">
+                <div class="input-group col-xs-12 col-sm-6">
+                <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                <input name="bi.managementAndTreasureCondition"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.managementAndTreasureCondition)!''}"  type="text" />
+                </div>
+                </div>
+                </div>
+            </div>
+            <div class="form-group2">
+                <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >借款人还款能力变化情况</label>
+                <div class="col-xs-12 col-sm-9">
+                <div class="clearfix">
+                <div class="input-group col-xs-12 col-sm-6">
+                <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                <input name="bi.repaymentAbilityChangeCondition"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.repaymentAbilityChangeCondition)!''}"  type="text" />
+                </div>
+
+                </div>
+                </div>
+            </div>
+            <div class="form-group2">
+                <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >借款人涉拆情况</label>
+                <div class="col-xs-12 col-sm-9">
+                <div class="clearfix">
+                <div class="input-group col-xs-12 col-sm-6">
+                <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+                <input name="bi.accusedCondition"    class="col-xs-12 col-sm-6" value="${(returnDatas.queryBean.accusedCondition)!''}"  type="text" />
+                </div>
+
+                </div>
+                </div>
+            </div>
+            <div class="form-group2">
+            <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="bidard" >借款人行政处罚情况</label>
+            <div class="col-xs-12 col-sm-9">
+            <div class="clearfix">
+            <div class="input-group col-xs-12 col-sm-6">
+            <!--<input name="endTitme" datatype="*"   nullmsg="项目流标时间不能为空"  class="form-control date-picker"  id="endTitme" readonly="readonly" value="${(returnDatas.data.endTitme)!''}"  type="text" />-->
+            <input name="bi.criminalPunishmentCondition"    class="col-xs-12 col-sm-6"  value="${(returnDatas.queryBean.criminalPunishmentCondition)!''}"  type="text" />
+            </div>
+
+            </div>
+            </div>
+            </div>
+        </div>
+            <!--<div class="borrower-info">
+                <div class="section-title">借款人情况跟踪</div>
+
+            </div>-->
+		</form>
+		<div class="wizard-actions">
+
+			<button class="btn btn-success btn-info" data-last="Finish" onclick="submit(0);" style="float: left;margin-left: 24.4%;">
+				发布
+			</button>
+			<button id="submit" style="display: none"  class="btn btn-success btn-info" data-last="Finish" onclick="commonUpdateForm('validation-form','${ctx}/system/project/<#if ((returnDatas.data.type)!1) == 1><#if ((returnDatas.data.isNew)!"否") != "是">list<#else>new/list</#if><#else>si/list</#if>');" style="float: left;margin-left: 25.4%;">
+				发布
+			</button>
+             <button class="btn btn-success btn-info" data-last="Finish" onclick="submit(1);" style="float: left;margin-left: 24.4%;">
+            预存
+            </button>
+
+            <button id="submit1" style="display: none"  class="btn btn-success btn-info" data-last="Finish" onclick="commonUpdateForm1('validation-form','${ctx}/system/project/<#if ((returnDatas.data.type)!1) == 1><#if ((returnDatas.data.isNew)!"否") != "是">list<#else>new/list</#if><#else>si/list</#if>');" style="float: left;margin-left: 25.4%;">
+            保存
+            </button>
+			<!--<button class="btn btn-success btn-info" data-last="Finish" onclick="updateLunbo(${(returnDatas.data.position)!''})" style="float: left;margin-left: 25.4%;">
+				保存
+			</button>-->
+		</div>
+	</div>
+</div>
+	<script>
+        var ue = UE.getEditor('editor');
+        $(function() {
+            var category = <#if (returnDatas.data)??> '${returnDatas.data.categoryId}' <#else> '' </#if>;
+            category && $('div[category=' + category + ']').show() && '' || $('div[category]:eq(0)').show();
+            $('div[type=extras]').show().find('div[belong]').hide().filter(function() {
+                return $(this).attr('belong').indexOf(category) !== -1;
+            }).show();
+
+            $('#categoryId').change(function() {
+                var val = $(this).val();
+                $('div[category]').hide().filter('div[category=' + val + ']').show();
+                $('div[type=extras]').show().find('div[belong]').find('input,textarea').val('').end().hide().filter(function() {
+                    return $(this).attr('belong').indexOf(val) !== -1;
+                }).show();
+            });
+        });
+
+	</script>
+
+</#escape>

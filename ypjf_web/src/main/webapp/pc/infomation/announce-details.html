@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=1220" />
+		<title>营普金服-信息披露</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/info.css"/>
+		
+		
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>-->
+		
+	</head>
+	<body>
+		<!--顶部-->
+		
+		<iframe src="../head.html" class="iframe-head" width="100%" scrolling="no"  style="border:0px;"></iframe>	
+		
+		<!--主体-->
+		<div class="infomation">
+			<!--banner-->
+			<!--<div class="infomation-banner">
+								
+			</div>-->
+			
+			<!--活动内容-->
+			<div class="center">
+				<div class="info-center">
+					<div class="info-nav">
+						<p>当前位置   &gt; <a href="/">首页</a> &gt; <a href="aboutUs/platform_intro.html">信息披露</a> &gt; <a href="#" class="now">公告详情</a></p>
+					</div>
+					
+					<!--公告详情-->
+					<div class="announce-contain">
+						<div class="tit">
+							<h3>营普金服上线重庆富民银行资金存管系统</h3>
+							<p class="time">发布时间：2017-10-19</p>
+						</div>
+						<div class="main">
+							<p>央视网消息（新闻联播）：中共中央总书记、国家主席、中央军委主席习近平26日下午出席了在京召开的军队领导干部会议并发表重要讲话。习近平强调，中国特色社会主义进入了新时代，国防和军队建设也进入了新时代。人民军队要不忘初心、牢记使命，认真学习贯彻党的十九大精神，深入学习贯彻新时代党的强军思想，坚定不移走中国特色强军之路，全面推进国防和军队现代化，为实现党在新时代的强军目标、到本世纪中叶把人民军队全面建成世界一流军队、实现中华民族伟大复兴的中国梦而努力奋斗。</p>
+							<p>习近平指出，党的十八大以来的5年，是党和国家发展进程中极不平凡的5年，也是我军发展进程中极不平凡的5年。中央军委坚决贯彻党中央决策部署，全面把握国际国内大势，紧紧围绕党和国家工作大局，扭住建设一支听党指挥、能打胜仗、作风优良的人民军队，贯彻新形势下军事战略方针，提出一系列重大方针原则，作出一系列重大决策部署，推进一系列重大工作，特别是贯彻落实新时代党的强军思想，带领全军在中国特色强军之路上迈出坚定步伐，开创了强军事业新局面。
+							<p>习近平总结了上一届中央军委的主要工作。他说，5年来，中央军委直面问题、勇于变革、攻坚克难，坚持党对军队的绝对领导，创新军事战略指导，深化国防和军队改革，加强军事斗争准备，狠抓练兵备战实战化，扎实推进军队现代化建设，坚持向科技创新要战斗力，提高依法治军水平，推进军民融合深度发展，坚定不移正风肃纪反腐，恢复了一些带根本性的东西，破解了一些深层次矛盾，取得了一些开创性成果，推动国防和军队建设上了一个大台阶。</p>
+						</div>
+						<div class="pre-next">
+							<ul class="clearfix">
+								<li><a href="pre">上一篇：</a><a href="#"> 营普金服上线了</a></li>
+								<li><a href="next">下一篇：</a><a href="#"> 营普金服有活动</a></li>
+							</ul>
+						</div>
+						<div class="go-list">
+							<a href="#">返回列表</a>
+						</div>
+					</div>
+
+				</div>
+			</div>	
+		</div>	
+		
+		
+		<!--客服悬浮条-->
+		<iframe src="../xuanfutiao.jsp" onload="$(this).show()" style="display: none;" class="iframe-xuanfutiao" width="204px" height="100%" scrolling="no"></iframe>
+		<!--<iframe src="../jiduanqi.jsp" class="iframe-jisuanqi" style="display: none; border: 0;position: fixed;width: 100%;height: 100%;top: 0;z-index: 100;" scrolling="no"></iframe>-->
+		<script type="text/javascript">
+			$(".iframe-xuanfutiao").on("load", function(event){
+				
+			　　$("#jisuanqi",this.contentDocument).click(function(){
+			　　　　$(".iframe-jisuanqi").show();	
+			　　});
+			
+			  $("#goTop",this.contentDocument).click(function(){
+			　　　　$(window).scrollTop(0);	
+			　　});
+			
+			});
+		</script>
+		<!--底部导航-->
+		
+		<iframe src="../footer.html" width="100%" scrolling="no"  style="border:0px;height:326px;"></iframe>
+		
+		<!--加载js文件-->
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery.lineProgressbar.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery.slimscroll.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="../js/swiper-3.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/first.js" type="text/javascript" charset="utf-8"></script>-->
+		<script type="text/javascript">
+			$(document).ready(function(){				
+				//表示项目进度的进度条
+				$('#progressBar1').LineProgressbar({
+				  percentage: 75,
+				  fillBackgroundColor: '#ff8f3d',
+				  height: '8' 
+				});
+				
+				$('#progressBar2').LineProgressbar({
+				  percentage: 0,
+				  fillBackgroundColor: '#ff8f3d',
+				  height: '8' 
+				});
+				
+				$('#progressBar3').LineProgressbar({
+				  percentage: 100,
+				  fillBackgroundColor: '#ff8f3d',
+				  height: '8' 
+				});
+				
+				$('#progressBar4').LineProgressbar({
+				  percentage: 100,
+				  fillBackgroundColor: '#ff8f3d',
+				  height: '8' 
+				});
+				
+				$('#progressBar5').LineProgressbar({
+				  percentage: 100,
+				  fillBackgroundColor: '#ff8f3d',
+				  height: '8' 
+				});
+				
+				$('#progressBar6').LineProgressbar({
+				  percentage: 75,
+				  fillBackgroundColor: '#ff8f3d',
+				  height: '8' 
+				});
+				
+				$('#progressBar7').LineProgressbar({
+				  percentage: 0,
+				  fillBackgroundColor: '#ff8f3d',
+				  height: '8' 
+				});
+				
+				$('#progressBar8').LineProgressbar({
+				  percentage: 100,
+				  fillBackgroundColor: '#ff8f3d',
+				  height: '8' 
+				});
+				
+				
+				//右边滚动条
+				$('#investors-list').slimScroll({  
+	                height: '748px'  
+	            });
+			})
+		</script>
+
+		
+	</body>
+</html>

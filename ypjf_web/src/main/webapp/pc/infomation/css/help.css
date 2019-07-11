@@ -1,0 +1,76 @@
+.help{
+	width: 100%;
+	height: auto;
+}
+.help .help-main{
+	width: 1200px;
+	height: auto;
+	margin: 20px auto;
+	background: #fff;
+	border: 1px solid #ddd;
+}
+.help .help-main .help-nav{
+	width: 200px;
+    text-align: center;
+}
+.help .help-main .help-nav ul{
+	width: 100%;
+}
+.help .help-main .help-nav ul li{
+	border: 1px solid #E4E4E4;
+    border-top: 0;
+    line-height: 60px;
+    border-right: 0;
+}
+.help .help-main .help-nav ul li.active{
+	border-left-width: 4px;
+    border-left-color: #f65c51;
+    position: relative;
+    left: 1px;
+    border-right: 1px solid #fff;
+}
+.help .help-main .help-nav ul li{
+	font-size: 15px;
+    color: #333;
+    display: block;
+}
+
+/*右边部分*/
+.help .help-main .help-content{
+	border: 1px solid #E4E4E4;
+    border-top: 0;
+    padding: 20px 40px 40px;
+    width: 918px;
+}
+.help .help-main .help-content .list ul li{
+	margin-top: 20px;
+}
+.help .help-main .help-content .list ul li label{
+	border-radius: 3px;
+    background-color: #f0f0f0;
+    padding-left: 22px;
+    cursor: pointer;
+    line-height: 50px;
+    font-size: 14px;
+    color: #666;
+    display: block;
+}
+.help .help-main .help-content .list ul li div.text{
+	border: 1px solid #f0f0f0;
+    border-top-width: 0;
+    padding: 17px 0 0 40px;
+    display: none;
+}
+.help .help-main .help-content .list ul li div.text p{
+	margin-bottom: 20px;
+    padding-right: 20px;
+    color: #666;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.help .help-main .help-content .list ul li div.text ul{
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 10px;
+}

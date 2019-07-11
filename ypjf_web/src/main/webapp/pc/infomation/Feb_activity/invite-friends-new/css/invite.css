@@ -1,0 +1,234 @@
+/* css reset */
+body,section,h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dd,th,td { 
+	margin: 0;
+	padding: 0; 
+	font-family: PingFang SC,Helvetica Neue,Helvetica,Tahoma,Arial,Hiragino Sans GB,Heiti SC,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+	/* color:##171717; */
+	-webkit-font-smoothing: antialiased;
+} 
+a{
+	text-decoration: none;
+}
+img { 
+	border: none;
+	vertical-align: middle;
+} 
+ul {
+	list-style: none; 
+}
+.clearFix:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.clearFix{
+	zoom:1;
+}
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html { overflow-y: scroll; }
+
+
+body{
+	width:100%;
+	text-align: center;
+	color:#000;
+	max-width:1920px;
+	min-width:1400px;
+	margin:0 auto;
+}
+
+
+#content{
+	position: relative;
+	max-width:1920px;
+	min-width:1400px;
+	margin:0 auto;
+	background: #5140b3;
+	padding-bottom:40px;
+}
+#content .bg{
+	position: absolute;
+	left:52px;
+	bottom:128px;
+}
+#content #banner{
+	width:100%;
+	height:400px;
+	background: #5140b3;
+	text-align: center;
+}
+#content #banner img{
+	width:1192px;
+	height:400px;
+	margin:0 auto;
+}
+
+
+/* 邀好友首投 */
+#content .content1{
+	width:1313px;
+	height:671px;
+	margin:0 auto;
+	background:url(../image/content1Bg.png) no-repeat center;
+	margin-top:-54px;
+	background-size:100% 100%;
+}
+#content .content1 img{
+	width:1034px;
+	height:355px;
+	margin:0 auto;
+	padding-top:156px;
+}
+
+/* 奖励加码 */
+#content .content2{
+	width:1273px;
+	height:550px;
+	margin:0 auto;
+	text-align: center;
+	margin-top:-20px;
+}
+#content .content2 .title{
+	font-size:24px;
+	line-height:24px;
+	color:#fff;
+	
+}
+#content .content2 .title img{
+	display: inline-block;
+	vertical-align: middle;
+	width:18px;
+	height:21px;
+}
+#content .content2 .title span.text{
+	padding:0 10px;
+	display: inline-block;
+	vertical-align: middle;
+}
+#content .content2 p.text{
+	padding-top:24px;
+	width:882px;
+	margin:0 auto;
+	font-size:16px;
+	line-height:24px;
+	color:#fff;
+}
+#content .content2 img.kuang{
+	display: inline-block;
+	width:1273px;
+	height:437px;
+	margin:0 auto;
+	padding-top:16px;
+}
+
+/* 活动规则 */
+#content .content3{
+	width:1336px;
+	height:892px;
+	margin:0 auto;
+	text-align: center;
+	background:url(../image/content3Bg.png) no-repeat center;
+	margin-top:16px;
+	
+	background-size:100% 100%;
+}
+#content .content3 .title{
+	font-size:24px;
+	line-height:60px;
+	color:#4b3bb0;
+	padding-top:150px;
+	margin:0;
+}
+#content .content3 .title img{
+	display: inline-block;
+	vertical-align: middle;
+	width:18px;
+	height:21px;
+}
+#content .content3 .title span.text{
+	padding:0 10px;
+	display: inline-block;
+	vertical-align: middle;
+}
+#content .content3 .box{
+	width:1000px;
+	margin:0 auto;
+	text-align: left;
+}
+#content .content3 .box div.p1{
+	line-height:26px;
+	padding-top:6px;
+	margin:0;
+}
+#content .content3 .box div.p1 img.left{
+	display: block;
+	width:15px;
+	height:19px;
+	padding-right:12px;
+	float:left;
+	vertical-align: middle;
+	padding-top:4px;
+}
+#content .content3 .box div.p1 span.right{
+	display: block;
+	vertical-align: middle;
+	float:left;
+	width:966px;
+	font-size:16px ;
+	line-height:24px;
+	color:#666666;
+}
+#content .content3 .box div.p1 span.right p{
+	margin:0;
+}
+#content .content3 .box div.p1 span.right p span.color{
+	color:#4b3bb0;
+}
+#content .content3 .box div.p2{
+	width:966px;
+	font-size:16px ;
+	line-height:24px;
+	color:#666666;
+	padding-left:27px;
+	padding-top:6px;
+}
+
+#content .content3 .box div.p2 span.zhu{
+	color:#373737;
+}
+#content .content3 .box p.p3{
+	font-size:14px;
+	color:#cbcbcb;
+	padding-top:16px;
+}
+
+
+/* 活动规则 */
+#content .content3{
+	width:1336px;
+	height:892px;
+	margin:0 auto;
+	text-align: center;
+	background:url(../image/content3Bg.png) no-repeat center;
+	margin-top:16px;
+	
+	background-size:100% 100%;
+}
+#content .content3 .title{
+	font-size:24px;
+	line-height:60px;
+	color:#4b3bb0;
+	padding-top:150px;
+	margin:0;
+}
+#content .content3 .title img{
+	display: inline-block;
+	vertical-align: middle;
+	width:18px;
+	height:21px;
+}
+#content .content3 .title span.text{
+	padding:0 10px;
+	display: inline-block;
+	vertical-align: middle;
+}

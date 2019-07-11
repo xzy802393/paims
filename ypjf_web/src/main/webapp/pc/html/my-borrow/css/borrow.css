@@ -1,0 +1,504 @@
+#laybox{
+	width:100%;
+	height:auto;
+}
+
+/* banner */
+#banner{
+	width:100%;
+	height:275px;
+	text-align: center;
+	background: url(../img/banner.jpg) no-repeat center;
+	background-size:cover;
+}
+#banner img{
+	width:647px;
+	height:101px;
+	margin:0 auto;
+	padding-top:88px;
+	margin-left: -360px;
+}
+
+/* 借款项目优势 */
+#borrow,
+#liucheng,
+#chanpin{
+	width:1200px;
+	margin:0 auto;
+	padding-top:16px;
+	text-align: center;
+}
+#kehu .title,
+#changjian .title,
+#borrow .title,
+#chanpin .title,
+#liucheng .title{
+	font-size:22px;
+	line-height:106px;
+	color:#53b2fa;
+	/* font-weight:bold; */
+	width:540px;
+	margin:0 auto;
+	text-align: center;
+}
+#changjian .title .left,
+#changjian .title .right,
+#kehu .title .left,
+#kehu .title .right,
+#chanpin .title .left,
+#chanpin .title .right,
+#borrow .title .left,
+#borrow .title .right,
+#liucheng .title .left,
+#liucheng .title .right{
+	display: inline;
+	width:155px;
+	height:106px;
+	vertical-align: middle;
+}
+#changjian .title .left img,
+#changjian .title .right img,
+#kehu .title .left img,
+#kehu .title .right img,
+#chanpin .title .left img,
+#chanpin .title .right img,
+#borrow .title .left img,
+#borrow .title .right img,
+#liucheng .title .left img,
+#liucheng .title .right img{
+	display: inline;
+	width:155px;
+	height:14px;
+}
+#changjian .title .text,
+#kehu .title .text,
+#chanpin .title .text,
+#borrow .title .text,
+#liucheng .title .text{
+	display: inline-block;
+	padding:0 20px;
+	vertical-align: middle;
+}
+
+#borrow .content{
+	width:1200px;
+	margin:0 auto;
+	/* height:600px;
+	padding:10px 0; */
+}
+#borrow .content li.item{
+	float:left;
+	width:398px;
+	height:280px;
+	margin:0 auto;
+	padding-top:30px;
+}
+#borrow .content li.line{
+	float:left;
+	width:1px;
+	height:114px;
+	background:#d5d5d5;
+	margin-top:44px;
+}
+#borrow .content li.item img{
+	display: block;
+	width:136px;
+	height:135px;
+	margin:0 auto;
+	transition: all .4s linear 0s;
+}
+#borrow .content li.item p.p1{
+	font-size:16px;
+	color:#404040;
+	line-height:60px;
+}
+#borrow .content li.item p.p1 .color{
+	color:#53b2fa;
+}
+#borrow .content li.item p.text{
+	width:304px;
+	font-size:14px;
+	color:#818181;
+	line-height:26px;
+	margin:0 auto;
+}
+
+
+/* 借款流程 */
+#liucheng .content{
+	width:1200px;
+	padding-bottom:18px;
+	margin:0 auto;
+}
+#liucheng .content li.item{
+	float:left;
+	width:398px;
+	margin:0 auto;
+}
+#liucheng .content li.item img{
+	display: block;
+	width:150px;
+	height:163px;
+	margin:0 auto;
+}
+
+
+/* 产品介绍 */
+#chanpin .content{
+	width:1200px;
+	height:390px;
+	margin:0 auto;
+	/* background: url(../img/wangge.png) no-repeat 0 0; */
+}
+#chanpin .content ul{
+	padding:0 27px;
+	width:1146px;
+	margin:0 auto;
+}
+#chanpin .content li.item{
+	float:left;
+	width:270px;
+	height:377px;
+	margin:0 auto;
+	box-shadow: 1px 2px 4px 1px #efefef;
+	margin-right:22px;
+}
+#chanpin .content li.item:nth-last-child(1){
+	margin-right:0;
+}
+#chanpin .content li.item img{
+	display: block;
+	width:161px;
+	height:141px;
+	margin:0 auto;
+	padding-top:54px;
+}
+#chanpin .content li.item p.p1{
+	font-size:16px;
+	color:#404040;
+	line-height:60px;
+}
+#chanpin .content li.item p.text{
+	font-size:14px;
+	color:#818181;
+	line-height:24px;
+	width:218px;
+	margin:0 auto;
+	height:72px;
+}
+#chanpin .content li.item p.btn{
+	font-size:16px;
+	color:#ffffff;
+	line-height:50px;
+	width:100%;
+	height:50px;
+	margin:0 auto;
+	background:#0293b9;
+	cursor: pointer;
+}
+
+
+/* 混合 */
+#hunhe{
+	width:1200px;
+	margin:0 auto;
+	padding:20px 0;
+}
+#hunhe #changjian{
+	float:left;
+	width:574px;
+	padding-left:26px;
+}
+#hunhe #kehu{
+	float:right;
+	width:600px;
+}
+
+
+/* 常见问题 */
+#hunhe #changjian .content{
+	width:534px;
+	text-align: left;
+}
+#hunhe #changjian .content p.p1{
+	font-size:16px;
+	color:#666666;
+	line-height:48px ;
+	vertical-align: middle;
+	padding-top:12px;
+}
+#hunhe #changjian .content p.p1 span.color{
+	display: inline-block;
+	margin:0 8px;
+	width:10px;
+	height:10px;
+	background: #0696f9;
+	vertical-align: middle;
+}
+#hunhe #changjian .content p.text{
+	font-size:14px;
+	color:#999999;
+	line-height:20px ;
+	padding-left:26px;
+}
+
+
+
+/* 客户说 */
+#hunhe #kehu .content{
+	width:574px;
+	height:675px;
+	margin:0 auto;
+	background: url(../img/kehu.png) no-repeat 0 0;
+	background-size:100% 100%;
+}
+#hunhe #kehu .content .kuang{
+	width:418px;
+	padding-top:40px;
+	margin:0 auto;
+}
+#hunhe #kehu .content .kuang img{
+	display: block;
+	width:84px;
+	height:109px;
+	float:left;
+}
+#hunhe #kehu .content .kuang .box{
+	float:right;
+	width:330px;
+	height:124px;
+	text-align: center;
+}
+#hunhe #kehu .content .kuang .box p.subTtitle{
+	font-size:16px;
+	color:#53b2fa;
+	line-height:28px;
+}
+#hunhe #kehu .content .kuang .box p.text{
+	font-size:14px;
+	color:#818181;
+	line-height:36px;
+	text-align: left;
+	letter-spacing: 3px;
+}
+#hunhe #kehu .content .wenben{
+	width:434px;
+	margin:0 auto;
+}
+#hunhe #kehu .content .wenben p.text{
+	font-size:14px;
+	color:#818181;
+	line-height:36px;
+	text-align: left;
+	letter-spacing: 3px;
+}
+
+
+
+
+/*弹出对话框*/
+/*遮罩层*/
+.black-overlay{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.2;
+	opacity:.20;
+	filter: alpha(opacity=20);
+}
+.borrow-apply{
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -280px;
+	margin-left: -499px;
+	width: 998px;
+	height: 560px;
+	background-color: white;
+	z-index:1002;
+	overflow: auto;
+	box-shadow: 5px 5px 5px 0 #b5acac;
+}
+.borrow-apply-t{
+	width: 100%;
+	height: 60px;
+	background: #ff7f01;
+	color: #FFFFFF;
+	font-size: 26px;
+}
+.borrow-apply-t h3{
+	line-height: 60px;
+	float: left;
+	margin-left: 448px;
+	font-size: 26px;
+	font-weight: normal;
+}
+.borrow-apply-t span{
+	float: right;
+	width: 21px;
+	height: 21px;
+	background: url(../img/borrow-close.png) no-repeat center;
+	margin-top: 19px;
+	margin-right: 19px;
+	cursor: pointer;
+}
+.borrow-msg{
+	width: 100%;
+}
+.borrow-apply-l{
+	float:left;
+	width: 50%;
+	height: 476px;
+	font-size: 14px;
+	background: #fffaf5;
+	color: #666;	
+}
+.borrow-apply-l ul{
+	margin: 33px;
+}
+.borrow-apply-l ul li{
+	margin-bottom: 30px;
+}
+.borrow-apply-l ul li h4{
+	font-size: 16px;
+	color: #000;
+	height: 34px;
+}
+.borrow-apply-l ul li h4 img{
+	width:16px;
+	height:16px;
+	vertical-align: middle;
+	padding-right:4px;
+}
+.borrow-apply-l ul li p{
+	line-height: 20px
+}
+.app-code{
+	width: 115px;
+	text-align: center;
+	margin-right: 30px;
+}
+.app-code img{
+	width: 115px;
+	height: 115px;
+}
+.borrow-apply-r{
+	width: 50%;
+	float:right;
+}
+.borrow-apply-r .line{
+	height:45px;
+	padding:6px 0;
+}
+.borrow-apply-r p{
+	display: inline-block;
+	width:90px;
+	padding-left:10px;
+}
+.borrow-apply-r form{
+	    margin: 15px;
+	    
+
+	/*text-align: center;*/
+}
+
+.borrow-biao {
+	/* margin-left: 70px; */
+    display: block;
+    margin-top: 14px;
+    cursor: pointer;
+    color: #666;
+    /* text-align: center; */
+}
+.borrow-apply-r form p{
+	font-size: 14px;
+    color: #666666;
+    height: 29px;
+    line-height: 29px;
+}
+.borrow-apply-r form input[type="text"]{
+	background: #fffaf5;
+	width: 286px;
+	height: 38px;
+	outline: none;
+	padding: 0 10px;
+	border: 1px solid #ddd;
+	margin-bottom: 5px;
+	font-size: 14px;
+} 
+.borrow-apply-r form input[type="button"]{
+	width: 168px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    color: #fff;
+    /* line-height: 50px; */
+    background: #ff984c;
+    background: -moz-linear-gradient(top, #ff984c, rgba(255, 92, 2, 1));
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ff984c), to(rgba(255, 92, 2, 1)));
+    background: -o-linear-gradient(top, #ff984c, rgba(255, 92, 2, 1));
+    outline: none;
+    border: none;
+    
+    margin-left: 0px;
+    cursor: pointer;
+    /* vertical-align: middle; */
+    text-align: center;
+    display: block;
+	margin:0 auto;
+	margin-top: 36px;
+}
+.borrow-apply-r form span.tip{
+	line-height: 5px;
+    margin-top: 20px;
+    display: block;
+}
+.borrow-apply-r form span.tip a:first-child{
+	color: #666;
+}
+.borrow-tip{
+	position: absolute;
+	top: 170px;
+	left: 50%;
+	margin-left: -173px;
+	width: 346px;
+	height: 174px;
+	z-index: 1003;
+	background: #fff;
+	border: 1px solid #ddd;
+	text-align: center;
+	box-shadow: 5px 5px 5px 0 #ddd;
+	display: none;
+}
+.borrow-tip p{
+	margin: 0 36px;
+	color: #000;
+}
+.borrow-tip p:first-child{
+	text-align: right;
+	margin-top:20px;
+	margin-right: 16px;
+}
+.borrow-tip p span{
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url(../img/tip-close.png) no-repeat center;
+	cursor: pointer;
+}
+.borrow-tip p:nth-child(2){
+	font-size: 20px;
+	line-height: 40px;
+	height: 40px;
+}
+.borrow-tip p:nth-child(3){
+	font-size: 16px;
+	line-height: 30px;
+	text-align: left;
+}

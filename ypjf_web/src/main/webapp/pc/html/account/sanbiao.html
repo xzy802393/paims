@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=1220" />
+		<title>营普金服-我的账户</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sanbiao.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		
+	</head>
+	<body>
+		<div id="accountBox" class="clearFix">
+			<!-- 左边导航 -->
+			<div id="aside">
+				<iframe src="account-sideBar.html" width="100%" height="744px" scrolling="no"  style="border:0px;"></iframe>
+			</div>
+			
+			<!-- 右边内容 -->
+			<div id="account">
+				<div class="trans-records">
+					<div class="nav">
+						<span class="active">车融贷</span>
+						<span>消费贷</span>
+						<span>好房贷</span>
+						<span>优企贷</span>
+					</div>
+					<div class="trans-choice">						
+						<dl class="trans-choice-date clearfix">
+							<dt>项目期限:</dt>
+							<dd class="active">全部</dd>
+							<dd>最近1个月</dd>
+							<dd>最近3个月</dd>
+							<dd>最近1年</dd>
+							<div class="trans-choice-date-box">
+								时间:
+								<div class="calendarWarp">
+									<input type="text" class="ECalendar" id="ECalendar_date" value="起止日">
+								</div>
+								<span>至</span>
+								<div class="calendarWarp">
+									<input type="text" class="ECalendar" id="ECalendar_date2" value="截止日">
+								</div>
+								<input type="submit" name="" id="search" value="查询记录" />
+							</div>
+						</dl>
+					
+						<dl class="trans-choice-type clearfix">
+							<dt>项目状态:</dt>
+							<dd class="active">投标中</dd>
+							<dd>还款中</dd>
+							<dd>完结中</dd>
+						</dl>
+					</div>
+					<!-- 投标中 -->
+					<div id="toubiao" style="display: block;">
+						<table border="0">
+							<tr class="title">
+								<th>项目名称</th>
+								<th>预期年化利率</th>
+								<th>日期</th>
+								<th>期限(月)</th>
+								<th>到期时间</th>
+								<th>本金(元)</th>
+								<th>利息(元)</th>
+								<th>优惠券(元)</th>
+								<th>本息合计(元)</th>
+							</tr>
+							<tr>
+								<td>奥迪A4L抵押</td>
+								<td>7%</td>
+								<td>2019/1/1</td>
+								<td>12</td>
+								<td>2020/1/1</td>
+								<td>29912.00</td>
+								<td>2100.00</td>
+								<td>88.00</td>
+								<td>32100.00</td>
+							</tr>
+							<tr>
+								<td>奥迪A4L抵押</td>
+								<td>7%</td>
+								<td>2019/1/1</td>
+								<td>12</td>
+								<td>2020/1/1</td>
+								<td>29912.00</td>
+								<td>2100.00</td>
+								<td>88.00</td>
+								<td>32100.00</td>
+							</tr>
+							<tr>
+								<td>奥迪A4L抵押</td>
+								<td>7%</td>
+								<td>2019/1/1</td>
+								<td>12</td>
+								<td>2020/1/1</td>
+								<td>29912.00</td>
+								<td>2100.00</td>
+								<td>88.00</td>
+								<td>32100.00</td>
+							</tr>
+							<tr>
+								<td>奥迪A4L抵押</td>
+								<td>7%</td>
+								<td>2019/1/1</td>
+								<td>12</td>
+								<td>2020/1/1</td>
+								<td>29912.00</td>
+								<td>2100.00</td>
+								<td>88.00</td>
+								<td>32100.00</td>
+							</tr>
+							<tr>
+								<td>奥迪A4L抵押</td>
+								<td>7%</td>
+								<td>2019/1/1</td>
+								<td>12</td>
+								<td>2020/1/1</td>
+								<td>29912.00</td>
+								<td>2100.00</td>
+								<td>88.00</td>
+								<td>32100.00</td>
+							</tr>
+						</table>
+						
+					</div>
+					<!-- 回款中 -->
+					<div id="huikuan" style="display: none;">
+						<table border="0">
+							<tr class="title">
+								<th>日期</th>
+								<th>项目名称</th>
+								<th>期限(月)</th>
+								<th>到期时间</th>
+								<th>预期年化利率</th>
+								<th>利息(元)</th>
+								<th>本息合计(元)</th>
+								<th>已回款(元)</th>
+								<th>待回款(元)</th>
+							</tr>
+							<tr>
+								<td>2019/1/1</td>
+								<td>奥迪A4L抵押</td>
+								<td>12个月</td>
+								<td>2020/1/1</td>
+								<td>7%</td>
+								<td>2100.00</td>
+								<td>2100.00</td>
+								<td>2000.00</td>
+								<td>100.00</td>
+							</tr>
+							<tr>
+								<td>2019/1/1</td>
+								<td>奥迪A4L抵押</td>
+								<td>12个月</td>
+								<td>2020/1/1</td>
+								<td>7%</td>
+								<td>2100.00</td>
+								<td>2100.00</td>
+								<td>2000.00</td>
+								<td>100.00</td>
+							</tr>
+							<tr>
+								<td>2019/1/1</td>
+								<td>奥迪A4L抵押</td>
+								<td>12个月</td>
+								<td>2020/1/1</td>
+								<td>7%</td>
+								<td>2100.00</td>
+								<td>2100.00</td>
+								<td>2000.00</td>
+								<td>100.00</td>
+							</tr>
+							<tr>
+								<td>2019/1/1</td>
+								<td>奥迪A4L抵押</td>
+								<td>12个月</td>
+								<td>2020/1/1</td>
+								<td>7%</td>
+								<td>2100.00</td>
+								<td>2100.00</td>
+								<td>2000.00</td>
+								<td>100.00</td>
+							</tr>
+							<tr>
+								<td>2019/1/1</td>
+								<td>奥迪A4L抵押</td>
+								<td>12个月</td>
+								<td>2020/1/1</td>
+								<td>7%</td>
+								<td>2100.00</td>
+								<td>2100.00</td>
+								<td>2000.00</td>
+								<td>100.00</td>
+							</tr>
+						</table>
+					</div>
+					<!-- 完结中 -->
+					<div id="wanjie" style="display: none;">
+						<table border="0">
+							<tr class="title">
+								<th>项目名称</th>
+								<th>预期年化利率</th>
+								<th>日期</th>
+								<th>期限(月)</th>
+								<th>到期时间</th>
+								<th>本金(元)</th>
+								<th>利息(元)</th>
+								<th>优惠券(元)</th>
+								<th>本息合计(元)</th>
+							</tr>
+							<tr>
+								<td>奥迪A4L抵押</td>
+								<td>7%</td>
+								<td>2019/1/1</td>
+								<td>12</td>
+								<td>2020/1/1</td>
+								<td>29912.00</td>
+								<td>2100.00</td>
+								<td>88.00</td>
+								<td>32100.00</td>
+							</tr>
+							<tr>
+								<td>奥迪A4L抵押</td>
+								<td>7%</td>
+								<td>2019/1/1</td>
+								<td>12</td>
+								<td>2020/1/1</td>
+								<td>29912.00</td>
+								<td>2100.00</td>
+								<td>88.00</td>
+								<td>32100.00</td>
+							</tr>
+							<tr>
+								<td>奥迪A4L抵押</td>
+								<td>7%</td>
+								<td>2019/1/1</td>
+								<td>12</td>
+								<td>2020/1/1</td>
+								<td>29912.00</td>
+								<td>2100.00</td>
+								<td>88.00</td>
+								<td>32100.00</td>
+							</tr>
+							<tr>
+								<td>奥迪A4L抵押</td>
+								<td>7%</td>
+								<td>2019/1/1</td>
+								<td>12</td>
+								<td>2020/1/1</td>
+								<td>29912.00</td>
+								<td>2100.00</td>
+								<td>88.00</td>
+								<td>32100.00</td>
+							</tr>
+							<tr>
+								<td>奥迪A4L抵押</td>
+								<td>7%</td>
+								<td>2019/1/1</td>
+								<td>12</td>
+								<td>2020/1/1</td>
+								<td>29912.00</td>
+								<td>2100.00</td>
+								<td>88.00</td>
+								<td>32100.00</td>
+							</tr>
+						</table>
+						
+					</div>
+					<!--页码-->
+					<div class="page">
+						<div class="page-list" id="pageList">
+							<a href="#" class="on">首页</a>
+							<a href="#">上一页</a>
+							<a href="#" class="active">1</a>
+							<a href="#" onclick="$(this).parent().find('a').removeClass('active');$(this).addClass('active');">2</a>
+							<a href="#">下一页</a>
+							<a href="#">尾页</a>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/calendar2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sanbiao.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#ECalendar_date").ECalendar({
+					 type:"time",
+					 stamp:false,
+					 offset:[0,2],   //弹框手动偏移量;
+					 skin:'#ff7f01',
+					 format:"yyyy/mm/dd",
+					 callback:function(v,e)
+					 {
+						 $(".callback span").html(v)
+					 }
+				});
+				$("#ECalendar_date2").ECalendar({
+					 type:"time",
+					 stamp:false,
+					 offset:[0,2],   //弹框手动偏移量;
+					 skin:'#ff7f01',
+					 format:"yyyy/mm/dd",
+					 callback:function(v,e)
+					 {
+						 $(".callback span").html(v)
+					 }
+				});
+			});
+		</script>
+	</body>
+	
+</html>

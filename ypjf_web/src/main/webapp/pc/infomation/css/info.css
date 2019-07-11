@@ -1,0 +1,440 @@
+.infomation{
+	width: 100%;
+}
+.infomation .infomation-banner{
+	width: 100%;
+	height: 275px;
+	background: url(../../img/infomation/banner-msg.jpg) no-repeat center;
+	background-size:cover;
+}
+.infomation .infomation-banner.risk{
+	background: url(../../img/infomation/risk-banner-bg.png) no-repeat center;
+}
+
+.info-center .info-nav p{
+	margin: 40px 0;
+	font-size: 16px;
+	height: 18px;
+	line-height: 18px;
+	border-left: 2px solid #666;
+	padding-left: 10px;
+}
+.info-center .info-nav p a:hover{
+	font-weight: bold;
+	color: #FF7F01;
+}
+.info-center .info-nav p .now{
+	font-weight: bold;
+	color: #FF7F01;
+}
+
+
+
+/*风险教育*/
+.risk-education,.announcement{
+	width: 100%;
+	
+}
+.industry-news,.industry-laws,.industry-contract,.platform,.dynamics{
+	width: 100%;
+	text-align: center;
+	margin-top: 55px;
+}
+.industry-news h3,.industry-laws h3,.industry-contract h3,.platform h3,.dynamics h3{
+	font-size: 18px;
+	color: #333;
+	height: 42px;
+	background: url(../../img/infomation/info-title-bg.png) no-repeat center 30px;
+	font-weight: normal;
+	margin-bottom: 32px;
+}
+.risk-education .image,.announcement .image{
+	width: 581px;
+	height: 296px;
+	overflow: hidden;
+}
+.risk-education .image img,.announcement .image img{
+	width: 100%;
+	height: 100%;
+}
+.risk-education .item,.announcement .item{
+	margin-left: 46px;
+	width: 565px;
+}
+.risk-education .item ul,.announcement .item ul{
+	width: 100%;
+}
+.risk-education .item ul li,.announcement .item ul li{
+	width: 100%;
+	height: 39px;
+	line-height: 39px;
+	border-bottom: 1px dashed #666;
+	clear: both;
+	overflow: hidden;
+	font-size: 14px;
+}
+.risk-education .item ul li p,.announcement .item ul li p{
+	float: left;
+	width: 430px;
+	margin-left: 6px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-align: left;
+	
+}
+.risk-education .item ul li p span.icon,.announcement .item ul li p span{
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	border-width: 5px 0px 5px 5px;
+	border-color: transparent #666;
+	border-style: solid;
+	margin-right: 12px;
+}
+.risk-education .item ul li span.time,.announcement .item ul li p span.time{
+	float: right;
+	margin-right: 14px;
+}
+.risk-education .item ul li:hover,.announcement .item ul li:hover{
+	color: #FF8601;
+	cursor: pointer;
+}
+.risk-education .item ul li:hover p a,.announcement .item ul li:hover p a{
+	color: #FF8601;
+}
+.risk-education .item ul li:hover p span.icon,.announcement .item ul li:hover p span.icon{
+	border-color: transparent #ff8601;
+}
+.risk-education .item div.more,.announcement .item div.more{
+	text-align: right;
+	margin-top: 16px;
+}
+.risk-education .item div.more a,.announcement .item div.more a{
+	display: inline-block;
+	width: 52px;
+	height: 24px;
+	background: #FF8601;
+	color: #fff;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+}
+
+.risk-assetment{
+	width: 100%;
+	text-align: center;
+	margin: 55px auto;
+}
+.risk-assetment a{
+	display:inline-block;
+	background: #FF8601;
+	color: #fff;
+	padding: 10px 50px;
+	font-size: 14px;
+}
+.risk-assetment a:hover,.risk-education .item div.more a:hover{
+	transform: scale(1.1);
+	box-shadow: 2px 3px 8px 1px #928d8d;
+}
+
+.announcement{
+	margin-bottom: 60px;
+}
+
+
+/*数据报告*/
+.infomation .data-banner{
+	width: 100%;
+    height: 275px;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: #0767a3;
+    margin: 0 auto;
+}
+.infomation .data-banner img{
+	width: 1920px;
+    height: 275px;
+    margin: 0 auto;
+}
+.infomation .data-banner p:first-child{
+	font-size: 56px;
+	color: #ffe400;
+	letter-spacing: 6px;
+}
+.infomation .data-banner p:nth-child(2){
+	font-size: 45px;
+	color: #fff;
+	letter-spacing: 6px;
+	margin-top: 70px;
+}
+.infomation .data-banner p:nth-child(3){
+	font-size: 36px;
+	color: #fff;
+	letter-spacing: 6px;
+	margin-top: 20px;
+}
+
+
+.operation-data{
+	width: 100%;
+}
+.operation-data ul{
+	width: 100%;
+}
+.operation-data ul li{
+	float: left;
+}
+.operation-data .operation-num{
+	width: 938px;
+	margin: 55px auto;
+	
+}
+.operation-data .operation-num li{
+	width: 33%;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	color: #fff;
+}
+.operation-data .operation-num li .num{
+	width: 176px;
+	height: 176px;
+	border: 2px solid #fac10f;
+	border-radius: 50%;
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.operation-data .operation-num li .num img{
+	position: absolute;
+	top: -4px;
+    left: 12px;
+    z-index: 12;
+}
+.operation-data .operation-num li .num div.bg{
+	width: 176px;
+	height: 176px;
+	
+	background: #FAC10F;
+	position: absolute;
+	top: 176px;
+	z-index: 11;
+}
+.operation-data .operation-num li .num .txt{
+	position: absolute;
+	z-index: 20;
+	width: 176px;
+	text-align: center;
+   	top: 64px;
+}
+.operation-data .operation-num li .num .txt p{
+	line-height: 40px;
+}
+.operation-data .operation-num li p.des{
+	font-size: 16px;
+	color: #000;
+	text-align: center;
+	margin-top: 16px;
+	font-weight: bold;
+}
+.operation-data .operation-num li .num.person{
+	border: 2px solid #038BD7;
+}
+.operation-data .operation-num li .num.person div.bg{
+	background: #038bd7;
+}
+.operation-data .operation-num li .num.day{
+	border: 2px solid #fe5252;
+}
+.operation-data .operation-num li .num.day div.bg{
+	background: #fe5252;
+}
+
+/*运营报告*/
+
+.operation-data h3{
+	font-size: 18px;
+	color: #333;
+	height: 42px;
+	background: url(../../img/infomation/info-title-bg.png) no-repeat center 30px;
+	font-weight: normal;
+	margin-bottom: 32px;
+	text-align: center;
+}
+
+.operation-data .data-reports{
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+.operation-data .data-reports .swiper-slide{
+	text-align: center;
+}
+/*.operation-data .data-reports li:nth-child(2){
+	margin: 0 64px;
+}*/
+.operation-data .data-reports .swiper-slide p{
+	font-size: 14px;
+	margin-top: 20px;
+	text-align: center;
+}
+
+
+/*公告详情*/
+.infomation .announce-contain{
+	border: 1px solid #ddd;
+	padding: 30px 60px;
+	margin-bottom: 60px;
+}
+.infomation .announce-contain div.tit{
+	text-align: center;
+}
+.infomation .announce-contain div.tit h3{
+	font-size: 16px;
+	font-weight: normal;
+	color: #333;
+	line-height: 40px;
+}
+.infomation .announce-contain div.tit p.time{
+	font-size: 12px;
+	color: #666;
+}
+.infomation .announce-contain div.main{
+	font-size: 14px;
+    color: #333;
+    line-height: 21px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.infomation .announce-contain div.main P{
+	margin-bottom: 30px;
+	text-align: justify;
+}
+
+
+.infomation .announce-contain .pre-next{
+	margin-top: 80px;
+}
+.infomation .announce-contain .pre-next ul li{
+	float: left;
+	margin-left: 40px;
+	width: 500px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 14px;
+	color: #333;
+}
+.infomation .announce-contain .pre-next ul li:nth-child(2){
+	float: right;
+	text-align: right;
+	margin-right: 40px;
+}
+.infomation .announce-contain .pre-next ul li a{
+	color: #333;
+}
+.infomation .announce-contain .go-list{
+	text-align: right;
+    margin-top: 14px;
+    font-size: 14px;	
+}
+.infomation .announce-contain .go-list a{
+	color: #FF7F01;
+}
+
+
+/*新闻列表页样式*/
+.announce-list{
+	width: 100%;
+    margin: 0 auto;
+    /*padding: 20px 0;*/
+    margin-bottom: 40px;
+}
+.announce-list li{
+	padding: 20px;
+    overflow: hidden;
+    border: 1px #ddd solid;
+    margin: 25px auto;
+}
+.announce-list li:hover{
+	box-shadow:  3px 3px 3px 1px #ccc;
+}
+.announce-list .pic{
+	float: left;
+    width: 300px;
+    height: 168px;
+    overflow: hidden;
+}
+.announce-list .pic img{
+	width: 100%;
+	height: 100%;
+}
+.announce-list .news{
+	float: right;
+	width: 800px;
+}
+.announce-list .news h6{
+	font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: normal;
+}
+.announce-list .news span{
+	display: block;
+	color: #AAAAAA;
+	font-size: 14px;
+}
+.announce-list .news p{
+	color: #666;
+    line-height: 26px;
+    height: 84px;
+    overflow: hidden;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/*翻页*/
+.page-list{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.page-list a{
+	display: inline-block;
+	padding: 8px 12px;
+	font-size: 12px;
+	border: 1px solid #aaa;
+	margin-left: 10px;
+	cursor: default;
+}
+.page-list a.active{
+	background: #ff7200;
+	border: none;
+	padding: 9px 13px;
+	color: #fff;
+}
+.page-list a.on{
+	color: #aaa;
+}
+.page-list a:hover{
+	background: #FF7200;
+	border: none;
+	padding: 9px 13px;
+	color: #fff;
+}
+.rewards-tip .title{
+	font-weight: bold;
+	font-size: 13px;
+	color: #333;
+	line-height: 26px;
+}

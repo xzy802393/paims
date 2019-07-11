@@ -1,0 +1,144 @@
+.integral-record{
+	margin-left: 30px;
+	width: 938px;
+}
+.integral-record h3{
+	font-size: 16px;
+	font-weight: normal;
+}
+.integral-record .integral-total{
+	width: 936px;
+	height: 98px;
+	border: 1px solid #ddd;
+	margin-top: 28px;
+	margin-bottom: 28px;
+}
+.integral-record .integral-total ul{
+	width: 100%;
+}
+.integral-record .integral-total ul li{
+	float: left;
+}
+.integral-record .integral-total ul li.list{
+	width: 33%;
+	text-align: center;
+	margin: 24px auto;
+}
+.integral-record .integral-total ul li.line span{
+	display: block;
+	width: 2px;
+	height: 28px;
+	background: #ddd;
+	margin-top: 34px;
+}
+.integral-record .integral-total ul li.list p:first-child{
+	font-size: 14px;
+	color: #666;
+	line-height: 26px;
+}
+.integral-record .integral-total ul li.list p:last-child{
+	font-size: 20px;
+	font-weight: bold;
+	color: #333;
+}
+
+.integral-record .tab-menu{
+	margin-top: 28px;
+}
+.integral-record .tab-menu li{
+	float: left;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	cursor: pointer;
+	position: relative;
+}
+.integral-record .tab-menu li.active{
+	border-bottom: 2px solid #FF7F01;
+	color: #FF7F01;
+	font-weight: bold;
+}
+/*选择日期的样式*/
+.integral-record .choice-date-box{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: #333;
+	margin-left: 20px;
+}
+.integral-record .choice-date-box input[type="submit"] {
+    border: none;
+    background: none;
+    color: #FF7F01;
+    outline: none;
+    cursor: pointer;
+}
+.integral-record table{
+	width: 937px;
+	margin-bottom: 28px;
+}
+.integral-record table tr{
+	width: 99%;
+	height: 38px;
+	text-align: center;
+	color: #666;
+	font-size: 13px;
+}
+.integral-record table tr:nth-child(odd){
+	background: #f8f8f8;
+}
+.integral-record table tr.title{
+	height: 44px;
+	color: #333;
+	font-size: 14px;
+	background: #eee;
+	font-weight: normal;
+}
+.integral-record table tr th{
+	color: #333;
+	font-weight: normal;
+	width: 20%;
+}
+.integral-record table tr th:last-child{
+	width: 30%;
+}
+.integral-record table tr td:last-child{
+	width: 90%;
+}
+
+/*翻页样式*/
+.page-list{
+	width: 100%;
+	text-align: center;
+}
+.page-list a{
+	display: inline-block;
+	padding: 8px 12px;
+	font-size: 12px;
+	border: 1px solid #aaa;
+	margin-left: 10px;
+	cursor: default;
+}
+.page-list a.active{
+	background: #ff7200;
+	border: none;
+	padding: 9px 13px;
+	color: #fff;
+}
+.page-list a.on{
+	color: #aaa;
+}
+.page-list a:hover{
+	background: #FF7200;
+	border: none;
+	padding: 9px 13px;
+	color: #fff;
+}
+.rewards-tip .title{
+	font-weight: bold;
+	font-size: 13px;
+	color: #333;
+	line-height: 26px;
+}

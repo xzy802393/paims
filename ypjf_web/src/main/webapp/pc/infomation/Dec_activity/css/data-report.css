@@ -1,0 +1,362 @@
+.data-report{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 128px;
+}
+
+/*/*第二部分*/
+.data-report .data-report-one{
+	width: 100%;
+	height: 900px;
+	background: url(../../img/safe/img/data-report-1_01.jpg) no-repeat center;
+	text-align: center;
+	position: relative;
+}
+.data-report .data-report-one .data-report-one-date{
+	width: 506px;
+	height: 60px;
+	line-height: 60px;
+	color: #FFFFFF;
+	font-size: 30px;
+	background: rgba(255,255,255,.5);
+	border-radius: 30px;
+	position: absolute;
+    top: 658px;
+    left: 50%;
+    margin-left: -253px;
+}
+.data-report .data-report-one .data-report-one-ld{
+	width: 400px;
+	height: 58px;
+	position: absolute;
+	left: 50%;
+	bottom: 88px;
+	margin-left: -200px;
+	font-size: 28px;
+	color: #FFFFFF;
+}
+.data-report .data-report-one .data-report-one-ld p{
+	height: 58px;
+	line-height: 58px;
+}
+.data-report .data-report-one .data-report-one-ld span{
+	display: inline-block;
+	width: 39px;
+	height: 58px;
+	background: url(../../img/safe/img/number-bg.png) no-repeat center;
+	background-size: contain;
+	margin-right: 10px;
+}
+
+/*第二部分*/
+.data-report-two{
+	width: 100%;
+	/*height: 1030px;*/
+	text-align: center;
+}
+.data-report-two h4{
+	width: 198px;
+	height: 96px;
+	margin: 70px auto 60px;
+	background: url(../../img/safe/img/report-1.png) no-repeat center;
+	line-height: 96px;
+	font-size: 30px;
+	color: #FFFFFF;
+}
+.data-report-two .date{
+	font-size: 32px;
+}
+.data-report-two .date span{
+	color: #012470;
+}
+.data-report-two ul{
+	width: 1200px;
+	margin: 0 auto 80px;
+}
+.data-report-two ul li{
+	float: left;
+	margin-top: 60px;
+	margin-right: 99px;
+}
+.data-report-two ul li:nth-child(4){
+	margin-right: 0;
+}
+.data-report-two ul li p{
+	margin-top: 20px;
+	font-size: 30px;
+}
+.data-report-two ul li:nth-child(5){
+	margin-left: 324px;
+}
+
+/*第三部分*/
+.data-report-three{
+	width: 100%;
+	height: 1036px;
+	background: url(../../img/safe/img/line-bg.jpg) no-repeat center;
+	text-align: center;
+}
+.data-report-three h4{
+	width: 383px;
+	height: 96px;
+	margin: 0 auto;
+	background: url(../../img/safe/img/report-2.png) no-repeat center;
+	line-height: 96px;
+	font-size: 30px;
+	color: #012470;
+	padding: 50px 0px 40px;
+}
+.data-report-three p{
+	font-size: 28px;
+	color: #fff;
+}
+.data-report-three img{
+	margin-top: 40px;
+}
+
+
+/*第四部分*/
+.data-report-four{
+	width: 100%;
+	height: 896px;	
+}
+.data-report-four h4{
+	width: 275px;
+	height: 96px;
+	margin: 0 auto;
+	background: url(../../img/safe/img/report-3.png) no-repeat center;
+	line-height: 96px;
+	font-size: 30px;
+	color: #fff;
+	padding: 50px 0px 40px;
+	text-align: center;
+}
+.data-report-four-lists{
+	width: 1200px;
+	margin: 62px auto;
+}
+.data-report-four-lists .item{
+	width: 583px;
+	height: 160px;
+	line-height: 160px;
+	background: url(../../img/safe/img/zui-2.png) no-repeat center;
+	float: left;
+	margin-right: 30px;
+	margin-bottom: 74px ;
+}
+.data-report-four-lists .item:nth-child(2),.data-report-four-lists .item:nth-child(4),.data-report-four-lists .item:nth-child(6){
+	margin-right: 0;
+}
+.data-report-four-lists .item p{
+	font-size: 24px;
+	height: 147px;
+	line-height: 147px;	
+}
+
+.data-report-four-lists .item p .zui{
+	display: inline-block;
+	font-size: 30px;
+	margin:0 40px 0 32px;	
+}
+.data-report-four-lists .item p .red{
+	font-size: 28px;
+	color: #ff0000;
+}
+.data-report-four-lists .item.fan{
+	background: url(../../img/safe/img/zui-1.png) no-repeat center;
+}
+.data-report-four-lists .item.fan p{
+	margin-left: 162px ;
+}
+.data-report-four-lists .item.fan p .zui{
+	margin: 0 32px 0 49px;
+}
+.data-report-four-lists .item.fan:last-child p .zui{
+	margin: 0 32px 0 140px;
+}
+
+/*第五部分*/
+.data-report-five{
+	width: 100%;
+	height: 812px;
+	background: url(../../img/safe/img/product-bg-1.jpg) no-repeat center;
+	text-align: center;
+}
+.data-report-five h4{
+	width: 300px;
+	height: 96px;
+	margin: 0 auto;
+	background: url(../img/safe/img/report-4.png) no-repeat center;
+	line-height: 96px;
+	font-size: 30px;
+	color: #012470;
+	padding: 50px 0px 40px;
+}
+.data-report-five p{
+	font-size: 28px;
+	color: #fff;
+	width: 890px;
+	line-height: 40px;
+	margin: 0 auto;
+}
+.data-report-five img{
+	margin-top: 40px;
+}
+
+/*第六部分*/
+.data-report-six{
+	width: 100%;
+	height: 843px;
+	text-align: center;
+}
+.data-report-six h4{
+	width: 300px;
+	height: 96px;
+	margin: 0 auto;
+	background: url(../img/safe/img/report-3.png) no-repeat center;
+	line-height: 96px;
+	font-size: 30px;
+	color: #FFFFFF;
+	padding: 50px 0px 40px;
+}
+.data-report-six p{
+	font-size: 28px;
+	color: #000;
+	width: 890px;
+	line-height: 40px;
+	margin: 0 auto;
+}
+.data-report-six img{
+	margin-top: 40px;
+}
+
+/*第七部分*/
+.data-report-seven{
+	width: 100%;
+	height: 843px;
+	text-align: center;
+	background: url(../img/safe/img/product-bg-2.jpg) no-repeat center;
+}
+.data-report-seven h4{
+	width: 300px;
+	height: 96px;
+	margin: 0 auto;
+	background: url(../img/safe/img/report-4.png) no-repeat center;
+	line-height: 96px;
+	font-size: 30px;
+	color: #012470;
+	padding: 50px 0px 40px;
+}
+.data-report-seven p{
+	font-size: 28px;
+	color: #fff;
+	width: 890px;
+	line-height: 40px;
+	margin: 0 auto;
+}
+.data-report-seven img{
+	margin-top: 40px;
+}
+
+/*第八部分*/
+.data-report-eight{
+	width: 100%;
+	height: 766px;
+	text-align: center;
+}
+.data-report-eight h4{
+	width: 300px;
+	height: 96px;
+	margin: 0 auto;
+	background: url(../img/safe/img/report-5.png) no-repeat center;
+	line-height: 96px;
+	font-size: 30px;
+	color: #fff;
+	padding: 50px 0px 40px;
+}
+.data-report-eight .data-report-eight-left{
+	float: left;
+	width: 574px;
+	margin-right: 47px;
+}
+.data-report-eight .data-report-eight-right{
+	float: left;
+}
+.data-report-eight p,.data-report-map p{
+	font-size: 24px;
+	color: #000;
+	line-height: 40px;
+	margin-bottom: 50px;
+}
+.data-report-eight p span,.data-report-map p span{
+	display: inline-block;
+	margin: 0 5px;
+	color: #c5c5c5;
+}
+/* 地图部分*/
+.data-report-map{
+	width: 100%;
+	height: 852px;
+	text-align: center;
+	background: url(../img/safe/img/map-bg.jpg) no-repeat center;
+	position: relative;
+	margin-bottom: 80px;
+}
+.data-report-map p{
+	width: 568px;
+	color: #fff;
+	position: absolute;
+	top: 54px;
+	left: 50%;
+	margin-left: -284px;	
+}
+
+
+/*底部*/
+.data-report-footer{
+	width: 100%;
+	height: 310px;
+	background: #dedede;
+	padding-top: 38px;
+}
+.data-report-app{
+	width: 184px;
+	float: left;
+	text-align: center;
+}
+.data-report-app img{
+	width: 127px;
+    height: 127px;
+    margin: 0 auto 20px;
+    border-radius: 6px;
+} 
+.data-report-app p{
+	font-size: 14px;
+}
+.data-report-footer .content{
+	width: 445px;
+	margin: 40px auto;
+}
+.data-report-rel{
+	float: left;
+	width: 226px;
+	text-align: center;
+	margin: 35px 0 0 35px;
+	line-height: 40px;
+}
+.data-report-text{
+	overflow: hidden;
+	clear: both;
+	margin-top: 45px;
+}
+.data-report-text p{
+	margin-top: 45px;
+    text-align: center;	
+}
+
+.data-report-map .map{
+	position: absolute;
+	top: 150px;
+	left: 20%;
+	
+}

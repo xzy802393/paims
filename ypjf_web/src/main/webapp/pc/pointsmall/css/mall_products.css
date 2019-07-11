@@ -1,0 +1,458 @@
+.main{
+	width: 100%;
+	height: auto;
+	background: #f7f7f7;
+	padding-bottom: 34px;
+}
+.main .section{
+	margin-top: 34px;
+}
+.section .item-tit{
+	margin-bottom: 16px;
+	font-size: 18px;
+	color: #000;
+}
+.section .item-tit .tit{
+	height: 24px;
+	line-height: 24px;
+	border-left: 2px solid #b3e4b8;
+	padding-left: 8px;
+	color: #666;
+}
+.section.jiadian .item-tit .tit{
+	border-left: 2px solid #ffa95e;
+}
+.section.jiaju .item-tit .tit{
+	border-left: 2px solid #f0d3dd;
+}
+.section.get .item-tit .tit{
+	border-left: 2px solid #ff860e;
+}
+.section .item-tit .more{
+	font-size: 14px;
+}
+.section .item-tit .more a{
+	color: #666;
+}
+.section .item-tit .more a:hover{
+	color: #FF7F01;
+}
+.item-content{
+	height: 609px;
+	overflow: hidden;
+}
+.item-content .item-pic{
+	width: 215px;
+	height: 609px;
+	position: relative;
+	overflow: hidden;
+}
+.item-content .item-pic img{
+	position: relative;
+}
+.transition3{
+	transition: all 0.8s;
+}
+
+.item-content .item-pic:hover img{
+	transform: scale(1.1);
+}
+.item-content .item-pic .text{
+	position: absolute;
+    text-align: center;
+    top: 150px;
+    width: 100%;
+    color: #fff;
+}
+.item-content .item-pic .text h6{
+	font-size: 24px;
+}
+.item-content .item-pic .text p{
+	margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 0;
+}
+.item-content .item-pic .text p:nth-child(3){
+	text-align: right;
+}
+.item-product{
+	width: 962px;
+    margin-left: 23px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.item-product .list{
+	width: 214px;
+	height: 288px;
+	background: #fff;
+	/*box-shadow: 1px 1px 1px 1px #ddd;*/
+	margin-bottom: 32px;
+	text-align: center;
+	color: #666;
+}
+.item-product .list:hover{
+	box-shadow: 1px 1px 1px 1px #ddd;
+}
+.item-product .list .product-pic{
+	width: 100%;
+    height: 220px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.item-product .list .product-pic img{
+	width: 100%;
+	height: 100%;
+}
+.item-product .list .tit{
+	margin-top: 10px;
+	font-size: 14px;	
+}
+.item-product .list .detail{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.item-product .list .detail p{
+	width: 50%;
+	margin-top: 15px;
+}
+.item-product .list .detail p span{
+	color: #ff7f01;
+}
+.get-content,.help-content,.record-content{
+	width: 100%;
+	height: 324px;
+	background: #fff;
+	border-radius: 20px;
+	padding: 0 20px;
+	box-sizing: border-box;
+	/*overflow: hidden;*/
+}
+
+.get-content .tab,.help-content .tab{
+	/*width: 100%;*/
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;	
+	border-bottom: 1px dotted #bfbfbf;
+}
+.get-content .tab{
+	justify-content: flex-start;
+}
+.get-content .tab .item,.help-content .tab .item{
+	/*width: 162px;*/
+	font-size: 15px;
+	color: #666;
+	text-align: center;
+	height: 58px;
+	line-height: 58px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.get-content .tab-list{
+	margin-top: 30px;
+}
+.get-content .tab-list .list{
+	padding: 0 10px;
+}
+.get-content .tab .item.active{
+	color: #ff7f01;
+}
+.get-content .tab-list .list .mission{
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+}
+.mission .mis-list{
+	width: 160px;
+	height: 210px;
+	border: 1px solid #bfbfbf;
+	/*margin-right: 40px;*/
+	text-align: center;	
+	padding-top: 22px;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+.mission .mis-list img{
+	margin-bottom: 16px;
+}
+.mission .mis-list p{
+	 margin-bottom: 15px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+}
+.mission .waiting{
+	margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+}
+.mission .mis-list p.btn a{
+	padding: 6px 14px;
+    background: #FF7F02;
+    color: #fff;
+    border-radius: 5px;
+    /* margin-top: 28px; */
+    display: inline-block;
+}
+.help-content .tab .item .icon{
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	vertical-align: -6px;
+	margin-right: 10px;
+	filter: grayscale(100%);
+}
+.help-content .tab .item .icon.dhlc{
+	background: url(../img/help-present.png) no-repeat center;
+}
+.help-content .tab .item .icon.cjwt{
+	background: url(../img/help-question.png) no-repeat center;
+}
+.help-content .tab .item .icon.zysx{
+	background: url(../img/help-tip.png) no-repeat center;
+}
+.help-content .tab .item .icon.hqff{
+	background: url(../img/help-score.png) no-repeat center;
+}
+.help-content .tab .item .icon.dhjl{
+	background: url(../img/help-record.png) no-repeat center;
+}
+.help-content .tab .item .icon.yzjl{
+	background: url(../img/help-s-record.png) no-repeat center;
+}
+/*=====active======*/
+
+.help-content .tab .item.active .icon.dhlc{
+	background: url(../img/help-present2.png) no-repeat center;
+}
+.help-content .tab .item.active .icon.cjwt{
+	background: url(../img/help-question2.png) no-repeat center;
+}
+.help-content .tab .item.active .icon.zysx{
+	background: url(../img/help-tip2.png) no-repeat center;
+}
+.help-content .tab .item.active .icon.hqff{
+	background: url(../img/help-score2.png) no-repeat center;
+}
+.help-content .tab .item.active .icon.dhjl{
+	background: url(../img/help-record2.png) no-repeat center;
+}
+.help-content .tab .item.active .icon.yzjl{
+	background: url(../img/help-s-record2.png) no-repeat center;
+}
+.help-content .tab .item.active{
+	color: #FF7F01;
+}
+.help-content .tab .item.active .icon{	
+	filter: grayscale(0);
+}
+.help-content .tab-list{
+	padding: 10px;
+}
+
+.help-content .tab-list .list dl{
+	width: 100%;
+	clear: both;
+	overflow: hidden;
+	font-size: 13px;
+	line-height: 26px;
+	color: #666;
+}
+.help-content .tab-list .list.question dl dt{
+	width: 18px;
+	float: left;
+	/*display: inline;*/
+}
+.help-content .tab-list .list.question{
+	height: 236px;
+	overflow-y: scroll;
+}
+.help-content .tab-list .list.question dl dd{
+	width: 1100px;
+	float: left;
+	/*display: inline;*/
+}
+.help-content .tab-list .list.question dl:nth-child(2n){
+	margin-bottom: 20px;
+}
+.help-content .tab-list .list.exchange dl{
+	margin-bottom: 20px;
+}
+.help-content .tab-list .list.exchange dl dt,.help-content .tab-list .list.exchange dl dd{
+	display: block;
+	width: auto;
+}
+.help-content .tab-list .list.exchange dl dd{
+	padding-left: 20px;
+}
+.help-content .tab-list .list.exchange{
+	height: 236px;
+	overflow-y: scroll;
+}
+.help-content .tab-list .list.way dl dd,.help-content .tab-list .list.way dl dt{
+	float: left;
+}
+.help-content .tab-list .list.way dl dd{
+	width: 1119px;
+}
+.help-content .tab-list .list.way dl dt{
+	width: 21px;
+}
+.help-content .tab-list .list .login-btn{
+	text-align: center;
+    margin-top: 70px;
+    font-size: 14px;
+}
+.help-content .tab-list .list .login-btn a{
+	color: #ff7f01;
+	cursor: pointer;
+}
+.trans-records table{
+	width: 100%;
+	/*margin-bottom: 24px;*/
+}
+.trans-records table tr{
+	width: 99%;
+	height: 38px;
+	text-align: center;
+	color: #666;
+	font-size: 13px;
+}
+
+.trans-records table tr:nth-child(odd){
+	background: #f8f8f8;
+}
+.trans-records table tr.title{
+	height: 44px;
+	color: #333;
+	font-size: 14px;
+	background: #eee;
+	font-weight: normal;
+}
+.trans-records table tr.title th{
+	color: #333;
+	font-weight: normal;
+}
+.trans-records table tr.title th:nth-child(2),.trans-records table tr.title th:nth-child(3),.trans-records table tr.title th:nth-child(4){
+	padding-right: 22px;
+}
+.trans-records .trans-choice{
+	font-size: 14px;
+}
+.help-content .tab-list .list.trans-records .trans-choice dl{
+	margin-left: 20px;
+	margin-bottom: 16px;
+	line-height: normal;
+    overflow: inherit;
+}
+.help-content .tab-list .list.trans-records .trans-choice dl dt,.help-content .tab-list .list.trans-records .trans-choice dl dd{
+	float: left;
+	font-size: 14px;
+	padding: 4px 7px;
+	margin-right: 20px;	
+	width: auto;
+}
+.help-content .tab-list .list.trans-records .trans-choice dl dd:hover{
+	cursor: pointer;
+	background: #f44336;
+	color: #fff;
+}
+.help-content .tab-list .list.trans-records .trans-choice dl dd.active{
+	background: #f44336;
+	color: #fff;
+}
+.help-content .tab-list .list .trans-choice-date-box{
+	text-align: right;
+	margin-right: 100px;
+}
+.help-content .tab-list .list .trans-choice-date-box .calendarWarp{
+	position: relative;
+	display: inline-block;
+	text-align: left;
+}
+
+.trans-choice-date-box input[type="text"]{
+	width: 100px;
+	outline: none;
+	font-size: 12px;
+	color: #666;
+	cursor: default;
+	padding-left: 4px;
+}
+.trans-choice-date-box input[type="submit"]{
+	border: none;
+	background: none;
+	color: #FF7F01;
+	outline: none;
+	cursor: pointer;
+}
+
+.trans-records table tr{
+	height: 40px;
+}
+.trans-records table tr th{
+	width: 18%;
+}
+.trans-records table tr td{
+	width: 20%;
+}
+.trans-records.score-records table tr th,.trans-records.score-records table tr td{
+	width: 20%;
+}
+.trans-records table tr td.time span{
+	display: inline-block;
+	margin-bottom: 4px;
+}
+.trans-records table tr td.time span:last-child{
+	color: #aaa;
+	font-size: 12px;
+	margin-right: 26px;
+}
+.trans-records table tr td.org{
+	color: #FF7F01;
+}
+.table-box{
+	height: 140px;
+	overflow-y: scroll;
+}
+
+
+/*获取银子*/
+.get-silver{
+	width: 588px;
+}
+.get-silver .get-content .tab{
+	justify-content: space-between;
+}
+.change-record{
+	width: 588px;
+	margin-left: 24px;
+}
+.change-record .record-content{
+	padding: 20px 50px;
+	box-sizing: border-box;
+}
+.record-content .list{
+	height: 46px;
+	line-height: 46px;
+	border-bottom: 1px solid #ddd;
+	font-size: 14px;
+	padding-left: 70px;
+	color: #666;
+}
+.record-content .list span{
+	color: #FF7F01;
+	margin: 0 5px;
+}
+.record-content .scroll-box{
+	width: 488px;
+	height: 284px;
+	overflow: hidden;
+}

@@ -1,0 +1,136 @@
+.luckydraw{
+	width: 939px;
+	margin-left: 28px;
+	/*display: none;*/
+}
+.luckydraw h3{
+	font-size: 16px;
+	font-weight: normal;
+	margin-bottom: 28px;
+}
+
+
+.luckydraw .tab-menu li{
+	float: left;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	cursor: pointer;
+}
+.luckydraw .tab-menu li.active{
+	border-bottom: 2px solid #FF7F01;
+	color: #FF7F01;
+	font-weight: bold;
+}
+/*.sign-records .sign-earn{
+	width: 936px;
+	height: 94px;
+	border: 1px solid #ddd;
+	margin-top: 28px;
+	margin-bottom: 28px;
+}
+
+.sign-records .sign-earn ul{
+	width: 100%;
+}
+.sign-records .sign-earn ul li{
+	float: left;
+	font-size: 16px;
+}
+.sign-records .sign-earn ul li.list{
+	width: 33%;
+	text-align: center;
+	margin: 36px auto;
+}
+.sign-records .sign-earn ul li.line span{
+	display: block;
+	width: 2px;
+	height: 28px;
+	background: #ddd;
+	margin-top: 34px;
+}
+.sign-records .sign-earn ul li.list p span{
+	font-size: 20px;
+	color: #FF7F01;
+}
+.sign-records .sign-earn ul li.list:last-child{
+	height: 94px;
+	border-left: 1px solid #ddd;
+	margin: 0;
+	line-height: 94px;	
+}
+.sign-records .sign-earn ul li.list:last-child button{
+	display: inline-block;
+	width: 130px;
+	height: 40px;
+	border-radius: 20px;
+	background: #3a95e0;
+	border: none;
+	outline: none;
+	color: #fff;
+	outline: none;
+}*/
+.luckydraw table{
+	width: 937px;
+	margin-bottom: 28px;
+}
+.luckydraw table tr{
+	width: 99%;
+	height: 38px;
+	text-align: center;
+	color: #666;
+	font-size: 13px;
+}
+.luckydraw table tr:nth-child(odd){
+	background: #f8f8f8;
+}
+.luckydraw table tr.title{
+	height: 44px;
+	color: #333;
+	font-size: 14px;
+	background: #eee;
+	font-weight: normal;
+}
+/*.luckydraw .sign-rule{
+	margin-top: 30px;
+	font-size: 14px;
+	color: #666;
+	line-height: 24px;
+}
+.luckydraw .sign-rule p:first-child{
+	font-size: 16px;
+	line-height: 34px;
+	color: #000;
+}*/
+
+
+.page-list{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.page-list a{
+	display: inline-block;
+	padding: 8px 12px;
+	font-size: 12px;
+	border: 1px solid #aaa;
+	margin-left: 10px;
+	cursor: default;
+}
+.page-list a.active{
+	background: #ff7200;
+	border: none;
+	padding: 9px 13px;
+	color: #fff;
+}
+.page-list a.on{
+	color: #aaa;
+}
+.page-list a:hover{
+	background: #FF7200;
+	border: none;
+	padding: 9px 13px;
+	color: #fff;
+}

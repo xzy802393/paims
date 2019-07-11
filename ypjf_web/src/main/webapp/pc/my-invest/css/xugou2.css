@@ -1,0 +1,118 @@
+/* css reset */
+body,section,h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dd,th,td { 
+	margin: 0;
+	padding: 0; 
+	font-family:  'PingFang SC','Helvetica Neue','Helvetica','Tahoma','Arial','Hiragino Sans GB','Heiti SC','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif';
+	/* color:##171717; */
+	-webkit-font-smoothing: antialiased;
+}  
+em{
+	font-style:normal;
+}
+table{
+		border-collapse: collapse;
+		    border-spacing: 0;
+}
+
+a{
+	text-decoration: none;
+}
+img { 
+	border: none;
+	vertical-align: middle;
+} 
+ul {
+	list-style: none; 
+}
+.clearFix:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.clearFix{
+	zoom:1;
+}
+/* #box2{
+	width:560px;
+	height:434px;
+	margin:0 auto;
+	border-radius:10px;
+	background:#fff;
+	margin-top:100px;
+} */
+#box2 p.title{
+	height:45px;
+	border-bottom:1px solid #eeeeee;
+}
+#box2 p.title span{
+	float:left;
+	padding-left:22px;
+	font-size:16px;
+	color:#212121;
+	line-height:46px;
+	letter-spacing: 1px;
+}
+#box2 p.title img{
+	float:right;
+	padding-right:22px;
+	width:20px;
+	height:20px;
+	padding-top:12px;
+	cursor: pointer;
+}
+#box2 p.line1{
+	width:512px;
+	height:50px;
+	margin:0 auto;
+	text-align: left;
+}
+#box2 p.line1 span{
+	display: inline-block;
+	color:#666666;
+}
+#box2 p.line1 span.text{
+	font-size:14px;
+	line-height:50px;
+	width:130px;
+}
+#box2 p.line1 span.number{
+	font-size:14px;
+	line-height:50px;
+	color:#212121;
+	width:130px;
+}
+#box2 p.line1 span.return{
+	font-size:14px;
+	line-height:50px;
+	color:#038cf6;
+	cursor: pointer;
+}
+/* 按钮区域 */
+#box2 .btns{
+	width:384px;
+	height:40px;
+	padding:14px 0;
+	margin:0 auto;
+}
+#box2 .btns span{
+	display: inline-block;
+	font-size:14px;
+	line-height:40px;
+	border-radius: 4px;
+	text-align: center;
+	cursor: pointer;
+}
+#box2 .btns span.continue{
+	background:#038cf6;
+	color:#fff;
+	width:180px;
+	height:40px;
+	margin-right:16px;
+}
+#box2 .btns span.reset{
+	background:#fff;
+	color:#038cf6;
+	width:178px;
+	height:38px;
+	border:1px solid #038cf6;
+}

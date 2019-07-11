@@ -1,0 +1,323 @@
+.Nov-activity{
+	width: 100%;
+	height: 100%;
+	/*position: relative;*/
+}
+.Nov-activity img.bg{
+	/*width: 100%;*/
+}
+.Nov-activity .nav{
+	width: 155px;
+    height: 353px;
+    position: fixed;
+    top: 183px;
+    right: 20px;
+    z-index: 100000;
+	background: url(../../img/infomation/bg-nav.png) no-repeat center;
+}
+.Nov-activity .nav ul{
+	width: 100%;
+	text-align: center;
+	margin-top: 135px;
+	font-size: 16px;	
+}
+.Nov-activity .nav ul li{
+	line-height: 43px;
+}
+.Nov-activity .nav ul li:hover a{
+	color: #FF7F01;
+}
+.Nov-activity .nav ul li:last-child:hover a{
+	color: #fff;
+}
+/*.Nov-activity .tit{
+	position: absolute;
+	top: 13.8%;
+	width: 100%;
+	text-align: center;
+}*/
+.Nov-activity .tit img{
+	width: 100%;
+	height: 761px;
+}
+/*.Nov-activity .tit p{
+	font-size: 22px;
+	font-weight: bold;
+	color: #fff;
+	letter-spacing: 1px;
+}*/
+
+.main-bg{
+	width: 100%;
+	/*background: url(../../img/infomation/images/act-main-bg_02.jpg) no-repeat center;*/
+	position: relative;
+	z-index: 99;
+}
+.main-bg img{
+	margin-top: -2px;
+	width: 100%;
+	height: 2790px;
+}
+/*红包活动*/
+.activity-hongbao{
+	width: 1056px;
+	height: 1445px;
+	position: absolute;
+	top: 2%;
+	left: 50%;
+	margin-left: -528px;
+}
+.activity-hongbao h2{
+	width: 1056px;
+	height: 388px;
+	background: url(../../img/infomation/act-hb-t-bg_01.png) no-repeat center;
+	font-size: 36px;
+	color: #f3da1c;
+	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	padding-top: 46px;
+}
+.activity-hongbao .hb-bg{
+	width: 100%;
+	height: auto;
+	background: #9940fc;
+	position: absolute;
+	top: 27.5%;
+	left: 50%;
+	margin-left: -528px;
+}
+.activity-hongbao .hb-bg ul{
+	width: 850px;
+	height: auto; 
+	background: #e1caf6;
+	margin: 30px auto;
+	padding: 44px 50px;
+	box-shadow: 1px 0px 17px 5px #7c35cc;;
+}
+.activity-hongbao .hb-bg ul li.hb{
+	float: left;
+	width: 246px;
+	height: 323px;
+	background: url(../../img/infomation/hb-bg.png) no-repeat center;
+	text-align: center;
+	margin-bottom: 40px;
+}
+.activity-hongbao .hb-bg ul li.hb:nth-child(2),.activity-hongbao .hb-bg ul li.hb:nth-child(5){
+	margin: 0 55px;
+}
+
+.activity-hongbao .hb-bg ul li.hb p.money{
+	font-size: 85px;
+    color: #e3b772;
+    margin-top: 58px;
+    transform: rotateZ(-8deg);
+    letter-spacing: -3px;
+    font-weight: normal;
+    margin-right: 22px;
+    font-family: cursive;
+}
+.activity-hongbao .hb-bg ul li.hb p.des{
+	font-size: 15px;
+	color: #fff;
+	margin-top: 60px;
+}
+.activity-hongbao .hb-bg ul li.hb p.des.xian{
+	margin-top: 4px;
+}
+.activity-hongbao .hb-bg ul li.hb p.des.xian span{
+	font-size: 24px;
+	color: #fff600;
+}
+.activity-hongbao .hb-bg ul li.hb p.zhuce a{
+	display: block;
+	width: 160px;
+	height: 40px;
+	background: #ffe400;
+	font-size: 18px;
+	color: #f03838;
+	line-height: 40px;
+	text-align: center;	
+	border-radius: 20px;
+	margin: 18px auto;
+}
+.activity-hongbao .hb-bg ul div.des-txt{
+	text-align: center;
+	font-size: 24px;
+	color: #bb1616;
+	font-weight: bold;
+}
+.activity-hongbao .hb-bg ul div.des-txt p:nth-child(1) span{
+	font-size: 34px;
+	color: #ff2525;
+	font-family: cursive;
+}
+.activity-hongbao .hb-bg ul div.des-txt p:last-child{
+	font-size: 18px;
+	color: #5b0502;
+	font-weight: normal;
+	margin-top: 10px;
+}
+.activity-hongbao .hb-bg-b{
+	width: 1056px;
+	height: 130px;
+	background: url(../../img/infomation/act-hb-bg-b_03.png) no-repeat center;
+	position: absolute;
+	bottom: 10px;
+}
+
+/*邀请好友*/
+.activity-hongbao.visit{
+	height: 990px;
+	margin-top: 1550px;
+}
+.activity-hongbao.visit ul li{
+	float: none;
+	background: none;
+}
+.activity-hongbao.visit ul li div.photo{
+	width: 138px;
+	height: auto;
+	text-align: center;
+}
+.activity-hongbao.visit ul li div.photo img{
+	display: block;
+	width: 34px;
+	height: 54px;
+	padding: 6px 13px 0;
+	background: #ffbf0c;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+.activity-hongbao.visit ul li div.photo.right img{
+	background: #ffe3ce;
+}
+.activity-hongbao.visit ul li div.photo span.name{
+	font-size: 16px;
+    color: #333333;
+    margin-top: 8px;
+    display: block;
+}
+.activity-hongbao.visit ul li div.photo.right span.name{
+	color: #0070ff;
+}
+.activity-hongbao.visit ul li div.text{
+	
+}
+.activity-hongbao.visit ul li div.text p{
+	font-size: 16px;
+	color: #6c2c34;
+	padding: 10px 20px;
+	background: #fed049;
+	border-radius: 10px;
+	margin: 20px 6px;
+}
+.activity-hongbao.visit ul li div.text p span.sj{
+	display: inline-block;
+	width: 15px;
+	height: 10px;
+	background: url(../../img/infomation/visit-bg-1.png) no-repeat center;
+	margin-left: -27px;
+	margin-right: 10px;
+}
+.activity-hongbao.visit ul li div.text.right p{
+	background: #fce9d8;
+}
+.activity-hongbao.visit ul li div.text.right p span.sj{
+	background: url(../../img/infomation/visit-bg-2.png) no-repeat center;
+	margin-right: -27px;
+	margin-left: 10px;
+}
+.activity-hongbao.visit ul li div.text.left p span{
+	color: #ff5a00;
+	font-weight: bold;
+ 	color: 18px;
+}
+.activity-hongbao.visit ul li div.text.right p span{
+	color: #ff7800;
+	font-weight: bold;
+	color: 18px;
+}
+.activity-hongbao.visit ul .des-txt.btn a{ 
+	display: block;
+	width: 134px;
+	height: 40px;
+	margin: 30px auto 0;
+	background: #ec761d;
+	border-radius: 20px;
+	line-height: 40px;
+	font-size: 18px;
+	color: #fff;
+	font-weight: normal;
+}
+.activity-hongbao.visit div.hb-bg-b{
+	bottom: 40px;
+}
+.activity-saoma{
+	position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    line-height: 40px;
+    margin-top: -40px;
+    top: 2720px;
+}
+.activity-saoma p span{
+	font-size: 30px;
+}
+.saoma.pic{
+	margin-top: -4px;
+}
+.saoma.pic img{
+	width: 100%;
+}
+
+
+/*底部说明*/
+.activity-bottom{
+	width: 100%;
+    background: #c086ff;
+    margin-top: -32px;
+    padding-bottom: 30px;
+    padding-top: 60px;
+}
+.activity-bottom h5{
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 30px;
+	color: #fff;
+	text-align: center;
+}
+.activity-bottom .act-sm-bg{
+	width: 956px;
+	padding: 10px 27px 34px;
+    height: 470px;
+    margin: 30px auto;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background: #9e50ff;	
+}
+.activity-bottom .act-sm-bg dl{
+	clear: both;
+	overflow: hidden;
+	font-size: 14px;
+	color: #fff;
+	line-height: 27px;	
+}
+.activity-bottom .act-sm-bg dl dt,.activity-bottom .act-sm-bg dl dd{
+	float: left;
+}
+.activity-bottom .act-sm-bg dl dt{
+	font-weight: bold;
+}
+.activity-bottom .act-sm-bg dl dd{
+	width: 922px;
+}
+.activity-bottom p{
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	line-height: 22px;
+}

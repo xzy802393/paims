@@ -1,0 +1,314 @@
+.Dec-activity{
+	width: 100%;
+	height: auto;
+	background: #ffdeb3;
+	padding-bottom: 10px;
+}
+.Dec-activity .dec-head{
+	width: 100%;
+	height: 646px;
+	background: url(images/banner.jpg) no-repeat center;
+}
+
+.section{
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 110px;
+}
+
+.part-one .main{
+	margin-top: 35px;
+}
+
+.line{
+	width: 100%;
+	height: 58px;
+	background: url(images/qizi-num.png) no-repeat center;
+}
+
+
+.section-one{
+	text-align: center;
+}
+.section .title{
+	margin-bottom: 20px;
+	margin-top: 122px;
+}
+.section .title img{
+	width: 777px;
+	height: 126px;
+}
+.section .content{
+	width: 100%;
+	/*height: 917px;*/
+	background: #ffd8a6;
+	border-radius: 36px;
+	position: relative;
+	overflow: hidden;
+}
+
+.section-one .content ul{
+	width: 890px;
+	height: auto; 
+	margin: 30px auto;
+	padding: 44px 50px;	
+	/*padding-bottom: 140px;*/
+}
+.section-one .content ul li{
+	float: left;
+	width: 246px;
+	height: 323px;
+}
+.section-one .content ul li.hb{
+	float: left;
+	width: 246px;
+	height: 323px;
+	background: url(../../img/infomation/hb-bg.png) no-repeat center;
+	text-align: center;
+	margin-bottom: 44px;
+	position: relative;
+    z-index: 3;
+}
+.section-one .content ul li.hb:nth-child(2),.section-one .content ul li:nth-child(5){
+	margin: 0 75px;
+}
+
+.section-one .content ul li.hb p.money{
+	font-size: 85px;
+    color: #e3b772;
+    margin-top: 58px;
+    transform: rotateZ(-8deg);
+    letter-spacing: -3px;
+    font-weight: normal;
+    margin-right: 22px;
+    font-family: cursive;
+}
+.section-one .content ul li.hb p.des{
+	font-size: 15px;
+	color: #fff;
+	margin-top: 60px;
+}
+.section-one .content ul li.hb p.des.xian{
+	margin-top: 4px;
+}
+.section-one .content ul li.hb p.des.xian span{
+	font-size: 24px;
+	color: #fff600;
+}
+.section-one .content ul li.hb p.zhuce a{
+	display: block;
+	width: 160px;
+	height: 40px;
+	background: #ffe400;
+	font-size: 18px;
+	color: #f03838;
+	line-height: 40px;
+	text-align: center;	
+	border-radius: 20px;
+	margin: 18px auto;
+}
+
+.section .content .tip{
+	position: absolute;
+    right: 9%;
+    /* margin-left: -445px; */
+    bottom: 75px;
+    width: 617px;
+    text-align: center;
+    z-index: 2;
+}
+.section .content .tip .text{
+	width: 100%;
+	height: 90px;
+	background: #f7d325;
+	color: #FF0000;
+}
+.section .content .tip img{
+	width: 166px;
+	height: 190px;
+	transform-origin: 0% 60%;
+    /*-webkit-transform-origin: 50% 0 0;*/
+	/*background: url(../../img/active-dec/ball-3.png) no-repeat center;*/
+	animation: qizi 1.5s linear infinite alternate;
+    /*-webkit-animation: ball 1.5s linear infinite alternate;
+    -moz-animation: ball 1.5s linear infinite alternate;
+    -ms-animation: ball 1.5s linear infinite alternate;*/
+}
+
+@keyframes qizi{
+	0%{transform: rotate(4deg);}
+	50%{transform: rotate(0deg);}
+	100%{transform: rotate(-4deg)}
+}
+
+.section .content .tip .text p{
+	font-size: 16px;
+	padding: 22px 46px 0 46px;
+	text-align: left;
+	line-height: 22px;
+}
+
+
+/*第三部分*/
+.section-two .title{
+	margin-bottom: 35px;
+}
+
+.section-two ul{
+	width: 890px;
+	margin: 0 auto;
+	padding: 54px;
+}
+.section-two ul li{
+	float: none;
+	background: none;
+}
+.section-two ul li div.photo{
+	width: 138px;
+	height: auto;
+	text-align: center;
+}
+.section-two ul li div.photo img{
+	display: block;
+	width: 34px;
+	height: 54px;
+	padding: 6px 13px 0;
+	background: #ff6600;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+.section-two ul li div.photo.right img{
+	background: #ffe3ce;
+}
+.section-two ul li div.photo span.name{
+	font-size: 16px;
+    color: #333333;
+    margin-top: 8px;
+    display: block;
+}
+.section-two ul li div.photo.right span.name{
+	color: #0070ff;
+}
+.section-two ul li div.text{
+	
+}
+.section-two ul li div.text p{
+	font-size: 16px;
+	color: #6c2c34;
+	padding: 10px 20px;
+	background: #fed049;
+	border-radius: 10px;
+	margin: 20px 6px;
+}
+.section-two ul li div.text p span.sj{
+	display: inline-block;
+	width: 15px;
+	height: 10px;
+	background: url(../../img/infomation/visit-bg-1.png) no-repeat center;
+	margin-left: -27px;
+	margin-right: 10px;
+}
+.section-two ul li div.text.right p{
+	background: #fce9d8;
+}
+.section-two ul li div.text.right p span.sj{
+	background: url(../../img/infomation/visit-bg-2.png) no-repeat center;
+	margin-right: -27px;
+	margin-left: 10px;
+}
+.section-two ul li div.text.left p span{
+	color: #ff5a00;
+	font-weight: bold;
+ 	color: 18px;
+}
+.section-two ul li div.text.right p span{
+	color: #ff7800;
+	font-weight: bold;
+	color: 18px;
+}
+.section-two ul .des-txt.btn a{ 
+	display: block;
+	width: 134px;
+	height: 40px;
+	margin: 30px auto 0;
+	background: #fe553b;
+	border-radius: 20px;
+	line-height: 40px;
+	font-size: 18px;
+	color: #fff;
+	font-weight: normal;
+}
+
+/*签到扫码*/
+.section-three .content{
+	margin-top: 35px;
+}
+.section-three .sign{
+	padding: 44px 0 0;
+	text-align: center;
+	font-size: 23px;
+	color: #fe3a2b;
+	line-height: 32px;
+}
+.section-three .sign p span{
+	font-size: 32px;
+	font-weight: bold;
+}
+.section-three .sign .btn{
+	margin-top: 30px;
+}
+.section-three .sign .btn a{
+	padding: 6px 20px;
+    border-radius: 24px;
+    font-size: 18px;
+    color: #fff;
+    background: #fe4a34;
+}
+.section-three .sign .bg{
+	width: 1200px;
+	height: 436px;
+	background: url(images/images/sign-bg_02_02.png) no-repeat center;
+	margin-top: 28px;
+}
+
+.bg-y{
+	width: 100%;
+	height: 95px;
+	background: url(images/bg-2.png) no-repeat center;
+}
+
+/*活动说明*/
+.instruction{
+	width: 100%;
+	height: 968px;
+	background: url(images/images/bottom-bg_03.jpg) no-repeat bottom;
+	text-align: center;
+	/*padding-bottom: 20px;*/
+}
+.instruction h4{
+	font-size: 20px;
+    color: #6b4700;
+    margin-bottom: -24px;
+    font-weight: normal;
+}
+.instruction dl{
+	width: 872px;
+	margin: 0 auto;
+	clear: both;
+	overflow: hidden;
+	font-size: 14px;
+	color: #6c2c34;
+	line-height: 24px;
+}
+.instruction dl dt,.instruction dl dd{
+	float: left;
+}
+.instruction dl dd{
+	width: 841px;
+	text-align: left;
+}
+.instruction p{
+	margin-top: 404px;
+}
