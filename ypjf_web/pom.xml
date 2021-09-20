@@ -69,7 +69,7 @@
 
 		<freemarker.version>2.3.22</freemarker.version>
 		<jedis.version>2.9.0</jedis.version>
-		<shiro.version>1.3.2</shiro.version>
+		<shiro.version>1.8.0</shiro.version>
 		<jxl.version>2.6.12</jxl.version>
 		<jodconverter.version>2.2.1</jodconverter.version>
 		
