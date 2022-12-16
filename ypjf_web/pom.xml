@@ -49,7 +49,7 @@
 		<!--  
 		<persistence-api.version>1.0.2</persistence-api.version>
 		-->
-		<spring.baseline.version>4.3.1.RELEASE</spring.baseline.version>
+		<spring.baseline.version>5.2.20.RELEASE</spring.baseline.version>
 		<spring-data-redis.version>1.7.3.RELEASE</spring-data-redis.version>
 		<slf4j-api.version>1.7.21</slf4j-api.version>
 		<jcl-over-slf4j.version>1.7.21</jcl-over-slf4j.version>
